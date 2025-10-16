@@ -2,8 +2,8 @@ name: Deploy
 on:
   push:
     branches:
-      - master 
-      - main
+      - ___master 
+      - ___main
 permissions:
   contents: write
 jobs:
