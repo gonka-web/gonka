@@ -19,80 +19,48 @@
   {% endblock %}
 
 {% block header %}
-{# Custom header for all pages except homepage and announcement #}
 {% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
-  {# Homepage (index.md and zh/index.md) has header in content #}
 {% elif page and page.file and page.file.src_path == "announcement.md" %}
-  {# Announcement page has header in content via announcement.html template #}
 {% elif page %}
-  {# All other pages use custom header #}
   <style>
-    /* Ensure header and footer are full width and override MkDocs styles */
-    .landing-header,
-    .landing-footer {
-      width: 100vw !important;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw !important;
-      margin-right: -50vw !important;
-      z-index: 100 !important;
+    .header-wrap {
+      padding: 20px 40px
     }
-    
-    /* Override MkDocs container constraints but keep sidebar layout */
-    .md-container {
-      max-width: 100% !important;
-      padding: 0 !important;
-    }
-    
-    .md-main {
-      margin: 0 !important;
-      max-width: 100% !important;
-    }
-    
-    .md-main__inner {
-      margin: 0 !important;
-      max-width: 100% !important;
-    }
-    
-    .md-content {
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    
-    /* Hide only MkDocs default header, keep sidebars */
-    .md-header {
-      display: none !important;
-    }
-    
-    /* Ensure content has proper spacing with sidebars */
-    .md-content__inner {
-      padding: 20px !important;
-    }
-    
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-      .md-content__inner {
-        padding: 20px !important;
-      }
+    .yellow-banner {
+      padding: 8px 40px
     }
   </style>
   {% include "partials/custom-header.html" %}
 {% endif %}
 {% endblock %}
 
-{# --- hide the horizontal nav-tabs row on all pages ----------------------- #}
 {% block tabs %}{% endblock %}
 
-{# --- Custom footer for all pages except homepage and announcement ----------------------- #}
+{% block site_nav %}
+  {% if nav %}
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/nav.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if page.toc %}
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          {% include "partials/toc.html" %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}
+
 {% block footer %}
 {% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
-  {# Homepage (index.md and zh/index.md) has footer in content #}
 {% elif page and page.file and page.file.src_path == "announcement.md" %}
-  {# Announcement page has footer in content via announcement.html template #}
 {% elif page %}
-  {# All other pages use custom footer #}
   {% include "partials/custom-footer.html" %}
 {% endif %}
 {% endblock %}

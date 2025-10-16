@@ -1,0 +1,118 @@
+{% import "partials/nav-item.html" as item %}
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="{{ lang.t('nav.title') }}" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      {% include "partials/logo.html" %}
+    </a>
+    {{ config.site_name }}
+  </label>
+
+  <!-- Custom navigation sections -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    <!-- DOCS Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DOCS</div>
+      <nav class="md-nav" aria-label="DOCS">
+        <ul class="md-nav__list">
+          {% for item in nav %}
+            {% if item.title == "Introduction" %}
+              <li class="md-nav__item">
+                <a href="{{ item.url | url }}" class="md-nav__link{% if page and item == page %} md-nav__link--active{% endif %}">
+                  {{ item.title }}
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </li>
+
+    <!-- DEVELOPER Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DEVELOPER</div>
+      <nav class="md-nav" aria-label="DEVELOPER">
+        <ul class="md-nav__list">
+          {% for item in nav %}
+            {% if item.title == "Developer" and item.children %}
+              {% for child in item.children %}
+                <li class="md-nav__item">
+                  <a href="{{ child.url | url }}" class="md-nav__link{% if page and child == page %} md-nav__link--active{% endif %}">
+                    {{ child.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </li>
+
+    <!-- PARTICIPANT Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">PARTICIPANT</div>
+      <nav class="md-nav" aria-label="PARTICIPANT">
+        <ul class="md-nav__list">
+          {% for item in nav %}
+            {% if item.title == "Host" and item.children %}
+              {% for child in item.children %}
+                <li class="md-nav__item">
+                  <a href="{{ child.url | url }}" class="md-nav__link{% if page and child == page %} md-nav__link--active{% endif %}">
+                    {{ child.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </li>
+
+    <!-- WALLET Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">WALLET</div>
+      <nav class="md-nav" aria-label="WALLET">
+        <ul class="md-nav__list">
+          {% for item in nav %}
+            {% if item.title == "Wallet" and item.children %}
+              {% for child in item.children %}
+                <li class="md-nav__item">
+                  <a href="{{ child.url | url }}" class="md-nav__link{% if page and child == page %} md-nav__link--active{% endif %}">
+                    {{ child.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </li>
+
+    <!-- Additional links -->
+    <li class="md-nav__item">
+      <nav class="md-nav" aria-label="Additional">
+        <ul class="md-nav__list">
+          {% for item in nav %}
+            {% if item.title in ["Model licenses", "Transactions & Governance", "Software Upgrades"] %}
+              <li class="md-nav__item">
+                <a href="{{ item.url | url }}" class="md-nav__link{% if page and item == page %} md-nav__link--active{% endif %}">
+                  {{ item.title }}
+                </a>
+              </li>
+            {% elif item.title == "Help" and item.children %}
+              {% for child in item.children %}
+                <li class="md-nav__item">
+                  <a href="{{ child.url | url }}" class="md-nav__link{% if page and child == page %} md-nav__link--active{% endif %}">
+                    {{ child.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </li>
+  </ul>
+
+</nav>

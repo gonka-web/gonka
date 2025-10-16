@@ -175,6 +175,354 @@ a.md-logo img,
   font-weight: 700;
 }
 
+/* Custom Sidebar Navigation Design */
+.md-sidebar--primary {
+  width: 280px !important;
+  min-width: 280px !important;
+  z-index: 100 !important;
+  position: sticky !important;
+  top: 0 !important;
+  height: calc(100vh - 80px) !important;
+  max-height: calc(100vh - 80px) !important;
+  overflow-y: auto !important;
+}
+
+/* Right sidebar (Table of Contents) */
+.md-sidebar--secondary {
+  z-index: 100 !important;
+  position: sticky !important;
+  top: 0 !important;
+  height: calc(100vh - 80px) !important;
+  max-height: calc(100vh - 80px) !important;
+  overflow-y: auto !important;
+}
+
+/* Table of Contents styling */
+.md-nav--secondary .md-nav__title {
+  font-family: "IBM Plex Mono", monospace !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #9F9F9F !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* TOC navigation items */
+.md-nav--secondary .md-nav__item {
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.md-nav--secondary .md-nav__link {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #333333 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  transition: all 0.2s ease !important;
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  background: #f0f0f0 !important;
+  color: #000000 !important;
+}
+
+/* TOC sub-items */
+.md-nav--secondary .md-nav .md-nav__link {
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  color: #666666 !important;
+  padding-left: 8px!important;
+  transition: all 0.2s ease !important;
+}
+
+.md-nav--secondary .md-nav .md-nav__link:hover {
+  color: #333333 !important;
+}
+
+/* TOC third level items */
+.md-nav--secondary .md-nav .md-nav .md-nav__link {
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  color: #888888 !important;
+  padding-left: 16px!important;
+}
+
+.md-nav--secondary .md-nav .md-nav .md-nav__link:hover {
+  color: #555555 !important;
+}
+
+/* TOC expand/collapse icons */
+.md-nav--secondary .md-nav__icon {
+  width: 16px !important;
+  height: 16px !important;
+  margin-left: 8px !important;
+  transition: transform 0.2s ease !important;
+}
+
+.md-nav--secondary .md-toggle:checked ~ .md-nav__link .md-nav__icon {
+  transform: rotate(90deg) !important;
+}
+
+/* READ NEXT section */
+.md-nav__read-next {
+  margin-top: 24px !important;
+  padding: 16px !important;
+  border-top: 1px solid #e0e0e0 !important;
+  background: #f8f8f8 !important;
+}
+
+.md-nav__read-next-title {
+  font-family: "IBM Plex Mono", monospace !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #666666 !important;
+  margin-bottom: 4px !important;
+}
+
+.md-nav__read-next-section {
+  font-family: "IBM Plex Mono", monospace !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #666666 !important;
+  margin-bottom: 8px !important;
+}
+
+.md-nav__read-next-link {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #333333 !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+}
+
+.md-nav__read-next-link:hover {
+  color: #007acc !important;
+}
+
+.md-sidebar--primary .md-nav {
+  padding: 0 !important;
+}
+
+/* Navigation section headers */
+.md-nav__title {
+  font-family: "IBM Plex Mono", monospace !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: #a0a0a0 !important;
+  margin: 24px 0 8px 0 !important;
+  line-height: 1.2 !important;
+  cursor: default !important;
+  padding: 0 !important;
+}
+
+/* First section header */
+.md-nav__title:first-child {
+  margin-top: 0 !important;
+}
+
+/* Navigation links */
+.md-nav__item .md-nav__link {
+  font-family: Geist !important;
+  font-weight: 400 !important;
+  font-style: Regular !important;
+  font-size: 12px !important;
+  line-height: 140% !important;
+  letter-spacing: 0% !important;
+  margin-bottom: 12px !important;
+}
+
+/* Active navigation link */
+.md-nav__item .md-nav__link--active {
+  font-weight: 600 !important;
+  color: #333333 !important;
+  background: transparent !important;
+}
+
+/* Hover state for navigation links */
+.md-nav__item .md-nav__link:hover {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #333333 !important;
+  font-weight: 500 !important;
+}
+
+/* Nested navigation items */
+.md-nav__item .md-nav .md-nav__item .md-nav__link {
+  font-size: 13px !important;
+  color: black !important;
+}
+
+.md-nav__item .md-nav .md-nav__item .md-nav__link:hover {
+  color: #333333 !important;
+}
+
+/* Hide contents toggle */
+.md-nav__title[for="__toc"] {
+  font-family: IBM Plex Mono !important;
+  font-weight: 600 !important;
+  font-style: SemiBold !important;
+  font-size: 12px !important;
+  line-height: 120% !important;
+  letter-spacing: 0% !important;
+  text-transform: uppercase !important;
+}
+
+.md-nav__title[for="__toc"]:hover {
+  color: #000000 !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Dark theme adjustments */
+[data-md-color-scheme="slate"] .md-sidebar--primary {
+  z-index: 100 !important;
+  position: sticky !important;
+  top: 0 !important;
+  height: calc(100vh - 80px) !important;
+  max-height: calc(100vh - 80px) !important;
+  overflow-y: auto !important;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--secondary {
+  z-index: 100 !important;
+  position: sticky !important;
+  top: 0 !important;
+  height: calc(100vh - 80px) !important;
+  max-height: calc(100vh - 80px) !important;
+  overflow-y: auto !important;
+}
+
+/* Dark theme for TOC */
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__title {
+  color: #999999 !important;
+  border-bottom-color: #333333 !important;
+  background: #1a1a1a !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__item {
+  border-bottom-color: #333333 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link {
+  color: #cccccc !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav__link:hover {
+  background: #2a2a2a !important;
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav .md-nav__link {
+  color: #999999 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav .md-nav__link:hover {
+  background: #2a2a2a !important;
+  color: #cccccc !important;
+  border-left-color: #007acc !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav .md-nav .md-nav__link {
+  color: #777777 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--secondary .md-nav .md-nav .md-nav__link:hover {
+  background: #2a2a2a !important;
+  color: #aaaaaa !important;
+  border-left-color: #007acc !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__read-next {
+  border-top-color: #333333 !important;
+  background: #1a1a1a !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__read-next-title,
+[data-md-color-scheme="slate"] .md-nav__read-next-section {
+  color: #999999 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__read-next-link {
+  color: #cccccc !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__read-next-link:hover {
+  color: #007acc !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__title {
+  color: #888888 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link {
+  color: #cccccc !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link--active {
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav__link:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav .md-nav__item .md-nav__link {
+  color: #aaaaaa !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item .md-nav .md-nav__item .md-nav__link:hover {
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__title[for="__toc"] {
+  color: #cccccc !important;
+  border-top-color: #333333 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__title[for="__toc"]:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+.md-nav__list {
+  padding-left: 0 !important;
+}
+
+.md-sidebar__scrollwrap {
+  padding-left: 40px !important;
+}
+
+
+
+/* Mobile adjustments for sidebars */
+@media (max-width: 768px) {
+  .md-sidebar--primary,
+  .md-sidebar--secondary {
+    height: calc(100vh - 60px) !important;
+    max-height: calc(100vh - 60px) !important;
+  }
+  
+  
+  [data-md-color-scheme="slate"] .md-sidebar--primary,
+  [data-md-color-scheme="slate"] .md-sidebar--secondary {
+    height: calc(100vh - 60px) !important;
+    max-height: calc(100vh - 60px) !important;
+  }
+}
+
+
+
+
 /* Hide built‑with banner */
 .md-footer-meta {
   display: none;
@@ -271,6 +619,11 @@ body:has(.gonka-landing) .md-sidebar {
   display: none !important;
 }
 
+.md-sidebar {
+  top: 0 !important;
+  padding: 0 !important;
+}
+
 /* fallback for browsers that support :has() */
 body:has(.gonka-landing) .md-main__inner {
   margin-top: 0 !important;
@@ -301,7 +654,9 @@ body {
   display: none !important;
 }
 
-;
+.md-content__inner {
+  padding-top: 0 !important;
+}
 
 .gonka-landing {
   min-height: 100dvh;
@@ -2874,7 +3229,7 @@ body:has(.gonka-landing-2025) .md-header {
   padding: 40px;
   box-sizing: border-box;
   position: relative;
-  z-index: 40;
+  z-index: 10; /* Lower z-index than sidebar */
 }
 
 .footer-wrap {
