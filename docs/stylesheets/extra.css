@@ -10,6 +10,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Display:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* Override MkDocs accent color - change from teal to neutral */
+[data-md-color-accent=teal] {
+  --md-accent-fg-color: #6b7280 !important; /* Neutral gray instead of teal */
+  --md-accent-fg-color--transparent: #6b72801a !important;
+  --md-accent-bg-color: #fff !important;
+  --md-accent-bg-color--light: #ffffffb3 !important;
+}
+
+/* Dark theme accent color */
+[data-md-color-scheme="slate"][data-md-color-accent=teal] {
+  --md-accent-fg-color: #9ca3af !important; /* Lighter gray for dark theme */
+  --md-accent-fg-color--transparent: #9ca3af1a !important;
+  --md-accent-bg-color: #1e293b !important;
+  --md-accent-bg-color--light: #1e293bb3 !important;
+}
+
 /* Make MkDocs containers transparent */
 .md-container,
 .md-main,
@@ -184,7 +200,7 @@ a.md-logo img,
   top: 0 !important;
   height: calc(100vh - 80px) !important;
   max-height: calc(100vh - 80px) !important;
-  overflow-y: auto !important;
+  overflow: hidden !important;
 }
 
 /* Right sidebar (Table of Contents) */
@@ -194,7 +210,7 @@ a.md-logo img,
   top: 0 !important;
   height: calc(100vh - 80px) !important;
   max-height: calc(100vh - 80px) !important;
-  overflow-y: auto !important;
+  overflow: hidden !important;
 }
 
 /* Table of Contents styling */
@@ -388,7 +404,7 @@ a.md-logo img,
   top: 0 !important;
   height: calc(100vh - 80px) !important;
   max-height: calc(100vh - 80px) !important;
-  overflow-y: auto !important;
+  overflow: hidden !important;
 }
 
 [data-md-color-scheme="slate"] .md-sidebar--secondary {
@@ -397,7 +413,7 @@ a.md-logo img,
   top: 0 !important;
   height: calc(100vh - 80px) !important;
   max-height: calc(100vh - 80px) !important;
-  overflow-y: auto !important;
+  overflow: hidden !important;
 }
 
 /* Dark theme for TOC */
@@ -500,6 +516,236 @@ a.md-logo img,
 
 .md-sidebar__scrollwrap {
   padding-left: 40px !important;
+  height: 100% !important;
+  overflow-y: auto !important;
+}
+
+/* Global scrollbar styles - override all scrollbars */
+*::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #e0e0e0 !important;
+  border-radius: 3px !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0 !important;
+}
+
+/* Dark theme scrollbar */
+[data-md-color-scheme="slate"] *::-webkit-scrollbar-thumb {
+  background: #444444 !important;
+}
+
+[data-md-color-scheme="slate"] *::-webkit-scrollbar-thumb:hover {
+  background: #666666 !important;
+}
+
+/* Force override for all possible scrollable elements */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+div::-webkit-scrollbar,
+nav::-webkit-scrollbar,
+ul::-webkit-scrollbar,
+li::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+div::-webkit-scrollbar-track,
+nav::-webkit-scrollbar-track,
+ul::-webkit-scrollbar-track,
+li::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+div::-webkit-scrollbar-thumb,
+nav::-webkit-scrollbar-thumb,
+ul::-webkit-scrollbar-thumb,
+li::-webkit-scrollbar-thumb {
+  background: #e0e0e0 !important;
+  border-radius: 3px !important;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+div::-webkit-scrollbar-thumb:hover,
+nav::-webkit-scrollbar-thumb:hover,
+ul::-webkit-scrollbar-thumb:hover,
+li::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0 !important;
+}
+
+/* Dark theme for all elements */
+[data-md-color-scheme="slate"] html::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] body::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] div::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] nav::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] ul::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] li::-webkit-scrollbar-thumb {
+  background: #444444 !important;
+}
+
+[data-md-color-scheme="slate"] html::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] body::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] div::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] nav::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] ul::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] li::-webkit-scrollbar-thumb:hover {
+  background: #666666 !important;
+}
+
+/* Specific sidebar scrollbar styles - maximum specificity */
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar,
+.md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar,
+.md-sidebar--primary .md-sidebar__inner::-webkit-scrollbar,
+.md-sidebar--secondary .md-sidebar__inner::-webkit-scrollbar,
+.md-sidebar--primary .md-nav::-webkit-scrollbar,
+.md-sidebar--secondary .md-nav::-webkit-scrollbar,
+.md-sidebar--primary::-webkit-scrollbar,
+.md-sidebar--secondary::-webkit-scrollbar,
+.md-sidebar__scrollwrap::-webkit-scrollbar,
+.md-sidebar__inner::-webkit-scrollbar,
+.md-nav::-webkit-scrollbar,
+.md-sidebar::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-track,
+.md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-track,
+.md-sidebar--primary .md-sidebar__inner::-webkit-scrollbar-track,
+.md-sidebar--secondary .md-sidebar__inner::-webkit-scrollbar-track,
+.md-sidebar--primary .md-nav::-webkit-scrollbar-track,
+.md-sidebar--secondary .md-nav::-webkit-scrollbar-track,
+.md-sidebar--primary::-webkit-scrollbar-track,
+.md-sidebar--secondary::-webkit-scrollbar-track,
+.md-sidebar__scrollwrap::-webkit-scrollbar-track,
+.md-sidebar__inner::-webkit-scrollbar-track,
+.md-nav::-webkit-scrollbar-track,
+.md-sidebar::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+.md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+.md-sidebar--primary .md-sidebar__inner::-webkit-scrollbar-thumb,
+.md-sidebar--secondary .md-sidebar__inner::-webkit-scrollbar-thumb,
+.md-sidebar--primary .md-nav::-webkit-scrollbar-thumb,
+.md-sidebar--secondary .md-nav::-webkit-scrollbar-thumb,
+.md-sidebar--primary::-webkit-scrollbar-thumb,
+.md-sidebar--secondary::-webkit-scrollbar-thumb,
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+.md-sidebar__inner::-webkit-scrollbar-thumb,
+.md-nav::-webkit-scrollbar-thumb,
+.md-sidebar::-webkit-scrollbar-thumb {
+  background: #e0e0e0 !important;
+  border-radius: 3px !important;
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+.md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+.md-sidebar--primary .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+.md-sidebar--secondary .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+.md-sidebar--primary .md-nav::-webkit-scrollbar-thumb:hover,
+.md-sidebar--secondary .md-nav::-webkit-scrollbar-thumb:hover,
+.md-sidebar--primary::-webkit-scrollbar-thumb:hover,
+.md-sidebar--secondary::-webkit-scrollbar-thumb:hover,
+.md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+.md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+.md-nav::-webkit-scrollbar-thumb:hover,
+.md-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0 !important;
+}
+
+/* Dark theme scrollbar - maximum specificity */
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__inner::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__inner::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar--primary::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar--secondary::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar__inner::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-nav::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-sidebar::-webkit-scrollbar-thumb {
+  background: #444444 !important;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar--primary::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar--secondary::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-nav::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #666666 !important;
+}
+
+/* Additional MkDocs specific elements that might have scrollbars */
+.md-content__inner::-webkit-scrollbar,
+.md-typeset::-webkit-scrollbar,
+.md-content::-webkit-scrollbar,
+.md-main__inner::-webkit-scrollbar,
+.md-container::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.md-content__inner::-webkit-scrollbar-track,
+.md-typeset::-webkit-scrollbar-track,
+.md-content::-webkit-scrollbar-track,
+.md-main__inner::-webkit-scrollbar-track,
+.md-container::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.md-content__inner::-webkit-scrollbar-thumb,
+.md-typeset::-webkit-scrollbar-thumb,
+.md-content::-webkit-scrollbar-thumb,
+.md-main__inner::-webkit-scrollbar-thumb,
+.md-container::-webkit-scrollbar-thumb {
+  background: #e0e0e0 !important;
+  border-radius: 3px !important;
+}
+
+.md-content__inner::-webkit-scrollbar-thumb:hover,
+.md-typeset::-webkit-scrollbar-thumb:hover,
+.md-content::-webkit-scrollbar-thumb:hover,
+.md-main__inner::-webkit-scrollbar-thumb:hover,
+.md-container::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0 !important;
+}
+
+/* Dark theme for MkDocs specific elements */
+[data-md-color-scheme="slate"] .md-content__inner::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-typeset::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-content::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-main__inner::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"] .md-container::-webkit-scrollbar-thumb {
+  background: #444444 !important;
+}
+
+[data-md-color-scheme="slate"] .md-content__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-typeset::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-content::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-main__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"] .md-container::-webkit-scrollbar-thumb:hover {
+  background: #666666 !important;
 }
 
 
@@ -4157,6 +4403,36 @@ text-transform: uppercase !important;
   .social-card-empty {
     display: none !important;
   }
+}
+
+.admonition info {
+  border-color: #DBDBDB !important;
+  border-radius: 0 !important;
+}
+
+.admonition-title {
+  background-color: #DFF200 !important;
+}
+
+.md-typeset .admonition.info {
+  border-color: #DBDBDB !important;
+}
+
+.md-typeset .admonition {
+  border-radius: 0 !important;
+}
+
+.md-typeset .admonition.note {
+  border-color: #DBDBDB !important;
+}
+
+.md-typeset .admonition, .md-typeset details {
+  box-shadow: none !important;
+  border-width: 1px !important;
+}
+
+.note {
+  
 }
 
 
