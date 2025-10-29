@@ -2428,7 +2428,7 @@ body:has(.gonka-landing-2025) .md-header {
   }
   
   .super-content {
-    margin-top: 60px !important;
+    margin-top: 0 !important;
     flex-direction: column;
     gap: 40px;
   }
@@ -2527,10 +2527,11 @@ body:has(.gonka-landing-2025) .md-header {
   }
   
   .card {
-    min-height: 300px !important;
-    max-height: none !important;
+    min-height: auto !important;
+    max-height: fit-content !important;
     padding: 30px 20px !important;
     margin-bottom: 0 !important;
+    height: auto;
   }
   
   
@@ -2959,6 +2960,7 @@ body:has(.gonka-landing-2025) .md-header {
     min-width: auto !important;
     padding-top: 0 !important;
     flex-basis: auto !important;
+    align-items: center !important;
   }
   
   .footer-bottom-links {
@@ -3087,6 +3089,10 @@ body:has(.gonka-landing-2025) .md-header {
   display: flex;
   gap: 60px;
   align-items: center;
+}
+
+.footer-link:hover {
+  color: #dff200 !important;
 }
 
 /* ========== DARK THEME (Slate) ========== */
@@ -3805,7 +3811,7 @@ text-transform: uppercase !important;
     grid-template-columns: 1fr 1fr !important;
     gap: 20px;
     max-width: 100% !important;
-    padding: 0 20px !important;
+    padding: 0 !important;
     width: 100% !important;
   }
   
@@ -3853,8 +3859,10 @@ text-transform: uppercase !important;
   .say-section,
   .logos-section,
   .announcement-content,
-  .three-cards-section {
-    padding: 40px 20px !important;
+  .three-cards-section,
+  .hero-wrapper,
+  .mission-section {
+    padding: 20px !important;
   }
 
   .social-card {
