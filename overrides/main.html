@@ -1,98 +1,97 @@
 {#-
-    This file was automatically generated - do not edit
-  -#}
-  {% extends "base.html" %}
+This file was automatically generated - do not edit
+-#}
+{% extends "base.html" %}
 
-  {% block extrahead %}
-    {% set title = config.site_name %}
-    {% if page and page.title and not page.is_homepage %}
-      {% set title = config.site_name ~ " - " ~ page.title | striptags %}
-    {% endif %}
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ config.site_description }}">
-    <meta property="og:url" content="{{ page.canonical_url }}">
-    <meta property="og:image" content="{{ image }}">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1080">
-    <meta property="og:image:height" content="568">
-  {% endblock %}
+{% block extrahead %}
+{% set title = config.site_name %}
+{% if page and page.title and not page.is_homepage %}
+{% set title = config.site_name ~ " - " ~ page.title | striptags %}
+{% endif %}
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ config.site_description }}">
+<meta property="og:url" content="{{ page.canonical_url }}">
+<meta property="og:image" content="{{ image }}">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="568">
+{% endblock %}
 
 {% block header %}
 {# Custom header for all pages except homepage and announcement #}
 {% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
-  {# Homepage (index.md and zh/index.md) has header in content #}
+{# Homepage (index.md and zh/index.md) has header in content #}
 {% elif page and page.file and page.file.src_path == "announcement.md" %}
-  {# Announcement page has header in content via announcement.html template #}
+{# Announcement page has header in content via announcement.html template #}
 {% elif page %}
-  {# All other pages use custom header #}
-  <style>
-    /* Ensure header and footer are full width and override MkDocs styles */
-    .landing-header,
-    .landing-footer {
-      width: 100vw !important;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw !important;
-      margin-right: -50vw !important;
-      z-index: 100 !important;
-    }
-    
-    /* Override MkDocs container constraints but keep sidebar layout */
-    .md-container {
-      max-width: 100% !important;
-      padding: 0 !important;
-    }
-    
-    .md-main {
-      margin: 0 !important;
-      max-width: 100% !important;
-    }
-    
-    .md-main__inner {
-      margin: 0 !important;
-      max-width: 100% !important;
-    }
-    
-    .md-content {
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    
-    /* Hide only MkDocs default header, keep sidebars */
-    .md-header {
-      display: none !important;
-    }
-    
-    /* Ensure content has proper spacing with sidebars */
+{# All other pages use custom header #}
+<style>
+  /* Ensure header and footer are full width and override MkDocs styles */
+  .landing-header,
+  .landing-footer {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    z-index: 100 !important;
+  }
+
+  /* Override MkDocs container constraints but keep sidebar layout */
+  .md-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .md-main {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-main__inner {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide only MkDocs default header, keep sidebars */
+  .md-header {
+    display: none !important;
+  }
+
+  /* Ensure content has proper spacing with sidebars */
+  .md-content__inner {
+    padding: 20px !important;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
     .md-content__inner {
       padding: 20px !important;
     }
-    
-    /* Mobile adjustments */
-    @media (max-width: 768px) {
-      .md-content__inner {
-        padding: 20px !important;
-      }
-    }
-  </style>
-  {% include "partials/custom-header.html" %}
+  }
+</style>
+{% include "partials/custom-header.html" %}
 {% endif %}
 {% endblock %}
 
 {# --- hide the horizontal nav-tabs row on all pages ----------------------- #}
 {% block tabs %}{% endblock %}
 
-{# --- Custom footer for all pages except homepage and announcement ----------------------- #}
+{# --- Custom footer only for homepage and announcement ----------------------- #}
 {% block footer %}
 {% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
-  {# Homepage (index.md and zh/index.md) has footer in content #}
+{# Homepage (index.md and zh/index.md) has footer in content #}
 {% elif page and page.file and page.file.src_path == "announcement.md" %}
-  {# Announcement page has footer in content via announcement.html template #}
-{% elif page %}
-  {# All other pages use custom footer #}
-  {% include "partials/custom-footer.html" %}
+{# Announcement page has footer in content via announcement.html template #}
+{% else %}
+{# All documentation pages have no footer #}
 {% endif %}
 {% endblock %}
