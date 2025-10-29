@@ -1,0 +1,21 @@
+{% macro render(nav_item) %}
+  {% if nav_item %}
+    {% for item in nav_item %}
+      {% if item.children %}
+        {% for child in item.children %}
+          <li class="md-nav__item">
+            <a href="{{ child.url | url }}" class="md-nav__link{% if page and child == page %} md-nav__link--active{% endif %}">
+              {{ child.title }}
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+        <li class="md-nav__item">
+          <a href="{{ item.url | url }}" class="md-nav__link{% if page and item == page %} md-nav__link--active{% endif %}">
+            {{ item.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endmacro %}

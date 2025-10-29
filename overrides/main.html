@@ -19,7 +19,6 @@ This file was automatically generated - do not edit
 {% endblock %}
 
 {% block header %}
-{# Custom header for all pages except homepage and announcement #}
 {% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
 {# Homepage (index.md and zh/index.md) has header in content #}
 {% elif page and page.file and page.file.src_path == "announcement.md" %}
@@ -82,16 +81,16 @@ This file was automatically generated - do not edit
 {% endif %}
 {% endblock %}
 
-{# --- hide the horizontal nav-tabs row on all pages ----------------------- #}
 {% block tabs %}{% endblock %}
 
-{# --- Custom footer only for homepage and announcement ----------------------- #}
+{# --- Custom footer for all pages except homepage and announcement ----------------------- #}
 {% block footer %}
 {% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
 {# Homepage (index.md and zh/index.md) has footer in content #}
 {% elif page and page.file and page.file.src_path == "announcement.md" %}
 {# Announcement page has footer in content via announcement.html template #}
-{% else %}
-{# All documentation pages have no footer #}
+{% elif page %}
+{# All other pages use custom footer #}
+{% include "partials/custom-footer.html" %}
 {% endif %}
 {% endblock %}
