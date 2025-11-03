@@ -7,7 +7,7 @@ template: announcement.html
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
     <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-    <button class="banner-learn-more">learn more</button>
+    <a href="/announcement" class="banner-learn-more">learn more</a>
     <button class="banner-close">
       <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
@@ -105,7 +105,7 @@ template: announcement.html
             </div>
           </div>
         </div>
-        <button class="join-btn">join today</button>
+        <a href="https://x.com/gonka_ai" target="_blank" class="join-btn">join today</a>
       </div>
     </div>
 
@@ -200,7 +200,7 @@ template: announcement.html
             </div>
           </div>
           
-          <button class="mobile-join-btn">join today</button>
+        <a href="https://x.com/gonka_ai" target="_blank" class="mobile-join-btn">join today</a>
         </div>
       </div>
     </div>
@@ -254,36 +254,36 @@ template: announcement.html
       <div class="footer-links">
         <div class="footer-col">
           <h4>Protocol</h4>
-          <a href="#">Whitepaper</a>
-          <a href="#">Transformer-Based-Proof-of-Work</a>
+          <a href="/whitepaper.pdf" target="_blank">Whitepaper</a>
+        <a href="/pow-security-analysis.pdf" target="_blank">Transformer-Based-Proof-of-Work</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
-          <a href="#">Gonka Protocol License</a>
-          <a href="#">Patents</a>
+          <a href="/protocol-license.pdf" target="_blank">Gonka Protocol License</a>
+              <!-- <a href="/patents.pdf" target="_blank">Patents</a> -->
         </div>
       </div>
     </div>
           <div class="footer-bottom">
-        <div class="footer-socials">
-          <a href="#" class="footer-social" aria-label="Github">
-            <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
-          </a>
-          <a href="#" class="footer-social" aria-label="Discord">
-            <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
-          </a>
-          <a href="#" class="footer-social" aria-label="Mail">
-            <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
-          </a>
-          <a href="#" class="footer-social" aria-label="X">
-            <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
-          </a>
-        </div>
+          <div class="footer-socials">
+            <a href="https://github.com/gonka-ai/gonka/" class="footer-social" target="_blank" aria-label="Github">
+              <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
+            </a>
+            <a href="https://discord.com/invite/RADwCT2U6R" class="footer-social" target="_blank" aria-label="Discord">
+              <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
+            </a>
+            <a href="mailto:hello@productscience.ai" class="footer-social" target="_blank" aria-label="Mail">
+              <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
+            </a>
+            <a href="https://x.com/gonka_ai" class="footer-social" target="_blank" aria-label="X">
+              <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
+            </a>
+          </div>
 
         <div class="footer-bottom-links">
-          <a href="#" class="footer-link">Help</a>
-          <a href="#" class="footer-link">Transactions & Governance</a>
-          <a href="#" class="footer-link">Terms & Policies</a>
+      <a href="/help" class="footer-link">Help</a>
+      <a href="/transactions-and-governance" class="footer-link">Transactions & Governance</a>
+      <!-- <a href="#" class="footer-link">Terms & Policies</a> -->
           <div>
         </div>
 

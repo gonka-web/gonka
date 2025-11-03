@@ -203,6 +203,12 @@ a.md-logo img,
   overflow: hidden !important;
 }
 
+@media (max-width: 768px) {
+  .md-sidebar--primary {
+display: none !important;
+  }
+}
+
 /* Right sidebar (Table of Contents) */
 .md-sidebar--secondary {
   z-index: 100 !important;
@@ -3052,9 +3058,13 @@ body:has(.gonka-landing-2025) .md-header {
   font-size: 75px !important;
   line-height: 1.1 !important;
   text-transform: uppercase;
+  word-break:normal;
+  overflow-wrap: normal;
   color: #242424;
   margin: 0 !important;
 }
+
+
 
 .super-subtitle {
   display: flex;
@@ -3374,7 +3384,8 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .social-card {
-  background: #ebebeb;
+
+  background: #dff200;
   border: 1px solid #dbdbdb;
   border-radius: 1px;
   width: 200px;
@@ -3402,7 +3413,7 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .social-card:hover {
-  background: #dff200;
+  background: #ebebeb;
   border: 1px solid transparent;
   clip-path: polygon(0% 0%, 96.25% 0%, 100% 3.75%, 100% 100%, 0% 100%);
   transition: all 0.3s ease-in-out;
@@ -4500,5 +4511,16 @@ text-transform: uppercase !important;
 
   .social-card {
     min-height: 124px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .super-title {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+
+  .super-subtitle {
+    gap: 24px !important;
   }
 }
