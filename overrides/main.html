@@ -16,6 +16,64 @@ This file was automatically generated - do not edit
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="568">
+<!-- Prevent theme flash: apply theme immediately before render -->
+<script>
+  (function () {
+    try {
+      var savedScheme = localStorage.getItem('data-md-color-scheme');
+      if (savedScheme) {
+        // Apply to both html and body immediately
+        document.documentElement.setAttribute('data-md-color-scheme', savedScheme);
+        if (document.body) {
+          document.body.setAttribute('data-md-color-scheme', savedScheme);
+        } else {
+          // If body doesn't exist yet, wait for it
+          document.addEventListener('DOMContentLoaded', function () {
+            document.body.setAttribute('data-md-color-scheme', savedScheme);
+            // Trigger Material theme update if function exists
+            if (typeof __md_set !== 'undefined') {
+              __md_set('__palette', { color: { scheme: savedScheme } });
+            }
+          });
+        }
+        // Try to trigger Material theme update immediately
+        if (typeof __md_set !== 'undefined') {
+          __md_set('__palette', { color: { scheme: savedScheme } });
+        }
+      } else {
+        // Default to light theme
+        var defaultScheme = 'default';
+        document.documentElement.setAttribute('data-md-color-scheme', defaultScheme);
+        if (document.body) {
+          document.body.setAttribute('data-md-color-scheme', defaultScheme);
+        }
+      }
+    } catch (e) { }
+  })();
+</script>
+<style>
+  /* Prevent white flash on page load - apply immediately */
+  html:not([data-md-color-scheme]) {
+    background-color: #fff;
+  }
+
+  html[data-md-color-scheme="slate"] {
+    background-color: #1A1A1A;
+  }
+
+  html[data-md-color-scheme="slate"] body {
+    background-color: #1A1A1A;
+  }
+
+  /* Force theme colors to apply immediately */
+  html[data-md-color-scheme="slate"] {
+    color-scheme: dark;
+  }
+
+  html[data-md-color-scheme="default"] {
+    color-scheme: light;
+  }
+</style>
 {% endblock %}
 
 {% block header %}
@@ -80,7 +138,7 @@ This file was automatically generated - do not edit
   /* Mobile adjustments */
   @media (max-width: 768px) {
     .md-content__inner {
-      padding: 20px !important;
+      padding: 20px 0 !important;
     }
   }
 </style>

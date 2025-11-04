@@ -1,60 +1,61 @@
 {% if page and page.toc %}
-  <nav class="md-nav md-nav--secondary" aria-label="{{ lang.t('toc.title') }}">
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      TABLE OF CONTENTS
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      {% for toc_item in page.toc %}
-        <li class="md-nav__item">
-          {% if toc_item.children %}
-            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_{{ loop.index }}" checked>
-            <label class="md-nav__link" for="__toc_{{ loop.index }}">
-              {{ toc_item.title }}
+<nav class="md-nav md-nav--secondary" aria-label="{{ lang.t('toc.title') }}">
+  <label class="md-nav__title" for="__toc">
+    <span class="md-nav__icon md-icon"></span>
+    TABLE OF CONTENTS
+  </label>
+  <ul class="md-nav__list" data-md-scrollfix>
+    {% for toc_item in page.toc %}
+    <li class="md-nav__item">
+      {% if toc_item.children %}
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_{{ loop.index }}" checked>
+      <label class="md-nav__link" for="__toc_{{ loop.index }}">
+        {{ toc_item.title }}
+      </label>
+      <nav class="md-nav" aria-label="{{ toc_item.title }}">
+        <ul class="md-nav__list">
+          {% for toc_item_2 in toc_item.children %}
+          <li class="md-nav__item">
+            {% if toc_item_2.children %}
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_{{ loop.index }}_{{ loop.index }}"
+              checked>
+            <label class="md-nav__link" for="__toc_{{ loop.index }}_{{ loop.index }}">
+              {{ toc_item_2.title }}
             </label>
-            <nav class="md-nav" aria-label="{{ toc_item.title }}">
+            <nav class="md-nav" aria-label="{{ toc_item_2.title }}">
               <ul class="md-nav__list">
-                {% for toc_item_2 in toc_item.children %}
-                  <li class="md-nav__item">
-                    {% if toc_item_2.children %}
-                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_{{ loop.index }}_{{ loop.index }}" checked>
-                      <label class="md-nav__link" for="__toc_{{ loop.index }}_{{ loop.index }}">
-                        {{ toc_item_2.title }}
-                      </label>
-                      <nav class="md-nav" aria-label="{{ toc_item_2.title }}">
-                        <ul class="md-nav__list">
-                          {% for toc_item_3 in toc_item_2.children %}
-                            <li class="md-nav__item">
-                              <a href="{{ toc_item_3.url }}" class="md-nav__link">
-                                {{ toc_item_3.title }}
-                              </a>
-                            </li>
-                          {% endfor %}
-                        </ul>
-                      </nav>
-                    {% else %}
-                      <a href="{{ toc_item_2.url }}" class="md-nav__link">
-                        {{ toc_item_2.title }}
-                      </a>
-                    {% endif %}
-                  </li>
+                {% for toc_item_3 in toc_item_2.children %}
+                <li class="md-nav__item">
+                  <a href="{{ toc_item_3.url }}" class="md-nav__link">
+                    {{ toc_item_3.title }}
+                  </a>
+                </li>
                 {% endfor %}
               </ul>
             </nav>
-          {% else %}
-            <a href="{{ toc_item.url }}" class="md-nav__link">
-              {{ toc_item.title }}
+            {% else %}
+            <a href="{{ toc_item_2.url }}" class="md-nav__link">
+              {{ toc_item_2.title }}
             </a>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-    
-    <!-- READ NEXT section -->
-    <div class="md-nav__read-next">
-      <div class="md-nav__read-next-title">READ NEXT:</div>
-      <div class="md-nav__read-next-section">RUNNER</div>
-      <a href="#" class="md-nav__read-next-link">Quickstart</a>
-    </div>
-  </nav>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {% else %}
+      <a href="{{ toc_item.url }}" class="md-nav__link">
+        {{ toc_item.title }}
+      </a>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+
+  <!-- READ NEXT section -->
+  <div class="md-nav__read-next">
+    <div class="md-nav__read-next-title">READ NEXT:</div>
+    <!-- <div class="md-nav__read-next-section">RUNNER</div> -->
+    <a href="/developer/quickstart" class="md-nav__read-next-link">Quickstart</a>
+  </div>
+</nav>
 {% endif %}

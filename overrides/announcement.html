@@ -3,6 +3,61 @@ Gonka Announcement Page
 -#}
 {% extends "base.html" %}
 
+{% block extrahead %}
+<!-- Prevent theme flash: apply theme immediately before render -->
+<script>
+  (function () {
+    try {
+      var savedScheme = localStorage.getItem('data-md-color-scheme');
+      if (savedScheme) {
+        document.documentElement.setAttribute('data-md-color-scheme', savedScheme);
+        if (document.body) {
+          document.body.setAttribute('data-md-color-scheme', savedScheme);
+        } else {
+          document.addEventListener('DOMContentLoaded', function () {
+            document.body.setAttribute('data-md-color-scheme', savedScheme);
+            if (typeof __md_set !== 'undefined') {
+              __md_set('__palette', { color: { scheme: savedScheme } });
+            }
+          });
+        }
+        if (typeof __md_set !== 'undefined') {
+          __md_set('__palette', { color: { scheme: savedScheme } });
+        }
+      } else {
+        var defaultScheme = 'default';
+        document.documentElement.setAttribute('data-md-color-scheme', defaultScheme);
+        if (document.body) {
+          document.body.setAttribute('data-md-color-scheme', defaultScheme);
+        }
+      }
+    } catch (e) { }
+  })();
+</script>
+<style>
+  /* Prevent white flash on page load - apply immediately */
+  html:not([data-md-color-scheme]) {
+    background-color: #fff;
+  }
+
+  html[data-md-color-scheme="slate"] {
+    background-color: #1A1A1A;
+  }
+
+  html[data-md-color-scheme="slate"] body {
+    background-color: #1A1A1A;
+  }
+
+  html[data-md-color-scheme="slate"] {
+    color-scheme: dark;
+  }
+
+  html[data-md-color-scheme="default"] {
+    color-scheme: light;
+  }
+</style>
+{% endblock %}
+
 {# Hide header and navigation completely #}
 {% block header %}{% endblock %}
 {% block tabs %}{% endblock %}

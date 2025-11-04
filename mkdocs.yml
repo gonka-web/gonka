@@ -101,6 +101,7 @@ extra_javascript:
   - javascripts/banner-close.js
   - javascripts/mobile-menu.js
   - javascripts/announcement.js
+  - javascripts/code-copy.js
 
 plugins:
   - minify:

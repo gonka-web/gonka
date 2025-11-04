@@ -7,7 +7,7 @@ template: announcement.html
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
     <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-    <a href="/announcement" class="banner-learn-more">learn more</a>
+    <a href="https://discord.com/invite/RADwCT2U6R" target="_blank" class="banner-learn-more">learn more</a>
     <button class="banner-close">
       <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
@@ -17,10 +17,10 @@ template: announcement.html
   <header class="landing-header">
     <div class="header-wrap">
     <div class="nav-section">
-      <div class="logo-section">
+      <a href="/" class="logo-section">
         <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
         <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
-      </div>
+      </a>
 
       <nav class="main-nav">
         <div class="nav-item-dropdown">
@@ -249,7 +249,7 @@ template: announcement.html
   <footer class="landing-footer">
     <div class="footer-wrap">
       <div class="footer-brand">
-        <span class="footer-logo">Gonka</span>
+        <a href="/" class="footer-logo">Gonka</a>
       </div>
       <div class="footer-links">
         <div class="footer-col">
