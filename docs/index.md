@@ -3,7 +3,7 @@
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
     <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-    <button class="banner-learn-more">learn more</button>
+    <a href=https://discord.com/invite/RADwCT2U6R" target="_blank" class="banner-learn-more">learn more</a>
     <button class="banner-close">
       <img src="images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
@@ -13,10 +13,10 @@
   <header class="landing-header">
     <div class="header-wrap">
     <div class="nav-section">
-      <div class="logo-section">
+      <a href="/" class="logo-section">
         <img src="images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
         <img src="images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
-      </div>
+      </a>
 
       <nav class="main-nav">
         <div class="nav-item-dropdown">
@@ -29,7 +29,7 @@
             <a href="/developer/details" class="dropdown-link">Details</a>
           </div>
         </div>
-        
+
         <div class="nav-item-dropdown">
           <a href="#" class="nav-item" data-dropdown="miners">
             <span class="nav-text">miners</span>
@@ -48,7 +48,7 @@
             <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
           </div>
         </div>
-        
+
         <div class="nav-item-dropdown">
           <a href="#" class="nav-item" data-dropdown="tokenomics">
             <span class="nav-text">tokenomics</span>
@@ -58,7 +58,7 @@
             <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
           </div>
         </div>
-        
+
         <a href="/introduction" class="nav-item nav-item-link">
           <span class="nav-text">documentations</span>
           <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,12 +87,12 @@
         </div>
         <div class="buy-gnk-wrapper">
           <button class="buy-gnk-btn" onclick="return false;">
-            buy gnk 
+            buy gnk
             <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
             </svg>
           </button>
-          
+
           <div class="wallet-tooltip">
             <img src="images/wallet.svg" alt="Wallet" class="wallet-icon" />
             <div class="wallet-text">
@@ -101,7 +101,7 @@
             </div>
           </div>
         </div>
-        <button class="join-btn">join today</button>
+        <a href="https://x.com/gonka_ai" target="_blank" class="join-btn">join today</a>
       </div>
     </div>
 
@@ -196,7 +196,7 @@
             </div>
           </div>
           
-          <button class="mobile-join-btn">join today</button>
+        <a href="https://x.com/gonka_ai" target="_blank" class="mobile-join-btn">join today</a>
         </div>
       </div>
     </div>
@@ -279,6 +279,7 @@
     <p>AI <span class="tooltip-text" data-tooltip="AI represents artificial intelligence technology that serves humanity" data-scroll="#cards-title">of the people</span>,<br/><span class="tooltip-text" data-tooltip="Built and developed by community members, miners, and contributors worldwide" data-scroll="#cards-title">by the people</span>, <span class="tooltip-text" data-tooltip="AI for the people – serving the needs and well-being of everyone, not the narrow interests of a few" data-scroll="#cards-title">for the people</span></p>
 
     <span class="scroll-text">Scroll down \\\</span>
+
   </div>
 
   <!-- Mission Section -->
@@ -320,6 +321,7 @@
         </p>
       </div>
     </div>
+
   </section>
 
   <!-- Three Cards Section -->
@@ -356,7 +358,7 @@
   <!-- Join Today Section -->
   <section class="join-section">
     <h2 class="join-title">Gonka — AI that<br/>belongs to everyone</h2>
-    <button class="join-cta">join today</button>
+     <a href="https://x.com/gonka_ai" target="_blank" class="join-cta">join today</a>
   </section>
 
   <!-- SAY Section -->
@@ -365,7 +367,7 @@
       <h2>SAY</h2>
       <div class="say-tabs">
         <button class="say-tab active">social</button>
-        <button class="say-tab">announcement</button>
+        <a href="/announcement" class="say-tab">announcement</a>
       </div>
     </div>
     
@@ -417,12 +419,12 @@
           <img src="images/partners/block.svg" alt="6block" width="90" height="32" />
         </div>
       </div>
-      <div class="logos-group">
+      <!-- <div class="logos-group">
         <span class="logos-label">Exchange Partners</span>
         <div class="logos-items">
           <img src="images/partners/uphold.svg" alt="Uphold" width="90" height="32" />
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="logos-row">
       <div class="logos-group">
@@ -446,43 +448,44 @@
   <footer class="landing-footer">
     <div class="footer-wrap">
       <div class="footer-brand">
-        <span class="footer-logo">Gonka</span>
+        <a href="/" class="footer-logo">Gonka</a>
       </div>
       <div class="footer-links">
         <div class="footer-col">
           <h4>Protocol</h4>
-          <a href="#">Whitepaper</a>
-          <a href="#">Transformer-Based-Proof-of-Work</a>
+            <a href="/whitepaper.pdf" target="_blank">Whitepaper</a>
+            <a href="/pow-security-analysis.pdf" target="_blank">Transformer-Based-Proof-of-Work</a>
         </div>
         <div class="footer-col">
           <h4>Legal</h4>
-          <a href="#">Gonka Protocol License</a>
-          <a href="#">Patents</a>
+          <a href="/protocol-license.pdf" target="_blank">Gonka Protocol License</a>
+          <a href="/patents.pdf" target="_blank">Patents</a>
         </div>
       </div>
     </div>
           <div class="footer-bottom">
-        <div class="footer-socials">
-          <a href="#" class="footer-social" aria-label="Github">
-            <img src="images/icons/github.svg" alt="Github" width="25" height="25" />
-          </a>
-          <a href="#" class="footer-social" aria-label="Discord">
-            <img src="images/icons/discord.svg" alt="Discord" width="25" height="25" />
-          </a>
-          <a href="#" class="footer-social" aria-label="Mail">
-            <img src="images/icons/mail.svg" alt="Mail" width="25" height="25" />
-          </a>
-          <a href="#" class="footer-social" aria-label="X">
-            <img src="images/icons/twitter.svg" alt="X" width="25" height="25" />
-          </a>
-        </div>
+          <div class="footer-socials">
+            <a href="https://github.com/gonka-ai/gonka/" class="footer-social" target="_blank" aria-label="Github">
+              <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
+            </a>
+            <a href="https://discord.com/invite/RADwCT2U6R" class="footer-social" target="_blank" aria-label="Discord">
+              <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
+            </a>
+            <a href="mailto:hello@productscience.ai" class="footer-social" target="_blank" aria-label="Mail">
+              <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
+            </a>
+            <a href="https://x.com/gonka_ai" class="footer-social" target="_blank" aria-label="X">
+              <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
+            </a>
+          </div>
 
         <div class="footer-bottom-links">
-          <a href="#" class="footer-link">Help</a>
-          <a href="#" class="footer-link">Transactions & Governance</a>
-          <a href="#" class="footer-link">Terms & Policies</a>
+      <a href="/help" class="footer-link">Help</a>
+      <a href="/transactions-and-governance" class="footer-link">Transactions & Governance</a>
+      <!-- <a href="#" class="footer-link">Terms & Policies</a> -->
           <div>
         </div>
+
   </footer>
 
 </div>
