@@ -448,7 +448,10 @@
   <footer class="landing-footer">
     <div class="footer-wrap">
       <div class="footer-brand">
-        <a href="/" class="footer-logo">Gonka</a>
+        <a href="/" class="footer-logo">
+          <img src="/images/icons/gonka-logo.svg" alt="Gonka" width="99" height="23" />
+        </a>
+        <a href="https://what-is-gonka.hashnode.dev/" target="_blank" class="footer-link-blog">Blog</a>
       </div>
       <div class="footer-links">
         <div class="footer-col">
@@ -476,6 +479,9 @@
             </a>
             <a href="https://x.com/gonka_ai" class="footer-social" target="_blank" aria-label="X">
               <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
+            </a>
+            <a href="https://t.me/Gonka_AI" class="footer-social" target="_blank" aria-label="Telegram">
+              <img src="/images/icons/telegram.svg" alt="Telegram" width="25" height="25" />
             </a>
           </div>
 

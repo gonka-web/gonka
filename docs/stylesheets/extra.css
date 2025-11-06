@@ -20,10 +20,10 @@ html[data-md-color-scheme="slate"] body {
 }
 
 /* == Google Fonts Imports ====================================== */
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter+Display:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
 /* Override MkDocs accent color - change from teal to neutral */
 [data-md-color-accent=teal] {
@@ -233,6 +233,10 @@ display: none !important;
   max-height: calc(100vh - 80px) !important;
   overflow: hidden !important;
 }
+
+/* .md-sidebar--secondary * {
+  font-family: 'IBM Plex Mono', monospace !important;
+} */
 
 /* Table of Contents styling */
 .md-nav--secondary .md-nav__title {
@@ -1770,6 +1774,7 @@ body:has(.gonka-landing-2025) .md-header {
 
 /* Navigation text */
 .nav-text {
+  font-family: 'IBM Plex Mono', monospace;
   transition: text-decoration 0.3s ease;
 }
 
@@ -2518,7 +2523,7 @@ body:has(.gonka-landing-2025) .md-header {
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #242424;
+  color: #242424 !important;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -3389,7 +3394,7 @@ body:has(.gonka-landing-2025) .md-header {
   height: 40px;
   border: 1px solid #000;
   background: white;
-  color: #242424;
+  color: #242424 !important;
   cursor: pointer;
 }
 
@@ -3615,25 +3620,50 @@ body:has(.gonka-landing-2025) .md-header {
 .footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
 }
 
-.footer-logo {
-  font-family: 'PP Formula', 'Geist', sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  color: #f2f2f3;
+@media (max-width: 1023px) {
+  .footer-brand {
+    align-items: center;
+  }
+}
+
+.footer-brand-link {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  line-height: 16px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #b2b2b2 !important;
+  text-decoration: none !important;
+  margin-top: 8px;
+  transition: color 0.2s;
+}
+
+.footer-brand-link:hover {
+  color: #dff200 !important;
+}
+
+/* .footer-logo {
   position: absolute;
   top: 40px;
   left: 40px;
   text-decoration: none;
   cursor: pointer;
-  transition: color 0.2s;
+  display: inline-block;
+  transition: opacity 0.2s;
+} */
+
+.footer-logo img {
+  display: block;
+  width: auto;
+  height: 23px;
 }
 
 .footer-logo:hover {
-  color: #dff200;
+  opacity: 0.8;
 }
 
 .footer-socials {
@@ -3686,8 +3716,8 @@ body:has(.gonka-landing-2025) .md-header {
 
 .footer-col h4 {
   font-family: 'IBM Plex Mono', monospace !important;
-  font-weight: 600 !important;
-  font-size: 12px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
   line-height: 16px !important;
   letter-spacing: 0.05em !important;
   text-transform: uppercase !important;
@@ -3738,6 +3768,20 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .footer-link:hover {
+  color: #dff200 !important;
+}
+
+.footer-link-blog {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  color: #ffffff !important;
+}
+
+.footer-link-blog:hover {
   color: #dff200 !important;
 }
 
@@ -3915,7 +3959,7 @@ body:has(.gonka-landing-2025) .md-header {
 
 /* Make social icons white in dark theme - default state */
 [data-md-color-scheme="slate"] .social-card img {
-  filter: brightness(0) invert(1) !important;
+  filter: invert(1) brightness(1.2) !important;
   transition: filter 0.3s ease-in-out;
 }
 
@@ -3993,7 +4037,7 @@ body:has(.gonka-landing-2025) .md-header {
 
 /* Dark Theme: Social icons in SAY section */
 [data-md-color-scheme="slate"] .social-card img {
-  filter: brightness(0) invert(1);
+  filter: invert(1) brightness(1.2);
 }
 
 /* Dark Theme: Partner logos */
@@ -4619,3 +4663,4 @@ text-transform: uppercase !important;
 .md-typeset code {
   padding-right: 40px !important;
 }
+
