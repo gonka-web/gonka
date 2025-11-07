@@ -1,5 +1,13 @@
 // Language Selector Functionality
+// Only works on documentation pages (not on homepage or announcement page)
 document.addEventListener('DOMContentLoaded', function () {
+  // Check if we're on a documentation page (has custom-header with language selector)
+  // Homepage and announcement pages don't have language selector
+  const languageBtn = document.getElementById('language-btn');
+  if (!languageBtn) {
+    return; // Exit if not on documentation page (no language selector)
+  }
+
   function getCurrentLanguage() {
     const path = window.location.pathname;
     if (path.startsWith('/zh/')) {
@@ -32,8 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Desktop languageselector
-  const languageBtn = document.getElementById('language-btn');
+  // Desktop language selector
   const languageDropdown = document.getElementById('language-dropdown');
   const languageOptions = document.querySelectorAll('.language-option');
 

@@ -103,6 +103,7 @@ extra_javascript:
   - javascripts/announcement.js
   - javascripts/code-copy.js
   - javascripts/language-selector.js
+  - javascripts/header-links.js
 
 plugins:
   - minify:
