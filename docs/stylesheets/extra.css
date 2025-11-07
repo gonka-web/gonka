@@ -210,7 +210,7 @@ a.md-logo img,
 .md-sidebar--primary {
   width: 280px !important;
   min-width: 280px !important;
-  z-index: 100 !important;
+  z-index: 99 !important;
   position: sticky !important;
   top: 0 !important;
   height: calc(100vh - 80px) !important;
@@ -226,7 +226,7 @@ display: none !important;
 
 /* Right sidebar (Table of Contents) */
 .md-sidebar--secondary {
-  z-index: 100 !important;
+  z-index: 99 !important;
   position: sticky !important;
   top: 0 !important;
   height: calc(100vh - 80px) !important;
@@ -424,7 +424,7 @@ display: none !important;
 
 /* Dark theme adjustments */
 [data-md-color-scheme="slate"] .md-sidebar--primary {
-  z-index: 100 !important;
+  z-index: 99 !important;
   position: sticky !important;
   top: 0 !important;
   height: calc(100vh - 80px) !important;
@@ -889,7 +889,7 @@ body:has(.gonka-landing) .md-sidebar {
 }
 
 .md-sidebar {
-  top: 0 !important;
+  top: 20px !important;
   padding: 0 !important;
 }
 
@@ -2169,6 +2169,134 @@ body:has(.gonka-landing-2025) .md-header {
   padding: 0;
 }
 
+@media screen and (max-width: 1023px) {
+  .mobile-menu-actions {
+flex-direction: column;
+  }
+}
+
+/* Mobile Language Selector */
+.mobile-menu-actions-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.mobile-language-selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-language-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424;
+  /* background: #ffffff; */
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  padding: 3px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  min-width: 60px;
+  justify-content: space-between;
+}
+
+.mobile-language-btn:hover {
+  border-color: #00bda4;
+}
+
+.mobile-language-arrow {
+  width: 8px;
+  height: 6px;
+  color: #242424;
+  transition: transform 0.2s;
+}
+
+.mobile-language-selector.active .mobile-language-arrow {
+  transform: rotate(180deg);
+}
+
+.mobile-language-dropdown {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  min-width: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s;
+  z-index: 1000;
+}
+
+.mobile-language-selector.active .mobile-language-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mobile-language-option {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.mobile-language-option:first-child {
+  border-radius: 2px 2px 0 0;
+}
+
+.mobile-language-option:last-child {
+  border-radius: 0 0 2px 2px;
+}
+
+.mobile-language-option:hover {
+  background: #f5f5f5;
+}
+
+/* Dark theme mobile language selector */
+[data-md-color-scheme="slate"] .mobile-language-btn {
+  background: #242424;
+  border-color: #3a3a3a;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .mobile-language-btn:hover {
+  border-color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .mobile-language-arrow {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .mobile-language-dropdown {
+  background: #242424;
+  border-color: #3a3a3a;
+}
+
+[data-md-color-scheme="slate"] .mobile-language-option {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .mobile-language-option:hover {
+  background: #3a3a3a;
+}
+
 .mobile-theme-toggle {
   display: flex;
   height: 30px;
@@ -2354,6 +2482,121 @@ body:has(.gonka-landing-2025) .md-header {
   .header-actions {
     gap: 18px;
   }
+}
+
+/* Language Selector */
+.language-selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.language-btn {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  padding: 3px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  min-width: 60px;
+  justify-content: space-between;
+}
+
+.language-btn:hover {
+  border-color: #00bda4;
+}
+
+.language-arrow {
+  width: 8px;
+  height: 6px;
+  color: #242424;
+  transition: transform 0.2s;
+}
+
+.language-selector.active .language-arrow {
+  transform: rotate(180deg);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 2px;
+  min-width: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s;
+  z-index: 1000;
+}
+
+.language-selector.active .language-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.language-option {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  color: #242424;
+  padding: 8px 12px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.language-option:first-child {
+  border-radius: 2px 2px 0 0;
+}
+
+.language-option:last-child {
+  border-radius: 0 0 2px 2px;
+}
+
+.language-option:hover {
+  background: #f5f5f5;
+}
+
+/* Dark theme language selector */
+[data-md-color-scheme="slate"] .language-btn {
+  background: #242424;
+  border-color: #3a3a3a;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .language-btn:hover {
+  border-color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .language-arrow {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .language-dropdown {
+  background: #242424;
+  border-color: #3a3a3a;
+}
+
+[data-md-color-scheme="slate"] .language-option {
+  color: #ffffff;
+}
+
+[data-md-color-scheme="slate"] .language-option:hover {
+  background: #3a3a3a;
 }
 
 .theme-toggle {
