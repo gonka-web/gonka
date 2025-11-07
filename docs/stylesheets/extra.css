@@ -2169,18 +2169,18 @@ body:has(.gonka-landing-2025) .md-header {
   padding: 0;
 }
 
-@media screen and (max-width: 1023px) {
+/* @media screen and (max-width: 1023px) {
   .mobile-menu-actions {
 flex-direction: column;
   }
-}
+} */
 
 /* Mobile Language Selector */
 .mobile-menu-actions-top {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .mobile-language-selector {
@@ -2226,7 +2226,7 @@ flex-direction: column;
 .mobile-language-dropdown {
   position: absolute;
   bottom: calc(100% + 8px);
-  right: 0;
+  left: 0;
   background: #ffffff;
   border: 1px solid #dbdbdb;
   border-radius: 2px;
