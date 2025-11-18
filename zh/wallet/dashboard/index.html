@@ -1,0 +1,861 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn to configure and use Gonka network">
+      
+      
+      
+        <link rel="canonical" href="https://gonka.me/zh/wallet/dashboard/">
+      
+      
+        <link rel="prev" href="../../host/optional-ssl-setup/">
+      
+      
+        <link rel="next" href="../wallet-and-transfer-guide/">
+      
+      
+        
+          <link rel="alternate" href="../../../wallet/dashboard/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../../../images/01-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>仪表盘 - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Manrope";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JWVG5X6CY5"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JWVG5X6CY5",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JWVG5X6CY5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    
+      
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" - 仪表盘">
+    <meta property="og:description" content="Learn to configure and use Gonka network">
+    <meta property="og:url" content="https://gonka.me/zh/wallet/dashboard/">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="568">
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+
+  <style>
+    .header-wrap {
+      padding: 20px 40px
+    }
+    .yellow-banner {
+      padding: 8px 40px
+    }
+  </style>
+  <!-- Yellow Top Banner -->
+<div class="yellow-banner">
+  <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
+  <button class="banner-learn-more">learn more</button>
+  <button class="banner-close">
+    <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
+  </button>
+</div>
+
+<!-- Header -->
+<header class="landing-header">
+  <div class="header-wrap">
+  <div class="nav-section">
+    <div class="logo-section">
+      <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
+      <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
+    </div>
+
+    <nav class="main-nav">
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="developers">
+          <span class="nav-text">Developers</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="developers">
+          <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="miners">
+          <span class="nav-text">miners</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="miners">
+          <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="tokenomics">
+          <span class="nav-text">tokenomics</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="tokenomics">
+          <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="nav-item nav-item-link">
+        <span class="nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </nav>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="header-actions">
+      <div class="theme-toggle">
+        <button class="theme-btn theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-dark" />
+        </button>
+        <button class="theme-btn theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="18" height="18" />
+        </button>
+      </div>
+      <div class="buy-gnk-wrapper">
+        <button class="buy-gnk-btn" onclick="return false;">
+          buy gnk 
+          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+          </svg>
+        </button>
+        
+        <div class="wallet-tooltip">
+          <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
+          <div class="wallet-text">
+            <span>Wallet will be</span>
+            <span>available soon</span>
+          </div>
+        </div>
+      </div>
+      <button class="join-btn">join today</button>
+    </div>
+  </div>
+
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <!-- Mobile Menu Close Button -->
+  <button class="mobile-menu-close" id="mobile-menu-close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="developers">
+          <span class="mobile-nav-text">Developers</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-developers">
+          <a href="/developer/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="mobile-dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="miners">
+          <span class="mobile-nav-text">miners</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-miners">
+          <a href="/host/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="mobile-dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="mobile-dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="mobile-dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="mobile-dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="mobile-dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="mobile-dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="mobile-dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="mobile-dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
+          <span class="mobile-nav-text">tokenomics</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-tokenomics">
+          <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
+        <span class="mobile-nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!-- Mobile Menu Actions -->
+    <div class="mobile-menu-actions">
+      <div class="mobile-theme-toggle">
+        <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
+        </button>
+        <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
+        </button>
+      </div>
+      
+      <div class="mobile-buttons-group">
+        <div class="mobile-buy-gnk-wrapper">
+          <button class="mobile-buy-gnk-btn" onclick="return false;">
+            buy gnk 
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+            </svg>
+          </button>
+          
+          <div class="mobile-wallet-tooltip">
+            <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
+            <div class="mobile-wallet-text">
+              <span>Wallet will be</span>
+              <span>available soon</span>
+            </div>
+          </div>
+        </div>
+        
+        <button class="mobile-join-btn">join today</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="md-container" data-md-component="container">
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="nav.title" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../../../images/logos/gonka.svg" alt="logo">
+
+    </a>
+    
+  </label>
+
+  <!-- Custom navigation sections -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    <!-- DOCS Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DOCS</div>
+      <nav class="md-nav" aria-label="DOCS">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- DEVELOPER Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DEVELOPER</div>
+      <nav class="md-nav" aria-label="DEVELOPER">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- PARTICIPANT Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">PARTICIPANT</div>
+      <nav class="md-nav" aria-label="PARTICIPANT">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- WALLET Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">WALLET</div>
+      <nav class="md-nav" aria-label="WALLET">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- Additional links -->
+    <li class="md-nav__item">
+      <nav class="md-nav" aria-label="Additional">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  </ul>
+
+</nav>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+  <nav class="md-nav md-nav--secondary" aria-label="toc.title">
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      TABLE OF CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+          
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1" checked>
+            <label class="md-nav__link" for="__toc_1">
+              仪表盘入门
+            </label>
+            <nav class="md-nav" aria-label="仪表盘入门">
+              <ul class="md-nav__list">
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#1-gonka" class="md-nav__link">
+                        1. 访问 Gonka 账户
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#2" class="md-nav__link">
+                        2. 设置外部钱包
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#3" class="md-nav__link">
+                        3. 连接钱包
+                      </a>
+                    
+                  </li>
+                
+              </ul>
+            </nav>
+          
+        </li>
+      
+    </ul>
+    
+    <!-- READ NEXT section -->
+    <div class="md-nav__read-next">
+      <div class="md-nav__read-next-title">READ NEXT:</div>
+      <div class="md-nav__read-next-section">RUNNER</div>
+      <a href="#" class="md-nav__read-next-link">Quickstart</a>
+    </div>
+  </nav>
+
+        </div>
+      </div>
+    </div>
+  
+
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="_1">仪表盘入门</h1>
+<p>仪表盘展示链上实时活动。</p>
+<p>与依赖单一中心化服务器不同，网络数据与推理指标直接托管在各个主机（Host）节点上。也就是说，仪表盘可以连接到任意主机节点，直接从源头获取实时网络数据。</p>
+<p>你可以通过两种方式使用仪表盘：</p>
+<ul>
+<li>预览模式：无需创建账户，浏览仪表盘并查看网络数据。</li>
+<li>完整模式：连接你的钱包以解锁全部功能。</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">预览模式</label><label for="__tabbed_1_2">完整模式</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>如果你想在创建账户之前探索网络或查看实时推理指标，请按以下步骤操作：</p>
+<ol>
+<li>
+<p>从创世节点的 <code>inference_url</code> 列表中选择任意一个节点：</p>
+<ul>
+<li><a href="http://185.216.21.98:8000">http://185.216.21.98:8000</a>  </li>
+<li><a href="http://36.189.234.197:18026">http://36.189.234.197:18026</a>  </li>
+<li><a href="http://36.189.234.237:17241">http://36.189.234.237:17241</a>  </li>
+<li><a href="http://node1.gonka.ai:8000">http://node1.gonka.ai:8000</a>  </li>
+<li><a href="http://node2.gonka.ai:8000">http://node2.gonka.ai:8000</a>  </li>
+<li><a href="http://node3.gonka.ai:8000">http://node3.gonka.ai:8000</a>  </li>
+<li><a href="http://47.236.26.199:8000">http://47.236.26.199:8000</a>  </li>
+<li><a href="http://47.236.19.22:18000">http://47.236.19.22:18000</a>  </li>
+<li><a href="http://gonka.spv.re:8000">http://gonka.spv.re:8000</a>  </li>
+</ul>
+<details class="note">
+<summary>另一种方式：完全去中心化地随机选择节点</summary>
+<p>打开主机列表：<a href="http://node2.gonka.ai:8000/v1/epochs/current/participants">http://node2.gonka.ai:8000/v1/epochs/current/participants</a>。<br>
+从该列表中选择任意活跃主机。</p>
+</details>
+</li>
+<li>
+<p>将选中的 <code>inference_url</code> 复制并粘贴到浏览器地址栏，即可加载仪表盘。</p>
+</li>
+</ol>
+<p>打开后，你将看到直接来自该主机节点的实时数据——包括网络统计、活跃负载与推理指标。</p>
+<div class="admonition note">
+<p class="admonition-title">为什么这很重要？</p>
+<p>这种架构确保了去中心化：没有任何单一中心化服务器控制网络。在预览模式下，功能有限。你可以查看余额、交易与部分分析。如需发送代币、管理个人账户或分析你的私有 AI 令牌使用情况，请切换到<a href="https://gonka.ai/wallet/dashboard/#__tabbed_1_2">完整模式</a>。</p>
+</div>
+</div>
+<div class="tabbed-block">
+<p>首先按“预览模式”打开仪表盘。进入后，继续以下步骤以启用全部功能。</p>
+<h3 id="1-gonka">1. 访问 Gonka 账户</h3>
+<p>如需解锁仪表盘的全部功能，你需要一个 Gonka 账户。</p>
+<ul>
+<li>已有账户？前往下方“设置外部钱包”。</li>
+<li>新用户？访问<a href="https://gonka.ai/developer/quickstart/" target="_blank">开发者快速开始</a>或<a href="https://gonka.ai/host/quickstart/" target="_blank">主机快速开始</a>创建账户。</li>
+</ul>
+<h3 id="2">2. 设置外部钱包</h3>
+<p>通过钱包与仪表盘交互，推荐使用 <a href="https://www.keplr.app/" target="_blank">Keplr</a> 或 <a href="https://www.leapwallet.io/" target="_blank">Leap</a>（面向 Cosmos 生态的浏览器扩展钱包）。</p>
+<details class="note">
+<summary>什么是钱包？</summary>
+<p>加密钱包是存放用户公钥与私钥的安全容器，帮助用户管理、转移与购买加密资产。Gonka 基于 Cosmos‑SDK 区块链框架构建，可通过 Keplr 或 Leap 访问（将支持更多钱包）。</p>
+</details>
+<ul>
+<li>如果已有 Keplr 或 Leap，请前往<a href="https://gonka.ai/wallet/dashboard/#3-connect-wallet">“连接钱包”</a>部分。</li>
+<li>如果尚未安装，请按下述步骤操作。</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Keplr</label><label for="__tabbed_2_2">Leap</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>2.1. 访问<a href="https://www.keplr.app/" target="_blank">Keplr 官网</a>，点击“Get Keplr wallet”。</p>
+<p><a href="/images/dashboard_keplr_step_2_1.png" target="_blank"><img src="/images/dashboard_keplr_step_2_1.png" style="width:500px; height:auto;"></a></p>
+<p>2.2. 选择与你浏览器匹配的扩展。</p>
+<p><a href="/images/dashboard_keplr_step_2_2.png" target="_blank"><img src="/images/dashboard_keplr_step_2_2.png" style="width:500px; height:auto;"></a></p>
+<p>2.3. 将扩展添加至浏览器。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Firefox</label><label for="__tabbed_3_2">Google Chrome</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="/images/dashboard_keplr_step_2_3.png" target="_blank"><img src="/images/dashboard_keplr_step_2_3.png" style="width:500px; height:auto;"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="/images/dashboard_keplr_step_2_3_2.png" target="_blank"><img src="/images/dashboard_keplr_step_2_3_2.png" style="width:500px; height:auto;"></a></p>
+</div>
+</div>
+</div>
+<p>2.4. 点击 “Import an existing wallet”。</p>
+<p><a href="/images/dashboard_keplr_step_2_4.png" target="_blank"><img src="/images/dashboard_keplr_step_2_4.png" style="width:500px; height:auto;"></a></p>
+<p>2.5. 点击 “Use recovery phrase or private key”。</p>
+<p><a href="/images/dashboard_keplr_step_2_5.png" target="_blank"><img src="/images/dashboard_keplr_step_2_5.png" style="width:500px; height:auto;"></a></p>
+<p>2.6. 粘贴你在<a href="https://gonka.ai/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=your%2Daccount%2Daddress%3E-,3.%20Add%20Private%20Key%20to%20environment%20variables,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using">此步骤</a>通过 CLI 生成的私钥。不要导入助记词/恢复短语（mnemonic/seed），因为跨链桥需要直接访问原始私钥以签名交易并确保与以太坊的互操作性。</p>
+<p><a href="/images/dashboard_keplr_step_2_6_private%20key.png" target="_blank"><img src="/images/dashboard_keplr_step_2_6_private_key.png" style="width:500px; height:auto;"></a></p>
+<p>2.7. 为钱包命名，便于区分。</p>
+<p><a href="/images/dashboard_keplr_step_2_6.png" target="_blank"><img src="/images/dashboard_keplr_step_2_6.png" style="width:500px; height:auto;"></a></p>
+<p>2.8. 勾选 Cosmos Hub 与 Ethereum。</p>
+<p><a href="/images/dashboard_keplr_step_2_7.png" target="_blank"><img src="/images/dashboard_keplr_step_2_7.png" style="width:500px; height:auto;"></a></p>
+<p>2.9. 完成！你的 Gonka 账户已成功导入 Keplr！</p>
+<p><a href="/images/dashboard_keplr_step_2_8.png" target="_blank"><img src="/images/dashboard_keplr_step_2_8.png" style="width:500px; height:auto;"></a></p>
+</div>
+<div class="tabbed-block">
+<p>2.1. 访问<a href="https://www.leapwallet.io/" target="_blank">Leap 官网</a>，点击 “Download Leap”。</p>
+<p><a href="/images/dashboard_leap_step_2_1.png" target="_blank"><img src="/images/dashboard_leap_step_2_1.png" style="width:500px; height:auto;"></a></p>
+<p>2.2. 将扩展添加至浏览器。</p>
+<p><a href="/images/dashboard_leap_step_2_2.png" target="_blank"><img src="/images/dashboard_leap_step_2_2.png" style="width:500px; height:auto;"></a></p>
+<p>2.3. 点击 “Import an existing wallet”。</p>
+<p><a href="/images/dashboard_leap_step_2_3.png" target="_blank"><img src="/images/dashboard_leap_step_2_3.png" style="width:500px; height:auto;"></a></p>
+<p>2.4. 选择 “Import private key”。不要选择 “Import recovery phrase”，因为跨链桥需要直接访问原始私钥以签名交易并确保与以太坊的互操作性。</p>
+<p><a href="/images/dashboard_leap_step_2_4.png" target="_blank"><img src="/images/dashboard_leap_step_2_4.png" style="width:500px; height:auto;"></a></p>
+<p>2.5. 粘贴你在<a href="https://gonka.ai/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using">此步骤</a>通过 CLI 生成的私钥。</p>
+<p><a href="/images/dashboard_leap_2_5_private_key.png" target="_blank"><img src="/images/dashboard_leap_2_5_private_key.png" style="width:500px; height:auto;"></a></p>
+<p>2.6. 创建你的钱包密码。</p>
+<p><a href="/images/dashboard_leap_step_2_6.png" target="_blank"><img src="/images/dashboard_leap_step_2_6.png" style="width:500px; height:auto;"></a></p>
+<p>2.7. 完成！你的 Gonka 账户已成功导入 Leap！</p>
+<p><a href="/images/dashboard_leap_step_2_7.png" target="_blank"><img src="/images/dashboard_leap_step_2_7.png" style="width:500px; height:auto;"></a></p>
+</div>
+</div>
+</div>
+<h3 id="3">3. 连接钱包</h3>
+<p>3.1 按<a href="https://gonka.ai/wallet/dashboard/#__tabbed_1_1">预览模式</a>说明打开 Gonka 仪表盘。</p>
+<p>3.2 在右上角点击 “Connect Wallet”。</p>
+<p><a href="/images/dashboard_ping_pub_3_1.png" target="_blank"><img src="/images/dashboard_ping_pub_3_1.png" style="width:500px; height:auto;"></a></p>
+<p>3.3 选择 Keplr 或 Leap 并点击 Connect。</p>
+<p><a href="/images/dashboard_ping_pub_3_2.png" target="_blank"><img src="/images/dashboard_ping_pub_3_2.png" style="width:500px; height:auto;"></a></p>
+<p>3.4 你会看到提示将自定义 Gonka 链添加到钱包。确认并添加。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked id="__tabbed_4_1" name="__tabbed_4" type="radio"><input id="__tabbed_4_2" name="__tabbed_4" type="radio"><div class="tabbed-labels"><label for="__tabbed_4_1">Keplr</label><label for="__tabbed_4_2">Leap</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="/images/dashboard_ping_pub_3_3.png" target="_blank"><img src="/images/dashboard_ping_pub_3_3.png" style="width:500px; height:auto;"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="/images/dashboard_ping_pub_3_3-leap.png" target="_blank"><img src="/images/dashboard_ping_pub_3_3-leap.png" style="width:500px; height:auto;"></a></p>
+</div>
+</div>
+</div>
+<p>3.5 完成！你的账户已成功添加到钱包。</p>
+<p><a href="/images/dashboard_ping_pub_3_4.png" target="_blank"><img src="/images/dashboard_ping_pub_3_4.png" style="width:500px; height:auto;"></a></p>
+<details class="note">
+<summary>可选：如何在钱包中添加额外的 Gonka 账户（点击展开）</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked id="__tabbed_5_1" name="__tabbed_5" type="radio"><input id="__tabbed_5_2" name="__tabbed_5" type="radio"><div class="tabbed-labels"><label for="__tabbed_5_1">Keplr</label><label for="__tabbed_5_2">Leap</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>打开扩展，在右上角点击账户图标。</p>
+<p><a href="/images/dashboard_ping_pub_3_5_1.png" target="_blank"><img src="/images/dashboard_ping_pub_3_5_1.png" style="width:auto; height:337.5px;"></a></p>
+<p>点击 “Add wallet”。</p>
+<p><a href="/images/dashboard_ping_pub_3_5_2.png" target="_blank"><img src="/images/dashboard_ping_pub_3_5_2.png" style="width:auto; height:337.5px; display:block;"></a></p>
+<p>点击 “Import an Existing Wallet”。</p>
+<p><a href="/images/dashboard_ping_pub_3_5_3.png" target="_blank"><img src="/images/dashboard_ping_pub_3_5_3.png" style="width:450px; height:auto; display:block;"></a></p>
+<p>点击 “Use recovery phrase or private key”。</p>
+<p><a href="/images/dashboard_ping_pub_3_5_4.png" target="_blank"><img src="/images/dashboard_ping_pub_3_5_4.png" style="width:450px; height:auto;"></a></p>
+<p>粘贴你在<a href="https://gonka.ai/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using">此步骤</a>通过 CLI 生成的私钥。不要导入助记词/恢复短语，因为跨链桥需要直接访问原始私钥以签名交易并确保与以太坊的互操作性。</p>
+<p><a href="/images/dashboard_ping_pub_3_5_4.png" target="_blank"><img src="/images/dashboard_keplr_step_3_5_5_private_key.png" style="width:450px; height:auto;"></a></p>
+<p>为钱包命名，便于区分。</p>
+<p><a href="/images/dashboard_ping_pub_3_5_5.png" target="_blank"><img src="/images/dashboard_ping_pub_3_5_5.png" style="width:450px; height:auto;"></a></p>
+<p>勾选 Cosmos Hub 与 Ethereum。</p>
+<p><a href="/images/dashboard_ping_pub_3_5_6.png" target="_blank"><img src="/images/dashboard_ping_pub_3_5_6.png" style="width:450px; height:auto; display:block;"></a></p>
+<p>完成 —— 你的 Gonka 账户已成功导入 Keplr！</p>
+<p><a href="/images/dashboard_ping_pub_3_5_7.png" target="_blank"><img src="/images/dashboard_ping_pub_3_5_7.png" style="width:450px; height:auto;"></a></p>
+</div>
+<div class="tabbed-block">
+<p>打开扩展，在顶部中间的按钮处点击青蛙图标与钱包名称。</p>
+<p><a href="/images/dashboard_leap_step_3_5_1.png" target="_blank"><img src="/images/dashboard_leap_step_3_5_1.png" style="width:250px; height:auto;"></a></p>
+<p>点击 “Create/Import wallet”。</p>
+<p><a href="/images/dashboard_leap_step_3_5_2.png" target="_blank"><img src="/images/dashboard_leap_step_3_5_2.png" style="width:250px; height:auto;"></a></p>
+<p>选择 “Import using private key”。不要选择 “Import using recovery phrase”，因为跨链桥需要直接访问原始私钥以签名交易并确保与以太坊的互操作性。</p>
+<p><a href="/images/dashboard_leap_step_3_5_3.png" target="_blank"><img src="/images/dashboard_leap_step_3_5_3.png" style="width:250px; height:auto;"></a></p>
+<p>粘贴你在<a href="https://gonka.ai/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using">此步骤</a>通过 CLI 生成的私钥。</p>
+<p><a href="/images/dashboard_leap_step_3_5_3.png" target="_blank"><img src="/images/dashboard_leap_step_3_5_4_private_key.png" style="width:250px; height:auto;"></a></p>
+<p>完成 —— 你的 Gonka 账户已成功导入 Leap（点击顶部中间的青蛙图标与钱包名称可在钱包之间切换）。</p>
+<p><a href="/images/dashboard_leap_step_3_5_4.png" target="_blank"><img src="/images/dashboard_leap_step_3_5_4.png" style="width:250px; height:auto;"></a></p>
+</div>
+</div>
+</div>
+</details>
+</div>
+</div>
+</div></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+
+  <!-- Footer -->
+<footer class="landing-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <span class="footer-logo">Gonka</span>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Protocol</h4>
+        <a href="#">Whitepaper</a>
+        <a href="#">Transformer-Based-Proof-of-Work</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Gonka Protocol License</a>
+        <a href="#">Patents</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-socials">
+      <a href="#" class="footer-social" aria-label="Github">
+        <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Discord">
+        <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Mail">
+        <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="X">
+        <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
+      </a>
+    </div>
+
+    <div class="footer-bottom-links">
+      <a href="#" class="footer-link">Help</a>
+      <a href="#" class="footer-link">Transactions & Governance</a>
+      <a href="#" class="footer-link">Terms & Policies</a>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../js/links.js"></script>
+      
+        <script src="../../../javascripts/theme-toggle.js"></script>
+      
+        <script src="../../../javascripts/dropdown.js"></script>
+      
+        <script src="../../../javascripts/chat-redirect.js"></script>
+      
+        <script src="../../../javascripts/smooth-scroll-to-cards.js"></script>
+      
+        <script src="../../../javascripts/banner-close.js"></script>
+      
+        <script src="../../../javascripts/mobile-menu.js"></script>
+      
+        <script src="../../../javascripts/announcement.js"></script>
+      
+    
+  </body>
+</html>

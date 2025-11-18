@@ -1,0 +1,792 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn to configure and use Gonka network">
+      
+      
+      
+        <link rel="canonical" href="https://gonka.me/zh/host/validator_info/">
+      
+      
+        <link rel="prev" href="../genesis/">
+      
+      
+        <link rel="next" href="../optional-ssl-setup/">
+      
+      
+        
+          <link rel="alternate" href="../../../host/validator_info/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../../../images/01-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>编辑验证者公开信息 - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Manrope";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JWVG5X6CY5"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JWVG5X6CY5",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JWVG5X6CY5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    
+      
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" - 编辑验证者公开信息">
+    <meta property="og:description" content="Learn to configure and use Gonka network">
+    <meta property="og:url" content="https://gonka.me/zh/host/validator_info/">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="568">
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+
+  <style>
+    .header-wrap {
+      padding: 20px 40px
+    }
+    .yellow-banner {
+      padding: 8px 40px
+    }
+  </style>
+  <!-- Yellow Top Banner -->
+<div class="yellow-banner">
+  <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
+  <button class="banner-learn-more">learn more</button>
+  <button class="banner-close">
+    <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
+  </button>
+</div>
+
+<!-- Header -->
+<header class="landing-header">
+  <div class="header-wrap">
+  <div class="nav-section">
+    <div class="logo-section">
+      <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
+      <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
+    </div>
+
+    <nav class="main-nav">
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="developers">
+          <span class="nav-text">Developers</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="developers">
+          <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="miners">
+          <span class="nav-text">miners</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="miners">
+          <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="tokenomics">
+          <span class="nav-text">tokenomics</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="tokenomics">
+          <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="nav-item nav-item-link">
+        <span class="nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </nav>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="header-actions">
+      <div class="theme-toggle">
+        <button class="theme-btn theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-dark" />
+        </button>
+        <button class="theme-btn theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="18" height="18" />
+        </button>
+      </div>
+      <div class="buy-gnk-wrapper">
+        <button class="buy-gnk-btn" onclick="return false;">
+          buy gnk 
+          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+          </svg>
+        </button>
+        
+        <div class="wallet-tooltip">
+          <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
+          <div class="wallet-text">
+            <span>Wallet will be</span>
+            <span>available soon</span>
+          </div>
+        </div>
+      </div>
+      <button class="join-btn">join today</button>
+    </div>
+  </div>
+
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <!-- Mobile Menu Close Button -->
+  <button class="mobile-menu-close" id="mobile-menu-close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="developers">
+          <span class="mobile-nav-text">Developers</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-developers">
+          <a href="/developer/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="mobile-dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="miners">
+          <span class="mobile-nav-text">miners</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-miners">
+          <a href="/host/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="mobile-dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="mobile-dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="mobile-dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="mobile-dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="mobile-dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="mobile-dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="mobile-dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="mobile-dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
+          <span class="mobile-nav-text">tokenomics</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-tokenomics">
+          <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
+        <span class="mobile-nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!-- Mobile Menu Actions -->
+    <div class="mobile-menu-actions">
+      <div class="mobile-theme-toggle">
+        <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
+        </button>
+        <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
+        </button>
+      </div>
+      
+      <div class="mobile-buttons-group">
+        <div class="mobile-buy-gnk-wrapper">
+          <button class="mobile-buy-gnk-btn" onclick="return false;">
+            buy gnk 
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+            </svg>
+          </button>
+          
+          <div class="mobile-wallet-tooltip">
+            <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
+            <div class="mobile-wallet-text">
+              <span>Wallet will be</span>
+              <span>available soon</span>
+            </div>
+          </div>
+        </div>
+        
+        <button class="mobile-join-btn">join today</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="md-container" data-md-component="container">
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="nav.title" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../../../images/logos/gonka.svg" alt="logo">
+
+    </a>
+    
+  </label>
+
+  <!-- Custom navigation sections -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    <!-- DOCS Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DOCS</div>
+      <nav class="md-nav" aria-label="DOCS">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- DEVELOPER Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DEVELOPER</div>
+      <nav class="md-nav" aria-label="DEVELOPER">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- PARTICIPANT Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">PARTICIPANT</div>
+      <nav class="md-nav" aria-label="PARTICIPANT">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- WALLET Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">WALLET</div>
+      <nav class="md-nav" aria-label="WALLET">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- Additional links -->
+    <li class="md-nav__item">
+      <nav class="md-nav" aria-label="Additional">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+  </ul>
+
+</nav>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+  <nav class="md-nav md-nav--secondary" aria-label="toc.title">
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      TABLE OF CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+          
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1" checked>
+            <label class="md-nav__link" for="__toc_1">
+              如何编辑验证者公开信息
+            </label>
+            <nav class="md-nav" aria-label="如何编辑验证者公开信息">
+              <ul class="md-nav__list">
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#_2" class="md-nav__link">
+                        前提条件
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#_3" class="md-nav__link">
+                        字段 / 参数
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#_4" class="md-nav__link">
+                        分步指南
+                      </a>
+                    
+                  </li>
+                
+              </ul>
+            </nav>
+          
+        </li>
+      
+    </ul>
+    
+    <!-- READ NEXT section -->
+    <div class="md-nav__read-next">
+      <div class="md-nav__read-next-title">READ NEXT:</div>
+      <div class="md-nav__read-next-section">RUNNER</div>
+      <a href="#" class="md-nav__read-next-link">Quickstart</a>
+    </div>
+  </nav>
+
+        </div>
+      </div>
+    </div>
+  
+
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="_1">如何编辑验证者公开信息</h1>
+<p>本指南介绍如何更新您的验证者资料，包括可读名称、网站和头像/身份标识，以便浏览器正确显示信息。</p>
+<h2 id="_2">前提条件</h2>
+<ul>
+<li>您必须是验证者的运营商（持有运营商密钥）。</li>
+<li>您的节点必须正在运行并连接到网络。</li>
+<li>如果您希望拥有经过验证的头像，请准备一个身份服务（例如，<a href="https://keybase.io/">Keybase</a>）。</li>
+</ul>
+<h2 id="_3">字段 / 参数</h2>
+<p>以下是您可以设置或编辑的<strong>唯一</strong>字段。</p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>标志</th>
+<th>用途 / 显示内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>名称（Moniker）</td>
+<td><code>--new-moniker</code></td>
+<td>您验证者的公开名称，将在浏览器中显示。</td>
+</tr>
+<tr>
+<td>网站（Website）</td>
+<td><code>--website</code></td>
+<td>指向您验证者网站或项目页面的链接。显示后，委托人可进一步了解您的信息。</td>
+</tr>
+<tr>
+<td>身份（Identity）</td>
+<td><code>--identity</code></td>
+<td>通常用于提供身份验证证明（例如 <a href="https://keybase.io/">Keybase</a>），许多浏览器使用此ID获取您的头像/标志。您需要从网站下载应用以生成PRP密钥来获取您的标志。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">分步指南</h2>
+<p>如果您还没有PGP密钥，请运行以下命令：
+</p><div class="highlight"><pre><span></span><code>keybase pgp gen
+</code></pre></div>
+<details class="note">
+<summary>使用 Keybase 生成 PGP 密钥（keybase pgp gen</summary>
+<p><code>keybase pgp gen</code> 为该账户生成一个新的PGP密钥。在所有情况下，它都会使用现有的设备密钥对公钥进行签名，并将签名推送到服务器。因此，用户在执行此操作后将拥有一个公开可见的“PGP设备”。默认情况下，PGP密钥的私钥部分会被写入用户的本地Keybase密钥链，并使用“本地密钥安全”（LKS）协议加密。（更多信息，请尝试 'keybase help keyring'）。此外，默认情况下，如果找到本地GnuPG密钥环，新PGP密钥的公钥和私钥部分都会被导出到其中。您可以指定 <code>--no-export</code> 来阻止将新生成的密钥导出到GnuPG密钥环。在后续访问私钥时——例如用于PGP解密或签名——无需访问本地GnuPG密钥环。Keybase将直接在其自己的本地密钥链中访问私钥。默认情况下，PGP密钥的私钥部分永远不会导出到本地系统之外，但用户可以通过终端提示选择是否将其加密后的私钥存储在Keybase服务器上。</p>
+</details>
+<p>系统会提示您：</p>
+<ul>
+<li>Push an encrypted copy of your new secret key to the Keybase.io server? 输入 Y 表示“是”。</li>
+<li>When exporting to the GnuPG keychain, encrypt private keys with a passphrase? 输入 Y 表示“是”，N 表示“否”。</li>
+</ul>
+<p>如果您已有PGP密钥，请运行以下命令将其导入Keybase：
+</p><div class="highlight"><pre><span></span><code>keybase pgp select
+</code></pre></div>
+<p>打开Keybase应用。输入您的真实姓名，该姓名将在浏览器中公开显示。</p>
+<p><a href="/images/validator_info_create_account.png" target="_blank"><img src="/images/validator_info_create_account.png" style="width:500px; height:auto;"></a></p>
+<p>为您的设备命名（未来无法更改）。</p>
+<p><a href="/images/validator_info_name_comp.png" target="_blank"><img src="/images/validator_info_name_comp.png" style="width:500px; height:auto;"></a></p>
+<p>点击左上角的头像，然后点击“查看/编辑个人资料”。</p>
+<p><a href="/images/validator_info_edit.png" target="_blank"><img src="/images/validator_info_edit.png" style="width:500px; height:auto;"></a></p>
+<p>上传您的头像。</p>
+<p><a href="/images/validator_info_upload_avatar.png" target="_blank"><img src="/images/validator_info_upload_avatar.png" style="width:500px; height:auto;"></a></p>
+<p>复制您的64位PGP ID。您将在下面命令的 --identity 参数中使用它。</p>
+<p>更新您的节点信息
+运行以下命令以编辑验证者信息。请确保将 cold-key-name、YourNewValidatorName、https://updated.website 和 PGP-64-ID 替换为您自己的值。</p>
+<div class="highlight"><pre><span></span><code>./inferenced tx staking edit-validator \
+  --chain-id="gonka-mainnet" \
+  --from &lt;cold-key-name&gt;  \
+  --new-moniker &lt;YourNewValidatorName&gt; \
+  --website &lt;https://updated.website&gt; \
+  --identity &lt;PGP-64-ID&gt; \
+  --keyring-backend file \
+  --node &lt;NODE_URL&gt;/chain-rpc/ \
+  --yes
+</code></pre></div>
+<p>发送交易后，请等待其被打包进区块并被网络确认。</p>
+<p>检查您的验证者信息：
+</p><div class="highlight"><pre><span></span><code>./inferenced query staking delegator-validators \
+  &lt;cold-key-address&gt; \
+  --node &lt;NODE_URL&gt;/chain-rpc/
+</code></pre></div>
+<p>这应显示已更新的名称、网站和身份信息。</p>
+<div class="highlight"><pre><span></span><code>...
+validators:
+- commission:
+    commission_rates:
+      max_change_rate: "0.010000000000000000"
+      max_rate: "0.200000000000000000"
+      rate: "0.100000000000000000"
+    update_time: "2025-08-27T23:56:24.580275479Z"
+  consensus_pubkey:
+    type: tendermint/PubKeyEd25519
+    value: XMTuK2T6ojmAfcDzv5scXtl9QkgYaqwAnnyo7BdLKS4=
+  delegator_shares: "186.000000000000000000"
+  description:
+    details: Created after Proof of Compute
+    identity: 673C81B66A67ED67
+    moniker: gonkavaloper18lluv53n4h9z34qu20vxcvypgdkhsg6n02fcaq
+    website: https://gonka.ai
+</code></pre></div>
+<p>等待浏览器索引新数据（可能需要几分钟到几小时）。然后查看浏览器，您的名称、网站和头像应已显示。</p></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+
+  <!-- Footer -->
+<footer class="landing-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <span class="footer-logo">Gonka</span>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Protocol</h4>
+        <a href="#">Whitepaper</a>
+        <a href="#">Transformer-Based-Proof-of-Work</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Gonka Protocol License</a>
+        <a href="#">Patents</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-socials">
+      <a href="#" class="footer-social" aria-label="Github">
+        <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Discord">
+        <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Mail">
+        <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="X">
+        <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
+      </a>
+    </div>
+
+    <div class="footer-bottom-links">
+      <a href="#" class="footer-link">Help</a>
+      <a href="#" class="footer-link">Transactions & Governance</a>
+      <a href="#" class="footer-link">Terms & Policies</a>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../js/links.js"></script>
+      
+        <script src="../../../javascripts/theme-toggle.js"></script>
+      
+        <script src="../../../javascripts/dropdown.js"></script>
+      
+        <script src="../../../javascripts/chat-redirect.js"></script>
+      
+        <script src="../../../javascripts/smooth-scroll-to-cards.js"></script>
+      
+        <script src="../../../javascripts/banner-close.js"></script>
+      
+        <script src="../../../javascripts/mobile-menu.js"></script>
+      
+        <script src="../../../javascripts/announcement.js"></script>
+      
+    
+  </body>
+</html>

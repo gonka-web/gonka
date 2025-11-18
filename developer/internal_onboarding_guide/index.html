@@ -1,0 +1,990 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn to configure and use Gonka network">
+      
+      
+      
+        <link rel="canonical" href="https://gonka.me/developer/internal_onboarding_guide/">
+      
+      
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../zh/developer/internal_onboarding_guide/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../../images/01-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Internal onboarding guide - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Manrope";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JWVG5X6CY5"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JWVG5X6CY5",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JWVG5X6CY5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    
+      
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" - Internal onboarding guide">
+    <meta property="og:description" content="Learn to configure and use Gonka network">
+    <meta property="og:url" content="https://gonka.me/developer/internal_onboarding_guide/">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="568">
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#internal-onboarding-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+
+  <style>
+    .header-wrap {
+      padding: 20px 40px
+    }
+    .yellow-banner {
+      padding: 8px 40px
+    }
+  </style>
+  <!-- Yellow Top Banner -->
+<div class="yellow-banner">
+  <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
+  <button class="banner-learn-more">learn more</button>
+  <button class="banner-close">
+    <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
+  </button>
+</div>
+
+<!-- Header -->
+<header class="landing-header">
+  <div class="header-wrap">
+  <div class="nav-section">
+    <div class="logo-section">
+      <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
+      <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
+    </div>
+
+    <nav class="main-nav">
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="developers">
+          <span class="nav-text">Developers</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="developers">
+          <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="miners">
+          <span class="nav-text">miners</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="miners">
+          <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="tokenomics">
+          <span class="nav-text">tokenomics</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="tokenomics">
+          <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="nav-item nav-item-link">
+        <span class="nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </nav>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="header-actions">
+      <div class="theme-toggle">
+        <button class="theme-btn theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-dark" />
+        </button>
+        <button class="theme-btn theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="18" height="18" />
+        </button>
+      </div>
+      <div class="buy-gnk-wrapper">
+        <button class="buy-gnk-btn" onclick="return false;">
+          buy gnk 
+          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+          </svg>
+        </button>
+        
+        <div class="wallet-tooltip">
+          <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
+          <div class="wallet-text">
+            <span>Wallet will be</span>
+            <span>available soon</span>
+          </div>
+        </div>
+      </div>
+      <button class="join-btn">join today</button>
+    </div>
+  </div>
+
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <!-- Mobile Menu Close Button -->
+  <button class="mobile-menu-close" id="mobile-menu-close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="developers">
+          <span class="mobile-nav-text">Developers</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-developers">
+          <a href="/developer/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="mobile-dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="miners">
+          <span class="mobile-nav-text">miners</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-miners">
+          <a href="/host/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="mobile-dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="mobile-dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="mobile-dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="mobile-dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="mobile-dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="mobile-dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="mobile-dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="mobile-dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
+          <span class="mobile-nav-text">tokenomics</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-tokenomics">
+          <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
+        <span class="mobile-nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!-- Mobile Menu Actions -->
+    <div class="mobile-menu-actions">
+      <div class="mobile-theme-toggle">
+        <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
+        </button>
+        <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
+        </button>
+      </div>
+      
+      <div class="mobile-buttons-group">
+        <div class="mobile-buy-gnk-wrapper">
+          <button class="mobile-buy-gnk-btn" onclick="return false;">
+            buy gnk 
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+            </svg>
+          </button>
+          
+          <div class="mobile-wallet-tooltip">
+            <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
+            <div class="mobile-wallet-text">
+              <span>Wallet will be</span>
+              <span>available soon</span>
+            </div>
+          </div>
+        </div>
+        
+        <button class="mobile-join-btn">join today</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="md-container" data-md-component="container">
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="nav.title" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../../images/logos/gonka.svg" alt="logo">
+
+    </a>
+    
+  </label>
+
+  <!-- Custom navigation sections -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    <!-- DOCS Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DOCS</div>
+      <nav class="md-nav" aria-label="DOCS">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../../introduction/" class="md-nav__link">
+                  Introduction
+                </a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- DEVELOPER Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DEVELOPER</div>
+      <nav class="md-nav" aria-label="DEVELOPER">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../quickstart/" class="md-nav__link">
+                    Quickstart
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../details/" class="md-nav__link">
+                    Details
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- PARTICIPANT Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">PARTICIPANT</div>
+      <nav class="md-nav" aria-label="PARTICIPANT">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../../host/quickstart/" class="md-nav__link">
+                    Quickstart
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/multiple-nodes/" class="md-nav__link">
+                    Multiple nodes
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/network-node-api/" class="md-nav__link">
+                    Network Node API
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/key-management/" class="md-nav__link">
+                    Key Management
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/access-account/" class="md-nav__link">
+                    Access account
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/benchmark-to-choose-optimal-deployment-config-for-llms/" class="md-nav__link">
+                    Benchmark to Choose Optimal Deployment Config for LLMs
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/hardware-specifications/" class="md-nav__link">
+                    Hardware Specifications
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/genesis/" class="md-nav__link">
+                    Genesis
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/validator_info/" class="md-nav__link">
+                    How to edit validator public info
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../host/optional-ssl-setup/" class="md-nav__link">
+                    SSL setup
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- WALLET Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">WALLET</div>
+      <nav class="md-nav" aria-label="WALLET">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../../wallet/dashboard/" class="md-nav__link">
+                    Dashboard
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../wallet/wallet-and-transfer-guide/" class="md-nav__link">
+                    Wallet & Transfer Guide
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../wallet/pricing/" class="md-nav__link">
+                    Pricing
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- Additional links -->
+    <li class="md-nav__item">
+      <nav class="md-nav" aria-label="Additional">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../../model-licenses/" class="md-nav__link">
+                  Model licenses
+                </a>
+              </li>
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../../transactions-and-governance/" class="md-nav__link">
+                  Transactions & Governance
+                </a>
+              </li>
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../../software-upgrades/" class="md-nav__link">
+                  Software Upgrades
+                </a>
+              </li>
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../../FAQ/" class="md-nav__link">
+                    FAQ
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../Errors/" class="md-nav__link">
+                    Errors
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../help/" class="md-nav__link">
+                    Get help
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+      </nav>
+    </li>
+  </ul>
+
+</nav>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+  <nav class="md-nav md-nav--secondary" aria-label="toc.title">
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      TABLE OF CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+          
+            <a href="#internal-onboarding-guide" class="md-nav__link">
+              Internal onboarding guide
+            </a>
+          
+        </li>
+      
+    </ul>
+    
+    <!-- READ NEXT section -->
+    <div class="md-nav__read-next">
+      <div class="md-nav__read-next-title">READ NEXT:</div>
+      <div class="md-nav__read-next-section">RUNNER</div>
+      <a href="#" class="md-nav__read-next-link">Quickstart</a>
+    </div>
+  </nav>
+
+        </div>
+      </div>
+    </div>
+  
+
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="internal-onboarding-guide">Internal onboarding guide</h1>
+<p>To start using Gonka Network and access your coins, you first need to create a Gonka Account.
+There are several ways to do this:</p>
+<ul>
+<li>Via Keplr wallet — easier setup, supports Connect with Google (recommended) or mnemonic phrase (limited: no bridge support).</li>
+<li>Via Leap wallet — simple setup via mnemonic phrase, but also no bridge support.</li>
+<li>Via <code>inferenced</code> CLI tool — full functionality, including bridge transactions.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Option 1: Via Keplr (external wallet)</label><label for="__tabbed_1_2">Option 2: Via Leap (external wallet)</label><label for="__tabbed_1_3">Option 3: Via <code>inferenced</code> CLI tool</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Go to <a href="https://www.keplr.app/" target="_blank">the official Keplr website</a> and click "Get Keplr wallet".</p>
+<p><a href="/images/dashboard_keplr_step_2_1.png" target="_blank"><img src="/images/dashboard_keplr_step_2_1.png" style="width:500px; height:auto;"></a></p>
+<p>Choose an extension for your browser.</p>
+<p><a href="/images/dashboard_keplr_step_2_2.png" target="_blank"><img src="/images/dashboard_keplr_step_2_2.png" style="width:500px; height:auto;"></a></p>
+<p>Add the selected extension to your browser.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Firefox</label><label for="__tabbed_2_2">Google Chrome</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><a href="/images/dashboard_keplr_step_2_3.png" target="_blank"><img src="/images/dashboard_keplr_step_2_3.png" style="width:500px; height:auto;"></a></p>
+</div>
+<div class="tabbed-block">
+<p><a href="/images/dashboard_keplr_step_2_3_2.png" target="_blank"><img src="/images/dashboard_keplr_step_2_3_2.png" style="width:500px; height:auto;"></a></p>
+</div>
+</div>
+</div>
+<p>Click "Create a new wallet".</p>
+<p><a href="/images/dashboard_keplr_step_2_4.png" target="_blank"><img src="/images/dashboard_keplr_step_2_4.png" style="width:500px; height:auto;"></a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked id="__tabbed_3_1" name="__tabbed_3" type="radio"><input id="__tabbed_3_2" name="__tabbed_3" type="radio"><div class="tabbed-labels"><label for="__tabbed_3_1">Connect with Google</label><label for="__tabbed_3_2">Create new recovery phrase</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Click "Connect with Google".</p>
+<p><a href="/images/keplr_welcome_to_keplr.png" target="_blank"><img src="/images/keplr_welcome_to_keplr.png" style="width:500px; height:auto;"></a></p>
+<p>Set Up Your Wallet.</p>
+<p><a href="/images/keplr_set_up_your_wallet.png" target="_blank"><img src="/images/keplr_set_up_your_wallet.png" style="width:500px; height:auto;"></a></p>
+<p>Backup your private key securely and never share your private key. Anyone with your private key can have access to your assets. If you lose access to your Gmail Account, the only way to recover your wallet is using your private key. Keep this in a safe place.</p>
+<p><a href="/images/keplr_back_up_private_key.png" target="_blank"><img src="/images/keplr_back_up_private_key.png" style="width:500px; height:auto;"></a></p>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Important Notice: Limited Functionality</p>
+<p>This option creates an account using a mnemonic phrase and does not support transactions through the bridge. If you want to perform transactions via the bridge, please use Option 1: Via Keplr (external wallet, "Connect with Google") or Option 3: Via <code>inferenced</code> CLI tool instead.</p>
+</div>
+<p>Click "Create new recovery phrase"</p>
+<p><a href="/images/keplr_welcome_to_keplr.png" target="_blank"><img src="/images/keplr_welcome_to_keplr.png" style="width:500px; height:auto;"></a></p>
+<p>DO NOT share your recovery phrase with ANYONE. Anyone with your recovery phrase can have full control over your assets. Please stay vigilant against phishing attacks at all times. Back up the phrase safely. You will never be able to restore your account without your recovery phrase.</p>
+<p><a href="/images/keplr_new_recovery_phrase.png" target="_blank"><img src="/images/keplr_new_recovery_phrase.png" style="width:500px; height:auto;"></a></p>
+<p>Verify your recovery phrase, create wallet name and password.</p>
+<p><a href="/images/keplr_verify_your_recovery_phrase.png" target="_blank"><img src="/images/keplr_verify_your_recovery_phrase.png" style="width:500px; height:auto;"></a></p>
+<p>Select Cosmos Hub and Ethereum.</p>
+<p><a href="/images/dashboard_keplr_step_2_7.png" target="_blank"><img src="/images/dashboard_keplr_step_2_7.png" style="width:500px; height:auto;"></a></p>
+<p>Your Keplr wallet has been created.</p>
+<p><a href="/images/dashboard_keplr_step_2_8.png" target="_blank"><img src="/images/dashboard_keplr_step_2_8.png" style="width:500px; height:auto;"></a></p>
+</div>
+</div>
+</div>
+<p>Choose a random node from the <code>inference_url</code> list of genesis-nodes.</p>
+<ul>
+<li><a href="http://185.216.21.98:8000">http://185.216.21.98:8000</a></li>
+<li><a href="http://36.189.234.197:18026">http://36.189.234.197:18026</a></li>
+<li><a href="http://36.189.234.237:17241">http://36.189.234.237:17241</a></li>
+<li><a href="http://node1.gonka.ai:8000">http://node1.gonka.ai:8000</a></li>
+<li><a href="http://node2.gonka.ai:8000">http://node2.gonka.ai:8000</a></li>
+<li><a href="http://node3.gonka.ai:8000">http://node3.gonka.ai:8000</a></li>
+<li><a href="http://47.236.26.199:8000">http://47.236.26.199:8000</a></li>
+<li><a href="http://47.236.19.22:18000">http://47.236.19.22:18000</a></li>
+<li><a href="http://gonka.spv.re:8000">http://gonka.spv.re:8000</a></li>
+</ul>
+<details class="note">
+<summary>An alternative, fully decentralized approach to choosing a random node from the list of active Hosts</summary>
+<p>Open the Hosts list: <a href="http://node2.gonka.ai:8000/v1/epochs/current/participants">http://node2.gonka.ai:8000/v1/epochs/current/participants</a>.</p>
+<p>Choose any active Host from the list.</p>
+<p>Copy their <code>inference_url</code> value.</p>
+</details>
+<p>Paste the <code>inference_url</code> into your browser to load the dashboard.</p>
+<p>Once opened, you’ll see real-time data streamed directly from the Host’s node — including network statistics, active workloads, and inference metrics.</p>
+<p>In the top-right corner, click "Connect Wallet" to get started.</p>
+<p><a href="/images/dashboard_ping_pub_3_1.png" target="_blank"><img src="/images/dashboard_ping_pub_3_1.png" style="width:500px; height:auto;"></a></p>
+<p>Select Keplr and hit Connect.</p>
+<p><a href="/images/dashboard_ping_pub_3_2.png" target="_blank"><img src="/images/dashboard_ping_pub_3_2.png" style="width:500px; height:auto;"></a></p>
+<p>You will see a prompt to add a custom Gonka chain to your wallet. Approve and add Gonka chain.</p>
+<p><a href="/images/dashboard_ping_pub_3_3.png" target="_blank"><img src="/images/dashboard_ping_pub_3_3.png" style="width:500px; height:auto;"></a></p>
+<p>Done! Your Gonka Developer account has been successfully created.</p>
+<p><a href="/images/dashboard_ping_pub_3_4.png" target="_blank"><img src="/images/dashboard_ping_pub_3_4.png" style="width:500px; height:auto;"></a></p>
+<p>Open Keplr, navigate to “Copy Address” in your wallet, tap or click “Copy Address”. It looks like a long string of letters and numbers (e.g., gonka1... ). This address is public—you can safely share it with others to receive payments.</p>
+<p><a href="/images/keplr_copy_address.png" target="_blank"><img src="/images/keplr_copy_address.png" style="width:auto; height:337.5px;"></a></p>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Important Notice: Limited Functionality</p>
+<p>This option creates an account using a mnemonic phrase and does not support transactions through the bridge. If you want to perform transactions via the bridge, please use Option 1: Via Keplr (external wallet, "Connect with Google") or Option 3: Via <code>inferenced</code> CLI tool instead.</p>
+</div>
+<p>Go to <a href="https://www.leapwallet.io/" target="_blank">the official Leap website</a> and click "Download Leap".</p>
+<p><a href="/images/dashboard_leap_step_2_1.png" target="_blank"><img src="/images/dashboard_leap_step_2_1.png" style="width:500px; height:auto;"></a></p>
+<p>Add the selected extension to your browser.</p>
+<p><a href="/images/dashboard_leap_step_2_2.png" target="_blank"><img src="/images/dashboard_leap_step_2_2.png" style="width:500px; height:auto;"></a></p>
+<p>Click "Create a new wallet".</p>
+<p><a href="/images/dashboard_leap_step_2_3.png" target="_blank"><img src="/images/dashboard_leap_step_2_3.png" style="width:500px; height:auto;"></a></p>
+<p>Save your secret recovery phrase. Write down these words, your secret recovery phrase is the only way to recover your wallet and funds!</p>
+<p><a href="/images/leap_your_secret_recovery_phrase.png" target="_blank"><img src="/images/leap_your_secret_recovery_phrase.png" style="width:500px; height:auto;"></a></p>
+<p>Choose a password to secure &amp; lock your wallet. Agree to the Terms &amp; Conditions.</p>
+<p><a href="/images/leap_create_your_password.png" target="_blank"><img src="/images/leap_create_your_password.png" style="width:500px; height:auto;"></a></p>
+<p>Your Leap wallet has been created.</p>
+<p><a href="/images/leap_you_are_all_set.png" target="_blank"><img src="/images/leap_you_are_all_set.png" style="width:500px; height:auto;"></a></p>
+<p>Choose a random node from the <code>inference_url</code> list of genesis-nodes</p>
+<ul>
+<li><a href="http://185.216.21.98:8000">http://185.216.21.98:8000</a></li>
+<li><a href="http://69.19.136.233:8000">http://69.19.136.233:8000</a></li>
+<li><a href="http://36.189.234.197:18026">http://36.189.234.197:18026</a></li>
+<li><a href="http://36.189.234.237:17241">http://36.189.234.237:17241</a></li>
+<li><a href="http://node1.gonka.ai:8000">http://node1.gonka.ai:8000</a></li>
+<li><a href="http://node2.gonka.ai:8000">http://node2.gonka.ai:8000</a></li>
+<li><a href="http://node3.gonka.ai:8000">http://node3.gonka.ai:8000</a></li>
+<li><a href="http://47.236.26.199:8000">http://47.236.26.199:8000</a></li>
+<li><a href="http://47.236.19.22:18000">http://47.236.19.22:18000</a></li>
+<li><a href="http://gonka.spv.re:8000">http://gonka.spv.re:8000</a></li>
+</ul>
+<details class="note">
+<summary>An alternative, fully decentralized approach to choosing a random node from the list of active Hosts</summary>
+<p>Open the Hosts list: <a href="http://node2.gonka.ai:8000/v1/epochs/current/participants">http://node2.gonka.ai:8000/v1/epochs/current/participants</a></p>
+<p>Choose any active Host from the list.</p>
+<p>Copy their <code>inference_url</code> value.</p>
+</details>
+<p>Paste the <code>inference_url</code> into your browser to load the dashboard.</p>
+<p>Once opened, you’ll see real-time data streamed directly from the Host’s node — including network statistics, active workloads, and inference metrics.</p>
+<p>In the top-right corner, click "Connect Wallet" to get started.</p>
+<p><a href="/images/dashboard_ping_pub_3_1.png" target="_blank"><img src="/images/dashboard_ping_pub_3_1.png" style="width:500px; height:auto;"></a></p>
+<p>Select Leap and hit Connect.</p>
+<p><a href="/images/dashboard_ping_pub_3_2.png" target="_blank"><img src="/images/dashboard_ping_pub_3_2.png" style="width:500px; height:auto;"></a></p>
+<p>You will see a prompt to add a custom Gonka chain to your wallet. Approve and add Gonka chain.</p>
+<p><a href="/images/leap_add_network.png" target="_blank"><img src="/images/leap_add_network.png" style="width:500px; height:auto;"></a></p>
+<p>Done! Your Gonka Developer account has been successfully created.</p>
+<p>Open Leap, navigate to “Copy Address” in your wallet, tap or click “Copy Address”. It looks like a long string of letters and numbers (e.g., gonka1... ). This address is public—you can safely share it with others to receive payments.</p>
+<p><a href="/images/leap_copy_address.png" target="_blank"><img src="/images/leap_copy_address.png" style="width:auto; height:337.5px;"></a></p>
+</div>
+<div class="tabbed-block">
+<p>Download the <code>inferenced</code> CLI tool (the latest <code>inferenced</code> binary for your system is <a href="https://github.com/gonka-ai/gonka/releases">here</a>).</p>
+<details class="note">
+<summary>Enabling Execution on Mac OS</summary>
+<p>On Mac OS, after downloading the inferenced binary, you may need to enable execution permissions manually. Follow these steps:</p>
+<ol>
+<li>
+<p>Open a terminal and navigate to the directory where the binary is located.</p>
+</li>
+<li>
+<p>Run the following command to grant execution permission:
+</p><div class="highlight"><pre><span></span><code>chmod +x inferenced
+</code></pre></div>
+</li>
+<li>
+<p>Try running <code>./inferenced --help</code> to ensure it's working.</p>
+</li>
+<li>
+<p>If you see a security warning when trying to run <code>inferenced</code>, go to System Settings → Privacy &amp; Security.</p>
+</li>
+<li>
+<p>Scroll down to the warning about <code>inferenced</code> and click "Allow Anyway".</p>
+</li>
+</ol>
+</details>
+<p>You can create an account with the following command:
+</p><div class="highlight"><pre><span></span><code>./inferenced<span class="w"> </span>create-client<span class="w"> </span><span class="nv">$ACCOUNT_NAME</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--node-address<span class="w"> </span><span class="nv">$NODE_URL</span>
+</code></pre></div>
+<p>Make sure to securely save your passphrase — you'll need it for future access.</p>
+<p>This command creates a new account, securely stores its keys in the <code>~/.inference</code> directory, and returns your new account address:</p>
+<div class="highlight"><pre><span></span><code>-<span class="w"> </span>address:<span class="w"> </span>&lt;your-account-address&gt;
+<span class="w">  </span>name:<span class="w"> </span>ACCOUNT_NAME
+<span class="w">  </span>pubkey:<span class="w"> </span><span class="s1">'{"@type":"...","key":"..."}'</span>
+<span class="w">  </span>type:<span class="w"> </span><span class="nb">local</span>
+</code></pre></div>
+<p>Save this data. This address is public, you can safely share it with others to receive payments.</p>
+<p>Export your private key.
+</p><div class="highlight"><pre><span></span><code>./inferenced<span class="w"> </span>keys<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">$ACCOUNT_NAME</span><span class="w"> </span>--unarmored-hex<span class="w"> </span>--unsafe
+</code></pre></div>
+<p>This command outputs a plain-text private key. Backup your private key securely and never share your private key. Anyone with your private key can have access to your assets. </p>
+</div>
+</div>
+</div>
+<p>Sharing Your Address Safely</p>
+<ul>
+<li>Always copy and paste your address (don’t type it by hand).</li>
+<li>Double-check the first and last 4 characters before sending.</li>
+<li>Some wallets let you generate a QR code—useful for in-person sharing.</li>
+<li>You never share your seed phrase or private key. Only the public address is for sharing.</li>
+</ul>
+<p>Receiving Crypto</p>
+<ul>
+<li>Give your public address to the sender.</li>
+<li>Once they send funds, you can check your wallet balance or look up your address on a block explorer in Gonka Dashboard (links above).</li>
+</ul></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+  <!-- Footer -->
+<footer class="landing-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <span class="footer-logo">Gonka</span>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Protocol</h4>
+        <a href="#">Whitepaper</a>
+        <a href="#">Transformer-Based-Proof-of-Work</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Gonka Protocol License</a>
+        <a href="#">Patents</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-socials">
+      <a href="#" class="footer-social" aria-label="Github">
+        <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Discord">
+        <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Mail">
+        <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="X">
+        <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
+      </a>
+    </div>
+
+    <div class="footer-bottom-links">
+      <a href="#" class="footer-link">Help</a>
+      <a href="#" class="footer-link">Transactions & Governance</a>
+      <a href="#" class="footer-link">Terms & Policies</a>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/links.js"></script>
+      
+        <script src="../../javascripts/theme-toggle.js"></script>
+      
+        <script src="../../javascripts/dropdown.js"></script>
+      
+        <script src="../../javascripts/chat-redirect.js"></script>
+      
+        <script src="../../javascripts/smooth-scroll-to-cards.js"></script>
+      
+        <script src="../../javascripts/banner-close.js"></script>
+      
+        <script src="../../javascripts/mobile-menu.js"></script>
+      
+        <script src="../../javascripts/announcement.js"></script>
+      
+    
+  </body>
+</html>

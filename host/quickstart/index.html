@@ -1,0 +1,1449 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn to configure and use Gonka network">
+      
+      
+      
+        <link rel="canonical" href="https://gonka.me/host/quickstart/">
+      
+      
+        <link rel="prev" href="../../developer/details/">
+      
+      
+        <link rel="next" href="../multiple-nodes/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../zh/host/quickstart/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../../images/01-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Quickstart - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Manrope";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JWVG5X6CY5"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JWVG5X6CY5",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JWVG5X6CY5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    
+      
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" - Quickstart">
+    <meta property="og:description" content="Learn to configure and use Gonka network">
+    <meta property="og:url" content="https://gonka.me/host/quickstart/">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="568">
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#setting-up-your-chain" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+
+  <style>
+    .header-wrap {
+      padding: 20px 40px
+    }
+    .yellow-banner {
+      padding: 8px 40px
+    }
+  </style>
+  <!-- Yellow Top Banner -->
+<div class="yellow-banner">
+  <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
+  <button class="banner-learn-more">learn more</button>
+  <button class="banner-close">
+    <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
+  </button>
+</div>
+
+<!-- Header -->
+<header class="landing-header">
+  <div class="header-wrap">
+  <div class="nav-section">
+    <div class="logo-section">
+      <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
+      <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
+    </div>
+
+    <nav class="main-nav">
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="developers">
+          <span class="nav-text">Developers</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="developers">
+          <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="miners">
+          <span class="nav-text">miners</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="miners">
+          <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="tokenomics">
+          <span class="nav-text">tokenomics</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="tokenomics">
+          <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="nav-item nav-item-link">
+        <span class="nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </nav>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="header-actions">
+      <div class="theme-toggle">
+        <button class="theme-btn theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-dark" />
+        </button>
+        <button class="theme-btn theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="18" height="18" />
+        </button>
+      </div>
+      <div class="buy-gnk-wrapper">
+        <button class="buy-gnk-btn" onclick="return false;">
+          buy gnk 
+          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+          </svg>
+        </button>
+        
+        <div class="wallet-tooltip">
+          <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
+          <div class="wallet-text">
+            <span>Wallet will be</span>
+            <span>available soon</span>
+          </div>
+        </div>
+      </div>
+      <button class="join-btn">join today</button>
+    </div>
+  </div>
+
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <!-- Mobile Menu Close Button -->
+  <button class="mobile-menu-close" id="mobile-menu-close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="developers">
+          <span class="mobile-nav-text">Developers</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-developers">
+          <a href="/developer/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="mobile-dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="miners">
+          <span class="mobile-nav-text">miners</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-miners">
+          <a href="/host/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="mobile-dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="mobile-dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="mobile-dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="mobile-dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="mobile-dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="mobile-dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="mobile-dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="mobile-dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
+          <span class="mobile-nav-text">tokenomics</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-tokenomics">
+          <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
+        <span class="mobile-nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!-- Mobile Menu Actions -->
+    <div class="mobile-menu-actions">
+      <div class="mobile-theme-toggle">
+        <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
+        </button>
+        <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
+        </button>
+      </div>
+      
+      <div class="mobile-buttons-group">
+        <div class="mobile-buy-gnk-wrapper">
+          <button class="mobile-buy-gnk-btn" onclick="return false;">
+            buy gnk 
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+            </svg>
+          </button>
+          
+          <div class="mobile-wallet-tooltip">
+            <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
+            <div class="mobile-wallet-text">
+              <span>Wallet will be</span>
+              <span>available soon</span>
+            </div>
+          </div>
+        </div>
+        
+        <button class="mobile-join-btn">join today</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="md-container" data-md-component="container">
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="nav.title" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../../images/logos/gonka.svg" alt="logo">
+
+    </a>
+    
+  </label>
+
+  <!-- Custom navigation sections -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    <!-- DOCS Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DOCS</div>
+      <nav class="md-nav" aria-label="DOCS">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../../introduction/" class="md-nav__link">
+                  Introduction
+                </a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- DEVELOPER Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DEVELOPER</div>
+      <nav class="md-nav" aria-label="DEVELOPER">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../../developer/quickstart/" class="md-nav__link">
+                    Quickstart
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../developer/details/" class="md-nav__link">
+                    Details
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- PARTICIPANT Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">PARTICIPANT</div>
+      <nav class="md-nav" aria-label="PARTICIPANT">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="./" class="md-nav__link md-nav__link--active">
+                    Quickstart
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../multiple-nodes/" class="md-nav__link">
+                    Multiple nodes
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../network-node-api/" class="md-nav__link">
+                    Network Node API
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../key-management/" class="md-nav__link">
+                    Key Management
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../access-account/" class="md-nav__link">
+                    Access account
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../benchmark-to-choose-optimal-deployment-config-for-llms/" class="md-nav__link">
+                    Benchmark to Choose Optimal Deployment Config for LLMs
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../hardware-specifications/" class="md-nav__link">
+                    Hardware Specifications
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../genesis/" class="md-nav__link">
+                    Genesis
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../validator_info/" class="md-nav__link">
+                    How to edit validator public info
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../optional-ssl-setup/" class="md-nav__link">
+                    SSL setup
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- WALLET Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">WALLET</div>
+      <nav class="md-nav" aria-label="WALLET">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../../wallet/dashboard/" class="md-nav__link">
+                    Dashboard
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../wallet/wallet-and-transfer-guide/" class="md-nav__link">
+                    Wallet & Transfer Guide
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../wallet/pricing/" class="md-nav__link">
+                    Pricing
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- Additional links -->
+    <li class="md-nav__item">
+      <nav class="md-nav" aria-label="Additional">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../../model-licenses/" class="md-nav__link">
+                  Model licenses
+                </a>
+              </li>
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../../transactions-and-governance/" class="md-nav__link">
+                  Transactions & Governance
+                </a>
+              </li>
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../../software-upgrades/" class="md-nav__link">
+                  Software Upgrades
+                </a>
+              </li>
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../../FAQ/" class="md-nav__link">
+                    FAQ
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../Errors/" class="md-nav__link">
+                    Errors
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../../help/" class="md-nav__link">
+                    Get help
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+      </nav>
+    </li>
+  </ul>
+
+</nav>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+  <nav class="md-nav md-nav--secondary" aria-label="toc.title">
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      TABLE OF CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+          
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1" checked>
+            <label class="md-nav__link" for="__toc_1">
+              Setting up your chain
+            </label>
+            <nav class="md-nav" aria-label="Setting up your chain">
+              <ul class="md-nav__list">
+                
+                  <li class="md-nav__item">
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1_1" checked>
+                      <label class="md-nav__link" for="__toc_1_1">
+                        Prerequisites
+                      </label>
+                      <nav class="md-nav" aria-label="Prerequisites">
+                        <ul class="md-nav__list">
+                          
+                            <li class="md-nav__item">
+                              <a href="#supported-model-classes" class="md-nav__link">
+                                Supported Model Classes
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#configuration-for-optimal-rewards" class="md-nav__link">
+                                Configuration for Optimal Rewards
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#proposed-hardware-configuration" class="md-nav__link">
+                                Proposed Hardware Configuration
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#ports-open-for-public-connections" class="md-nav__link">
+                                Ports open for public connections
+                              </a>
+                            </li>
+                          
+                        </ul>
+                      </nav>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_2_2" checked>
+                      <label class="md-nav__link" for="__toc_2_2">
+                        Setup Your Nodes
+                      </label>
+                      <nav class="md-nav" aria-label="Setup Your Nodes">
+                        <ul class="md-nav__list">
+                          
+                            <li class="md-nav__item">
+                              <a href="#key-management-overview" class="md-nav__link">
+                                Key Management Overview
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#local-machine-install-the-cli-tool" class="md-nav__link">
+                                [Local machine] Install the CLI Tool
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#local-machine-create-account-key" class="md-nav__link">
+                                [Local machine] Create Account Key
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#server-download-deployment-files" class="md-nav__link">
+                                [Server] Download Deployment Files
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#server-edit-environment-variables" class="md-nav__link">
+                                [Server] Edit Environment Variables
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#server-edit-inference-node-description-for-the-server" class="md-nav__link">
+                                [Server] Edit Inference Node Description for the Server
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#server-pre-download-model-weights-to-hugging-face-cache-hf_home" class="md-nav__link">
+                                [Server] Pre-download Model Weights to Hugging Face Cache (HF_HOME)
+                              </a>
+                            </li>
+                          
+                        </ul>
+                      </nav>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_3_3" checked>
+                      <label class="md-nav__link" for="__toc_3_3">
+                        Launch Nodes
+                      </label>
+                      <nav class="md-nav" aria-label="Launch Nodes">
+                        <ul class="md-nav__list">
+                          
+                            <li class="md-nav__item">
+                              <a href="#1-server-pull-docker-images-containers" class="md-nav__link">
+                                1. [Server] Pull Docker Images (Containers)
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#2-server-start-initial-services" class="md-nav__link">
+                                2. [Server] Start Initial Services
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#3-complete-key-setup-and-host-registration" class="md-nav__link">
+                                3. Complete Key Setup and Host Registration
+                              </a>
+                            </li>
+                          
+                        </ul>
+                      </nav>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#verify-node-status" class="md-nav__link">
+                        Verify Node Status
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_5_5" checked>
+                      <label class="md-nav__link" for="__toc_5_5">
+                        Stopping and Cleaning Up Your Node
+                      </label>
+                      <nav class="md-nav" aria-label="Stopping and Cleaning Up Your Node">
+                        <ul class="md-nav__list">
+                          
+                            <li class="md-nav__item">
+                              <a href="#how-to-stop-mlnode" class="md-nav__link">
+                                How to stop MLNode
+                              </a>
+                            </li>
+                          
+                        </ul>
+                      </nav>
+                    
+                  </li>
+                
+              </ul>
+            </nav>
+          
+        </li>
+      
+    </ul>
+    
+    <!-- READ NEXT section -->
+    <div class="md-nav__read-next">
+      <div class="md-nav__read-next-title">READ NEXT:</div>
+      <div class="md-nav__read-next-section">RUNNER</div>
+      <a href="#" class="md-nav__read-next-link">Quickstart</a>
+    </div>
+  </nav>
+
+        </div>
+      </div>
+    </div>
+  
+
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="setting-up-your-chain">Setting up your chain</h1>
+<p><strong>Host</strong> (<strong>hardware provider</strong> or <strong>node</strong>) contributes computational resources to the network and is rewarded based on the amount and quality of resources they provide.</p>
+<p>To join the network, you need to deploy two services:</p>
+<ul>
+<li><strong>Network node</strong> – a service consisting of two nodes: a <strong>chain node</strong> and an <strong>API node</strong>. This service handles all communication. The <strong>chain node</strong> connects to the blockchain, while the <strong>API node</strong> manages user requests.</li>
+<li><strong>Inference (ML) node</strong> – a service that performs inference of large language models (LLMs) on GPU(s). You need at least one <strong>ML node</strong> to join the network.</li>
+</ul>
+<p>The guide describes the scenario where both services are deployed on the same machine, and each Host has one MLNode. Services are deployed as Docker containers.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>This  section provides guidance on configuring your hardware infrastructure to participate in Gonka Network launch. The goal is to maximize protocol rewards by aligning your deployment with network expectations.</p>
+<h3 id="supported-model-classes">Supported Model Classes</h3>
+<p>The protocol currently supports the following model classes:</p>
+<ul>
+<li>Large Models — <code>DeepSeek R1</code>, <code>Qwen3-235B</code>, <code>gpt-oss-120b</code></li>
+<li>Medium Models — <code>Qwen3-32B</code>, <code>Gemma-3-27b-it</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Governance and model classification</p>
+<ul>
+<li>The exact deployment parameters for each category are defined in the genesis configuration.</li>
+<li>Models may be classified into a category if approved by governance.</li>
+<li>Decisions about adding or changing supported models are made by governance.</li>
+<li>For details on governance procedures and how to propose new models, see the <a href="https://gonka.ai/transactions-and-governance/">Transactions and Governance Guide</a>.</li>
+</ul>
+</div>
+<h3 id="configuration-for-optimal-rewards">Configuration for Optimal Rewards</h3>
+<p>To earn the highest rewards and maintain reliability, each Network Node should serve two model classes, with a minimum of 2 MLNodes per class. This setup:</p>
+<ul>
+<li>Improves protocol-level redundancy and fault tolerance</li>
+<li>Enhances model-level validation performance</li>
+<li>Aligns with future reward scaling logic</li>
+</ul>
+<h3 id="proposed-hardware-configuration">Proposed Hardware Configuration</h3>
+<p>To run a valid node, you need machines with <a href="/host/hardware-specifications/">supported GPU(s)</a>. We recommend grouping your hardware into 2–5 Network Nodes, each configured to support all model classes. Below is a reference layout:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Model Class</strong></th>
+<th><strong>Model Name</strong></th>
+<th><strong>MLNodes (min)</strong></th>
+<th><strong>Example Hardware</strong></th>
+<th><strong>Total VRAM</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Large</strong></td>
+<td><code>DeepSeek R1</code> / <code>Qwen3-235B</code></td>
+<td>≥ 2</td>
+<td>8× H200 per MLNode</td>
+<td>640 GB</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td><code>Qwen3-32B</code> / <code>Gemma-3-27B-it</code></td>
+<td>≥ 2</td>
+<td>4× A100 or 2× H100 per MLNode</td>
+<td>80 GB</td>
+</tr>
+</tbody>
+</table>
+<p>This is a reference architecture. You may adjust node count or hardware allocation, but we recommend following the core principle: each node should support multiple MLNodes across all three model tiers.</p>
+<p>More details about optimal deploy configuration can be found <a href="https://gonka.ai/host/benchmark-to-choose-optimal-deployment-config-for-llms/">here</a>.</p>
+<p>The server hosting the Network Node should have:</p>
+<ul>
+<li>16-core CPU (amd64)</li>
+<li>64+ GB RAM</li>
+<li>1TB NVe SSD</li>
+<li>100Mbps minimum netowork connection (1Gbps preffered)</li>
+</ul>
+<p>The final requirements will depend on the number of MLNodes connected and their total throughput.</p>
+<p>Each server to deploy MLNode should have:</p>
+<ul>
+<li>at least 1.5x RAM of GPU VRAM</li>
+<li>a 16-core CPU (Network Node and MLNode can be deployed on the same server).</li>
+<li>NVIDIA Container Toolkit installed and configured, with a CUDA Toolkit version between 12.6 and 12.9. You can check the version with <code>nvidia-smi</code>.</li>
+</ul>
+<h3 id="ports-open-for-public-connections">Ports open for public connections</h3>
+<ul>
+<li>5000 - Tendermint P2P communication</li>
+<li>26657 - Tendermint RPC (querying the blockchain, broadcasting transactions)</li>
+<li>8000 - Application service (configurable)</li>
+</ul>
+<h2 id="setup-your-nodes">Setup Your Nodes</h2>
+<p>The quickstart instruction is designed to run both the Network Node and the inference node on a single machine (one server setup). </p>
+<details class="note">
+<summary>Multiple nodes deployment</summary>
+<p>If you are deploying multiple GPU nodes, please refer to the detailed <a href="https://gonka.ai/host/multiple-nodes/">Multiple nodes deployment guide</a> for proper setup and configuration. Whether you deploy inference nodes on a single machine or across multiple servers (including across geographical regions), all inference nodes must be connected to the same Network Node.</p>
+</details>
+<h3 id="key-management-overview">Key Management Overview</h3>
+<p>Before configuring your Network Node, you need to set up cryptographic keys for secure operations.<br>
+<strong>It is recommended to read <a href="/host/key-management/">Key Management Guide</a> before launching a production node.</strong></p>
+<p>We use a two-key system:</p>
+<ul>
+<li><strong>Account Key</strong> (Cold Wallet) - Created on your local secure machine for high-stakes operations</li>
+<li><strong>ML Operational Key</strong> (Warm Wallet) - Created on the server for automated AI workload transactions</li>
+</ul>
+<h3 id="local-machine-install-the-cli-tool">[Local machine] Install the CLI Tool</h3>
+<p>The <code>inferenced</code> CLI is required for local account management and network operations. It's a command-line interface utility that allows you to create and manage Gonka accounts, register hosts, and perform various network operations from your local machine.</p>
+<p>Download the latest <code>inferenced</code> binary from <a href="https://github.com/gonka-ai/gonka/releases">GitHub releases</a> and make it executable:</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>inferenced
+./inferenced<span class="w"> </span>--help
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">MacOS Users</p>
+<p>On MacOS, you may need to allow execution in <code>System Settings</code> → <code>Privacy &amp; Security</code> if prompted. Scroll down to the warning about <code>inferenced</code> and click <code>Allow Anyway</code>.</p>
+</div>
+<h3 id="local-machine-create-account-key">[Local machine] Create Account Key</h3>
+<p><strong>IMPORTANT: Perform this step on a secure, local machine (not your server)</strong></p>
+<p>Create your Account Key using the <code>file</code> keyring backend (you can also use <code>os</code> for enhanced security on supported systems):</p>
+<div class="highlight"><pre><span></span><code>./inferenced<span class="w"> </span>keys<span class="w"> </span>add<span class="w"> </span>gonka-account-key<span class="w"> </span>--keyring-backend<span class="w"> </span>file
+</code></pre></div>
+<p>CLI will ask you for passphrase and show data about created key-pair.
+</p><div class="highlight"><pre><span></span><code>❯ ./inferenced keys add gonka-account-key --keyring-backend file
+Enter keyring passphrase (attempt 1/3):
+Re-enter keyring passphrase:
+
+- address: gonka1rk52j24xj9ej87jas4zqpvjuhrgpnd7h3feqmm
+  name: gonka-account-key
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Au+a3CpMj6nqFV6d0tUlVajCTkOP3cxKnps+1/lMv5zY"}'
+  type: local
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+pyramid sweet dumb critic lamp various remove token talent drink announce tiny lab follow blind awful expire wasp flavor very pair tell next cable
+</code></pre></div>
+<p><strong>CRITICAL</strong>: Write this mnemonic phrase down and store it in a secure, offline location. This phrase is the <strong>only</strong> way to recover your Account Key.</p>
+<div class="admonition info">
+<p class="admonition-title">Hardware Wallet Support</p>
+<p><strong>Current Status</strong>: Hardware wallets are not yet supported at network launch.</p>
+<p><strong>For Now</strong>: Store your Account Key on a secure, dedicated machine with minimal internet exposure and strong encryption.</p>
+<p><strong>Important</strong>: Always keep your mnemonic phrase as backup regardless of future hardware wallet adoption.</p>
+</div>
+<h3 id="server-download-deployment-files">[Server] Download Deployment Files</h3>
+<p>Clone the repository with the base deploy scripts:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/gonka-ai/gonka.git<span class="w"> </span>-b<span class="w"> </span>main<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+<span class="nb">cd</span><span class="w"> </span>gonka/deploy/join
+</code></pre></div>
+<p>And copy <code>config</code> file template:
+</p><div class="highlight"><pre><span></span><code>cp config.env.template config.env
+</code></pre></div>
+<p>After cloning the repository, you’ll find the following key configuration files:</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>config.env</code></td>
+<td>Contains environment variables for the Network Node</td>
+</tr>
+<tr>
+<td><code>docker-compose.yml</code></td>
+<td>Docker Compose file to launch the Network Node</td>
+</tr>
+<tr>
+<td><code>docker-compose.mlnode.yml</code></td>
+<td>Docker Compose file to launch the ML node</td>
+</tr>
+<tr>
+<td><code>node-config.json</code></td>
+<td>Configuration file used by Network Node, it describes inference nodes managed by this Network Node</td>
+</tr>
+</tbody>
+</table>
+<h3 id="server-edit-environment-variables">[Server] Edit Environment Variables</h3>
+<div class="admonition note">
+<p class="admonition-title">config.env</p>
+<div class="highlight"><pre><span></span><code>export KEY_NAME=&lt;FILLIN&gt;                                    # Edit as described below
+export KEYRING_PASSWORD=&lt;FILLIN&gt;                            # Edit as described below
+export API_PORT=8000                                        # Edit as described below
+export PUBLIC_URL=http://&lt;HOST&gt;:&lt;PORT&gt;                      # Edit as described below
+export P2P_EXTERNAL_ADDRESS=tcp://&lt;HOST&gt;:&lt;PORT&gt;             # Edit as described below
+export ACCOUNT_PUBKEY=&lt;ACCOUNT_PUBKEY_FROM_STEP_ABOVE&gt;      # Use the pubkey from your Account Key (without quotes)
+export NODE_CONFIG=./node-config.json                       # Keep as is
+export HF_HOME=/mnt/shared                                  # Directory you used for cache
+export SEED_API_URL=http://node2.gonka.ai:8000              # Keep as is 
+export SEED_NODE_RPC_URL=http://node2.gonka.ai:26657        # Keep as is
+export SEED_NODE_P2P_URL=tcp://node2.gonka.ai:5000          # Keep as is
+export DAPI_API__POC_CALLBACK_URL=http://api:9100           # Keep as is
+export DAPI_CHAIN_NODE__URL=http://node:26657               # Keep as is
+export DAPI_CHAIN_NODE__P2P_URL=http://node:26656           # Keep as is
+export RPC_SERVER_URL_1=http://node1.gonka.ai:26657         # Keep as is
+export RPC_SERVER_URL_2=http://node2.gonka.ai:26657         # Keep as is
+export PORT=8080                                            # Keep as is
+export INFERENCE_PORT=5050                                  # Keep as is
+export KEYRING_BACKEND=file                                 # Keep as is
+</code></pre></div>
+</div>
+<p>Which variables to edit:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>KEY_NAME</code></td>
+<td>Manually define a unique identifier for your node.</td>
+</tr>
+<tr>
+<td><code>KEYRING_PASSWORD</code></td>
+<td>Set a password for encrypting the ML Operational Key stored in the <code>file</code> keyring backend on the server.</td>
+</tr>
+<tr>
+<td><code>API_PORT</code></td>
+<td>Set the port where your node will be available on the machine (default is 8000).</td>
+</tr>
+<tr>
+<td><code>PUBLIC_URL</code></td>
+<td>Specify the <code>Public URL</code> where your node will be available externally (e.g.: <code>http://&lt;your-static-ip&gt;:&lt;port&gt;</code>, mapped to 0.0.0.0:8000).</td>
+</tr>
+<tr>
+<td><code>P2P_EXTERNAL_ADDRESS</code></td>
+<td>Specify the <code>Public URL</code> where your node will be available externally for P2P connections (e.g.: <code>http://&lt;your-static-ip&gt;:&lt;port1&gt;</code>, mapped to 0.0.0.0:5000).</td>
+</tr>
+<tr>
+<td><code>HF_HOME</code></td>
+<td>Set the path where Hugging Face models will be cached. Set this to a writable local directory (e.g., <code>~/hf-cache</code>).</td>
+</tr>
+<tr>
+<td><code>ACCOUNT_PUBKEY</code></td>
+<td>Use the public key from your Account Key created above (the value after <code>"key":</code> without quotes)</td>
+</tr>
+</tbody>
+</table>
+<p>All other variables can be left as is.</p>
+<p><strong>Load the configuration:</strong>
+</p><div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>config.env
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Using Environment Variables</p>
+<p>The examples in the following sections will reference these environment variables (e.g., <code>$PUBLIC_URL</code>, <code>$ACCOUNT_PUBKEY</code>, <code>$SEED_API_URL</code>) in both local machine commands and server commands. Make sure to run <code>source config.env</code> in each terminal session where you'll be executing these commands.</p>
+</div>
+<h3 id="server-edit-inference-node-description-for-the-server">[Server] Edit Inference Node Description for the Server</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The network currently supports the following models: <code>Qwen/Qwen3-235B-A22B-Instruct-2507-FP8</code> and <code>Qwen/Qwen3-32B-FP8</code>. The governance makes decisions regarding the addition or modification of supported models. For details on how model governance works and how to propose new models, see the <a href="https://gonka.ai/transactions-and-governance/">Transactions and Governance Guide</a>.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">8xH200 or 8xH100</label><label for="__tabbed_1_2">1xH100</label><label for="__tabbed_1_3">8x4090</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">edit node-config.json</p>
+<div class="highlight"><pre><span></span><code>[
+    {
+        "id": "node1",
+        "host": "inference",
+        "inference_port": 5000,
+        "poc_port": 8080,
+        "max_concurrent": 500,
+        "models": {
+            "Qwen/Qwen3-235B-A22B-Instruct-2507-FP8": {
+                "args": [
+                    "--tensor-parallel-size","4"
+                ]
+            }
+        }
+    }
+]
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">edit node-config.json</p>
+<div class="highlight"><pre><span></span><code>[
+    {
+        "id": "node1",
+        "host": "inference",
+        "inference_port": 5000,
+        "poc_port": 8080,
+        "max_concurrent": 500,
+        "models": {
+            "Qwen/Qwen3-32B-FP8": {
+                "args": []
+            }
+        }
+    }
+]
+</code></pre></div>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">edit node-config.json</p>
+<div class="highlight"><pre><span></span><code>[
+    {
+        "id": "node1",
+        "host": "inference",
+        "inference_port": 5000,
+        "poc_port": 8080,
+        "max_concurrent": 500,
+        "models": {
+            "Qwen/Qwen3-32B-FP8": {
+                "args": [
+                    "--tensor-parallel-size","4"
+                ]
+            }
+        }
+    }
+]
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>For more details on the optimal deployment configuration, please refer to <a href="https://gonka.ai/host/benchmark-to-choose-optimal-deployment-config-for-llms/">this link</a>.</p>
+<h3 id="server-pre-download-model-weights-to-hugging-face-cache-hf_home">[Server] Pre-download Model Weights to Hugging Face Cache (HF_HOME)</h3>
+<p>Inference nodes download model weights from Hugging Face.
+To make sure the model weights are ready for inference, you should download them before deployment.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">8xH100 or 8xH200</label><label for="__tabbed_2_2">Other GPUs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HF_HOME</span>
+huggingface-cli<span class="w"> </span>download<span class="w"> </span>Qwen/Qwen3-235B-A22B-Instruct-2507-FP8
+huggingface-cli<span class="w"> </span>download<span class="w"> </span>Qwen/Qwen3-32B-FP8
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$HF_HOME</span>
+huggingface-cli<span class="w"> </span>download<span class="w"> </span>Qwen/Qwen3-32B-FP8
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="launch-nodes">Launch Nodes</h2>
+<h3 id="1-server-pull-docker-images-containers">1. [Server] Pull Docker Images (Containers)</h3>
+<p>Make sure you are in the <code>gonka/deploy/join</code> folder before running the next commands. 
+</p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.mlnode.yml<span class="w"> </span>pull
+</code></pre></div>
+<h3 id="2-server-start-initial-services">2. [Server] Start Initial Services</h3>
+<p>Start the essential services needed for key setup (excluding the API service):</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>config.env<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>tmkms<span class="w"> </span>node<span class="w"> </span>-d<span class="w"> </span>--no-deps
+</code></pre></div>
+<p>We start these specific containers first because:</p>
+<ul>
+<li><strong><code>tmkms</code></strong> - Generates and securely manages the Consensus Key needed for validator registration</li>
+<li><strong><code>node</code></strong> - Connects to the blockchain and provides the RPC endpoint to retrieve the Consensus Key  </li>
+<li><strong><code>api</code></strong> - is deliberately excluded at this stage because we need to create the ML Operational Key inside it in the next step</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Recommendation</p>
+<p>You can check logs to verify the initial services started successfully:</p>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>tmkms<span class="w"> </span>node<span class="w"> </span>-f
+</code></pre></div>
+<p>If you see the chain node continuously processing block events, then the setup is working correctly.</p>
+</div>
+<h3 id="3-complete-key-setup-and-host-registration">3. Complete Key Setup and Host Registration</h3>
+<p>Now we need to complete the key management setup by creating the warm key, registering the Host, and granting permissions:</p>
+<h4 id="31-server-create-ml-operational-key">3.1. [Server] Create ML Operational Key</h4>
+<p>Create the warm key inside the <code>api</code> container using the <code>file</code> keyring backend (required for programmatic access). The key will be stored in a persistent volume mapped to <code>/root/.inference</code> of the container:
+</p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>--no-deps<span class="w"> </span>-it<span class="w"> </span>api<span class="w"> </span>/bin/sh
+</code></pre></div>
+<p>Inside the container, create the ML operational key:
+</p><div class="highlight"><pre><span></span><code><span class="nb">printf</span><span class="w"> </span><span class="s1">'%s\n%s\n'</span><span class="w"> </span><span class="s2">"</span><span class="nv">$KEYRING_PASSWORD</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="nv">$KEYRING_PASSWORD</span><span class="s2">"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>inferenced<span class="w"> </span>keys<span class="w"> </span>add<span class="w"> </span><span class="s2">"</span><span class="nv">$KEY_NAME</span><span class="s2">"</span><span class="w"> </span>--keyring-backend<span class="w"> </span>file
+</code></pre></div>
+<p><strong>Example output:</strong>
+</p><div class="highlight"><pre><span></span><code>~ # printf '%s\n%s\n' "$KEYRING_PASSWORD" "$KEYRING_PASSWORD" | inferenced keys add "$KEY_NAME" --keyring-backend file
+
+- address: gonka1gyz2agg5yx49gy2z4qpsz9826t6s9xev6tkehw
+  name: node-702105
+  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Ao8VPh5U5XQBcJ6qxAIwBbhF/3UPZEwzZ9H/qbIA6ipj"}'
+  type: local
+
+
+**Important** write this mnemonic phrase in a safe place.
+It is the only way to recover your account if you ever forget your password.
+
+again plastic athlete arrow first measure danger drastic wolf coyote work memory already inmate sorry path tackle custom write result west tray rabbit jeans
+</code></pre></div>
+<h4 id="32-server-register-host">3.2. [Server] Register Host</h4>
+<p>From the same container, we can register the Host with URL, Account Key, and Consensus Key (fetched automatically) on chain:</p>
+<div class="highlight"><pre><span></span><code>inferenced register-new-participant \
+    $DAPI_API__PUBLIC_URL \
+    $ACCOUNT_PUBKEY \
+    --node-address $DAPI_CHAIN_NODE__SEED_API_URL
+</code></pre></div>
+<p><strong>Expected output:</strong>
+</p><div class="highlight"><pre><span></span><code>...
+Found participant with pubkey: Au+a3CpMj6nqFV6d0tUlVajCTkOP3cxKnps+1/lMv5zY (balance: 0)
+Participant is now available at http://36.189.234.237:19250/v1/participants/gonka1rk52j24xj9ej87jas4zqpvjuhrgpnd7h3feqmm
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Per-Node Account Key Configuration</p>
+<p>Always generate a unique <code>ACCOUNT_PUBKEY</code> for each Network Node to ensure proper separation of Hosts.</p>
+</div>
+<p>Then we can exit the container:
+</p><div class="highlight"><pre><span></span><code><span class="nb">exit</span>
+</code></pre></div>
+<h4 id="33-local-machine-grant-permissions-to-ml-operational-key">3.3. [Local machine] Grant Permissions to ML Operational Key</h4>
+<p><strong>IMPORTANT: Perform this step on your secure local machine where you created the Account Key</strong></p>
+<p>Grant permissions from your Account Key to the ML Operational Key:
+</p><div class="highlight"><pre><span></span><code>./inferenced<span class="w"> </span>tx<span class="w"> </span>inference<span class="w"> </span>grant-ml-ops-permissions<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>gonka-account-key<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>&lt;ml-operational-key-address-from-step-3.1&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--from<span class="w"> </span>gonka-account-key<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--keyring-backend<span class="w"> </span>file<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--gas<span class="w"> </span><span class="m">2000000</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--node<span class="w"> </span>&lt;seed_api_url<span class="w"> </span>from<span class="w"> </span>server<span class="err">'</span>s<span class="w"> </span>config.env&gt;/chain-rpc/<span class="w"> </span>
+</code></pre></div>
+<p><strong>Expected output:</strong>
+</p><div class="highlight"><pre><span></span><code>...
+Transaction sent with hash: FB9BBBB5F8C155D0732B290C443A0D06BC114CDF43E8EE8FB329D646C608062E
+Waiting for transaction to be included in a block...
+
+Transaction confirmed successfully!
+Block height: 174
+</code></pre></div>
+<h4 id="34-server-launch-full-node">3.4. [Server] Launch Full Node</h4>
+<p>Finally, launch all containers, including the API:
+</p><div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>config.env<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.mlnode.yml<span class="w"> </span>up<span class="w"> </span>-d
+</code></pre></div>
+<h2 id="verify-node-status">Verify Node Status</h2>
+<p>Open this URL, replacing <code>&lt;your-gonka-cold-address&gt;</code> with your address:
+</p><div class="highlight"><pre><span></span><code>http://node2.gonka.ai:8000/v1/participants/&lt;your-gonka-cold-address&gt;
+</code></pre></div>
+<p>You will see your public key in JSON format:
+</p><div class="highlight"><pre><span></span><code>{"pubkey":"&lt;your-public-key&gt;"}
+</code></pre></div>
+<p>This means that your address is included in the participants' list.</p>
+<p>Once your node completes the Proof of Compute stage (which runs every 24 hours), you can visit the following URL to see your node:
+</p><div class="highlight"><pre><span></span><code>http://node2.gonka.ai:8000/v1/epochs/current/participants
+</code></pre></div>
+<p>You may turn off your server before this stage and start it again right before the next Proof of Compute.
+To track when the next Proof of Compute session will begin, check <a href="https://gonka.ai/wallet/dashboard/">the dashboard</a> here:
+</p><div class="highlight"><pre><span></span><code>http://node2.gonka.ai:8000/dashboard/gonka/validator
+</code></pre></div>
+<p>Once your node is running, check your node status using Tendermint RPC endpoint of your node (26657 of <code>node</code> container).
+</p><div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://&lt;PUBLIC_IP&gt;:&lt;PUBLIC_RPC_PORT&gt;/status
+</code></pre></div>
+On the server, you can use private ones.
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://0.0.0.0:26657/status
+</code></pre></div>
+Using the public IP of the genesis node.
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://node2.gonka.ai:26657/status
+</code></pre></div>
+<p>Once your node is visible in the Dashboard, you may also want to update your public profile (host name, website, avatar). This helps other participants identify your node in the network. You can find <a href="https://gonka.ai/host/validator_info/">the instructions here</a>.</p>
+<h2 id="stopping-and-cleaning-up-your-node">Stopping and Cleaning Up Your Node</h2>
+<h3 id="how-to-stop-mlnode">How to stop MLNode</h3>
+<ol>
+<li>Disable each MLNode.
+<div class="highlight"><pre><span></span><code>curl -X POST http://&lt;api_node_static_ip&gt;:&lt;admin_port&gt;/nodes/&lt;id&gt;/disable
+</code></pre></div></li>
+<li>Wait for the next epoch. Do not stop the node yet. The disable flag takes effect only after the next epoch starts.</li>
+<li>
+<p>Verify removal and weight. Confirm both for every disabled node:</p>
+<ul>
+<li>It is not present in the active participants list</li>
+<li>Its effective weight equals 0</li>
+</ul>
+</li>
+<li>
+<p>Stop the MLNode.</p>
+</li>
+<li>
+<p>Make sure you are in <code>gonka/deploy/join</code> folder. To stop all running containers:
+</p><div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>docker-compose.yml<span class="w"> </span>-f<span class="w"> </span>docker-compose.mlnode.yml<span class="w"> </span>down
+</code></pre></div>
+This stops and removes all services defined in the <code>docker-compose.yml</code> file without deleting volumes or data unless explicitly configured.
+</li>
+<li>
+<p>To clean up cache and start fresh, remove the local <code>.inference</code> and <code>.dapi</code> folders (inference runtime cache and identity):
+</p><div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>.inference<span class="w"> </span>.dapi<span class="w"> </span>.tmkms
+</code></pre></div>
+</li>
+<li>
+<p>(Optional) Clear model weights cache:
+</p><div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span><span class="nv">$HF_HOME</span>
+</code></pre></div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Deleting <code>$HF_HOME</code> will require re-downloading large model files from Hugging Face or re-mounting the NFS cache.</p>
+</div>
+<p><strong>Need help?</strong> Join our <a href="https://discord.gg/fvhNxdFMvB">Discord server</a> for assistance with general inquiries, technical issues, or security concerns.  </p></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+  <!-- Footer -->
+<footer class="landing-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <span class="footer-logo">Gonka</span>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Protocol</h4>
+        <a href="#">Whitepaper</a>
+        <a href="#">Transformer-Based-Proof-of-Work</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Gonka Protocol License</a>
+        <a href="#">Patents</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-socials">
+      <a href="#" class="footer-social" aria-label="Github">
+        <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Discord">
+        <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Mail">
+        <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="X">
+        <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
+      </a>
+    </div>
+
+    <div class="footer-bottom-links">
+      <a href="#" class="footer-link">Help</a>
+      <a href="#" class="footer-link">Transactions & Governance</a>
+      <a href="#" class="footer-link">Terms & Policies</a>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../js/links.js"></script>
+      
+        <script src="../../javascripts/theme-toggle.js"></script>
+      
+        <script src="../../javascripts/dropdown.js"></script>
+      
+        <script src="../../javascripts/chat-redirect.js"></script>
+      
+        <script src="../../javascripts/smooth-scroll-to-cards.js"></script>
+      
+        <script src="../../javascripts/banner-close.js"></script>
+      
+        <script src="../../javascripts/mobile-menu.js"></script>
+      
+        <script src="../../javascripts/announcement.js"></script>
+      
+    
+  </body>
+</html>

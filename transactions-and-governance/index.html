@@ -1,0 +1,1096 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn to configure and use Gonka network">
+      
+      
+      
+        <link rel="canonical" href="https://gonka.me/transactions-and-governance/">
+      
+      
+        <link rel="prev" href="../model-licenses/">
+      
+      
+        <link rel="next" href="../software-upgrades/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../zh/transactions-and-governance/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../images/01-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Transactions & Governance - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Manrope";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JWVG5X6CY5"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JWVG5X6CY5",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JWVG5X6CY5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+    
+      
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" - Transactions & Governance">
+    <meta property="og:description" content="Learn to configure and use Gonka network">
+    <meta property="og:url" content="https://gonka.me/transactions-and-governance/">
+    <meta property="og:image" content="">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="568">
+  
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#governance-transactions-cosmos-sdk-053" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+
+  <style>
+    .header-wrap {
+      padding: 20px 40px
+    }
+    .yellow-banner {
+      padding: 8px 40px
+    }
+  </style>
+  <!-- Yellow Top Banner -->
+<div class="yellow-banner">
+  <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
+  <button class="banner-learn-more">learn more</button>
+  <button class="banner-close">
+    <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
+  </button>
+</div>
+
+<!-- Header -->
+<header class="landing-header">
+  <div class="header-wrap">
+  <div class="nav-section">
+    <div class="logo-section">
+      <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
+      <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
+    </div>
+
+    <nav class="main-nav">
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="developers">
+          <span class="nav-text">Developers</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="developers">
+          <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="miners">
+          <span class="nav-text">miners</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="miners">
+          <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="nav-item-dropdown">
+        <a href="#" class="nav-item" data-dropdown="tokenomics">
+          <span class="nav-text">tokenomics</span>
+          <span class="nav-icon">+</span>
+        </a>
+        <div class="dropdown-menu" id="tokenomics">
+          <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="nav-item nav-item-link">
+        <span class="nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </nav>
+    </div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="header-actions">
+      <div class="theme-toggle">
+        <button class="theme-btn theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-dark" />
+        </button>
+        <button class="theme-btn theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="18" height="18" />
+        </button>
+      </div>
+      <div class="buy-gnk-wrapper">
+        <button class="buy-gnk-btn" onclick="return false;">
+          buy gnk 
+          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+          </svg>
+        </button>
+        
+        <div class="wallet-tooltip">
+          <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
+          <div class="wallet-text">
+            <span>Wallet will be</span>
+            <span>available soon</span>
+          </div>
+        </div>
+      </div>
+      <button class="join-btn">join today</button>
+    </div>
+  </div>
+
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <!-- Mobile Menu Close Button -->
+  <button class="mobile-menu-close" id="mobile-menu-close">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  
+  <div class="mobile-menu-content">
+    <div class="mobile-nav-section">
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="developers">
+          <span class="mobile-nav-text">Developers</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-developers">
+          <a href="/developer/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/developer/details" class="mobile-dropdown-link">Details</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="miners">
+          <span class="mobile-nav-text">miners</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-miners">
+          <a href="/host/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/host/multiple-nodes" class="mobile-dropdown-link">Multiple nodes</a>
+          <a href="/host/network-node-api" class="mobile-dropdown-link">Network Node API</a>
+          <a href="/host/key-management" class="mobile-dropdown-link">Key Management</a>
+          <a href="/host/access-account" class="mobile-dropdown-link">Access account</a>
+          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="mobile-dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+          <a href="/host/hardware-specifications" class="mobile-dropdown-link">Hardware Specifications</a>
+          <a href="/host/genesis" class="mobile-dropdown-link">Genesis</a>
+          <a href="/host/validator_info" class="mobile-dropdown-link">How to edit validator public info</a>
+          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link">SSL setup</a>
+        </div>
+      </div>
+      
+      <div class="mobile-nav-item-dropdown">
+        <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
+          <span class="mobile-nav-text">tokenomics</span>
+          <span class="mobile-nav-icon">+</span>
+        </a>
+        <div class="mobile-dropdown-menu" id="mobile-tokenomics">
+          <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
+        </div>
+      </div>
+      
+      <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
+        <span class="mobile-nav-text">documentations</span>
+        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        </svg>
+      </a>
+    </div>
+    
+    <!-- Mobile Menu Actions -->
+    <div class="mobile-menu-actions">
+      <div class="mobile-theme-toggle">
+        <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
+          <img src="/images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
+          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
+        </button>
+        <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
+          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
+        </button>
+      </div>
+      
+      <div class="mobile-buttons-group">
+        <div class="mobile-buy-gnk-wrapper">
+          <button class="mobile-buy-gnk-btn" onclick="return false;">
+            buy gnk 
+            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+            </svg>
+          </button>
+          
+          <div class="mobile-wallet-tooltip">
+            <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
+            <div class="mobile-wallet-text">
+              <span>Wallet will be</span>
+              <span>available soon</span>
+            </div>
+          </div>
+        </div>
+        
+        <button class="mobile-join-btn">join today</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="md-container" data-md-component="container">
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+  
+    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="nav.title" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../images/logos/gonka.svg" alt="logo">
+
+    </a>
+    
+  </label>
+
+  <!-- Custom navigation sections -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    <!-- DOCS Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DOCS</div>
+      <nav class="md-nav" aria-label="DOCS">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../introduction/" class="md-nav__link">
+                  Introduction
+                </a>
+              </li>
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- DEVELOPER Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">DEVELOPER</div>
+      <nav class="md-nav" aria-label="DEVELOPER">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../developer/quickstart/" class="md-nav__link">
+                    Quickstart
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../developer/details/" class="md-nav__link">
+                    Details
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- PARTICIPANT Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">PARTICIPANT</div>
+      <nav class="md-nav" aria-label="PARTICIPANT">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../host/quickstart/" class="md-nav__link">
+                    Quickstart
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/multiple-nodes/" class="md-nav__link">
+                    Multiple nodes
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/network-node-api/" class="md-nav__link">
+                    Network Node API
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/key-management/" class="md-nav__link">
+                    Key Management
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/access-account/" class="md-nav__link">
+                    Access account
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/benchmark-to-choose-optimal-deployment-config-for-llms/" class="md-nav__link">
+                    Benchmark to Choose Optimal Deployment Config for LLMs
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/hardware-specifications/" class="md-nav__link">
+                    Hardware Specifications
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/genesis/" class="md-nav__link">
+                    Genesis
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/validator_info/" class="md-nav__link">
+                    How to edit validator public info
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../host/optional-ssl-setup/" class="md-nav__link">
+                    SSL setup
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- WALLET Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title">WALLET</div>
+      <nav class="md-nav" aria-label="WALLET">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../wallet/dashboard/" class="md-nav__link">
+                    Dashboard
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../wallet/wallet-and-transfer-guide/" class="md-nav__link">
+                    Wallet & Transfer Guide
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../wallet/pricing/" class="md-nav__link">
+                    Pricing
+                  </a>
+                </li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- Additional links -->
+    <li class="md-nav__item">
+      <nav class="md-nav" aria-label="Additional">
+        <ul class="md-nav__list">
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../model-licenses/" class="md-nav__link">
+                  Model licenses
+                </a>
+              </li>
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="./" class="md-nav__link md-nav__link--active">
+                  Transactions & Governance
+                </a>
+              </li>
+            
+          
+            
+              <li class="md-nav__item">
+                <a href="../software-upgrades/" class="md-nav__link">
+                  Software Upgrades
+                </a>
+              </li>
+            
+          
+            
+              
+                <li class="md-nav__item">
+                  <a href="../FAQ/" class="md-nav__link">
+                    FAQ
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../Errors/" class="md-nav__link">
+                    Errors
+                  </a>
+                </li>
+              
+                <li class="md-nav__item">
+                  <a href="../help/" class="md-nav__link">
+                    Get help
+                  </a>
+                </li>
+              
+            
+          
+        </ul>
+      </nav>
+    </li>
+  </ul>
+
+</nav>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner">
+          
+  <nav class="md-nav md-nav--secondary" aria-label="toc.title">
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      TABLE OF CONTENTS
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+          
+            <a href="#governance-transactions-cosmos-sdk-053" class="md-nav__link">
+              Governance &amp; Transactions (Cosmos SDK 0.53)
+            </a>
+          
+        </li>
+      
+        <li class="md-nav__item">
+          
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_2" checked>
+            <label class="md-nav__link" for="__toc_2">
+              Vote on a Proposal (quick path)
+            </label>
+            <nav class="md-nav" aria-label="Vote on a Proposal (quick path)">
+              <ul class="md-nav__list">
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#1-identify-the-right-proposal_id-and-verify-its-the-one-you-were-told" class="md-nav__link">
+                        1) Identify the right proposal_id (and verify it’s the one you were told)
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#2-review-the-contents-carefully-especially-param-updates" class="md-nav__link">
+                        2) Review the contents carefully (especially param updates)
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#3-know-the-voting-options-the-very-short-gov-flow" class="md-nav__link">
+                        3) Know the voting options &amp; the (very) short gov flow
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#4-cast-or-change-your-vote" class="md-nav__link">
+                        4) Cast (or change) your vote
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_5_5" checked>
+                      <label class="md-nav__link" for="__toc_5_5">
+                        Submit a Parameter Change Proposal
+                      </label>
+                      <nav class="md-nav" aria-label="Submit a Parameter Change Proposal">
+                        <ul class="md-nav__list">
+                          
+                            <li class="md-nav__item">
+                              <a href="#1-get-the-governance-module-address-authority" class="md-nav__link">
+                                1) Get the governance module address (authority)
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#2-export-current-params-for-the-target-module" class="md-nav__link">
+                                2) Export current params for the target module
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#3-check-the-minimum-deposit" class="md-nav__link">
+                                3) Check the minimum deposit
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#4-draft-the-proposal-file" class="md-nav__link">
+                                4) Draft the proposal file
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#5-submit-the-proposal" class="md-nav__link">
+                                5) Submit the proposal
+                              </a>
+                            </li>
+                          
+                            <li class="md-nav__item">
+                              <a href="#6-ensure-your-proposal-is-on-chain" class="md-nav__link">
+                                6) Ensure your proposal is on-chain
+                              </a>
+                            </li>
+                          
+                        </ul>
+                      </nav>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#add-a-deposit-if-needed" class="md-nav__link">
+                        Add a Deposit (if needed)
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#vote" class="md-nav__link">
+                        Vote
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#track-proposal-status" class="md-nav__link">
+                        Track Proposal Status
+                      </a>
+                    
+                  </li>
+                
+                  <li class="md-nav__item">
+                    
+                      <a href="#notes" class="md-nav__link">
+                        Notes
+                      </a>
+                    
+                  </li>
+                
+              </ul>
+            </nav>
+          
+        </li>
+      
+    </ul>
+    
+    <!-- READ NEXT section -->
+    <div class="md-nav__read-next">
+      <div class="md-nav__read-next-title">READ NEXT:</div>
+      <div class="md-nav__read-next-section">RUNNER</div>
+      <a href="#" class="md-nav__read-next-link">Quickstart</a>
+    </div>
+  </nav>
+
+        </div>
+      </div>
+    </div>
+  
+
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div><h1 id="governance-transactions-cosmos-sdk-053">Governance &amp; Transactions (Cosmos SDK 0.53)</h1>
+<p>You will perform governance actions from your <strong>Cold Account Machine</strong>, using the <strong>cold-key-name</strong> stored in your file keyring. This is the governance key you created when joining the network (<a href="https://gonka.ai/host/quickstart/#create-account-key-local-machine">see quickstart</a>).
+Transactions are sent through an RPC endpoint (here referred to as <code>$SEED_URL/chain-rpc/</code>). If you do not specify <code>--node</code>, the CLI defaults to <code>tcp://localhost:26657</code>. Unless you run your own node locally, always provide <code>--node $SEED_URL/chain-rpc/</code>.
+Unordered transactions are supported and recommended here to avoid sequence contention. (<a href="https://docs.cosmos.network/main/learn/beginner/tx-lifecycle?utm_source=chatgpt.com" title="Transaction Lifecycle | Explore the SDK">docs.cosmos.network</a>)</p>
+<p><strong>Always include these flags in transaction commands:</strong></p>
+<ul>
+<li><code>--from &lt;cold-key-name&gt;</code> → use your cold governance key.</li>
+<li><code>--keyring-backend file</code> → ensures signing with your local key (you will be prompted).</li>
+<li><code>--unordered --timeout-duration=60s</code> → makes the tx valid for a bounded time, bypassing sequence ordering (new in v0.53+).</li>
+<li><code>--gas=2000000 --gas-adjustment=5.0</code> → manual gas setting with buffer.</li>
+<li><code>--node $SEED_URL/chain-rpc/</code> → required unless you run a local RPC node.</li>
+<li><code>--yes</code> → auto-approve broadcasting.</li>
+</ul>
+<p>For background on transaction lifecycle and gas, see <a href="https://docs.cosmos.network/main/learn/beginner/tx-lifecycle">Cosmos SDK: Transactions</a> and <a href="https://docs.cosmos.network/main/build/modules/auth">Gas &amp; Fees</a>.</p>
+<h1 id="vote-on-a-proposal-quick-path">Vote on a Proposal (quick path)</h1>
+<p>Most participants only need to verify a proposal and cast a vote. Do these four things:</p>
+<h2 id="1-identify-the-right-proposal_id-and-verify-its-the-one-you-were-told">1) Identify the right proposal_id (and verify it’s the one you were told)</h2>
+<p>List proposals, then inspect the one you were given and cross-check its fields (title/summary/metadata/messages):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># List all proposals (IDs + basic info)</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>proposals<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/
+<span class="c1"># Inspect a specific proposal in detail</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>proposal<span class="w"> </span><span class="nv">$PROPOSAL_ID</span><span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/
+</code></pre></div>
+<p>Confirm the <strong>id</strong>, <strong>title</strong>, <strong>summary</strong>, and (if present) <strong>metadata</strong> match what was shared with you. If the proposal includes embedded messages, you’ll also see their <code>@type</code> and fields here. (Cosmos gov v1 stores proposal content on-chain and exposes it via <code>query gov proposal</code>.) (<a href="https://docs.cosmos.network/v0.46/modules/gov/07_client.html?utm_source=chatgpt.com" title="Client - Cosmos SDK">Cosmos SDK Documentation</a>)</p>
+<h2 id="2-review-the-contents-carefully-especially-param-updates">2) Review the contents carefully (especially param updates)</h2>
+<p>If the proposal includes a params update (e.g., <code>MsgUpdateParams</code>), compare the proposed params against the <strong>current on-chain params</strong> before voting:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># 2a) Get current module params (example: inference module)</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>inference<span class="w"> </span>params<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span>&gt;<span class="w"> </span>current_params.json
+
+<span class="c1"># 2b) Extract proposed params from the proposal (adjust jq path if your chain nests differently)</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>proposal<span class="w"> </span><span class="nv">$PROPOSAL_ID</span><span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">'.proposal.messages[] | select(."type"=="inference/x/inference/MsgUpdateParams") | .value'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>&gt;<span class="w"> </span>proposed_params.json
+
+<span class="c1"># 2c) Diff</span>
+diff<span class="w"> </span>-u<span class="w"> </span>current_params.json<span class="w"> </span>proposed_params.json<span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
+<p>For <code>MsgUpdateParams</code>, modules typically expect the <strong>full</strong> params object and the <code>authority</code> to be the <strong>gov module account</strong> (that’s normal—just confirm it). (<a href="https://docs.cosmos.network/main/build/modules/bank?utm_source=chatgpt.com" title="x/bank | Explore the SDK">Cosmos SDK Documentation</a>, <a href="https://hub.cosmos.network/main/governance/proposal-types/param-change?utm_source=chatgpt.com" title="Parameter Changes | Cosmos Hub">Cosmos Hub</a>)</p>
+<h2 id="3-know-the-voting-options-the-very-short-gov-flow">3) Know the voting options &amp; the (very) short gov flow</h2>
+<ul>
+<li><strong>Options:</strong> <code>yes</code>, <code>no</code>, <code>nowithveto</code>, <code>abstain</code>. <code>NoWithVeto</code> is a “no” plus a veto signal; <code>Abstain</code> contributes to quorum without supporting or opposing. (<a href="https://docs.cosmos.network/main/build/modules/gov?utm_source=chatgpt.com" title="x/gov | Explore the SDK">Cosmos SDK Documentation</a>, <a href="https://tutorials.cosmos.network/tutorials/8-understand-sdk-modules/4-gov.html?utm_source=chatgpt.com" title="Understand the Gov Module">Cosmos Tutorials</a>)</li>
+<li><strong>Flow:</strong> proposals open (after deposit) → voting period runs → outcome decided by quorum/threshold/veto parameters → if <strong>passed</strong>, messages execute via the gov module. You may <strong>change your vote any time before the voting period ends</strong>; the <strong>last</strong> vote counts. (<a href="https://hub.cosmos.network/main/governance/process?utm_source=chatgpt.com" title="On-Chain Proposal Process">Cosmos Hub</a>)</li>
+</ul>
+<h2 id="4-cast-or-change-your-vote">4) Cast (or change) your vote</h2>
+<p>Run this from the same machine that holds your Cold Account Key (you’ll be prompted for the keyring password because <code>--keyring-backend=file</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># options: yes | no | nowithveto | abstain</span>
+<span class="c1"># Example: vote "yes"</span>
+<span class="c1"># As an example, this is yes!</span>
+inferenced<span class="w"> </span>tx<span class="w"> </span>gov<span class="w"> </span>vote<span class="w"> </span>&lt;proposal_id&gt;<span class="w"> </span>yes<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from<span class="w"> </span>&lt;cold-key-name&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--keyring-backend<span class="w"> </span>file<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--unordered<span class="w"> </span>--timeout-duration<span class="o">=</span>60s<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--gas<span class="o">=</span><span class="m">2000000</span><span class="w"> </span>--gas-adjustment<span class="o">=</span><span class="m">5</span>.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--yes
+</code></pre></div>
+<p>You can submit another <code>tx gov vote</code> later with a different option to <strong>change your vote</strong> before the voting window closes. To confirm what’s recorded:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># See tally</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>tally<span class="w"> </span><span class="nv">$PROPOSAL_ID</span><span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/
+<span class="c1"># (Optional) list votes</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>votes<span class="w"> </span><span class="nv">$PROPOSAL_ID</span><span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/
+</code></pre></div>
+<p>(Cosmos CLI exposes <code>vote</code>, <code>votes</code>, and tally queries; voters can re-vote until the period ends.) (<a href="https://docs.cosmos.network/v0.46/modules/gov/07_client.html?utm_source=chatgpt.com" title="Client - Cosmos SDK">Cosmos SDK Documentation</a>)</p>
+<hr>
+<h2 id="submit-a-parameter-change-proposal">Submit a Parameter Change Proposal</h2>
+<p><strong>TL;DR:</strong> draft a proposal with a <code>MsgUpdateParams</code>, include <strong>all</strong> params for that module, ensure the deposit meets <code>min_deposit</code>, submit, then track/deposit/vote. <code>MsgUpdateParams</code> requires providing the full parameter set for the target module. (<a href="https://hub.cosmos.network/main/governance/formatting?utm_source=chatgpt.com" title="Formatting a Proposal - Cosmos Hub">hub.cosmos.network</a>)</p>
+<h3 id="1-get-the-governance-module-address-authority">1) Get the governance module address (authority)</h3>
+<p>Many modules’ <code>MsgUpdateParams</code> require <code>authority</code> to be the <strong>gov module account</strong>. You can get this by running this on a machine that has joined the node (your full node/server:)</p>
+<div class="highlight"><pre><span></span><code>inferenced<span class="w"> </span>query<span class="w"> </span>auth<span class="w"> </span>module-accounts<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-B2<span class="w"> </span><span class="s1">'name: gov'</span>
+</code></pre></div>
+<p>The gov module executes proposal messages if they pass. Copy that address for the <code>authority</code> field. (<a href="https://docs.cosmos.network/main/build/modules/gov?utm_source=chatgpt.com" title="x/gov | Explore the SDK">docs.cosmos.network</a>)</p>
+<h3 id="2-export-current-params-for-the-target-module">2) Export current params for the target module</h3>
+<p>You will edit these, but include the <strong>entire</strong> object in the proposal. Again, run this on your main server connected to the node</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example for a custom "inference" module</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>inference<span class="w"> </span>params<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span>&gt;<span class="w"> </span>current_params.json
+</code></pre></div>
+<p><code>MsgUpdateParams</code> expects the full struct, not partial fields. (<a href="https://hub.cosmos.network/main/governance/submitting?utm_source=chatgpt.com" title="Submitting a Proposal - Cosmos Hub">hub.cosmos.network</a>)</p>
+<h3 id="3-check-the-minimum-deposit">3) Check the minimum deposit</h3>
+<div class="highlight"><pre><span></span><code>inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>params<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span><span class="s1">'.params.min_deposit'</span>
+</code></pre></div>
+<p>Your proposal’s <code>deposit</code> must meet/exceed <code>min_deposit</code>. (<a href="https://hub.cosmos.network/main/governance/process?utm_source=chatgpt.com" title="On-Chain Proposal Process">hub.cosmos.network</a>)</p>
+<h3 id="4-draft-the-proposal-file">4) Draft the proposal file</h3>
+<p>Use the built-in wizard to scaffold <code>draft_proposal.json</code>, then choose <strong>other</strong> → pick your message type (e.g., <code>/inference.inference.MsgUpdateParams</code>).</p>
+<div class="highlight"><pre><span></span><code>inferenced<span class="w"> </span>tx<span class="w"> </span>gov<span class="w"> </span>draft-proposal
+<span class="c1"># fills draft_proposal.json and draft_metadata.json</span>
+</code></pre></div>
+<p>The <code>draft-proposal</code> helper is part of modern gov v1 CLIs. (<a href="https://docs.cosmos.network/main/build/modules/gov?utm_source=chatgpt.com" title="x/gov | Explore the SDK">docs.cosmos.network</a>, <a href="https://hub.cosmos.network/main/governance/submitting?utm_source=chatgpt.com" title="Submitting a Proposal - Cosmos Hub">hub.cosmos.network</a>)</p>
+<p>You will want to select the message you are proposing. To change the parameters for the main chain, use <code>/inference.inference.MsgUpdateParams</code></p>
+<p>This will produce a <code>draft_proposal.json</code> and a <code>draft_metadata.json</code></p>
+<p>The metadata file should be hosted off-chain, preferably on IPFS.</p>
+<p>Edit <code>draft_proposal.json</code> so it looks like:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"messages"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"@type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/inference.inference.MsgUpdateParams"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"authority"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cosmos1...gov..."</span><span class="p">,</span><span class="w">       </span><span class="c1">// from step 1</span>
+<span class="w">      </span><span class="nt">"params"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* paste &amp; modify from current_params.json */</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ipfs://CID"</span><span class="p">,</span><span class="w">  </span><span class="c1">// Path to the metadata file hosted on IPFS</span>
+<span class="w">  </span><span class="nt">"deposit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000000ngonka"</span><span class="p">,</span><span class="w">               </span><span class="c1">// meet min_deposit</span>
+<span class="w">  </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Adjust epoch length"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Increase epoch length to 1000"</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>Reminder: include the <strong>entire</strong> <code>params</code> object, not just the fields you changed. (<a href="https://hub.cosmos.network/main/governance/submitting?utm_source=chatgpt.com" title="Submitting a Proposal - Cosmos Hub">hub.cosmos.network</a>)</p>
+</blockquote>
+<h3 id="5-submit-the-proposal">5) Submit the proposal</h3>
+<p>This MUST be done on your private machine with your cold account information.</p>
+<p></p><div class="highlight"><pre><span></span><code>inferenced<span class="w"> </span>tx<span class="w"> </span>gov<span class="w"> </span>submit-proposal<span class="w"> </span>./draft_proposal.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from<span class="w"> </span>&lt;cold-key-name&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--keyring-backend<span class="w"> </span>file<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--unordered<span class="w"> </span>--timeout-duration<span class="o">=</span>60s<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--gas<span class="o">=</span><span class="m">2000000</span><span class="w"> </span>--gas-adjustment<span class="o">=</span><span class="m">5</span>.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--yes
+</code></pre></div>
+You will need to enter your passphrase to send the proposal.
+<p>Governance proposals in v1 are JSON files with embedded messages executed by the gov module if the vote passes. (<a href="https://docs.cosmos.network/main/build/modules/gov?utm_source=chatgpt.com" title="x/gov | Explore the SDK">docs.cosmos.network</a>)</p>
+<h3 id="6-ensure-your-proposal-is-on-chain">6) Ensure your proposal is on-chain</h3>
+<p></p><div class="highlight"><pre><span></span><code>inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>proposals<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/
+</code></pre></div>
+This will give a list of current proposals on the chain, you should see yours and get the proposal_id.
+<hr>
+<h2 id="add-a-deposit-if-needed">Add a Deposit (if needed)</h2>
+<p>If the initial deposit was short, top it up:</p>
+<div class="highlight"><pre><span></span><code>inferenced<span class="w"> </span>tx<span class="w"> </span>gov<span class="w"> </span>deposit<span class="w"> </span>&lt;proposal_id&gt;<span class="w"> </span>&lt;amount&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from<span class="w"> </span>&lt;cold-key-name&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--keyring-backend<span class="w"> </span>file<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--unordered<span class="w"> </span>--timeout-duration<span class="o">=</span>60s<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--gas<span class="o">=</span><span class="m">2000000</span><span class="w"> </span>--gas-adjustment<span class="o">=</span><span class="m">5</span>.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--yes
+</code></pre></div>
+<p>(<a href="https://docs.cosmos.network/main/build/modules/gov?utm_source=chatgpt.com" title="x/gov | Explore the SDK">docs.cosmos.network</a>)</p>
+<hr>
+<h2 id="vote">Vote</h2>
+<p>Again, this will need to be from you private machine with your Governance account:
+</p><div class="highlight"><pre><span></span><code><span class="c1"># options: yes | no | nowithveto | abstain</span>
+inferenced<span class="w"> </span>tx<span class="w"> </span>gov<span class="w"> </span>vote<span class="w"> </span>&lt;proposal_id&gt;<span class="w"> </span>yes<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--from<span class="w"> </span>&lt;cold-key-name&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--keyring-backend<span class="w"> </span>file<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--unordered<span class="w"> </span>--timeout-duration<span class="o">=</span>60s<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--gas<span class="o">=</span><span class="m">2000000</span><span class="w"> </span>--gas-adjustment<span class="o">=</span><span class="m">5</span>.0<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>--yes
+</code></pre></div>
+<p>(There’s no auto-YES for proposers; cast your vote explicitly.) (<a href="https://docs.cosmos.network/main/build/modules/gov?utm_source=chatgpt.com" title="x/gov | Explore the SDK">docs.cosmos.network</a>)</p>
+<hr>
+<h2 id="track-proposal-status">Track Proposal Status</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># One proposal</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>proposal<span class="w"> </span>&lt;proposal_id&gt;<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/
+<span class="c1"># Tally only</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>tally<span class="w"> </span>&lt;proposal_id&gt;<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/
+<span class="c1"># List all</span>
+inferenced<span class="w"> </span>query<span class="w"> </span>gov<span class="w"> </span>proposals<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>--node<span class="w"> </span><span class="nv">$SEED_URL</span>/chain-rpc/
+</code></pre></div>
+<p>(<a href="https://docs.cosmos.network/main/build/modules/gov?utm_source=chatgpt.com" title="x/gov | Explore the SDK">docs.cosmos.network</a>)</p>
+<hr>
+<h2 id="notes">Notes</h2>
+<ul>
+<li><strong>Unordered tx semantics.</strong> When using <code>--unordered</code>, the tx carries an expiry via <code>--timeout-duration</code>, and its sequence is left unset. External tooling that expects monotonic sequences must not rely on them for these txs. (<a href="https://docs.cosmos.network/main/learn/beginner/tx-lifecycle?utm_source=chatgpt.com" title="Transaction Lifecycle | Explore the SDK">docs.cosmos.network</a>)</li>
+<li><strong>Gas tuning.</strong> If simulations are tight or validators use higher min gas prices, raise <code>--gas-adjustment</code> or set <code>--gas-prices</code> per network policy. (<a href="https://docs.cosmos.network/main/build/modules/auth?utm_source=chatgpt.com" title="x/auth | Explore the SDK">docs.cosmos.network</a>)</li>
+</ul></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+
+  <!-- Footer -->
+<footer class="landing-footer">
+  <div class="footer-wrap">
+    <div class="footer-brand">
+      <span class="footer-logo">Gonka</span>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Protocol</h4>
+        <a href="#">Whitepaper</a>
+        <a href="#">Transformer-Based-Proof-of-Work</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Gonka Protocol License</a>
+        <a href="#">Patents</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-socials">
+      <a href="#" class="footer-social" aria-label="Github">
+        <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Discord">
+        <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="Mail">
+        <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
+      </a>
+      <a href="#" class="footer-social" aria-label="X">
+        <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
+      </a>
+    </div>
+
+    <div class="footer-bottom-links">
+      <a href="#" class="footer-link">Help</a>
+      <a href="#" class="footer-link">Transactions & Governance</a>
+      <a href="#" class="footer-link">Terms & Policies</a>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../js/links.js"></script>
+      
+        <script src="../javascripts/theme-toggle.js"></script>
+      
+        <script src="../javascripts/dropdown.js"></script>
+      
+        <script src="../javascripts/chat-redirect.js"></script>
+      
+        <script src="../javascripts/smooth-scroll-to-cards.js"></script>
+      
+        <script src="../javascripts/banner-close.js"></script>
+      
+        <script src="../javascripts/mobile-menu.js"></script>
+      
+        <script src="../javascripts/announcement.js"></script>
+      
+    
+  </body>
+</html>
