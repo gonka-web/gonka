@@ -1500,6 +1500,11 @@ body:has(.gonka-landing-2025) .md-header {
   overflow-x: hidden;
 }
 
+/* Dark theme background for main container */
+[data-md-color-scheme="slate"] .gonka-landing-2025 {
+  background-image: url('../images/backgrounds/dark-dots-main.svg') !important;
+}
+
 /* Yellow Top Banner */
 .yellow-banner {
   background: #dff200;
@@ -1532,20 +1537,7 @@ body:has(.gonka-landing-2025) .md-header {
   color: #000 !important;
 }
 
-.banner-learn-more {
-  background: white;
-  border: none;
-  padding: 0 12px;
-  min-height: 24px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
-  white-space: nowrap;
-  text-transform: uppercase;
-  color: #242424;
-  cursor: pointer;
-}
+
 
 .banner-close {
   position: absolute;
@@ -4024,7 +4016,7 @@ flex-direction: column;
 /* ========== DARK THEME (Slate) ========== */
 
 [data-md-color-scheme="slate"] .gonka-landing-2025 {
-  background: #1A1A1A !important;
+  /* background: #1A1A1A !important; */
   color: #ffffff;
 }
 
@@ -4283,7 +4275,7 @@ flex-direction: column;
 
 /* Dark Theme: Wallet tooltip icon */
 [data-md-color-scheme="slate"] .wallet-icon {
-  filter: grayscale(1) brightness(0) invert(1);
+  /* filter: grayscale(1) brightness(0) invert(1); */
 }
 
 /* Interactive Text Tooltips */
@@ -4900,3 +4892,22 @@ text-transform: uppercase !important;
   padding-right: 40px !important;
 }
 
+.banner-learn-more {
+  background: white;
+  border: none;
+  padding: 0 12px;
+  min-height: 24px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #242424 !important;
+  cursor: pointer;
+}
+
+.md-typeset a {
+  color: #242424 !important;
+  word-break: normal !important;
+}
