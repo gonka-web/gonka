@@ -76,6 +76,18 @@
       </button>
 
       <div class="header-actions">
+        <div class="language-selector">
+          <button class="language-btn" id="language-btn" aria-label="Select language">
+            <span class="language-text" id="language-text">EN</span>
+            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="language-arrow">
+              <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="language-dropdown" id="language-dropdown">
+            <a href="#" class="language-option" data-lang="en" data-url="/">English</a>
+            <a href="#" class="language-option" data-lang="zh" data-url="/zh/">中文</a>
+          </div>
+        </div>
         <div class="theme-toggle">
           <button class="theme-btn theme-btn-sun" data-theme="default">
             <img src="images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light" />
@@ -168,14 +180,28 @@
       
       <!-- Mobile Menu Actions -->
       <div class="mobile-menu-actions">
-        <div class="mobile-theme-toggle">
-          <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
-            <img src="images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
-            <img src="images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
-          </button>
-          <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
-            <img src="images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
-          </button>
+        <div class="mobile-menu-actions-top">
+          <div class="mobile-language-selector">
+            <button class="mobile-language-btn" id="mobile-language-btn" aria-label="Select language">
+              <span class="mobile-language-text" id="mobile-language-text">EN</span>
+              <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg" class="mobile-language-arrow">
+                <path d="M1 1L4 4L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="mobile-language-dropdown" id="mobile-language-dropdown">
+              <a href="#" class="mobile-language-option" data-lang="en" data-url="/">English</a>
+              <a href="#" class="mobile-language-option" data-lang="zh" data-url="/zh/">中文</a>
+            </div>
+          </div>
+          <div class="mobile-theme-toggle">
+            <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
+              <img src="images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
+              <img src="images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
+            </button>
+            <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
+              <img src="images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
+            </button>
+          </div>
         </div>
         
         <div class="mobile-buttons-group">
@@ -264,8 +290,8 @@
         </div>
         <h1 class="hero-title">Gonka is<br/>AI infrastructure that<br/>belongs to all of us</h1>
         <div class="hero-actions">
-          <a href="/host/quickstart/" class="hero-btn">mine it</a>
-          <a href="" class="hero-btn">own it</a>
+          <a href="/host/quickstart" class="hero-btn">mine it</a>
+          <a href="/wallet/wallet-and-transfer-guide/" class="hero-btn">own it</a>
           <a href="/developer/quickstart/" class="hero-btn">use it</a>
         </div>
       </div>
@@ -366,8 +392,8 @@
     <div class="say-header">
       <h2>SAY</h2>
       <div class="say-tabs">
-        <button class="say-tab active">social</button>
-        <a href="/announcement" class="say-tab">announcement</a>
+        <a href="https://discord.com/invite/RADwCT2U6R" target="_blank" class="say-tab active">social</a>
+        <a href="/announcement" class="say-tab say-tab--announcement">announcement</a>
       </div>
     </div>
     
