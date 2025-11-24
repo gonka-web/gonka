@@ -553,7 +553,7 @@
         <div class="footer-col">
           <h4>Legal</h4>
           <a href="/protocol-license.pdf" target="_blank">Gonka Protocol License</a>
-          <a href="/patents.pdf" target="_blank">Patents</a>
+          <!-- <a href="/patents.pdf" target="_blank">Patents</a> -->
         </div>
       </div>
     </div>
