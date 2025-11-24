@@ -4371,6 +4371,25 @@ transform: uppercase !important;
   filter: none !important;
 }
 
+.social-card:hover svg path:nth-child(2) {
+  fill: #ebebeb !important;
+}
+
+/* Make social icons white in dark theme - default state */
+[data-md-color-scheme="slate"] .social-card svg path:nth-child(2) {
+  fill: #242424 !important;
+}
+
+/* Make social icons white in dark theme - default state */
+[data-md-color-scheme="slate"] .social-card:hover svg path:nth-child(2) {
+  fill: #dff200 !important;
+}
+
+/* Make social icons white in dark theme - default state */
+[data-md-color-scheme="slate"] .social-card:hover svg path:nth-child(1) {
+  fill: #242424 !important;
+}
+
 /* Dark Theme: Logos Section */
 [data-md-color-scheme="slate"] .logos-label {
   color: #ffffff;
@@ -4402,7 +4421,7 @@ transform: uppercase !important;
 [data-md-color-scheme="slate"] .gonka-landing-2025 svg circle,
 [data-md-color-scheme="slate"] .gonka-landing-2025 svg rect,
 [data-md-color-scheme="slate"] .gonka-landing-2025 svg line {
-  stroke: #ffffff !important;
+  /* stroke: #ffffff !important; */
   fill: #ffffff !important;
 }
 
