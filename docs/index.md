@@ -3,7 +3,7 @@
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
     <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-    <a href=https://discord.com/invite/RADwCT2U6R" target="_blank" class="banner-learn-more">learn more</a>
+    <a href="https://x.com/gonka_ai" target="_blank" class="banner-learn-more">learn more</a>
     <button class="banner-close">
       <img src="images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
@@ -375,7 +375,7 @@
         <h3>tokenomics</h3>
         <div class="card-content">
         <p>Buy coins — own a share of the future AI economy.</p>
-        <button class="card-btn">read more</button>
+        <a href="/tokenomics.pdf" class="card-btn">read more</a>
         </div>
       </div>
     </div>
@@ -411,11 +411,14 @@
       </a>
       <div class="social-card-empty">
       </div>
-      <div class="social-card-empty">
-      </div>
+      <a href="https://t.me/Gonka_AI" target="_blank" class="social-card tg">
+        <img src="images/socials/tg.svg" alt="Mail" width="46" height="46" />
+      </a>
       <a href="mailto:hello@productscience.ai" target="_blank" class="social-card twitter">
         <img src="images/socials/mail.svg" alt="Mail" width="46" height="46" />
       </a>
+            <div class="social-card-empty">
+      </div>
     </div>
   </section>
 

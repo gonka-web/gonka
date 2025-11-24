@@ -7,7 +7,7 @@ template: announcement.html
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
     <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-    <a href="https://discord.com/invite/RADwCT2U6R" target="_blank" class="banner-learn-more">learn more</a>
+    <a href="https://x.com/gonka_ai" target="_blank" class="banner-learn-more">learn more</a>
     <button class="banner-close">
       <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
@@ -243,7 +243,7 @@ template: announcement.html
         <!-- Article 1 -->
         <div class="announcement-wrapper">
           <div class="announcement-badge">
-            <span>NEW MODELS</span>
+            <span>22 AUG 2025</span>
           </div>
           <div class="announcement-item">
             <div class="announcement-wrapper">
