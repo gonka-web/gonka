@@ -98,16 +98,29 @@
 
           // Add sidebar sections
           sidebarNav.querySelectorAll('.md-nav__list > .md-nav__item').forEach(section => {
-            const title = section.querySelector('.md-nav__title--primary');
+            let titleText = '';
+            const titleEl = section.querySelector('.md-nav__title--primary');
+            
+            if (titleEl) {
+              titleText = titleEl.textContent.trim();
+            } else {
+              // Handle "Additional" section which has no visible title on desktop
+              const navEl = section.querySelector('.md-nav');
+              if (navEl && navEl.getAttribute('aria-label') === 'Additional') {
+                const isZh = window.location.pathname.startsWith('/zh/');
+                titleText = isZh ? '资源' : 'RESOURCES';
+              }
+            }
+
             const links = section.querySelectorAll('.md-nav .md-nav__link');
 
-            if (title && links.length > 0) {
-              const id = title.textContent.trim().toLowerCase().replace(/[^a-z0-9]/g, '-');
+            if (titleText && links.length > 0) {
+              const id = titleText.toLowerCase().replace(/[^a-z0-9]/g, '-');
               const container = document.createElement('div');
               container.className = 'mobile-nav-item-dropdown';
               container.innerHTML = `
                 <a href="#" class="mobile-nav-item" data-mobile-dropdown="${id}">
-                  <span class="mobile-nav-text">${title.textContent.trim()}</span>
+                  <span class="mobile-nav-text">${titleText}</span>
                   <span class="mobile-nav-icon">+</span>
                 </a>
                 <div class="mobile-dropdown-menu" id="mobile-${id}"></div>
