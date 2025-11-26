@@ -2716,11 +2716,11 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 [data-md-color-scheme="slate"] .language-option {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 [data-md-color-scheme="slate"] .language-option:hover {
-  background: #3a3a3a;
+  background: #3a3a3a !important;
 }
 
 .theme-toggle {
@@ -3229,6 +3229,13 @@ transform: uppercase !important;
   -ms-justify-content: center;
 
   justify-content: center;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hero-btn:hover {
@@ -5161,4 +5168,24 @@ text-transform: uppercase !important;
 
 .md-typeset a {
   word-break: normal !important;
+}
+
+
+
+body:has(.gonka-landing-2025) .language-selector,
+body:has(.gonka-landing-2025) .mobile-language-selector,
+body:has(.announcement-content) .language-selector,
+body:has(.announcement-content) .mobile-language-selector {
+  display: none !important;
+}
+
+button, .btn, .hero-btn, .join-btn, .card-btn, .mobile-join-btn, .buy-gnk-btn, .mobile-buy-gnk-btn,
+.theme-btn, .mobile-theme-btn, .language-btn, .mobile-language-btn, .mobile-menu-toggle,
+a[class*="btn"], [role="button"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
 }

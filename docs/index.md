@@ -355,29 +355,29 @@
     <h2 class="cards-title" id="cards-title">AI <span class="tooltip-text" data-tooltip="AI represents artificial intelligence technology that serves humanity">of the people</span>, <span class="tooltip-text" data-tooltip="Built and developed by community members, miners, and contributors worldwide">by the people</span>,<br /> <span class="tooltip-text" data-tooltip="AI for the people – serving the needs and well-being of everyone, not the narrow interests of a few">for the people</span></h2>
     
     <div class="cards-grid">
-      <div class="card card-developers">
+      <a href="/developer/quickstart/" class="card card-developers">
         <h3>Developers</h3>
         <div class="card-content">
         <p>Using AI API? Switch to Gonka — cut costs fast.</p>
-        <a href="/developer/quickstart/" class="card-btn">read more</a>
+        <div  class="card-btn">read more</div>
         </div>
-      </div>
+      </a>
       
-      <div class="card card-miners">
+      <a href="/host/quickstart/" class="card card-miners">
         <h3>Miners</h3>
         <div class="card-content">
         <p>Connect GPUs to Gonka — start earning coins right away. Your mining node works 24/7 solving AI jobs ordered by developers. Become part of golabal AI infrastructure.</p>
-        <a href="/host/quickstart/" class="card-btn primary">read more</a>
+        <div class="card-btn primary">read more</div>
         </div>
-      </div>
+      </a>
       
-      <div class="card card-tokenomics">
+      <a href="/tokenomics.pdf" class="card card-tokenomics">
         <h3>tokenomics</h3>
         <div class="card-content">
         <p>Buy coins — own a share of the future AI economy.</p>
-        <a href="/tokenomics.pdf" class="card-btn">read more</a>
+        <div class="card-btn">read more</div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 
