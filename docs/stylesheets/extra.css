@@ -3244,6 +3244,7 @@ transform: uppercase !important;
   color: #242424 !important;
 }
 
+
 /* Dark theme - keep hero buttons with black text */
 [data-md-color-scheme="slate"] .hero-btn {
   background: white;
@@ -5262,4 +5263,25 @@ a[class*="btn"], [role="button"] {
     border-color: #dbdbdb !important;
     clip-path: none !important;
   }
+/*   
+  .hero-btn:active,
+  .join-btn:active,
+  .card-btn:active,
+  .mobile-join-btn:active,
+  .buy-gnk-btn:active,
+  .mobile-buy-gnk-btn:active {
+    background: #dff200 !important;
+    border-color: #000 !important;
+    color: #242424 !important;
+    transform: scale(0.95) !important;
+    transition: all 0.1s ease !important;
+  } */
+}
+.hero-btn:active, 
+.hero-btn:focus {
+  background: #dff200 !important;
+  border-color: #000 !important;
+  color: #242424 !important;
+  transform: scale(0.98);
+  transition: all 0.1s ease;
 }
