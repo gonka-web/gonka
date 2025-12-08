@@ -490,24 +490,48 @@
       <div class="logos-group">
         <span class="logos-label">Auditor</span>
         <div class="logos-items">
-          <img src="images/partners/certik.svg" alt="Certik" width="110" height="32" />
+          <a href="https://www.certik.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/certik.svg" alt="Certik" width="110" height="32" />
+          </a>
         </div>
       </div>
       <div class="logos-group">
         <span class="logos-label">Community Partners</span>
         <div class="logos-items">
-          <img src="images/partners/web3.svg" alt="Web3.com Ventures" width="98" height="32" />
-          <img src="images/partners/hard-yaka.svg" alt="Hard Yaka" width="114" height="32" />
-          <img src="images/partners/bitfury.svg" alt="Bitfury" width="102" height="32" />
-          <img src="images/partners/qtum.svg" alt="Qtum.AI" width="106" height="32" />
+          <a href="https://web3.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/web3.svg" alt="Web3.com Ventures" width="98" height="32" />
+          </a>
+          <a href="https://www.hardyaka.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/hard-yaka.svg" alt="Hard Yaka" width="114" height="32" />
+          </a>
+          <a href="https://bitfury.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/bitfury.svg" alt="Bitfury" width="102" height="32" />
+          </a>
+          <a href="https://qtum.org/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/qtum.svg" alt="Qtum.AI" width="106" height="32" />
+          </a>
         </div>
       </div>
       <div class="logos-group">
         <span class="logos-label">Select Hosts</span>
         <div class="logos-items">
-          <img src="images/partners/gcore.svg" alt="Qtum.AI" width="90" height="32" />
-          <img src="images/partners/huperfusion.svg" alt="Hyperfusion" width="132" height="32" />
-          <img src="images/partners/block.svg" alt="6block" width="90" height="32" />
+          <a href="https://gcore.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/gcore.svg" alt="Gcore" width="90" height="32" />
+          </a>
+          <a href="https://hyperfusion.io/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/huperfusion.svg" alt="Hyperfusion" width="132" height="32" />
+          </a>
+          <a href="https://6block.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/block.svg" alt="6block" width="90" height="32" />
+          </a>
+        </div>
+      </div>
+      <div class="logos-group">
+        <span class="logos-label">Select AI Developers</span>
+        <div class="logos-items">
+          <a href="https://aidenai.io/" target="_blank" rel="noopener noreferrer">
+            <img src="images/logos/aiden.svg" alt="Aiden" width="90" height="32" />
+          </a>
         </div>
       </div>
       <!-- <div class="logos-group">
@@ -521,16 +545,27 @@
       <div class="logos-group">
         <span class="logos-label">Protocol Creator</span>
         <div class="logos-items">
-          <img src="images/partners/product-science.svg" alt="Product Science" width="158" height="32" />
+          <a href="https://productscience.ai/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/product-science.svg" alt="Product Science" width="158" height="32" />
+          </a>
         </div>
       </div>
       <div class="logos-group">
         <span class="logos-label">Backed by</span>
         <div class="logos-items">          
-          <img src="images/partners/coatue.svg" alt="COATUE" width="86" height="32" />
-          <img src="images/partners/slow.svg" alt="Slow" width="49" height="32" />
-          <img src="images/partners/mantis.svg" alt="Mantis" width="100" height="32" />
-          <img src="images/partners/k5.svg" alt="K5" width="31" height="32" /></div>
+          <a href="https://www.coatue.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/coatue.svg" alt="COATUE" width="86" height="32" />
+          </a>
+          <a href="https://slow.co/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/slow.svg" alt="Slow" width="49" height="32" />
+          </a>
+          <a href="https://www.mantisvc.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/mantis.svg" alt="Mantis" width="100" height="32" />
+          </a>
+          <a href="https://k5ventures.com/" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/k5.svg" alt="K5" width="31" height="32" />
+          </a>
+        </div>
       </div>
     </div>
   </section>
