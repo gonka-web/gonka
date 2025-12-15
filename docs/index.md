@@ -268,7 +268,7 @@
             </div>
             <div class="message ai-message">
                             <span class="message-icon"><img src="images/icons/robot.svg" alt="ai robot" width="18" height="18"/></span>
-              <div class="message-bubble">You can't buy coins (if you're offered them, it's a scam). The only way to get coins is to become a Gonka miner.</div>
+              <div class="message-bubble">Gonka doesn't officially sell tokens anywhere right now. However, users can buy them directly from miners in different community channels.<br><br>Please be careful and avoid scammers.</div>
             </div>
           </div>
           

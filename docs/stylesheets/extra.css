@@ -1817,6 +1817,7 @@ body:has(.gonka-landing-2025) .md-header {
 
 [data-md-color-scheme="slate"] .logo-dark {
   display: block !important;
+  filter: invert(100%) !important;
 }
 
 .main-nav {
@@ -5116,6 +5117,7 @@ text-transform: uppercase !important;
 
 
 .md-nav--primary .md-nav__title {
+  position: static !important;
   background: transparent !important;
   box-shadow: none !important;
   color: #767676 !important;
