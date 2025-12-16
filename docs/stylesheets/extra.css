@@ -1652,7 +1652,7 @@ body:has(.gonka-landing-2025) .md-header {
   .yellow-banner {
     height: auto;
     min-height: 60px;
-    padding: 12px 36px 12px 16px; /* More padding on right for close button */
+    padding: 12px 36px 12px 36px; /* More padding on right for close button */
     flex-direction: column;
     gap: 8px;
     text-align: center;
@@ -1677,7 +1677,7 @@ body:has(.gonka-landing-2025) .md-header {
   
   .banner-close {
     position: absolute;
-    right: 12px;
+    right: 6px;
     top: 12px;
     width: 20px;
     height: 20px;
@@ -1698,6 +1698,13 @@ body:has(.gonka-landing-2025) .md-header {
     width: 12px !important;
     height: 12px !important;
   }
+}
+
+@media (max-width: 500px) {
+  .yellow-banner p {
+    font-size: 10px !important;
+  }
+
 }
 
 /* Header */

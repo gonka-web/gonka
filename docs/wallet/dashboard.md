@@ -34,7 +34,7 @@ You can interact with the dashboard in two ways:
     Once opened, you’ll see real-time data streamed directly from the Host’s node — including network statistics, active workloads, and inference metrics.
     
     !!! note "Why is this important?"
-        This architecture ensures decentralization: no single central server controls the network. In preview mode, functionality is limited. You can view balances, transactions, and some analytics. If you want to send coins, manage your personal accounts, or analyze your private AI token usage, unlock [Full mode](https://gonka.ai/wallet/dashboard/#__tabbed_1_2).
+        This architecture ensures decentralization: no single central server controls the network. In preview mode, functionality is limited. You can view balances, transactions, and some analytics. If you want to send coins, manage your personal accounts, or analyze your private AI token usage, unlock [Full mode](/wallet/dashboard/#__tabbed_1_2).
 
 === "**Full Mode**"
     
@@ -45,7 +45,7 @@ You can interact with the dashboard in two ways:
     To unlock the full functionality of the dashboard, you need a Gonka account.
     
     - Already have one? Proceed to the "Set Up External Wallet" section below.
-    - New user? Visit [the Developer](https://gonka.ai/developer/quickstart/){target=_blank} or [Host](https://gonka.ai/host/quickstart/){target=_blank} Quickstart to create an account.
+    - New user? Visit [the Developer](/developer/quickstart/){target=_blank} or [Host](/host/quickstart/){target=_blank} Quickstart to create an account.
     
     ### 2. Set Up External Wallet
     To interact with Dashboard through your wallet, we recommend using [Keplr](https://www.keplr.app/){target=_blank} or [Leap](https://www.leapwallet.io/){target=_blank} (a browser extension wallet built for Cosmos-based chains).
@@ -53,7 +53,7 @@ You can interact with the dashboard in two ways:
     ??? note "What is a wallet?"
         A crypto wallet serves as a secure container for a user's public and private cryptographic keys, enabling them to manage, transfer, and purchase cryptocurrencies. Gonka is built on the Cosmos-SDK blockchain framework and can be accessed using Keplr or Leap wallet (other wallet support is coming soon).
         
-    - If you have a Keplr or Leap wallet, proceed to the ["Connect wallet"](https://gonka.ai/wallet/dashboard/#3-connect-wallet) section.
+    - If you have a Keplr or Leap wallet, proceed to the ["Connect wallet"](/wallet/dashboard/#3-connect-wallet) section.
     - If you haven't set it up yet, follow the steps below.
     
     === "Keplr"
@@ -84,7 +84,7 @@ You can interact with the dashboard in two ways:
     
         <a href="/images/dashboard_keplr_step_2_5.png" target="_blank"><img src="/images/dashboard_keplr_step_2_5.png" style="width:500px; height:auto;"></a>
     
-        2.6. Paste your private key that was created via CLI in [this step](https://gonka.ai/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=your%2Daccount%2Daddress%3E-,3.%20Add%20Private%20Key%20to%20environment%20variables,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using). Do not import your recovery (mnemonic/seed) phrase, as the bridge requires direct access to the raw private key to sign transactions and ensure proper interoperability with Ethereum.
+        2.6. Paste your private key that was created via CLI in [this step](/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=your%2Daccount%2Daddress%3E-,3.%20Add%20Private%20Key%20to%20environment%20variables,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using). Do not import your recovery (mnemonic/seed) phrase, as the bridge requires direct access to the raw private key to sign transactions and ensure proper interoperability with Ethereum.
     
         <a href="/images/dashboard_keplr_step_2_6_private key.png" target="_blank"><img src="/images/dashboard_keplr_step_2_6_private_key.png" style="width:500px; height:auto;"></a>
     
@@ -118,7 +118,7 @@ You can interact with the dashboard in two ways:
     
         <a href="/images/dashboard_leap_step_2_4.png" target="_blank"><img src="/images/dashboard_leap_step_2_4.png" style="width:500px; height:auto;"></a>
     
-        2.5. Paste the private key that was created in [this step via CLI](https://gonka.ai/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using).
+        2.5. Paste the private key that was created in [this step via CLI](/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using).
     
         <a href="/images/dashboard_leap_2_5_private_key.png" target="_blank"><img src="/images/dashboard_leap_2_5_private_key.png" style="width:500px; height:auto;"></a>
     
@@ -132,7 +132,7 @@ You can interact with the dashboard in two ways:
     
     ### 3. Connect wallet
 
-    3.1  Open Gonka dashboard following the [preview mode](https://gonka.ai/wallet/dashboard/#__tabbed_1_1) instructions. 
+    3.1  Open Gonka dashboard following the [preview mode](/wallet/dashboard/#__tabbed_1_1) instructions. 
     
     3.2. In the top-right corner, click "Connect Wallet" to get started.
     
@@ -174,7 +174,7 @@ You can interact with the dashboard in two ways:
     
             <a href="/images/dashboard_ping_pub_3_5_4.png" target="_blank"><img src="/images/dashboard_ping_pub_3_5_4.png" style="width:450px; height:auto;"></a>
     
-            Paste your private key that was created via the CLI in [this step](https://gonka.ai/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using). Do not import the recovery (mnemonic/seed) phrase, as the bridge requires direct access to the raw private key to sign transactions and ensure proper interoperability with Ethereum.
+            Paste your private key that was created via the CLI in [this step](/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using). Do not import the recovery (mnemonic/seed) phrase, as the bridge requires direct access to the raw private key to sign transactions and ensure proper interoperability with Ethereum.
     
             <a href="/images/dashboard_ping_pub_3_5_4.png" target="_blank"><img src="/images/dashboard_keplr_step_3_5_5_private_key.png" style="width:450px; height:auto;"></a>
             
@@ -204,7 +204,7 @@ You can interact with the dashboard in two ways:
             
             <a href="/images/dashboard_leap_step_3_5_3.png" target="_blank"><img src="/images/dashboard_leap_step_3_5_3.png" style="width:250px; height:auto;"></a>
     
-            Paste your private key that was created in [this step via CLI. ](https://gonka.ai/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using)
+            Paste your private key that was created in [this step via CLI. ](/developer/quickstart/#4-inference-using-modified-openai-sdk:~:text=request%20in%20Python%3A-,3.1.%20Export%20your%20private%20key%20(for%20demo/testing%20only).,export%20GONKA_PRIVATE_KEY%3D%3Cyour%2Dprivate%2Dkey%3E,-4.%20Inference%20using)
     
             <a href="/images/dashboard_leap_step_3_5_3.png" target="_blank"><img src="/images/dashboard_leap_step_3_5_4_private_key.png" style="width:250px; height:auto;"></a>
             

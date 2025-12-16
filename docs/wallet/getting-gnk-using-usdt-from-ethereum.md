@@ -4,9 +4,9 @@ Currently, the decentralized exchange supports only the Ethereum network for USD
 
 Before you begin:
 
-1. Create a Gonka account (as a [Host](https://gonka.ai/host/quickstart/) or [Developer](https://gonka.ai/developer/quickstart/))
-2. [Set up external wallet](https://gonka.ai/wallet/dashboard#2-set-up-external-wallet)
-3. [Connect to the dashboard](https://gonka.ai/wallet/dashboard#3-connect-wallet)
+1. Create a Gonka account (as a [Host](/host/quickstart/) or [Developer](/developer/quickstart/))
+2. [Set up external wallet](/wallet/dashboard#2-set-up-external-wallet)
+3. [Connect to the dashboard](/wallet/dashboard#3-connect-wallet)
 
 ## Step 1. Purchase USDT (ERC-20)
 

@@ -22,7 +22,7 @@ The protocol currently supports the following model classes:
     - The exact deployment parameters for each category are defined in the genesis configuration.
     - Models may be classified into a category if approved by governance.
     - Decisions about adding or changing supported models are made by governance.
-    - For details on governance procedures and how to propose new models, see the [Transactions and Governance Guide](https://gonka.ai/transactions-and-governance/).
+    - For details on governance procedures and how to propose new models, see the [Transactions and Governance Guide](/transactions-and-governance/).
 
 ### Configuration for Optimal Rewards
 To earn the highest rewards and maintain reliability, each Network Node should serve two model classes, with a minimum of 2 MLNodes per class. This setup:
@@ -41,7 +41,7 @@ To run a valid node, you need machines with [supported GPU(s)](/host/hardware-sp
 
 This is a reference architecture. You may adjust node count or hardware allocation, but we recommend following the core principle: each node should support multiple MLNodes across all three model tiers.
 
-More details about optimal deploy configuration can be found [here](https://gonka.ai/host/benchmark-to-choose-optimal-deployment-config-for-llms/).
+More details about optimal deploy configuration can be found [here](/host/benchmark-to-choose-optimal-deployment-config-for-llms/).
 
 The server hosting the Network Node should have:
 
@@ -69,7 +69,7 @@ Each server to deploy MLNode should have:
 The quickstart instruction is designed to run both the Network Node and the inference node on a single machine (one server setup). 
 
 ??? note "Multiple nodes deployment"
-    If you are deploying multiple GPU nodes, please refer to the detailed [Multiple nodes deployment guide](https://gonka.ai/host/multiple-nodes/) for proper setup and configuration. Whether you deploy inference nodes on a single machine or across multiple servers (including across geographical regions), all inference nodes must be connected to the same Network Node.
+    If you are deploying multiple GPU nodes, please refer to the detailed [Multiple nodes deployment guide](/host/multiple-nodes/) for proper setup and configuration. Whether you deploy inference nodes on a single machine or across multiple servers (including across geographical regions), all inference nodes must be connected to the same Network Node.
 
 ### Key Management Overview
 Before configuring your Network Node, you need to set up cryptographic keys for secure operations.  
@@ -201,7 +201,7 @@ source config.env
 ### [Server] Edit Inference Node Description for the Server
 
 !!! note        
-    The network currently supports the following models: `Qwen/Qwen3-235B-A22B-Instruct-2507-FP8` and `Qwen/Qwen3-32B-FP8`. The governance makes decisions regarding the addition or modification of supported models. For details on how model governance works and how to propose new models, see the [Transactions and Governance Guide](https://gonka.ai/transactions-and-governance/).
+    The network currently supports the following models: `Qwen/Qwen3-235B-A22B-Instruct-2507-FP8` and `Qwen/Qwen3-32B-FP8`. The governance makes decisions regarding the addition or modification of supported models. For details on how model governance works and how to propose new models, see the [Transactions and Governance Guide](/transactions-and-governance/).
 
 === "8xH200 or 8xH100"
 
@@ -267,7 +267,7 @@ source config.env
         ]
         ```
 
-For more details on the optimal deployment configuration, please refer to [this link](https://gonka.ai/host/benchmark-to-choose-optimal-deployment-config-for-llms/).
+For more details on the optimal deployment configuration, please refer to [this link](/host/benchmark-to-choose-optimal-deployment-config-for-llms/).
 
 ### [Server] Pre-download Model Weights to Hugging Face Cache (HF_HOME)
 Inference nodes download model weights from Hugging Face.
@@ -432,7 +432,7 @@ http://node2.gonka.ai:8000/v1/epochs/current/participants
 ```
 
 You may turn off your server before this stage and start it again right before the next Proof of Compute.
-To track when the next Proof of Compute session will begin, check [the dashboard](https://gonka.ai/wallet/dashboard/) here:
+To track when the next Proof of Compute session will begin, check [the dashboard](/wallet/dashboard/) here:
 ```
 http://node2.gonka.ai:8000/dashboard/gonka/validator
 ```
@@ -450,7 +450,7 @@ Using the public IP of the genesis node.
 curl http://node2.gonka.ai:26657/status
 ```
 
-Once your node is visible in the Dashboard, you may also want to update your public profile (host name, website, avatar). This helps other participants identify your node in the network. You can find [the instructions here](https://gonka.ai/host/validator_info/).
+Once your node is visible in the Dashboard, you may also want to update your public profile (host name, website, avatar). This helps other participants identify your node in the network. You can find [the instructions here](/host/validator_info/).
 
 ## Stopping and Cleaning Up Your Node
 

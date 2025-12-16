@@ -7,18 +7,18 @@ Before you can perform any wallet operations, you need to access your account. F
 
 You contribute computational resources and receive tokens as rewards.
 Before proceeding, you need access to your wallet, which is automatically created when the chain-node container runs for the first time.
-Go [here](https://gonka.ai/host/access-account/) to learn how to access your account. 
+Go [here](/host/access-account/) to learn how to access your account. 
 
 **Are you a Developer?**
 
-You build and deploy AI applications using the network’s distributed power. You’ll need to create an account and CLI tools for scripting and automation.
-Go [here](https://gonka.ai/developer/quickstart/) to set up the CLI and access your account.
+You build and deploy AI applications using the network's distributed power. You'll need to create an account and CLI tools for scripting and automation.
+Go [here](/developer/quickstart/) to set up the CLI and access your account.
 
 Once you have access to your account, return to this guide to learn how to:
 
-- [Query Balance](https://gonka.ai/wallet/wallet-and-transfer-guide/#query-balance)
-- [Send Coins](https://gonka.ai/wallet/wallet-and-transfer-guide/#send-coins)
-- [Check Transaction Status](https://gonka.ai/wallet/wallet-and-transfer-guide/#check-transaction-status)
+- [Query Balance](/wallet/wallet-and-transfer-guide/#query-balance)
+- [Send Coins](/wallet/wallet-and-transfer-guide/#send-coins)
+- [Check Transaction Status](/wallet/wallet-and-transfer-guide/#check-transaction-status)
 
 ## Get Your Wallet Address
 
