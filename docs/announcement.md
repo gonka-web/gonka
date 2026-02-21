@@ -377,7 +377,7 @@ template: announcement.html
             <a href="https://x.com/gonka_ai" class="footer-social" target="_blank" aria-label="X">
               <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
             </a>
-            <a href="https://t.me/Gonka_AI" class="footer-social" target="_blank" aria-label="Telegram">
+            <a href="https://t.me/Gonka_AI" class="footer-social hidden" target="_blank" aria-label="Telegram">
               <img src="/images/icons/telegram.svg" alt="Telegram" width="25" height="25" />
             </a>
           </div>

@@ -288,12 +288,13 @@
         <div class="hero-badge">
           <span>Introducing</span>
         </div>
-        <h1 class="hero-title">Gonka is<br/>AI infrastructure that<br/>belongs to all of us</h1>
+        <h1 class="hero-title">Gonka is decentralized<br/>AI infrastructure that<br/>belongs to all of us</h1>
         <div class="hero-actions">
           <a href="/host/quickstart" class="hero-btn">mine it</a>
           <a href="/wallet/wallet-and-transfer-guide/" class="hero-btn">own it</a>
           <a href="/developer/quickstart/" class="hero-btn">use it</a>
         </div>
+        <h3 class="hero-subtitle">Become part of decentralized<br/>AI infrastructure — choose your path<br/>in the Gonka network.</h3>
       </div>
 
     </div>
@@ -453,7 +454,7 @@
       </div>
 
 
-      <a href="https://t.me/Gonka_AI" target="_blank" class="social-card tg">
+      <a href="https://t.me/Gonka_AI" target="_blank" class="social-card tg hidden">
         <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_1282_2970)">
         <path d="M23 46C35.7025 46 46 35.7025 46 23C46 10.2975 35.7025 0 23 0C10.2975 0 0 10.2975 0 23C0 35.7025 10.2975 46 23 46Z" fill="#242424" style="fill:#242424;fill:color(display-p3 0.1403 0.1403 0.1403);fill-opacity:1;"/>
@@ -606,7 +607,7 @@
             <a href="https://x.com/gonka_ai" class="footer-social" target="_blank" aria-label="X">
               <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
             </a>
-            <a href="https://t.me/Gonka_AI" class="footer-social" target="_blank" aria-label="Telegram">
+            <a href="https://t.me/Gonka_AI" class="footer-social hidden" target="_blank" aria-label="Telegram">
               <img src="/images/icons/telegram.svg" alt="Telegram" width="25" height="25" />
             </a>
           </div>

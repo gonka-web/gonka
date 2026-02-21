@@ -3193,6 +3193,19 @@ body:has(.gonka-landing-2025) .md-header {
   color: #242424;
   margin: 0;
 }
+
+.hero-subtitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: #242424;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(144, 238, 144, 0.5), 0 0 30px rgba(144, 238, 144, 0.3);
+}
+
+
 .hero-actions {
   display: -webkit-flex;
     display: -ms-flexbox;
@@ -4253,6 +4266,10 @@ transform: uppercase !important;
   color: #ffffff;
 }
 
+[data-md-color-scheme="slate"] .hero-subtitle {
+  color: #ffffff;
+}
+
 [data-md-color-scheme="slate"] .section-badge.left p {
   color: #ffffff;
 }
@@ -4943,6 +4960,12 @@ text-transform: uppercase !important;
     margin-bottom: 0 !important;
   }
   
+  .hero-subtitle {
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0 !important;
+  }
+  
   .social-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 20px;
@@ -5296,4 +5319,16 @@ a[class*="btn"], [role="button"] {
   color: #242424 !important;
   transform: scale(0.98);
   transition: all 0.1s ease;
+}
+
+.hero-subtitle {
+
+}
+
+.yellow-banner {
+  display: none;
+}
+
+.hidden {
+  display: none !important;
 }
