@@ -294,7 +294,7 @@
           <a href="/wallet/wallet-and-transfer-guide/" class="hero-btn">own it</a>
           <a href="/developer/quickstart/" class="hero-btn">use it</a>
         </div>
-        <h3 class="hero-subtitle">Become part of decentralized<br/>AI infrastructure — choose your path<br/>in the Gonka network.</h3>
+        <h3 class="hero-subtitle">Choose your path in the Gonka network.</h3>
       </div>
 
     </div>

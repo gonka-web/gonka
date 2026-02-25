@@ -3202,7 +3202,7 @@ body:has(.gonka-landing-2025) .md-header {
   text-transform: uppercase;
   color: #242424;
   margin: 0;
-  text-shadow: 0 0 15px rgba(144, 238, 144, 0.5), 0 0 30px rgba(144, 238, 144, 0.3);
+  opacity: 0.3;
 }
 
 
