@@ -106,6 +106,7 @@ extra_javascript:
   - javascripts/language-selector.js
   - javascripts/header-links.js
   - javascripts/faq.js
+  - javascripts/ios-long-press-fix.js
 
 plugins:
   - minify:
