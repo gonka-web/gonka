@@ -264,7 +264,7 @@
         </div>
         <h1 class="hero-title">Gonka is<br/>AI infrastructure that<br/>belongs to all of us</h1>
         <div class="hero-actions">
-          <a href="/host/quickstart/" class="hero-btn">mine it</a>
+          <a href="/mineit/" class="hero-btn">mine it</a>
           <a href="" class="hero-btn">own it</a>
           <a href="/developer/quickstart/" class="hero-btn">use it</a>
         </div>

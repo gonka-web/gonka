@@ -7,7 +7,7 @@ site_description: >-
 # Content
 nav:
   - Home: index.md
-  - Mining: mining.md
+  - Mineit: mineit.md
   - Announcements: announcement.md
   - Introduction: introduction.md
   - Developer:
