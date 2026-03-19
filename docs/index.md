@@ -317,7 +317,7 @@
           Today, access to AI is controlled by corporations: they set the prices, limit capabilities, filter knowledge, and decide who gets to participate in the future. We’re here to change that.
         </p>
         <p class="super-text">
-          Gonka is building an open infrastructure for free and accessible AI — a network where anyone can participate, earn, and influence. We don’t collect your data. It belongs to you.
+          Gonka is building an open infrastructure for free and accessible AI — a network where anyone can participate, earn, and influence.We don’t collect your data. It belongs to you.
         </p>
       </div>
     </div>

@@ -11,11 +11,11 @@ html {
 }
 
 html[data-md-color-scheme="slate"] {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
 }
 
 html[data-md-color-scheme="slate"] body {
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   transition: background-color 0.2s ease;
 }
 
@@ -26,7 +26,7 @@ html[data-md-color-scheme="slate"] body {
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
 /* Override MkDocs accent color - change from teal to neutral */
-[data-md-color-accent=teal] {
+[data-md-color-accent="teal"] {
   --md-accent-fg-color: #6b7280 !important; /* Neutral gray instead of teal */
   --md-accent-fg-color--transparent: #6b72801a !important;
   --md-accent-bg-color: #fff !important;
@@ -34,7 +34,7 @@ html[data-md-color-scheme="slate"] body {
 }
 
 /* Dark theme accent color */
-[data-md-color-scheme="slate"][data-md-color-accent=teal] {
+[data-md-color-scheme="slate"][data-md-color-accent="teal"] {
   --md-accent-fg-color: #9ca3af !important; /* Lighter gray for dark theme */
   --md-accent-fg-color--transparent: #9ca3af1a !important;
   --md-accent-bg-color: #1e293b !important;
@@ -84,7 +84,7 @@ body:has(.gonka-landing) .md-content__inner::before {
   display: none !important;
 }
 
-body:has(.gonka-landing) .md-content__inner>div {
+body:has(.gonka-landing) .md-content__inner > div {
   height: 100vh;
   min-height: 100vh;
 }
@@ -124,7 +124,7 @@ body:has(.gonka-landing) .md-content__inner>div {
 
 /* Compact global font size */
 .md-typeset {
-  font-size: .7rem;
+  font-size: 0.7rem;
   line-height: 1.5;
 }
 
@@ -148,7 +148,9 @@ body:has(.gonka-landing) .md-content__inner>div {
 /* == 3. Media & imagery ======================================== */
 /* img{height:auto;width:auto;border:0;border-radius:6px;padding:4px;background:#fff;} */
 .shadow {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, .2), 0 6px 20px rgba(0, 0, 0, .19);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.2),
+    0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 /* generic shadow */
@@ -163,7 +165,7 @@ body:has(.gonka-landing) .md-content__inner>div {
 }
 
 /* Mobile header shadow when scrolled */
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .gonka-header.scrolled {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 
@@ -220,7 +222,7 @@ a.md-logo img,
 
 @media (max-width: 768px) {
   .md-sidebar--primary {
-display: none !important;
+    display: none !important;
   }
 }
 
@@ -245,7 +247,7 @@ display: none !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.5px !important;
-  color: #9F9F9F !important;
+  color: #9f9f9f !important;
   padding: 0 !important;
   margin: 0 !important;
 }
@@ -276,7 +278,7 @@ display: none !important;
   font-size: 13px !important;
   font-weight: 400 !important;
   color: #666666 !important;
-  padding-left: 8px!important;
+  padding-left: 8px !important;
   transition: all 0.2s ease !important;
 }
 
@@ -289,7 +291,7 @@ display: none !important;
   font-size: 12px !important;
   font-weight: 400 !important;
   color: #888888 !important;
-  padding-left: 16px!important;
+  padding-left: 16px !important;
 }
 
 .md-nav--secondary .md-nav .md-nav .md-nav__link:hover {
@@ -471,11 +473,19 @@ display: none !important;
   border-left-color: #007acc !important;
 }
 
-[data-md-color-scheme="slate"] .md-nav--secondary .md-nav .md-nav .md-nav__link {
+[data-md-color-scheme="slate"]
+  .md-nav--secondary
+  .md-nav
+  .md-nav
+  .md-nav__link {
   color: #777777 !important;
 }
 
-[data-md-color-scheme="slate"] .md-nav--secondary .md-nav .md-nav .md-nav__link:hover {
+[data-md-color-scheme="slate"]
+  .md-nav--secondary
+  .md-nav
+  .md-nav
+  .md-nav__link:hover {
   background: #2a2a2a !important;
   color: #aaaaaa !important;
   border-left-color: #007acc !important;
@@ -516,11 +526,19 @@ display: none !important;
   color: #ffffff !important;
 }
 
-[data-md-color-scheme="slate"] .md-nav__item .md-nav .md-nav__item .md-nav__link {
+[data-md-color-scheme="slate"]
+  .md-nav__item
+  .md-nav
+  .md-nav__item
+  .md-nav__link {
   color: #aaaaaa !important;
 }
 
-[data-md-color-scheme="slate"] .md-nav__item .md-nav .md-nav__item .md-nav__link:hover {
+[data-md-color-scheme="slate"]
+  .md-nav__item
+  .md-nav
+  .md-nav__item
+  .md-nav__link:hover {
   color: #ffffff !important;
 }
 
@@ -533,7 +551,6 @@ display: none !important;
   color: #ffffff !important;
   background: rgba(255, 255, 255, 0.1) !important;
 }
-
 
 .md-nav__list {
   padding-left: 0 !important;
@@ -692,12 +709,24 @@ li::-webkit-scrollbar-thumb:hover {
 }
 
 /* Dark theme scrollbar - maximum specificity */
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
-[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__inner::-webkit-scrollbar-thumb,
-[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__inner::-webkit-scrollbar-thumb,
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav::-webkit-scrollbar-thumb,
-[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"]
+  .md-sidebar--primary
+  .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"]
+  .md-sidebar--secondary
+  .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"]
+  .md-sidebar--primary
+  .md-sidebar__inner::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"]
+  .md-sidebar--secondary
+  .md-sidebar__inner::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"]
+  .md-sidebar--primary
+  .md-nav::-webkit-scrollbar-thumb,
+[data-md-color-scheme="slate"]
+  .md-sidebar--secondary
+  .md-nav::-webkit-scrollbar-thumb,
 [data-md-color-scheme="slate"] .md-sidebar--primary::-webkit-scrollbar-thumb,
 [data-md-color-scheme="slate"] .md-sidebar--secondary::-webkit-scrollbar-thumb,
 [data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb,
@@ -707,16 +736,32 @@ li::-webkit-scrollbar-thumb:hover {
   background: #444444 !important;
 }
 
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar--secondary .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar--secondary .md-nav::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar--primary::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar--secondary::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
-[data-md-color-scheme="slate"] .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar--primary
+  .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar--secondary
+  .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar--primary
+  .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar--secondary
+  .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar--primary
+  .md-nav::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar--secondary
+  .md-nav::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar--primary::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar--secondary::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar__scrollwrap::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-sidebar__inner::-webkit-scrollbar-thumb:hover,
 [data-md-color-scheme="slate"] .md-nav::-webkit-scrollbar-thumb:hover,
 [data-md-color-scheme="slate"] .md-sidebar::-webkit-scrollbar-thumb:hover {
   background: #666666 !important;
@@ -765,15 +810,14 @@ li::-webkit-scrollbar-thumb:hover {
   background: #444444 !important;
 }
 
-[data-md-color-scheme="slate"] .md-content__inner::-webkit-scrollbar-thumb:hover,
+[data-md-color-scheme="slate"]
+  .md-content__inner::-webkit-scrollbar-thumb:hover,
 [data-md-color-scheme="slate"] .md-typeset::-webkit-scrollbar-thumb:hover,
 [data-md-color-scheme="slate"] .md-content::-webkit-scrollbar-thumb:hover,
 [data-md-color-scheme="slate"] .md-main__inner::-webkit-scrollbar-thumb:hover,
 [data-md-color-scheme="slate"] .md-container::-webkit-scrollbar-thumb:hover {
   background: #666666 !important;
 }
-
-
 
 /* Mobile adjustments for sidebars */
 @media (max-width: 768px) {
@@ -782,15 +826,13 @@ li::-webkit-scrollbar-thumb:hover {
     height: calc(100vh - 60px) !important;
     max-height: calc(100vh - 60px) !important;
   }
-  
-  
+
   [data-md-color-scheme="slate"] .md-sidebar--primary,
   [data-md-color-scheme="slate"] .md-sidebar--secondary {
     height: calc(100vh - 60px) !important;
     max-height: calc(100vh - 60px) !important;
   }
 }
-
 
 /* Hide built‑with banner */
 .md-footer-meta {
@@ -804,7 +846,7 @@ mark.critic {
   min-width: 88px;
   border-radius: 3px;
   text-align: center;
-  font-size: .84em;
+  font-size: 0.84em;
   font-weight: 600;
   background: #333;
   color: #fff;
@@ -815,7 +857,7 @@ mark.critic {
 }
 
 .label-button.apm {
-  background: #BF1942;
+  background: #bf1942;
 }
 
 .label-button.devops {
@@ -854,7 +896,7 @@ mark.critic {
 
 .label-button.sfx-ui-button-grey {
   background: #eee;
-  color: rgba(0, 0, 0, .65);
+  color: rgba(0, 0, 0, 0.65);
   font-weight: 400;
 }
 
@@ -948,7 +990,7 @@ body {
 }
 
 /* Desktop: center banner and hero vertically within main content area */
-@media (min-width:821px) {
+@media (min-width: 821px) {
   .gonka-main {
     justify-content: center;
     align-items: center;
@@ -977,8 +1019,7 @@ body {
   align-items: center;
 }
 
-@media (max-width:500px) {
-
+@media (max-width: 500px) {
   .md-header,
   .gonka-header {
     height: 72px;
@@ -1031,7 +1072,7 @@ body:has(.gonka-landing) .gonka-header {
 }
 
 .gonka-banner a {
-  color: #6171E9;
+  color: #6171e9;
   text-decoration: none;
   font-weight: 400;
   font-size: 15px;
@@ -1039,7 +1080,7 @@ body:has(.gonka-landing) .gonka-header {
   letter-spacing: -0.01em;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .gonka-banner {
     margin-bottom: 10px;
   }
@@ -1064,7 +1105,7 @@ body:has(.gonka-landing) .gonka-header {
 }
 
 /* Mobile hero background adjustment */
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .gonka-hero::before {
     top: -160px;
     /* Reduce top offset for mobile */
@@ -1109,8 +1150,12 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   font-size: 48px;
   line-height: 100%;
   letter-spacing: -0.02em;
-  font-feature-settings: 'ss02' on, 'ss03' on, 'ss04' on, 'cv10' on;
-  margin-bottom: .5rem;
+  font-feature-settings:
+    "ss02" on,
+    "ss03" on,
+    "ss04" on,
+    "cv10" on;
+  margin-bottom: 0.5rem;
 }
 
 .gonka-inner {
@@ -1119,7 +1164,7 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   padding: 0 32px;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .gonka-inner {
     padding: 0 14px;
   }
@@ -1151,8 +1196,8 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   height: 144px;
   padding: 16px;
   margin-bottom: 50px;
-  background: #FFFFFF;
-  border: 1px solid #DBDBDB;
+  background: #ffffff;
+  border: 1px solid #dbdbdb;
   text-decoration: none;
 }
 
@@ -1162,7 +1207,7 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   font-size: 18px;
   line-height: 110%;
   letter-spacing: -0.01em;
-  color: #6171E9;
+  color: #6171e9;
 }
 
 .card small {
@@ -1201,7 +1246,7 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   justify-content: space-between;
   border-radius: 16px;
   padding: 24px;
-  background: #FAFAFA;
+  background: #fafafa;
   scroll-snap-align: start;
 }
 
@@ -1238,7 +1283,7 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   opacity: 1;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .partner-logos img {
     height: 28px;
   }
@@ -1257,10 +1302,9 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   }
 }
 
-
 /* Footer */
 .gonka-footer {
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 0;
 }
 
@@ -1362,7 +1406,7 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
 }
 
 /* Responsive footer */
-@media (max-width:820px) {
+@media (max-width: 820px) {
   .footer-inner {
     flex-wrap: wrap;
     gap: 2rem 3rem;
@@ -1378,7 +1422,7 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   }
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .gonka-landing {
     padding-top: 70px;
   }
@@ -1453,15 +1497,15 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color .3s;
+  transition: background-color 0.3s;
 }
 
 .login-button {
-  background: #B2B2B2;
+  background: #b2b2b2;
 }
 
 .login-button:hover {
-  background: #8D8D8D;
+  background: #8d8d8d;
 }
 
 .signup-button {
@@ -1469,7 +1513,7 @@ body[data-md-color-scheme="slate"]:has(.gonka-landing) {
 }
 
 .signup-button:hover {
-  background: #8D8D8D;
+  background: #8d8d8d;
 }
 
 /* == 8. New Landing Page Design 2025 (From Figma) ======================== */
@@ -1493,13 +1537,13 @@ body:has(.gonka-landing-2025) .md-header {
 
 /* Main Container */
 .gonka-landing-2025 {
-  background-image: url('../images/backgrounds/main.svg') !important;
+  background-image: url("../images/backgrounds/main.svg") !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-attachment: fixed !important;
   min-height: 100vh;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   color: #242424;
   width: 100%;
   margin: 0;
@@ -1524,7 +1568,7 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .yellow-banner p {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 12px;
   line-height: 1;
@@ -1544,7 +1588,7 @@ body:has(.gonka-landing-2025) .md-header {
   border: none;
   padding: 0 12px;
   min-height: 24px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -1579,7 +1623,7 @@ body:has(.gonka-landing-2025) .md-header {
     text-align: center;
     position: relative;
   }
-  
+
   .yellow-banner p {
     font-size: 11px !important;
     line-height: 1.4 !important;
@@ -1587,7 +1631,7 @@ body:has(.gonka-landing-2025) .md-header {
     word-wrap: break-word;
     hyphens: auto;
   }
-  
+
   .banner-learn-more {
     font-size: 10px !important;
     padding: 4px 12px;
@@ -1595,7 +1639,7 @@ body:has(.gonka-landing-2025) .md-header {
     margin: 0 auto;
     min-width: 80px;
   }
-  
+
   .banner-close {
     position: absolute;
     right: 12px;
@@ -1610,11 +1654,11 @@ body:has(.gonka-landing-2025) .md-header {
     transition: background-color 0.2s ease;
     cursor: pointer;
   }
-  
+
   .banner-close:hover {
     background: rgba(0, 0, 0, 0.2);
   }
-  
+
   .banner-close img {
     width: 12px !important;
     height: 12px !important;
@@ -1646,13 +1690,13 @@ body:has(.gonka-landing-2025) .md-header {
   .landing-header {
     height: 60px;
   }
-  
+
   .header-wrap {
     padding: 0 20px;
     gap: 20px;
     justify-content: space-between;
   }
-  
+
   .nav-section {
     gap: 20px !important;
     display: flex;
@@ -1660,45 +1704,45 @@ body:has(.gonka-landing-2025) .md-header {
     justify-content: flex-start;
     width: auto;
   }
-  
+
   .main-nav {
     display: none !important; /* Hide desktop navigation on mobile */
   }
-  
+
   /* Show mobile menu toggle */
   .mobile-menu-toggle {
     display: flex !important;
   }
-  
+
   .header-actions {
     gap: 15px;
   }
-  
+
   .theme-toggle {
     height: 24px;
   }
-  
+
   .theme-btn {
     width: 24px;
     height: 24px;
   }
-  
+
   .theme-btn img {
     width: 14px;
     height: 14px;
   }
-  
+
   .join-btn {
     padding: 6px 12px;
     height: 32px;
     font-size: 12px;
   }
-  
+
   /* Mobile menu positioning */
   .mobile-menu {
     top: 0 !important;
   }
-  
+
   /* Hide header actions on mobile */
   .header-actions {
     display: none !important;
@@ -1771,10 +1815,9 @@ body:has(.gonka-landing-2025) .md-header {
   transition: all 0.3s ease;
 }
 
-
 /* Navigation text */
 .nav-text {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   transition: text-decoration 0.3s ease;
 }
 
@@ -1794,7 +1837,7 @@ body:has(.gonka-landing-2025) .md-header {
 
 /* Navigation icon (+ / -) */
 .nav-icon {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 16px;
   line-height: 1;
@@ -1876,7 +1919,7 @@ body:has(.gonka-landing-2025) .md-header {
   display: block;
   padding: 12px 20px;
   color: #242424 !important;
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: "IBM Plex Mono", monospace !important;
   font-weight: 500 !important;
   font-size: 12px !important;
   line-height: 1.4 !important;
@@ -1928,7 +1971,6 @@ body:has(.gonka-landing-2025) .md-header {
   z-index: 0;
 }
 
-
 .hamburger-line {
   width: 18px;
   height: 2px;
@@ -1973,7 +2015,6 @@ body:has(.gonka-landing-2025) .md-header {
   transform: translateY(-100%);
   transition: all 0.3s ease;
 }
-
 
 .mobile-menu.active {
   display: block !important;
@@ -2076,7 +2117,7 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .mobile-nav-icon {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 18px;
   line-height: 1;
@@ -2115,7 +2156,7 @@ body:has(.gonka-landing-2025) .md-header {
   display: block;
   padding: 12px 0;
   color: #242424 !important;
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: "IBM Plex Mono", monospace !important;
   font-weight: 500 !important;
   font-size: 14px !important;
   line-height: 1.4 !important;
@@ -2130,7 +2171,7 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .mobile-dropdown-link:hover {
-  color: #6171E9 !important;
+  color: #6171e9 !important;
 }
 
 .mobile-dropdown-link:last-child {
@@ -2190,7 +2231,7 @@ flex-direction: column;
 }
 
 .mobile-language-btn {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -2247,7 +2288,7 @@ flex-direction: column;
 
 .mobile-language-option {
   display: block;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -2378,7 +2419,7 @@ flex-direction: column;
 }
 
 .mobile-buy-gnk-btn {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -2446,7 +2487,7 @@ flex-direction: column;
 }
 
 .mobile-wallet-text span {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.2;
@@ -2460,7 +2501,7 @@ flex-direction: column;
   border: none;
   padding: 8px 20px;
   height: 40px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -2478,7 +2519,7 @@ flex-direction: column;
   gap: 30px;
 }
 
-@media (max-width: 1024px)  {
+@media (max-width: 1024px) {
   .header-actions {
     gap: 18px;
   }
@@ -2492,7 +2533,7 @@ flex-direction: column;
 }
 
 .language-btn {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -2549,7 +2590,7 @@ flex-direction: column;
 
 .language-option {
   display: block;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -2673,7 +2714,7 @@ flex-direction: column;
 }
 
 .buy-gnk-btn {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
@@ -2748,7 +2789,7 @@ flex-direction: column;
 }
 
 .wallet-text span {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
@@ -2761,7 +2802,7 @@ flex-direction: column;
   border: none;
   padding: 8px 20px;
   height: 40px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -2794,29 +2835,28 @@ flex-direction: column;
   .hero-wrapper {
     padding: 60px 20px;
   }
-  
+
   .hero-container {
     flex-direction: column;
     gap: 40px;
     align-items: center;
   }
-  
+
   .chat-demo-section {
     max-width: 100% !important;
     width: 100%;
   }
-  
+
   .hero-content {
     padding-top: 0 !important;
     text-align: center;
   }
-  
-  
+
   .hero-actions {
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   .hero-btn {
     font-size: 12px;
     padding: 6px 16px;
@@ -2852,7 +2892,7 @@ flex-direction: column;
 }
 
 .chat-demo-header h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   font-size: 21px;
   line-height: 30px;
@@ -2909,14 +2949,14 @@ flex-direction: column;
 }
 
 .chat-title {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 700;
   font-size: 14px;
   color: #242424;
 }
 
 .chat-status {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 12px;
   padding: 0 4px;
@@ -2953,7 +2993,7 @@ flex-direction: column;
 .message-bubble {
   background: #ebebeb;
   padding: 10px 12px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.6;
@@ -2977,7 +3017,7 @@ flex-direction: column;
   flex: 1;
   border: none;
   background: transparent;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.6;
@@ -3004,7 +3044,7 @@ flex-direction: column;
 }
 
 .chat-disclaimer {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.3;
@@ -3026,7 +3066,7 @@ flex-direction: column;
   display: inline-flex;
   align-items: center;
   width: 125px;
-  background-image: url('../images/icons/card.svg');
+  background-image: url("../images/icons/card.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -3034,11 +3074,11 @@ flex-direction: column;
 
 /* Dark theme - use white card for hero badge */
 [data-md-color-scheme="slate"] .hero-badge {
-  background-image: url('../images/icons/white-card.svg');
+  background-image: url("../images/icons/white-card.svg");
 }
 
 .hero-badge span {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 12px;
   line-height: 24px;
@@ -3053,7 +3093,7 @@ flex-direction: column;
 }
 
 .hero-title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   font-size: 45px;
   line-height: 1.15;
@@ -3072,7 +3112,7 @@ flex-direction: column;
 }
 
 .hero-btn {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -3126,13 +3166,13 @@ flex-direction: column;
     margin-bottom: 40px;
     text-align: center;
   }
-  
+
   .section-badge.left p {
     width: 100% !important;
     font-size: 14px !important;
     line-height: 1.4 !important;
   }
-  
+
   .scroll-text {
     position: static !important;
     margin-top: 20px;
@@ -3146,16 +3186,16 @@ flex-direction: column;
   left: 0;
   width: 100%;
   text-align: center;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #CECECE;
+  color: #cecece;
 }
 
 .section-badge.left p {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -3166,7 +3206,7 @@ flex-direction: column;
 }
 
 .super-text {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -3206,23 +3246,23 @@ flex-direction: column;
   .mission-section {
     padding: 80px 20px 20px;
   }
-  
+
   .mission-content {
     flex-direction: column;
     gap: 40px;
     align-items: center;
   }
-  
+
   .mission-left {
     max-width: 100% !important;
     justify-content: center !important;
   }
-  
+
   .mission-right {
     max-width: 100% !important;
     text-align: center;
   }
-  
+
   .mission-text {
     font-size: 14px !important;
     line-height: 1.5 !important;
@@ -3248,7 +3288,7 @@ flex-direction: column;
   display: inline-flex;
   align-items: center;
   width: 125px;
-  background-image: url('../images/icons/card.svg');
+  background-image: url("../images/icons/card.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -3256,11 +3296,11 @@ flex-direction: column;
 
 /* Dark theme - use white card for mission badge */
 [data-md-color-scheme="slate"] .mission-badge {
-  background-image: url('../images/icons/white-card.svg');
+  background-image: url("../images/icons/white-card.svg");
 }
 
 .mission-badge span {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 12px;
   line-height: 24px;
@@ -3275,7 +3315,7 @@ flex-direction: column;
 }
 
 .mission-text {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -3296,25 +3336,24 @@ flex-direction: column;
   .superintelligence-section {
     padding: 60px 20px;
   }
-  
-  
+
   .super-subtitle {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .super-replace {
     font-size: 16px !important;
     width: 100% !important;
     text-align: center !important;
   }
-  
+
   .super-content {
     margin-top: 0 !important;
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .super-text {
     font-size: 14px !important;
     line-height: 1.5 !important;
@@ -3323,18 +3362,16 @@ flex-direction: column;
 }
 
 .super-title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400 !important;
   font-size: 75px !important;
   line-height: 1.1 !important;
   text-transform: uppercase;
-  word-break:normal;
+  word-break: normal;
   overflow-wrap: normal;
   color: #242424;
   margin: 0 !important;
 }
-
-
 
 .super-subtitle {
   display: flex;
@@ -3344,7 +3381,7 @@ flex-direction: column;
 }
 
 .super-by-us {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   font-size: 75px;
   line-height: 1.1;
@@ -3353,17 +3390,17 @@ flex-direction: column;
 }
 
 .super-separator {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 75px;
   line-height: 28px;
   text-transform: uppercase;
-  color: #D6E800;
+  color: #d6e800;
   letter-spacing: -28px;
 }
 
 .super-replace {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
@@ -3382,7 +3419,7 @@ flex-direction: column;
 }
 
 .cards-title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400 !important;
   font-size: 45px !important;
   line-height: 1.15 !important;
@@ -3405,13 +3442,12 @@ flex-direction: column;
   .three-cards-section {
     padding: 60px 20px;
   }
-  
-  
+
   .cards-grid {
     grid-template-columns: 1fr;
-  gap: 20px;
+    gap: 20px;
   }
-  
+
   .card {
     min-height: auto !important;
     max-height: fit-content !important;
@@ -3419,12 +3455,11 @@ flex-direction: column;
     margin-bottom: 0 !important;
     height: auto;
   }
-  
-  
+
   .card p {
     font-size: 14px !important;
   }
-  
+
   .card-btn {
     font-size: 12px !important;
     width: 90px !important;
@@ -3456,7 +3491,13 @@ flex-direction: column;
 .card-hover {
   background: #dff200 !important;
   border-color: 1px solid transparent;
-  clip-path: polygon(0% 0%, 96.25% 0%, 100% 3.75%, 100% 100%, 0% 100%) !important;
+  clip-path: polygon(
+    0% 0%,
+    96.25% 0%,
+    100% 3.75%,
+    100% 100%,
+    0% 100%
+  ) !important;
   transition: all 0.3s ease-in-out !important;
 }
 
@@ -3469,7 +3510,7 @@ flex-direction: column;
 }
 
 .card h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   font-size: clamp(28px, 3vw, 45px);
   line-height: 1.2;
@@ -3479,7 +3520,7 @@ flex-direction: column;
 }
 
 .card p {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -3496,13 +3537,14 @@ flex-direction: column;
 }
 
 .card-btn {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
   color: #f2f2f3 !important;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" fill="%23242424"><rect width="101" height="32"/></svg>') no-repeat;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" fill="%23242424"><rect width="101" height="32"/></svg>')
+    no-repeat;
   background-size: contain;
   border: none;
   padding: 4px 16px;
@@ -3515,7 +3557,8 @@ flex-direction: column;
 
 /* Dark theme card button with yellow background */
 [data-md-color-scheme="slate"] .card-btn {
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" fill="%23dff200"><rect width="101" height="32"/></svg>') no-repeat;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" fill="%23dff200"><rect width="101" height="32"/></svg>')
+    no-repeat;
   background-size: contain;
   color: #000000 !important;
 }
@@ -3529,7 +3572,7 @@ flex-direction: column;
 }
 
 .join-title {
-  font-family: 'Space Grotesk', sans-serif !important;
+  font-family: "Space Grotesk", sans-serif !important;
   font-weight: 400 !important;
   font-size: 75px !important;
   line-height: 1.1 !important;
@@ -3543,8 +3586,7 @@ flex-direction: column;
   .join-section {
     padding: 80px 20px;
   }
-  
-  
+
   .join-cta {
     padding: 8px 16px;
     height: 36px;
@@ -3557,7 +3599,7 @@ flex-direction: column;
   border: none;
   padding: 8px 20px;
   height: 40px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -3593,27 +3635,25 @@ flex-direction: column;
     padding: 80px 20px;
     flex-direction: column;
   }
-  
+
   .say-header {
     text-align: center;
     margin-bottom: 0;
   }
-  
-  
+
   .say-tabs {
     justify-content: center;
   }
-  
+
   .say-tab {
     font-size: 12px;
     padding: 6px 16px;
     height: 36px;
   }
-  
 }
 
 .say-header h2 {
-  font-family: 'Geist', sans-serif;
+  font-family: "Geist", sans-serif;
   font-weight: 400 !important;
   font-size: 45px !important;
   line-height: 1.2;
@@ -3628,7 +3668,7 @@ flex-direction: column;
 }
 
 .say-tab {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 600;
   font-size: 14px;
   line-height: 24px;
@@ -3654,7 +3694,6 @@ flex-direction: column;
 }
 
 .social-card {
-
   background: #dff200;
   border: 1px solid #dbdbdb;
   border-radius: 1px;
@@ -3722,26 +3761,26 @@ flex-direction: column;
   .logos-section {
     padding: 80px 20px;
   }
-  
+
   .logos-row {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .logos-group {
     gap: 12px;
   }
-  
+
   .logos-label {
     font-size: 12px !important;
   }
-  
+
   .logos-items {
     gap: 16px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .logos-items img {
     height: 24px !important;
   }
@@ -3755,7 +3794,7 @@ flex-direction: column;
 }
 
 .logos-label {
-  font-family: 'Inter Display', sans-serif;
+  font-family: "Inter Display", sans-serif;
   font-weight: 500;
   font-size: 13px;
   line-height: 1.1;
@@ -3793,21 +3832,21 @@ flex-direction: column;
 /* Tablet styles */
 @media (max-width: 1024px) and (min-width: 769px) {
   .hero-container {
-  gap: 80px;
+    gap: 80px;
   }
-  
+
   .mission-content {
     gap: 80px;
   }
-  
+
   .super-content {
     gap: 80px;
   }
-  
+
   .say-section {
     gap: 60px;
   }
-  
+
   .social-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -3819,24 +3858,24 @@ flex-direction: column;
   .landing-footer {
     padding: 40px 20px;
   }
-  
+
   .footer-wrap {
     grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
   }
-  
+
   .footer-logo {
     position: static !important;
     margin-bottom: 20px;
   }
-  
+
   .footer-links {
     flex-direction: column;
     align-items: center;
     gap: 20px !important;
   }
-  
+
   .footer-bottom {
     flex-direction: column !important;
     gap: 20px;
@@ -3849,12 +3888,12 @@ flex-direction: column;
     flex-basis: auto !important;
     align-items: center !important;
   }
-  
+
   .footer-bottom-links {
     flex-direction: column;
     gap: 20px !important;
   }
-  
+
   .footer-socials {
     justify-content: center;
   }
@@ -3873,7 +3912,7 @@ flex-direction: column;
 }
 
 .footer-brand-link {
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: "IBM Plex Mono", monospace !important;
   font-weight: 600 !important;
   font-size: 12px !important;
   line-height: 16px !important;
@@ -3958,7 +3997,7 @@ flex-direction: column;
 }
 
 .footer-col h4 {
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: "IBM Plex Mono", monospace !important;
   font-weight: 700 !important;
   font-size: 14px !important;
   line-height: 16px !important;
@@ -3969,7 +4008,7 @@ flex-direction: column;
 }
 
 .footer-col a {
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: "IBM Plex Mono", monospace !important;
   font-weight: 600 !important;
   font-size: 12px !important;
   line-height: 20px !important;
@@ -3994,7 +4033,7 @@ flex-direction: column;
 }
 
 .footer-link {
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: "IBM Plex Mono", monospace !important;
   font-weight: 600 !important;
   font-size: 12px !important;
   line-height: 16px !important;
@@ -4015,7 +4054,7 @@ flex-direction: column;
 }
 
 .footer-link-blog {
-  font-family: 'IBM Plex Mono', monospace !important;
+  font-family: "IBM Plex Mono", monospace !important;
   font-weight: 600 !important;
   font-size: 14px !important;
   line-height: 16px !important;
@@ -4031,7 +4070,7 @@ flex-direction: column;
 /* ========== DARK THEME (Slate) ========== */
 
 [data-md-color-scheme="slate"] .gonka-landing-2025 {
-  background: #1A1A1A !important;
+  background: #1a1a1a !important;
   color: #ffffff;
 }
 
@@ -4136,7 +4175,13 @@ flex-direction: column;
 [data-md-color-scheme="slate"] .card:hover {
   background: #dff200 !important;
   border: 1px solid transparent !important;
-  clip-path: polygon(0% 0%, 96.25% 0%, 100% 3.75%, 100% 100%, 0% 100%) !important;
+  clip-path: polygon(
+    0% 0%,
+    96.25% 0%,
+    100% 3.75%,
+    100% 100%,
+    0% 100%
+  ) !important;
   transition: all 0.3s ease-in-out !important;
 }
 
@@ -4147,7 +4192,8 @@ flex-direction: column;
 
 /* Dark theme hover - button returns to dark background with yellow text */
 [data-md-color-scheme="slate"] .card:hover .card-btn {
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" fill="%23242424"><rect width="101" height="32"/></svg>') no-repeat;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" fill="%23242424"><rect width="101" height="32"/></svg>')
+    no-repeat;
   background-size: contain;
   color: #dff200 !important;
 }
@@ -4155,7 +4201,13 @@ flex-direction: column;
 [data-md-color-scheme="slate"] .card-hover {
   background: #dff200 !important;
   border: 1px solid transparent !important;
-  clip-path: polygon(0% 0%, 96.25% 0%, 100% 3.75%, 100% 100%, 0% 100%) !important;
+  clip-path: polygon(
+    0% 0%,
+    96.25% 0%,
+    100% 3.75%,
+    100% 100%,
+    0% 100%
+  ) !important;
   transition: all 0.3s ease-in-out !important;
 }
 
@@ -4166,7 +4218,8 @@ flex-direction: column;
 
 /* Dark theme hover - button returns to dark background with yellow text */
 [data-md-color-scheme="slate"] .card-hover .card-btn {
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" fill="%23242424"><rect width="101" height="32"/></svg>') no-repeat;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="101" height="32" fill="%23242424"><rect width="101" height="32"/></svg>')
+    no-repeat;
   background-size: contain;
   color: #dff200 !important;
 }
@@ -4210,7 +4263,13 @@ flex-direction: column;
 [data-md-color-scheme="slate"] .social-card:hover {
   background: #dff200 !important;
   border: 1px solid transparent !important;
-  clip-path: polygon(0% 0%, 96.25% 0%, 100% 3.75%, 100% 100%, 0% 100%) !important;
+  clip-path: polygon(
+    0% 0%,
+    96.25% 0%,
+    100% 3.75%,
+    100% 100%,
+    0% 100%
+  ) !important;
   transition: all 0.3s ease-in-out !important;
 }
 
@@ -4334,7 +4393,7 @@ span[class*="tooltip-text"]::after {
   background: #242424;
   color: #ffffff;
   padding: 16px 20px;
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.4;
@@ -4353,7 +4412,7 @@ span[class*="tooltip-text"]::after {
 }
 
 span[class*="tooltip-text"]::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 100%;
   left: 50%;
@@ -4454,7 +4513,7 @@ span[class*="tooltip-text"]:hover::before {
 }
 
 .announcement-container h1 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   font-size: 75px;
   line-height: 1.1;
@@ -4472,7 +4531,7 @@ span[class*="tooltip-text"]:hover::before {
 }
 
 .announcement-container p {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -4481,7 +4540,7 @@ span[class*="tooltip-text"]:hover::before {
 }
 
 [data-md-color-scheme="slate"] .announcement-container p {
-  color: #CCCCCC;
+  color: #cccccc;
 }
 
 /* Announcement Items */
@@ -4519,7 +4578,7 @@ span[class*="tooltip-text"]:hover::before {
   display: inline-flex;
   align-items: center;
   width: 125px;
-  background-image: url('../images/icons/card.svg');
+  background-image: url("../images/icons/card.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -4534,13 +4593,13 @@ span[class*="tooltip-text"]:hover::before {
   line-height: 24px !important;
   letter-spacing: 0% !important;
   text-transform: uppercase !important;
-  margin: 0 !important; 
+  margin: 0 !important;
   color: white !important;
   margin-left: 7px !important;
 }
 
 [data-md-color-scheme="slate"] .announcement-badge {
-  background-image: url('../images/icons/white-card.svg');
+  background-image: url("../images/icons/white-card.svg");
 }
 
 [data-md-color-scheme="slate"] .announcement-badge span {
@@ -4560,7 +4619,6 @@ span[class*="tooltip-text"]:hover::before {
 [data-md-color-scheme="slate"] .announcement-item-title {
   color: #ffffff;
 }
-
 
 .announcement-toggle {
   background: none;
@@ -4597,7 +4655,9 @@ span[class*="tooltip-text"]:hover::before {
 .announcement-item-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  transition:
+    max-height 0.3s ease-out,
+    padding 0.3s ease-out;
 }
 
 .announcement-item:not(.expanded) .announcement-item-content {
@@ -4638,7 +4698,7 @@ span[class*="tooltip-text"]:hover::before {
 }
 
 [data-md-color-scheme="slate"] .announcement-item-content p {
-  color: #CCCCCC;
+  color: #cccccc;
 }
 
 /* Mobile Announcement Section */
@@ -4646,11 +4706,11 @@ span[class*="tooltip-text"]:hover::before {
   .announcement-content {
     padding: 12px;
   }
-  
+
   .announcement-container h1 {
     font-size: 36px;
   }
-  
+
   .announcement-container p {
     font-size: 14px;
   }
@@ -4696,13 +4756,12 @@ span[class*="tooltip-text"]:hover::before {
 
 .announcement-title {
   font-family: Space Grotesk !important;
-font-weight: 400 !important;
-font-style: Regular !important;
-font-size: 45px !important;
-line-height: 114.99999999999999% !important;
-letter-spacing: 0% !important;
-text-transform: uppercase !important;
-
+  font-weight: 400 !important;
+  font-style: Regular !important;
+  font-size: 45px !important;
+  line-height: 114.99999999999999% !important;
+  letter-spacing: 0% !important;
+  text-transform: uppercase !important;
 }
 
 /* Mobile specific overrides - must be at the end to override other !important rules */
@@ -4711,7 +4770,7 @@ text-transform: uppercase !important;
     font-size: 36px !important;
     line-height: 1.2 !important;
   }
-  
+
   .super-by-us {
     font-size: 36px !important;
   }
@@ -4719,27 +4778,27 @@ text-transform: uppercase !important;
   .super-separator {
     font-size: 36px !important;
   }
-  
+
   .cards-title {
     font-size: 28px !important;
     margin-bottom: 40px !important;
   }
-  
+
   .join-title {
     font-size: 36px !important;
     line-height: 1.2 !important;
   }
-  
+
   .say-header h2 {
     font-size: 28px !important;
   }
-  
+
   .hero-title {
     font-size: 28px !important;
     line-height: 1.2 !important;
     margin-bottom: 0 !important;
   }
-  
+
   .social-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 20px;
@@ -4747,37 +4806,36 @@ text-transform: uppercase !important;
     padding: 0 !important;
     width: 100% !important;
   }
-  
+
   .social-card {
     width: 100% !important;
     height: 100px !important;
     max-width: none !important;
     min-width: 100% !important;
   }
-  
+
   /* Extra specific rule to override any conflicting styles */
   .say-section .social-grid .social-card {
     width: 100% !important;
     max-width: none !important;
     min-width: 100% !important;
   }
-  
+
   .social-card-empty {
     display: none !important;
   }
 }
 
-
-.md-content__inner.md-typeset .landing-footer{
+.md-content__inner.md-typeset .landing-footer {
   margin-top: auto;
 }
-.md-content__inner.md-typeset .gonka-landing-2025{
+.md-content__inner.md-typeset .gonka-landing-2025 {
   display: flex;
   flex-direction: column;
 }
 
 .admonition info {
-  border-color: #DBDBDB !important;
+  border-color: #dbdbdb !important;
   border-radius: 0 !important;
 }
 
@@ -4786,7 +4844,7 @@ text-transform: uppercase !important;
 }
 
 .md-typeset .admonition.info {
-  border-color: #DBDBDB !important;
+  border-color: #dbdbdb !important;
 }
 
 .md-typeset .admonition {
@@ -4794,10 +4852,11 @@ text-transform: uppercase !important;
 }
 
 .md-typeset .admonition.note {
-  border-color: #DBDBDB !important;
+  border-color: #dbdbdb !important;
 }
 
-.md-typeset .admonition, .md-typeset details {
+.md-typeset .admonition,
+.md-typeset details {
   box-shadow: none !important;
   border-width: 1px !important;
 }
@@ -4808,13 +4867,13 @@ text-transform: uppercase !important;
     width: 100%;
   }
 
-  .social-card, .social-card-empty {
+  .social-card,
+  .social-card-empty {
     width: 100% !important;
   }
 }
 
-
-@media (max-width: 768px)  {
+@media (max-width: 768px) {
   .join-section,
   .say-section,
   .logos-section,
@@ -4848,16 +4907,16 @@ text-transform: uppercase !important;
 }
 
 .md-clipboard {
-  border-radius: .1rem;
+  border-radius: 0.1rem;
   color: var(--md-default-fg-color--lightest);
   cursor: pointer;
   height: 1.5em;
   outline-color: var(--md-accent-fg-color);
-  outline-offset: .1rem;
+  outline-offset: 0.1rem;
   position: absolute;
-  right: .5em;
-  top: .5em;
-  transition: color .25s;
+  right: 0.5em;
+  top: 0.5em;
+  transition: color 0.25s;
   width: 1.5em;
   z-index: 1;
   background: transparent;
@@ -4907,3 +4966,1684 @@ text-transform: uppercase !important;
   padding-right: 40px !important;
 }
 
+body:has(.mining-page) *,
+body:has(.mining-page) *::before,
+body:has(.mining-page) *::after {
+  box-sizing: border-box !important;
+}
+
+body:has(.mining-page) h1,
+body:has(.mining-page) h2,
+body:has(.mining-page) h3,
+body:has(.mining-page) h4,
+body:has(.mining-page) p,
+body:has(.mining-page) ul,
+body:has(.mining-page) ol,
+body:has(.mining-page) li,
+body:has(.mining-page) figure,
+body:has(.mining-page) body {
+  margin: 0;
+  padding: 0;
+  /* font-weight: inherit;
+  font-size: inherit; */
+}
+
+body:has(.mining-page) .md-grid {
+  max-width: 100% !important;
+}
+
+body:has(.mining-page) {
+  .md-container,
+  .md-main,
+  .md-main__inner,
+  .md-content,
+  .md-content__inner {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .md-sidebar,
+  .md-header {
+    display: none !important;
+  }
+}
+
+:root {
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  --content-width: 1250px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --color-black: #242424;
+  --color-white: #ffffff;
+  --color-yellow: #dff200;
+  --color-bg-card: #ebebeb;
+  --color-border: #dbdbdb;
+}
+
+.mining-page {
+
+
+  min-height: 100vh;
+  font-family: var(--font-mono);
+  color: var(--color-black);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #f2f2f3;
+}
+
+.md-content__inner.md-typeset .mining-page {
+  display: flex;
+  flex-direction: column;
+}
+[data-md-color-scheme="slate"] .mining-page {
+  background: #1a1a1a !important;
+  color: var(--color-white);
+}
+
+/* Dark Theme: Text Colors */
+[data-md-color-scheme="slate"] .mining-page p,
+[data-md-color-scheme="slate"] .mining-page h1,
+[data-md-color-scheme="slate"] .mining-page h2,
+[data-md-color-scheme="slate"] .mining-page h3 {
+  color: var(--color-white);
+}
+
+[data-md-color-scheme="slate"] .mining-page svg path,
+[data-md-color-scheme="slate"] .mining-page svg circle,
+[data-md-color-scheme="slate"] .mining-page svg rect,
+[data-md-color-scheme="slate"] .mining-page svg line {
+  stroke: var(--color-white) !important;
+  fill: var(--color-white) !important;
+}
+
+.mining-page [class*="__container"] {
+  margin: 0 auto;
+  padding: 0 var(--container-offset, 20px);
+  max-width: var(--container-width, 1250px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* == common == */
+
+.mining-page .section-offset {
+  padding: 130px 0;
+  @media (max-width: 1280px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.mining-page .title {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 75px;
+  line-height: 1.1;
+  text-transform: uppercase;  
+  color: var(--color-black);
+  text-align: start;
+
+  @media (max-width: 1280px) {
+    font-size: 52px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+.mining-page .title--center {
+   text-align: center;
+}
+.mining-page .title--sm {
+    font-size: 64px;
+     @media (max-width: 1280px) {
+      font-size: 42px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+    }
+}
+
+[data-md-color-scheme='slate'] .mining-page .title {
+  color: var(--color-white);
+}
+.mining-page .title__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -0.1em;
+  margin-bottom: 0.2em;
+  height: 0.75em;
+}
+
+.mining-page .title__icon path {
+  fill: var(--color-yellow);
+}
+
+
+.mining-page .mining-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mining-page .mining-badge__text {
+  padding: 1px 8px 1px 7px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+  z-index: 1;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0px;
+    width: 20px;
+    background-color: var(--color-black);
+    z-index: -1;
+    transform-origin: top right;
+    transform: skewX(20deg);
+    backface-visibility: hidden;
+  }
+}
+.mining-page .mining-badge__text-lg {
+  padding: 1px 8px 1px 9px;
+  font-size: 20px;
+  height: 36px;
+  @media (max-width: 500px){
+       font-size: 16px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-badge__text {
+  color: var(--color-black);
+}
+
+.mining-page .mining-badge__bg path {
+  fill: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-badge__bg path {
+  fill: var(--color-white);
+}
+
+.mining-page .mining-badge__icon {
+  margin-left: 3px;
+  height: 28px;
+}
+.mining-page .mining-badge__icon-lg {
+  height: 36px;
+}
+.mining-page .mining-badge__icon path {
+  fill: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-badge__icon path {
+  fill: var(--color-white);
+}
+[data-md-color-scheme='slate'] .mining-page .mining-badge__text {
+  background-color: var(--color-white);
+  color: var(--color-black);
+
+  &::before {
+    background-color: var(--color-white);
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-badge__icon path {
+  fill: var(--color-white);
+}
+
+/* == Mining Hero Section == */
+
+.mining-page .mining-hero {
+  padding-top: 190px;
+  padding-bottom: 130px;
+  @media (max-width: 1280px) {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.mining-page .mining-hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mining-page .mining-hero__title {
+  margin-bottom: 60px;
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 72px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--color-black);
+  text-align: center;
+
+  @media (max-width: 1280px) {
+    font-size: 52px;
+  }
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-hero__title {
+  color: var(--color-white);
+}
+
+.mining-page .mining-hero__cards {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1069px;
+  width: 100%;
+  @media (max-width: 768px) {
+   grid-template-columns: repeat(1, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.mining-page .mining-hero__card {
+  padding: 40px 32px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 1px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+  @media (max-width: 1280px) {
+    gap: 50px;
+    padding: 30px;
+  }
+  @media (max-width: 768px) {
+    gap: 30px;
+    padding: 20px;
+  }
+}
+
+.mining-page .mining-hero__card:hover {
+  background: var(--color-yellow);
+  border: 1px solid #000;
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-hero__card {
+  background: #171717;
+  border-color: transparent;
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-hero__card:hover {
+  background: var(--color-yellow);
+  border: 1px solid #000;
+}
+.mining-page .mining-hero__card:hover .mining-hero__card-title,
+.mining-page .mining-hero__card:hover .mining-hero__card-text {
+  color: var(--color-black);
+}
+
+.mining-page .mining-hero__card-title {
+  margin: 0;
+  flex-grow: 1;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-black);
+
+  @media (max-width: 1280px) {
+    font-size: 20px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-hero__card-title {
+  color: var(--color-white);
+}
+
+[data-md-color-scheme='slate']
+  .mining-page
+  .mining-hero__card--active
+  .mining-hero__card-title {
+  color: var(--color-black);
+}
+
+.mining-page .mining-hero__card-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-hero__card-text {
+  color: var(--color-white);
+}
+
+.mining-page .mining-hero__note {
+}
+
+.mining-page .mining-hero__note span {
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-black);
+  text-align: start;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+.mining-page .mining-hero__note img {
+  width: 13px;
+  height: 17px;
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-hero__note span {
+  color: var(--color-white);
+}
+.mining-page .mining-what__container {
+  display: grid;
+  grid-template-columns: auto minmax(auto, 620px);
+  gap: 57px;
+  align-items: start;
+  justify-items: end;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.mining-page .mining-what__left {
+  padding-top: 5px;
+  display: flex;
+
+
+
+  @media (max-width: 768px) {
+
+  }
+}
+
+.mining-page .mining-what__right {
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 620px;
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+}
+
+.mining-page .mining-what__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--color-black);
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-what__text {
+  color: var(--color-white);
+}
+
+
+/* == Who Gonka Token Miners Are Section == */
+
+
+.mining-page .mining-who__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.mining-page .mining-who__card {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 281px 1fr;
+  gap: 40px;
+  width: 100%;
+  max-width: 887px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 1px;
+
+  @media (max-width: 1280px) {
+    padding: 30px;
+    grid-template-columns: 260px 1fr;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-who__card {
+  background: #171717;
+  border-color: transparent;
+}
+
+.mining-page .mining-who__image {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.mining-page .mining-who__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mining-page .mining-who__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.mining-page .mining-who__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-who__text {
+  color: var(--color-white);
+}
+/* == What Miners Receive Section == */
+
+.mining-page .mining-receive__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mining-page .mining-receive__header {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mining-page .mining-receive__subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--color-black);
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-receive__subtitle {
+  color: var(--color-white);
+}
+
+.mining-page .mining-receive__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  @media (max-width: 1280px) {
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.mining-page .mining-receive__card {
+  padding: 40px 25px 40px 40px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+  @media (max-width: 1280px) {
+    padding: 30px;
+  }
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.mining-page .mining-receive__card:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-receive__card {
+  background: #171717;
+  border-color: transparent;
+}
+
+
+
+[data-md-color-scheme='slate'] .mining-page .mining-receive__card:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+.mining-page .mining-receive__card-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+
+.mining-page .mining-receive__card:hover .mining-receive__card-text {
+  color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-receive__card-text {
+  color: var(--color-white);
+}
+
+[data-md-color-scheme='slate']
+  .mining-page
+  .mining-receive__card-text {
+  color: var(--color-white);
+}
+[data-md-color-scheme='slate']
+  .mining-page
+  .mining-receive__link {
+  color: var(--color-white);
+}
+[data-md-color-scheme='slate'] .mining-receive__card:hover .mining-receive__link {
+  color: var(--color-black);
+}
+
+.mining-page .mining-receive__link {
+  color: var(--color-black);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 700;
+}
+
+/* == How GNK Rewards Are Distributed Section == */
+.mining-page .mining-distribution {
+}
+
+.mining-page .mining-distribution__container {
+  max-width: 1460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mining-page .mining-distribution__header {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.mining-page .mining-distribution__subtitle {
+  margin: 0 auto;
+  max-width: 375px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-distribution__subtitle {
+  color: var(--color-white);
+}
+
+/* Flow */
+.mining-page .mining-distribution__flow {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+
+  @media (max-width: 1280px) {
+    gap: 8px;
+  }
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.mining-page .mining-distribution__step {
+  padding: 20px 16px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
+  text-align: center;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    flex: none;
+    padding: 16px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-distribution__step {
+  background: #171717;
+  border-color: transparent;
+}
+
+.mining-page .mining-distribution__step span {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--color-black);
+
+  @media (max-width: 1280px) {
+    font-size: 15px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-distribution__step span {
+  color: var(--color-white);
+}
+
+.mining-page .mining-distribution__step:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-distribution__step:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+.mining-page .mining-distribution__step:hover span,
+[data-md-color-scheme='slate']
+  .mining-page
+  .mining-distribution__step:hover
+  span {
+  color: var(--color-black);
+}
+/* Arrow */
+.mining-page .mining-distribution__arrow {
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    transform: rotate(90deg);
+    height: 30px;
+  }
+}
+
+.mining-page .mining-distribution__arrow path {
+  stroke: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-distribution__arrow path {
+  stroke: var(--color-white);
+}
+
+/* Note */
+.mining-page .mining-distribution__note {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-distribution__note {
+  color: var(--color-white);
+}
+/* == How Rewards Are Distributed Section == */
+.mining-page .mining-rewards {
+}
+
+.mining-page .mining-rewards__container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.mining-page .mining-rewards__inner {
+  max-width: 1069px;
+  margin: 0 auto;
+}
+
+.mining-page .mining-rewards__title {
+  margin-bottom: 50px;
+    @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.mining-page .mining-rewards__content {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 65px;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Left side */
+.mining-page .mining-rewards__left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mining-page .mining-rewards__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mining-page .mining-rewards__card {
+  padding: 20px 40px;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+
+
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-rewards__card {
+  background: #171717;
+  border-color: transparent;
+}
+
+.mining-page .mining-rewards__card-text {
+  margin: 0;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-rewards__card-text {
+  color: var(--color-white);
+}
+
+/* Right side */
+.mining-page .mining-rewards__right {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 40px;
+
+  @media (max-width: 1024px) {
+    padding-top: 0;
+      gap: 20px;
+  }
+}
+
+.mining-page .mining-rewards__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-rewards__text {
+  color: var(--color-white);
+}
+/* == How GNK Can Be Used Section == */
+
+.mining-page .mining-usage__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.mining-page .mining-usage__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.mining-page .mining-usage__subtitle {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+  text-align: center;
+  max-width: 610px;
+
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-usage__subtitle {
+  color: var(--color-white);
+}
+
+/* Cards grid */
+.mining-page .mining-usage__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  align-items: start;
+
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mining-page .mining-usage__card {
+  padding: 40px 38px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+  @media (max-width: 1280px) {
+    padding: 30px;
+  }
+  @media (max-width: 992px) {
+    padding: 20px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-usage__card {
+  background: #171717;
+  border-color: transparent;
+}
+
+/* Card top row */
+.mining-page .mining-usage__card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.mining-page .mining-usage__card-num {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 1.2;
+  color: var(--color-black);
+
+  @media (max-width: 1280px) {
+    font-size: 40px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-usage__card-num {
+  color: var(--color-white);
+}
+
+.mining-page .mining-usage__card-img {
+  width: 90px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Card title */
+.mining-page .mining-usage__card-title {
+  font-family: var(--font-display);
+  margin: 0;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-black);
+    @media (max-width: 768px) {
+    font-size: 26px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-usage__card-title {
+  color: var(--color-white);
+}
+
+/* Card content */
+.mining-page .mining-usage__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mining-page .mining-usage__card-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-usage__card-text {
+  color: var(--color-white);
+}
+
+.mining-page .mining-usage__divider {
+  margin: 0;
+  border: none;
+  border: 1px solid #000;
+}
+
+.mining-page .mining-usage__card-label {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+.mining-page .mining-usage__list {
+  margin: 0 !important;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+[data-md-color-scheme='slate'] .mining-page .mining-usage__list li{
+  color: var(--color-white);
+}
+
+.mining-page .mining-usage__list li {
+margin: 0 !important;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.mining-page .mining-usage__card:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-usage__card:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+.mining-page .mining-usage__card:hover .mining-usage__card-num,
+.mining-page .mining-usage__card:hover .mining-usage__card-title,
+.mining-page .mining-usage__card:hover .mining-usage__card-text,
+.mining-page .mining-usage__card:hover .mining-usage__card-label,
+.mining-page .mining-usage__card:hover .mining-usage__list li {
+  color: var(--color-black);
+}
+/* == How GNK Mining Differs Section == */
+
+.mining-page .mining-difference__container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  @media (max-width: 768px) {
+    gap: 50px;
+  }
+}
+
+.mining-page .mining-difference__header {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.mining-page .mining-difference__title {
+  max-width: 960px;
+}
+
+/* Content grid */
+.mining-page .mining-difference__content {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 40px;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Left — main Gonka card */
+.mining-page .mining-difference__main-card {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #000;
+  background: #fff;
+  transition: background 0.3s ease 0s;
+
+  @media (max-width: 1280px) {
+    padding: 20px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-difference__main-card {
+  background: #171717;
+}
+
+
+.mining-page .mining-difference__card-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  @media (max-width: 768px) {
+    gap: 18px;
+  }
+}
+
+.mining-page .mining-difference__card-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+  transition: color 0.3s ease 0s;
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-difference__card-text {
+  color: var(--color-white);
+}
+
+/* Right — other coins */
+.mining-page .mining-difference__right {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  @media (max-width: 768px) {
+    gap: 40px;
+  }
+}
+
+.mining-page .mining-difference__item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mining-page .mining-difference__item-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-difference__item-text {
+  color: var(--color-white);
+}
+
+/* Coin row — shared for both sides */
+.mining-page .mining-difference__coin-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mining-page .mining-difference__coin-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.mining-page .mining-difference__coin-name {
+  margin-bottom: 12;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--color-black);
+
+  @media (max-width: 1280px) {
+    font-size: 28px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-difference__coin-name {
+  color: var(--color-white);
+}
+/* == How Miners Influence The Gonka Network Section == */
+
+.mining-page .mining-influence__container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Content grid */
+.mining-page .mining-influence__content {
+  max-width: 1069px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Left side */
+.mining-page .mining-influence__left {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  @media (max-width: 768px){
+      flex-direction: column;
+  }
+}
+
+.mining-page .mining-influence__icon {
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.mining-page .mining-influence__texts {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  @media (max-width: 768px) {
+    gap: 18px;
+  }
+}
+
+.mining-page .mining-influence__text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+.mining-page .mining-influence__text--bold {
+  font-weight: 700;
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-influence__text {
+  color: var(--color-white);
+}
+
+.mining-page .mining-influence__list-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mining-page .mining-influence__list {
+  margin: 0 !important;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mining-page .mining-influence__list li {
+  margin: 0 !important;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-influence__list li {
+  color: var(--color-white);
+}
+
+/* Right side — cards */
+.mining-page .mining-influence__right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mining-page .mining-influence__card {
+  padding: 40px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--color-bg-card);
+  order: 1px solid #000;
+  border-radius: 1px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+  @media (max-width: 1024px) {
+    padding: 30px 30px;
+  }
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.mining-page .mining-influence__card:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-influence__card {
+  background: #171717;
+  border-color: transparent;
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-influence__card:hover {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+.mining-page .mining-influence__card:hover .mining-influence__card-title,
+.mining-page .mining-influence__card:hover .mining-influence__card-text {
+  color: var(--color-black);
+}
+
+.mining-page .mining-influence__card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mining-page .mining-influence__card-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-influence__card-title {
+  color: var(--color-white);
+}
+
+.mining-page .mining-influence__card-img {
+  margin-top: 10px;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.mining-page .mining-influence__card-text {
+  margin: 0;
+  max-width: 305px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-influence__card-text {
+  color: var(--color-white);
+}
+
+
+/* == Why Participate Section == */
+
+.mining-page .mining-why__container {
+  display: grid;
+   grid-template-columns: minmax(400px, 490px) minmax(450px, 615px);
+  gap: 60px;
+  justify-content: space-between;
+  align-items: start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+.mining-page .mining-why__header {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Left side */
+.mining-page .mining-why__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    order: 2;
+  }
+}
+
+.mining-page .mining-why__gpu {
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  display: block;
+}
+
+.mining-page .mining-why__disclaimer {
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+  text-align: center;
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-why__disclaimer {
+  color: var(--color-white);
+}
+
+.mining-page .mining-why__btn {
+  padding: 10px 20px;
+  width: 140px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-yellow);
+  border: 1px solid #000;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  color: var(--color-black);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.mining-page .mining-why__btn:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-why__btn:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Right side */
+.mining-page .mining-why__right {
+  display: flex;
+  flex-direction: column;
+
+
+  @media (max-width: 1024px) {
+    order: 1;
+  }
+}
+
+.mining-page .mining-why__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--color-black);
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-why__title {
+  color: var(--color-white);
+}
+
+/* Items list */
+.mining-page .mining-why__items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mining-page .mining-why__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.mining-page .mining-why__num {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--color-yellow);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--color-black);
+}
+
+.mining-page .mining-why__item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mining-page .mining-why__item-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-why__item-title {
+  color: var(--color-white);
+}
+
+.mining-page .mining-why__item-text {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-why__item-text {
+  color: var(--color-white);
+}
+/* == FAQ Section == */
+
+.mining-page .mining-faq__container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* List */
+.mining-page .mining-faq__list {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.mining-page .mining-faq__item {
+  display: inline-flex;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+/* Question button */
+.mining-page .mining-faq__question {
+  padding: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  @media (max-width: 768px) {
+    gap: 20px;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+}
+
+.mining-page .mining-faq__question span {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 31px;
+  line-height: 1.1;
+  color: var(--color-black);
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-faq__question span {
+  color: var(--color-white);
+}
+
+.mining-page .mining-faq__icon-wrap {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background: var(--color-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mining-page .mining-faq__icon {
+  width: 17px;
+  height: 10px;
+  transition: transform 0.3s ease;
+}
+
+.mining-page .mining-faq__item--open .mining-faq__icon {
+  transform: rotate(180deg);
+}
+
+/* Answer */
+.mining-page .mining-faq__answer {
+  padding: 20px 30px;
+  margin-bottom: 17px;
+  display: none;
+  background: var(--color-bg-card);
+  @media (max-width: 768px) {
+    padding: 15px;
+  }
+}
+
+.mining-page .mining-faq__item--open .mining-faq__answer {
+  display: inline-block;
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-faq__answer {
+  background: #171717;
+}
+
+.mining-page .mining-faq__answer p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-black);
+    @media (max-width: 768px) {
+    line-height: 1.4;
+  }
+}
+
+[data-md-color-scheme='slate'] .mining-page .mining-faq__answer p {
+  color: var(--color-white);
+}

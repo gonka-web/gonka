@@ -83,10 +83,10 @@ This file was automatically generated - do not edit
   }
 </style>
 {% endblock %}
-
+ 
 {% block header %}
-{% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
-{# Homepage (index.md and zh/index.md) has header in content #}
+{% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md" or page.file.src_path == "mining.md") %}
+{# Homepage and mining page have header in content #}
 {% elif page and page.file and page.file.src_path == "announcement.md" %}
 {# Announcement page has header in content via announcement.html template #}
 {% elif page %}
@@ -158,8 +158,8 @@ This file was automatically generated - do not edit
 
 {# --- Custom footer for all pages except homepage and announcement ----------------------- #}
 {% block footer %}
-{% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
-{# Homepage (index.md and zh/index.md) has footer in content #}
+{% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md" or page.file.src_path == "mining.md") %}
+{# Homepage and mining page have footer in content #}
 {% elif page and page.file and page.file.src_path == "announcement.md" %}
 {# Announcement page has footer in content via announcement.html template #}
 {% elif page %}
