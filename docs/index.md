@@ -290,8 +290,8 @@
         </div>
         <h1 class="hero-title">Gonka is decentralized<br/>AI infrastructure that<br/>belongs to all of us</h1>
         <div class="hero-actions">
-          <a href="/host/quickstart" class="hero-btn">mine it</a>
-          <a href="/wallet/wallet-and-transfer-guide/" class="hero-btn">own it</a>
+          <a href="/mineit/" class="hero-btn">mine it</a>
+          <a href="" class="hero-btn">own it</a>
           <a href="/developer/quickstart/" class="hero-btn">use it</a>
         </div>
         <h3 class="hero-subtitle">Choose your path in the Gonka network.</h3>
@@ -344,7 +344,7 @@
           Today, access to AI is controlled by corporations: they set the prices, limit capabilities, filter knowledge, and decide who gets to participate in the future. We’re here to change that.
         </p>
         <p class="super-text">
-          Gonka is building an open infrastructure for free and accessible AI — a network where anyone can participate, earn, and influence. We don’t collect your data. It belongs to you.
+          Gonka is building an open infrastructure for free and accessible AI — a network where anyone can participate, earn, and influence.We don’t collect your data. It belongs to you.
         </p>
       </div>
     </div>
