@@ -1,11 +1,9 @@
 // Language Selector Functionality
 // Only works on documentation pages (not on homepage or announcement page)
 document.addEventListener('DOMContentLoaded', function () {
-  // Check if we're on a documentation page (has custom-header with language selector)
-  // Homepage and announcement pages don't have language selector
   const languageBtn = document.getElementById('language-btn');
   if (!languageBtn) {
-    return; // Exit if not on documentation page (no language selector)
+    return;
   }
 
   function getCurrentLanguage() {

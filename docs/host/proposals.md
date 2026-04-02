@@ -22,7 +22,7 @@ Used for changes that directly affect the network and require on-chain voting:
 - Introducing new features
 - Any other modifications that must be approved by the community on-chain
   
-Governance power is earned through verifiable compute work, not passive coin ownership. By default, only 20% of each Host’s PoC-derived voting weight is activated automatically. To unlock the remaining 80%, Hosts must lock GNK coins as collateral, linking governance influence to real economic commitment. Technical details, including weight activation mechanics and collateral ratios, are covered in [Gonka: Tokenomics](https://gonka.ai/tokenomics.pdf).
+Governance power is earned through verifiable compute work, not passive coin ownership. By default, only 20% of each Host's PoC-derived voting weight is activated automatically. To unlock the remaining 80%, Hosts must lock GNK coins as collateral, linking governance influence to real economic commitment. Technical details, including weight activation mechanics and collateral ratios, are covered in [Gonka: Tokenomics](/tokenomics.pdf).
 
 !!! note "Grace Period"
     For the first 180 epochs (approximately 6 months), new participants can participate in governance and earn voting weight through PoC alone, without collateral requirements. During this period, the full governance rights are available, while voting weight remains tied to verified compute activity.
@@ -36,4 +36,4 @@ Governance power is earned through verifiable compute work, not passive coin own
 | **Veto Threshold**    | 33.4% of the entire non-abstaining voting power in the system | If the fraction of `No_with_Veto` votes reaches this level, the proposal is forcefully rejected regardless of other votes.                            | Acts as a safeguard against malicious or harmful proposals, even if they have majority support.                        |
 
 All these parameters are defined in the Genesis Code and can be modified via governance proposals, allowing the network to dynamically adjust decision-making rules over time.
-For on-chain governance steps, see [the detailed guide](https://gonka.ai/transactions-and-governance/).
+For on-chain governance steps, see [the detailed guide](/transactions-and-governance/).

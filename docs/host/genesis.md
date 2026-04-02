@@ -36,7 +36,7 @@ Before participating in the ceremony, each Host (validator) must:
 
 3. Follow the local setup portion of the Quickstart Guide.
   
-    - Before the ceremony, you must complete the local machine setup as described in the [Gonka Quickstart](https://gonka.ai/host/quickstart) guide. This includes installing the `inferenced` CLI, creating your Account Cold Key, and pulling the Docker images. 
+    - Before the ceremony, you must complete the local machine setup as described in the [Gonka Quickstart](/host/quickstart) guide. This includes installing the `inferenced` CLI, creating your Account Cold Key, and pulling the Docker images. 
     - Stop after pulling the images and do not launch the services; the ceremony process replaces the server-side setup and on-chain transactions with an offline, PR-based workflow.
 
 4. Confirm readiness:
@@ -332,4 +332,4 @@ INF Genesis time is in the future. Sleeping until then... genTime=2025-08-14T09:
 
     Remove genesis-specific variables from `docker-compose.yml` configuration files to transition to normal operation mode.
 
-For additional support, see the [Quickstart Guide](https://gonka.ai/host/quickstart) or join [the community Discord](https://discord.com/invite/pUSEmYX4JP).
+For additional support, see the [Quickstart Guide](/host/quickstart) or join [the community Discord](https://discord.com/invite/pUSEmYX4JP).

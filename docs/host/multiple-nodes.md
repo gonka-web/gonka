@@ -20,7 +20,7 @@ For the Network node, the approximate hardware requirements are:
 
 The final requirements will depend on the number of MLNodes connected and their total throughput.
 
-Before proceeding, complete the [Quickstart guide](https://gonka.ai/host/quickstart/) through step 3.4, which includes:
+Before proceeding, complete the [Quickstart guide](/host/quickstart/) through step 3.4, which includes:
 
 - Hardware and software requirements
 - Download deployment files
@@ -38,7 +38,7 @@ This section describes how to deploy a distributed setup with a network node and
 
 ## Starting the network node
 
-Make sure you have completed the [Quickstart guide](https://gonka.ai/host/quickstart/) through step 3.3 (key management and Host registration) beforehand.
+Make sure you have completed the [Quickstart guide](/host/quickstart/) through step 3.3 (key management and Host registration) beforehand.
 
 This server becomes the main entry point for external participants. It must be exposed to the public internet (static IP or domain recommended). High network reliability and security are essential. Host this on a stable, high-bandwidth server with robust security.
 
@@ -173,7 +173,7 @@ To ensure correct setup and optimal performance, use the arguments that best mat
 | `Qwen/Qwen3-32B-FP8` on 8x3080  | `"--tensor-parallel-size","4","--pipeline-parallel-size","2"`                       |
 
 !!! note "vLLM performance tuning reference"
-    For detailed guidance on selecting optimal deployment configurations and vLLM parameters tailored to your GPU hardware, refer to the [Benchmark to Choose Optimal Deployment Config for LLMs](https://gonka.ai/host/benchmark-to-choose-optimal-deployment-config-for-llms/) guide.
+    For detailed guidance on selecting optimal deployment configurations and vLLM parameters tailored to your GPU hardware, refer to the [Benchmark to Choose Optimal Deployment Config for LLMs](/host/benchmark-to-choose-optimal-deployment-config-for-llms/) guide.
 
 If the node is successfully added, the response will return the **configuration** of the newly added inference node.
 
