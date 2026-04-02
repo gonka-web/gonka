@@ -5913,8 +5913,8 @@ body:has(.mining-page) {
   align-items: center;
   justify-content: center;
   height: 88px;
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
+  background: var(--color-yellow);
+  border: 1px solid var(--color-black); 
   box-sizing: border-box;
   text-align: center;
   transition:
@@ -5928,10 +5928,6 @@ body:has(.mining-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .mining-page .mining-distribution__step {
-  background: #171717;
-  border-color: transparent;
-}
 
 .mining-page .mining-distribution__step span {
   font-weight: 500;
@@ -5944,27 +5940,8 @@ body:has(.mining-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .mining-page .mining-distribution__step span {
-  color: var(--color-white);
-}
 
-.mining-page .mining-distribution__step:hover {
-  background: var(--color-yellow);
-  border-color: var(--color-black);
-}
 
-[data-md-color-scheme='slate'] .mining-page .mining-distribution__step:hover {
-  background: var(--color-yellow);
-  border-color: var(--color-black);
-}
-
-.mining-page .mining-distribution__step:hover span,
-[data-md-color-scheme='slate']
-  .mining-page
-  .mining-distribution__step:hover
-  span {
-  color: var(--color-black);
-}
 /* Arrow */
 .mining-page .mining-distribution__arrow {
   flex-shrink: 0;
