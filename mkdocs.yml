@@ -8,6 +8,8 @@ site_description: >-
 nav:
   - Home: index.md
   - Mineit: mineit.md
+  - Ownit: ownit.md
+  - Useit: useit.md
   - Announcements: announcement.md
   - Introduction: introduction.md
   - Developer:
