@@ -1,4 +1,4 @@
-<div class="mining-page">
+<div class="infra-page">
   
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
@@ -251,10 +251,10 @@
 <section class="mining-what section-offset">
   <div class="mining-what__container">
     <div class="mining-what__left">
-      <div class="mining-badge">
-        <div class="mining-badge__text">What GNK Mining is</div>
+      <div class="badge">
+        <div class="badge__text">What GNK Mining is</div>
         <svg
-          class="mining-badge__icon"
+          class="badge__icon"
           width="24"
           height="28"
           viewBox="0 0 24 28"
@@ -329,10 +329,10 @@
 <section class="mining-receive section-offset">
   <div class="mining-receive__container">
     <div class="mining-receive__header">
-      <div class="mining-badge">
-        <div class="mining-badge__text">Reward</div>
+      <div class="badge">
+        <div class="badge__text">Reward</div>
         <svg
-          class="mining-badge__icon"
+          class="badge__icon"
           width="24"
           height="28"
           viewBox="0 0 24 28"
@@ -495,10 +495,10 @@
       <div class="mining-rewards__content">
         <div class="mining-rewards__left">
           <div class="mining-rewards__item">
-            <div class="mining-badge">
-              <div class=" mining-badge__text mining-badge__text-lg">Protocol-issued rewards</div>
+            <div class="badge">
+              <div class=" badge__text badge__text-lg">Protocol-issued rewards</div>
               <svg
-                class="mining-badge__icon mining-badge__icon-lg"
+                class="badge__icon badge__icon-lg"
                 viewBox="0 0 24 28"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -522,10 +522,10 @@
           </div>
 
           <div class="mining-rewards__item">
-            <div class="mining-badge">
-              <div class=" mining-badge__text mining-badge__text-lg">Work-based rewards</div>
+            <div class="badge">
+              <div class=" badge__text badge__text-lg">Work-based rewards</div>
                 <svg
-                class="mining-badge__icon mining-badge__icon-lg"
+                class="badge__icon badge__icon-lg"
                 viewBox="0 0 24 28"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -576,36 +576,36 @@
   </div>
 </section>
  <!-- How GNK Can Be Used Section -->
-<section class="mining-usage section-offset">
-  <div class="mining-usage__container">
-    <div class="mining-usage__header">
+<section class="infra-steps section-offset">
+  <div class="infra-steps__container">
+    <div class="infra-steps__header">
       <h2 class="title title--center">How GNK Can Be Used</h2>
 
-      <p class="mining-usage__subtitle">
+      <p class="infra-steps__subtitle">
         GNK in the Gonka ecosystem is a utility token. It is needed to pay for
         inference, obtain liquidity, and participate in long-term network
         incentives
       </p>
     </div>
 
-    <div class="mining-usage__cards">
-      <div class="mining-usage__card">
-        <div class="mining-usage__card-top">
-          <span class="mining-usage__card-num">01</span>
+    <div class="infra-steps__cards">
+      <div class="infra-steps__card">
+        <div class="infra-steps__card-top">
+          <span class="infra-steps__card-num">01</span>
           <img
-            class="mining-usage__card-img"
+            class="infra-steps__card-img"
             src="/images/coin-selling.png"
             alt=""
           />
         </div>
-        <h3 class="mining-usage__card-title">Selling</h3>
-        <div class="mining-usage__card-content">
-          <p class="mining-usage__card-text">
+        <h3 class="infra-steps__card-title">Selling</h3>
+        <div class="infra-steps__card-content">
+          <p class="infra-steps__card-text">
             GNK tokens do not yet have an official listing. However, they can be
             sold or exchanged via various OTC venues and through like-minded
             members of the Gonka ecosystem community.
           </p>
-          <p class="mining-usage__card-text">
+          <p class="infra-steps__card-text">
             This enables participants focused on short-term returns to use a
             "mine → sell" model without deep involvement in the long-term
             network economy.
@@ -613,58 +613,58 @@
         </div>
       </div>
 
-      <div class="mining-usage__card">
-        <div class="mining-usage__card-top">
-          <span class="mining-usage__card-num">02</span>
+      <div class="infra-steps__card">
+        <div class="infra-steps__card-top">
+          <span class="infra-steps__card-num">02</span>
           <img
-            class="mining-usage__card-img"
+            class="infra-steps__card-img"
             src="/images/coin-holding.png"
             alt=""
           />
         </div>
-        <h3 class="mining-usage__card-title">Holding</h3>
-        <div class="mining-usage__card-content">
-          <p class="mining-usage__card-text">
+        <h3 class="infra-steps__card-title">Holding</h3>
+        <div class="infra-steps__card-content">
+          <p class="infra-steps__card-text">
             Holding GNK is a strategy for participants who expect growing demand
             for decentralized inference and training in the Gonka network.
           </p>
-          <p class="mining-usage__card-text">
+          <p class="infra-steps__card-text">
             A host can hold GNK while waiting for the ecosystem to expand: new
             applications, integrations with external protocols, and growth in
             total inference request volume.
           </p>
-          <p class="mining-usage__card-text">
+          <p class="infra-steps__card-text">
             Holders may gain advantages in access to services, staking, and, in
             the future, governance features.
           </p>
         </div>
       </div>
 
-      <div class="mining-usage__card">
-        <div class="mining-usage__card-top">
-          <span class="mining-usage__card-num">03</span>
+      <div class="infra-steps__card">
+        <div class="infra-steps__card-top">
+          <span class="infra-steps__card-num">03</span>
           <img
-            class="mining-usage__card-img"
+            class="infra-steps__card-img"
             src="/images/coin-inference.png"
             alt=""
           />
         </div>
-        <h3 class="mining-usage__card-title">Paying for Inference</h3>
-        <div class="mining-usage__card-content">
-          <p class="mining-usage__card-text">
+        <h3 class="infra-steps__card-title">Paying for Inference</h3>
+        <div class="infra-steps__card-content">
+          <p class="infra-steps__card-text">
             A GNK miner can use the mined token as "fuel" for their own AI
             queries in the Gonka network.
           </p>
-          <p class="mining-usage__card-text">
+          <p class="infra-steps__card-text">
             If you need to test an AI model, build a demo, launch your own bot
             or service — you simply pay those requests in GNK instead of
             stablecoins or another cryptocurrency.
           </p>
-          <hr class="mining-usage__divider" />
-          <p class="mining-usage__card-label">
+          <hr class="infra-steps__divider" />
+          <p class="infra-steps__card-label">
             <strong>The process looks like this:</strong>
           </p>
-          <ul class="mining-usage__list">
+          <ul class="infra-steps__list">
             <li>Top up your inference balance with GNK.</li>
             <li>Send requests via an OpenAI-compatible API.</li>
             <li>
@@ -672,7 +672,7 @@
               distributes them to hosts that compute your requests.
             </li>
           </ul>
-          <p class="mining-usage__card-text">
+          <p class="infra-steps__card-text">
             This way, the miner turns part of the mined GNK not into immediate
             cash via selling, but into access to real compute power. You "pay
             yourself and other hosts" for a useful AI service.
@@ -687,10 +687,10 @@
 <section class="mining-difference section-offset">
   <div class="mining-difference__container">
     <div class="mining-difference__header">
-      <div class="mining-badge">
-        <div class="mining-badge__text">Difference</div>
+      <div class="badge">
+        <div class="badge__text">Difference</div>
         <svg
-          class="mining-badge__icon"
+          class="badge__icon"
           viewBox="0 0 24 28"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -907,10 +907,10 @@
     </div>
     <div class="mining-why__right">
       <div class="mining-why__header">
-        <div class="mining-badge">
-          <div class="mining-badge__text">Reasons</div>
+        <div class="badge">
+          <div class="badge__text">Reasons</div>
           <svg
-            class="mining-badge__icon"
+            class="badge__icon"
             width="24"
             height="28"
             viewBox="0 0 24 28"

@@ -291,8 +291,8 @@
         <h1 class="hero-title">Gonka is decentralized<br/>AI infrastructure that<br/>belongs to all of us</h1>
         <div class="hero-actions">
           <a href="/mineit/" class="hero-btn">mine it</a>
-          <a href="" class="hero-btn">own it</a>
-          <a href="/developer/quickstart/" class="hero-btn">use it</a>
+          <a href="/ownit" class="hero-btn">own it</a>
+          <a href="/useit" class="hero-btn">use it</a>
         </div>
         <h3 class="hero-subtitle">Choose your path in the Gonka network.</h3>
       </div>
