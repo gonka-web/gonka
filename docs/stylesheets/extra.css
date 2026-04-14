@@ -6440,6 +6440,36 @@ margin: 0 !important;
 .infra-page .infra-steps__card:hover .infra-steps__list li {
   color: var(--color-black);
 }
+
+/* Active state — yellow card (light theme) */
+.infra-page .infra-steps__card.active {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+.infra-page .infra-steps__card.active .infra-steps__card-num,
+.infra-page .infra-steps__card.active .infra-steps__card-title,
+.infra-page .infra-steps__card.active .infra-steps__card-text,
+.infra-page .infra-steps__card.active .infra-steps__card-label,
+.infra-page .infra-steps__card.active .infra-steps__list li,
+.infra-page .infra-steps__card.active .infra-steps__card-subtitle {
+  color: var(--color-black);
+}
+
+/* Active state — dark theme override */
+[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active {
+  background: var(--color-yellow);
+  border-color: var(--color-black);
+}
+
+[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-num,
+[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-title,
+[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-text,
+[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-label,
+[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__list li,
+[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-subtitle {
+  color: var(--color-black);
+}
 /* == How GNK Mining Differs Section == */
 
 .infra-page .mining-difference__container {

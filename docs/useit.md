@@ -360,7 +360,7 @@
       <h2 class="title title--center title--sm">How to start using the GONKA API</h2>
     </div>
     <div class="infra-steps__cards infra-steps__cards--own">
-      <div class="infra-steps__card">
+      <div class="infra-steps__card active">
         <div class="infra-steps__card-top">
           <span class="infra-steps__card-num">01</span>
         </div>
@@ -370,7 +370,7 @@
           </p>
         </div>
       </div>
-      <div class="infra-steps__card">
+      <div class="infra-steps__card active">
         <div class="infra-steps__card-top">
           <span class="infra-steps__card-num">02</span>
         </div>
@@ -384,7 +384,7 @@
           </p>
         </div>
       </div>
-      <div class="infra-steps__card">
+      <div class="infra-steps__card active">
         <div class="infra-steps__card-top">
           <span class="infra-steps__card-num">03</span>
         </div>
