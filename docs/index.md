@@ -2,8 +2,7 @@
   
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
-    <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-    <a href="/announcement/" class="banner-learn-more">learn more</a>
+    <p class="yellow-banner-text">COMING SOON: Kimi K 2.5 and MiniMax</p>
     <button class="banner-close">
       <img src="images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
@@ -372,7 +371,7 @@
         </div>
       </a>
       
-      <a href="/tokenomics.pdf" class="card card-tokenomics">
+      <a href="/gonka_tokenomics_explained.pdf" class="card card-tokenomics">
         <h3>tokenomics</h3>
         <div class="card-content">
         <p>Buy coins — own a share of the future AI economy.</p>
@@ -453,21 +452,6 @@
       <div class="social-card-empty">
       </div>
 
-
-      <a href="https://t.me/Gonka_AI" target="_blank" class="social-card tg hidden">
-        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_1282_2970)">
-        <path d="M23 46C35.7025 46 46 35.7025 46 23C46 10.2975 35.7025 0 23 0C10.2975 0 0 10.2975 0 23C0 35.7025 10.2975 46 23 46Z" fill="#242424" style="fill:#242424;fill:color(display-p3 0.1403 0.1403 0.1403);fill-opacity:1;"/>
-        <path d="M33.592 15.0318L30.057 31.581C29.7933 32.7465 29.1166 33.009 28.139 32.4828L22.8365 28.5722L20.2406 31.0537C19.9781 31.3173 19.7145 31.581 19.1125 31.581L19.5266 26.1268L29.4176 17.1388C29.8306 16.7247 29.3045 16.5742 28.7783 16.9137L16.4805 24.6603L11.1768 23.0433C10.0113 22.6677 10.0113 21.8767 11.4405 21.3517L32.0496 13.3402C33.0646 13.0392 33.9303 13.5665 33.592 15.0318Z" fill="#DBDBDB" style="fill:#DBDBDB;fill:#dff200;fill-opacity:1;"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_1282_2970">
-        <rect width="46" height="46" fill="white" style="fill:white;fill-opacity:1;"/>
-        </clipPath>
-        </defs>
-        </svg>
-
-      </a>
 
 
       <a href="mailto:hello@productscience.ai" target="_blank" class="social-card twitter">

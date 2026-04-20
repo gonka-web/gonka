@@ -301,7 +301,6 @@ a.md-logo img,
   transition: all 0.2s ease !important;
 }
 
-
 .md-nav--secondary .md-nav .md-nav__link:hover {
   color: #00bda4 !important;
 }
@@ -397,7 +396,7 @@ a.md-logo img,
 
 .md-sidebar--primary .md-nav {
   padding: 0 !important;
-  padding-right: .4rem !important;
+  padding-right: 0.4rem !important;
 }
 
 /* Navigation section headers */
@@ -415,7 +414,7 @@ a.md-logo img,
 }
 
 /* First section header */
-.md-nav__title:first-child {
+.md-nav__title--first-child {
   margin-top: 0 !important;
 }
 
@@ -576,7 +575,9 @@ a.md-logo img,
   color: #999999 !important;
 }
 
-[data-md-color-scheme="slate"] .md-nav__read-next-link:hover .md-nav__read-next-number {
+[data-md-color-scheme="slate"]
+  .md-nav__read-next-link:hover
+  .md-nav__read-next-number {
   color: #00bda4 !important;
 }
 
@@ -619,7 +620,11 @@ a.md-logo img,
 }
 
 /* Active nested navigation link in dark theme */
-[data-md-color-scheme="slate"] .md-nav__item .md-nav .md-nav__item .md-nav__link--active {
+[data-md-color-scheme="slate"]
+  .md-nav__item
+  .md-nav
+  .md-nav__item
+  .md-nav__link--active {
   font-weight: 600 !important;
   background: rgba(0, 189, 164, 0.15) !important;
   padding: 4px 8px !important;
@@ -1640,7 +1645,7 @@ body:has(.gonka-landing-2025) .md-header {
 
 /* Dark theme background for main container */
 [data-md-color-scheme="slate"] .gonka-landing-2025 {
-  background-image: url('../images/backgrounds/dark-dots-main.svg') !important;
+  /* background-image: url('../images/backgrounds/dark-dots-main.svg') !important; */
 }
 
 /* Yellow Top Banner */
@@ -1761,7 +1766,6 @@ body:has(.gonka-landing-2025) .md-header {
   .yellow-banner p {
     font-size: 10px !important;
   }
-
 }
 
 /* Header */
@@ -2112,7 +2116,10 @@ body:has(.gonka-landing-2025) .md-header {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-100%);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
 
@@ -2127,7 +2134,7 @@ body:has(.gonka-landing-2025) .md-header {
   background: #1d1d1d;
 }
 
-.mobile-menu.active .mobile-menu-actions{
+.mobile-menu.active .mobile-menu-actions {
   position: static;
   padding-top: 20px;
 }
@@ -3249,7 +3256,7 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .hero-subtitle {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   font-size: 32px;
   line-height: 1.15;
@@ -3259,11 +3266,10 @@ body:has(.gonka-landing-2025) .md-header {
   opacity: 0.3;
 }
 
-
 .hero-actions {
   display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+  display: -ms-flexbox;
+  display: flex;
   gap: 10px;
 }
 
@@ -3277,8 +3283,8 @@ body:has(.gonka-landing-2025) .md-header {
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase !important;
--ms-transform: uppercase !important;
-transform: uppercase !important;
+  -ms-transform: uppercase !important;
+  transform: uppercase !important;
   padding: 8px 20px;
   height: 40px;
   border: 1px solid #000;
@@ -3304,7 +3310,7 @@ transform: uppercase !important;
   -ms-justify-content: center;
 
   justify-content: center;
-  
+
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -3318,7 +3324,6 @@ transform: uppercase !important;
   border-color: #000;
   color: #242424 !important;
 }
-
 
 /* Dark theme - keep hero buttons with black text */
 [data-md-color-scheme="slate"] .hero-btn {
@@ -4262,7 +4267,8 @@ transform: uppercase !important;
 /* ========== DARK THEME (Slate) ========== */
 
 [data-md-color-scheme="slate"] .gonka-landing-2025 {
-  background: #1a1a1a !important;
+  /* background: #1a1a1a !important; */
+  background-image: url("../images/backgrounds/dark-dots-main.svg") !important;
   /* background: #1A1A1A !important; */
   color: #ffffff;
 }
@@ -4545,10 +4551,6 @@ transform: uppercase !important;
 }
 
 [data-md-color-scheme="slate"] .chat-send img {
-  filter: brightness(0) invert(1);
-}
-
-[data-md-color-scheme="slate"] .banner-close img {
   filter: brightness(0) invert(1);
 }
 
@@ -4896,7 +4898,7 @@ span[class*="tooltip-text"]:hover::before {
 }
 
 .announcement-item:not(.expanded) .announcement-item-content {
-  max-height: calc(1.6 * 18px * 2); 
+  max-height: calc(1.6 * 18px * 2);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   line-clamp: 2;
@@ -5033,13 +5035,13 @@ span[class*="tooltip-text"]:hover::before {
     line-height: 1.2 !important;
     margin-bottom: 0 !important;
   }
-  
+
   .hero-subtitle {
     font-size: 18px !important;
     line-height: 1.2 !important;
     margin-bottom: 0 !important;
   }
-  
+
   .social-grid {
     grid-template-columns: 1fr 1fr !important;
     gap: 20px;
@@ -5264,8 +5266,11 @@ body:has(.infra-page) {
 }
 
 .infra-page {
-
-
+  background-image: url("../images/backgrounds/main.svg") !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
   min-height: 100vh;
   font-family: var(--font-mono);
   color: var(--color-black);
@@ -5273,7 +5278,7 @@ body:has(.infra-page) {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: #f2f2f3;
+  background-color: #f2f2f3;
 }
 
 .md-content__inner.md-typeset .infra-page {
@@ -5281,7 +5286,8 @@ body:has(.infra-page) {
   flex-direction: column;
 }
 [data-md-color-scheme="slate"] .infra-page {
-  background: #1a1a1a !important;
+  background-color: #1a1a1a !important;
+  background-image: url("../images/backgrounds/dark-dots-main.svg") !important;
   color: var(--color-white);
 }
 
@@ -5384,7 +5390,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-header__subtitle {
+[data-md-color-scheme="slate"] .infra-page .infra-header__subtitle {
   color: var(--color-white);
 }
 
@@ -5416,15 +5422,15 @@ body:has(.infra-page) {
   line-height: 1.2;
   text-transform: uppercase;
   color: var(--color-black);
-  @media (max-width: 500px){
-        font-size: 10px;
+  @media (max-width: 500px) {
+    font-size: 10px;
   }
 }
 .infra-page .infra-badge__text--md {
   font-size: 16px;
-  
-  @media (max-width: 500px){
-        font-size: 14px;
+
+  @media (max-width: 500px) {
+    font-size: 14px;
   }
 }
 
@@ -5433,7 +5439,7 @@ body:has(.infra-page) {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-    @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     align-self: self-start;
   }
   @media (max-width: 768px) {
@@ -5461,10 +5467,9 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .ownit-badge__text {
+[data-md-color-scheme="slate"] .infra-page .ownit-badge__text {
   color: var(--color-white);
 }
-
 
 .infra-page .title {
   margin: 0;
@@ -5473,7 +5478,7 @@ body:has(.infra-page) {
   font-weight: 400;
   font-size: 75px;
   line-height: 1.1;
-  text-transform: uppercase;  
+  text-transform: uppercase;
   color: var(--color-black);
   text-align: start;
 
@@ -5486,20 +5491,20 @@ body:has(.infra-page) {
   }
 }
 .infra-page .title--center {
-   text-align: center;
+  text-align: center;
 }
 .infra-page .title--sm {
-    font-size: 64px;
-     @media (max-width: 1280px) {
-      font-size: 42px;
-    }
+  font-size: 64px;
+  @media (max-width: 1280px) {
+    font-size: 42px;
+  }
 
-    @media (max-width: 768px) {
-      font-size: 28px;
-    }
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 }
 
-[data-md-color-scheme='slate'] .infra-page .title {
+[data-md-color-scheme="slate"] .infra-page .title {
   color: var(--color-white);
 }
 .infra-page .title__icon {
@@ -5513,7 +5518,6 @@ body:has(.infra-page) {
 .infra-page .title__icon path {
   fill: var(--color-yellow);
 }
-
 
 .infra-page .badge {
   position: relative;
@@ -5535,7 +5539,7 @@ body:has(.infra-page) {
   text-transform: uppercase;
   z-index: 1;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -5552,12 +5556,12 @@ body:has(.infra-page) {
   padding: 1px 8px 1px 9px;
   font-size: 20px;
   height: 36px;
-  @media (max-width: 500px){
-       font-size: 16px;
+  @media (max-width: 500px) {
+    font-size: 16px;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .badge__text {
+[data-md-color-scheme="slate"] .infra-page .badge__text {
   color: var(--color-black);
 }
 
@@ -5565,7 +5569,7 @@ body:has(.infra-page) {
   fill: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .badge__bg path {
+[data-md-color-scheme="slate"] .infra-page .badge__bg path {
   fill: var(--color-white);
 }
 
@@ -5580,10 +5584,10 @@ body:has(.infra-page) {
   fill: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .badge__icon path {
+[data-md-color-scheme="slate"] .infra-page .badge__icon path {
   fill: var(--color-white);
 }
-[data-md-color-scheme='slate'] .infra-page .badge__text {
+[data-md-color-scheme="slate"] .infra-page .badge__text {
   background-color: var(--color-white);
   color: var(--color-black);
 
@@ -5592,7 +5596,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .badge__icon path {
+[data-md-color-scheme="slate"] .infra-page .badge__icon path {
   fill: var(--color-white);
 }
 
@@ -5636,7 +5640,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-hero__title {
+[data-md-color-scheme="slate"] .infra-page .mining-hero__title {
   color: var(--color-white);
 }
 
@@ -5648,7 +5652,7 @@ body:has(.infra-page) {
   max-width: 1069px;
   width: 100%;
   @media (max-width: 768px) {
-   grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   @media (max-width: 768px) {
@@ -5682,12 +5686,12 @@ body:has(.infra-page) {
   border: 1px solid #000;
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-hero__card {
-  background: #171717;
-  border-color: transparent;
+[data-md-color-scheme="slate"] .infra-page .mining-hero__card {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-hero__card:hover {
+[data-md-color-scheme="slate"] .infra-page .mining-hero__card:hover {
   background: var(--color-yellow);
   border: 1px solid #000;
 }
@@ -5711,11 +5715,11 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-hero__card-title {
+[data-md-color-scheme="slate"] .infra-page .mining-hero__card-title {
   color: var(--color-white);
 }
 
-[data-md-color-scheme='slate']
+[data-md-color-scheme="slate"]
   .infra-page
   .mining-hero__card--active
   .mining-hero__card-title {
@@ -5730,7 +5734,7 @@ body:has(.infra-page) {
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-hero__card-text {
+[data-md-color-scheme="slate"] .infra-page .mining-hero__card-text {
   color: var(--color-white);
 }
 
@@ -5755,7 +5759,7 @@ body:has(.infra-page) {
   height: 17px;
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-hero__note span {
+[data-md-color-scheme="slate"] .infra-page .mining-hero__note span {
   color: var(--color-white);
 }
 .infra-page .mining-what__container {
@@ -5775,15 +5779,11 @@ body:has(.infra-page) {
   padding-top: 5px;
   display: flex;
 
-
-
   @media (max-width: 768px) {
-
   }
 }
 
 .infra-page .mining-what__right {
-
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -5805,13 +5805,11 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-what__text {
+[data-md-color-scheme="slate"] .infra-page .mining-what__text {
   color: var(--color-white);
 }
 
-
 /* == Who Gonka Token Miners Are Section == */
-
 
 .infra-page .mining-who__container {
   display: flex;
@@ -5843,9 +5841,9 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-who__card {
-  background: #171717;
-  border-color: transparent;
+[data-md-color-scheme="slate"] .infra-page .mining-who__card {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
 
 .infra-page .mining-who__image {
@@ -5879,7 +5877,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-who__text {
+[data-md-color-scheme="slate"] .infra-page .mining-who__text {
   color: var(--color-white);
 }
 /* == What Miners Receive Section == */
@@ -5907,7 +5905,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-receive__subtitle {
+[data-md-color-scheme="slate"] .infra-page .mining-receive__subtitle {
   color: var(--color-white);
 }
 
@@ -5947,14 +5945,12 @@ body:has(.infra-page) {
   border-color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-receive__card {
-  background: #171717;
-  border-color: transparent;
+[data-md-color-scheme="slate"] .infra-page .mining-receive__card {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
 
-
-
-[data-md-color-scheme='slate'] .infra-page .mining-receive__card:hover {
+[data-md-color-scheme="slate"] .infra-page .mining-receive__card:hover {
   background: var(--color-yellow);
   border-color: var(--color-black);
 }
@@ -5967,26 +5963,23 @@ body:has(.infra-page) {
   color: var(--color-black);
 }
 
-
 .infra-page .mining-receive__card:hover .mining-receive__card-text {
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-receive__card-text {
+[data-md-color-scheme="slate"] .infra-page .mining-receive__card-text {
   color: var(--color-white);
 }
 
-[data-md-color-scheme='slate']
-  .infra-page
-  .mining-receive__card-text {
+[data-md-color-scheme="slate"] .infra-page .mining-receive__card-text {
   color: var(--color-white);
 }
-[data-md-color-scheme='slate']
-  .infra-page
+[data-md-color-scheme="slate"] .infra-page .mining-receive__link {
+  color: var(--color-white);
+}
+[data-md-color-scheme="slate"]
+  .mining-receive__card:hover
   .mining-receive__link {
-  color: var(--color-white);
-}
-[data-md-color-scheme='slate'] .mining-receive__card:hover .mining-receive__link {
   color: var(--color-black);
 }
 
@@ -6028,7 +6021,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-distribution__subtitle {
+[data-md-color-scheme="slate"] .infra-page .mining-distribution__subtitle {
   color: var(--color-white);
 }
 
@@ -6057,7 +6050,7 @@ body:has(.infra-page) {
   justify-content: center;
   height: 88px;
   background: var(--color-yellow);
-  border: 1px solid var(--color-black); 
+  border: 1px solid var(--color-black);
   box-sizing: border-box;
   text-align: center;
   transition:
@@ -6071,7 +6064,6 @@ body:has(.infra-page) {
   }
 }
 
-
 .infra-page .mining-distribution__step span {
   font-weight: 500;
   font-size: 15px;
@@ -6082,8 +6074,6 @@ body:has(.infra-page) {
     font-size: 15px;
   }
 }
-
-
 
 /* Arrow */
 .infra-page .mining-distribution__arrow {
@@ -6099,7 +6089,7 @@ body:has(.infra-page) {
   stroke: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-distribution__arrow path {
+[data-md-color-scheme="slate"] .infra-page .mining-distribution__arrow path {
   stroke: var(--color-white);
 }
 
@@ -6121,7 +6111,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-distribution__note {
+[data-md-color-scheme="slate"] .infra-page .mining-distribution__note {
   color: var(--color-white);
 }
 /* == How Rewards Are Distributed Section == */
@@ -6140,7 +6130,7 @@ body:has(.infra-page) {
 
 .infra-page .mining-rewards__title {
   margin-bottom: 50px;
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     margin-bottom: 30px;
   }
 }
@@ -6178,15 +6168,14 @@ body:has(.infra-page) {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
 
-
   @media (max-width: 768px) {
     padding: 20px;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-rewards__card {
-  background: #171717;
-  border-color: transparent;
+[data-md-color-scheme="slate"] .infra-page .mining-rewards__card {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
 
 .infra-page .mining-rewards__card-text {
@@ -6202,7 +6191,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-rewards__card-text {
+[data-md-color-scheme="slate"] .infra-page .mining-rewards__card-text {
   color: var(--color-white);
 }
 
@@ -6215,7 +6204,7 @@ body:has(.infra-page) {
 
   @media (max-width: 1024px) {
     padding-top: 0;
-      gap: 20px;
+    gap: 20px;
   }
 }
 
@@ -6231,7 +6220,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-rewards__text {
+[data-md-color-scheme="slate"] .infra-page .mining-rewards__text {
   color: var(--color-white);
 }
 /* == How GNK Can Be Used Section == */
@@ -6241,7 +6230,6 @@ body:has(.infra-page) {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-
 }
 .infra-page .infra-steps__header {
   display: flex;
@@ -6258,15 +6246,14 @@ body:has(.infra-page) {
   color: var(--color-black);
   text-align: center;
   max-width: 610px;
-  @media (max-width: 768px){
-      br{
-        display: none;
-      }
+  @media (max-width: 768px) {
+    br {
+      display: none;
+    }
   }
-
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-steps__subtitle {
+[data-md-color-scheme="slate"] .infra-page .infra-steps__subtitle {
   color: var(--color-white);
 }
 
@@ -6283,7 +6270,6 @@ body:has(.infra-page) {
   }
 }
 .infra-page .infra-steps__cards--own {
-
   align-items: stretch;
 }
 .infra-page .infra-steps__card {
@@ -6305,9 +6291,9 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card {
-  background: #171717;
-  border-color: transparent;
+[data-md-color-scheme="slate"] .infra-page .infra-steps__card {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
 
 /* Card top row */
@@ -6329,7 +6315,7 @@ body:has(.infra-page) {
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card-num {
+[data-md-color-scheme="slate"] .infra-page .infra-steps__card-num {
   color: var(--color-white);
 }
 
@@ -6348,26 +6334,24 @@ body:has(.infra-page) {
   line-height: 1.2;
   text-transform: uppercase;
   color: var(--color-black);
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     font-size: 26px;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card-title {
+[data-md-color-scheme="slate"] .infra-page .infra-steps__card-title {
   color: var(--color-white);
 }
 
 /* Card subtitle */
 .infra-page .infra-steps__card-subtitle {
- 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.6;
   color: var(--color-black);
-  
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card-subtitle {
+[data-md-color-scheme="slate"] .infra-page .infra-steps__card-subtitle {
   color: var(--color-white);
 }
 
@@ -6386,7 +6370,7 @@ body:has(.infra-page) {
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card-text {
+[data-md-color-scheme="slate"] .infra-page .infra-steps__card-text {
   color: var(--color-white);
 }
 
@@ -6409,14 +6393,13 @@ body:has(.infra-page) {
   padding-left: 22px;
   display: flex;
   flex-direction: column;
- 
 }
-[data-md-color-scheme='slate'] .infra-page .infra-steps__list li{
+[data-md-color-scheme="slate"] .infra-page .infra-steps__list li {
   color: var(--color-white);
 }
 
 .infra-page .infra-steps__list li {
-margin: 0 !important;
+  margin: 0 !important;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.6;
@@ -6428,7 +6411,7 @@ margin: 0 !important;
   border-color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card:hover {
+[data-md-color-scheme="slate"] .infra-page .infra-steps__card:hover {
   background: var(--color-yellow);
   border-color: var(--color-black);
 }
@@ -6457,17 +6440,36 @@ margin: 0 !important;
 }
 
 /* Active state — dark theme override */
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active {
+[data-md-color-scheme="slate"] .infra-page .infra-steps__card.active {
   background: var(--color-yellow);
   border-color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-num,
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-title,
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-text,
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-label,
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__list li,
-[data-md-color-scheme='slate'] .infra-page .infra-steps__card.active .infra-steps__card-subtitle {
+[data-md-color-scheme="slate"]
+  .infra-page
+  .infra-steps__card.active
+  .infra-steps__card-num,
+[data-md-color-scheme="slate"]
+  .infra-page
+  .infra-steps__card.active
+  .infra-steps__card-title,
+[data-md-color-scheme="slate"]
+  .infra-page
+  .infra-steps__card.active
+  .infra-steps__card-text,
+[data-md-color-scheme="slate"]
+  .infra-page
+  .infra-steps__card.active
+  .infra-steps__card-label,
+[data-md-color-scheme="slate"]
+  .infra-page
+  .infra-steps__card.active
+  .infra-steps__list
+  li,
+[data-md-color-scheme="slate"]
+  .infra-page
+  .infra-steps__card.active
+  .infra-steps__card-subtitle {
   color: var(--color-black);
 }
 /* == How GNK Mining Differs Section == */
@@ -6517,10 +6519,10 @@ margin: 0 !important;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-difference__main-card {
-  background: #171717;
+[data-md-color-scheme="slate"] .infra-page .mining-difference__main-card {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
-
 
 .infra-page .mining-difference__card-texts {
   display: flex;
@@ -6540,7 +6542,7 @@ margin: 0 !important;
   transition: color 0.3s ease 0s;
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-difference__card-text {
+[data-md-color-scheme="slate"] .infra-page .mining-difference__card-text {
   color: var(--color-white);
 }
 
@@ -6568,7 +6570,7 @@ margin: 0 !important;
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-difference__item-text {
+[data-md-color-scheme="slate"] .infra-page .mining-difference__item-text {
   color: var(--color-white);
 }
 
@@ -6599,7 +6601,7 @@ margin: 0 !important;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-difference__coin-name {
+[data-md-color-scheme="slate"] .infra-page .mining-difference__coin-name {
   color: var(--color-white);
 }
 /* == How Miners Influence The Gonka Network Section == */
@@ -6630,8 +6632,8 @@ margin: 0 !important;
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  @media (max-width: 768px){
-      flex-direction: column;
+  @media (max-width: 768px) {
+    flex-direction: column;
   }
 }
 
@@ -6661,7 +6663,7 @@ margin: 0 !important;
   font-weight: 700;
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-influence__text {
+[data-md-color-scheme="slate"] .infra-page .mining-influence__text {
   color: var(--color-white);
 }
 
@@ -6690,7 +6692,7 @@ margin: 0 !important;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-influence__list li {
+[data-md-color-scheme="slate"] .infra-page .mining-influence__list li {
   color: var(--color-white);
 }
 
@@ -6725,12 +6727,12 @@ margin: 0 !important;
   border-color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-influence__card {
-  background: #171717;
-  border-color: transparent;
+[data-md-color-scheme="slate"] .infra-page .mining-influence__card {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-influence__card:hover {
+[data-md-color-scheme="slate"] .infra-page .mining-influence__card:hover {
   background: var(--color-yellow);
   border-color: var(--color-black);
 }
@@ -6757,7 +6759,7 @@ margin: 0 !important;
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-influence__card-title {
+[data-md-color-scheme="slate"] .infra-page .mining-influence__card-title {
   color: var(--color-white);
 }
 
@@ -6778,16 +6780,15 @@ margin: 0 !important;
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-influence__card-text {
+[data-md-color-scheme="slate"] .infra-page .mining-influence__card-text {
   color: var(--color-white);
 }
-
 
 /* == Why Participate Section == */
 
 .infra-page .mining-why__container {
   display: grid;
-   grid-template-columns: minmax(400px, 490px) minmax(450px, 615px);
+  grid-template-columns: minmax(400px, 490px) minmax(450px, 615px);
   gap: 60px;
   justify-content: space-between;
   align-items: start;
@@ -6832,7 +6833,7 @@ margin: 0 !important;
   text-align: center;
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-why__disclaimer {
+[data-md-color-scheme="slate"] .infra-page .mining-why__disclaimer {
   color: var(--color-white);
 }
 
@@ -6859,7 +6860,7 @@ margin: 0 !important;
   color: var(--color-white);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-why__btn:hover {
+[data-md-color-scheme="slate"] .infra-page .mining-why__btn:hover {
   background: var(--color-white);
   color: var(--color-black);
 }
@@ -6868,7 +6869,6 @@ margin: 0 !important;
 .infra-page .mining-why__right {
   display: flex;
   flex-direction: column;
-
 
   @media (max-width: 1024px) {
     order: 1;
@@ -6889,7 +6889,7 @@ margin: 0 !important;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-why__title {
+[data-md-color-scheme="slate"] .infra-page .mining-why__title {
   color: var(--color-white);
 }
 
@@ -6936,7 +6936,7 @@ margin: 0 !important;
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-why__item-title {
+[data-md-color-scheme="slate"] .infra-page .mining-why__item-title {
   color: var(--color-white);
 }
 
@@ -6948,7 +6948,7 @@ margin: 0 !important;
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-why__item-text {
+[data-md-color-scheme="slate"] .infra-page .mining-why__item-text {
   color: var(--color-white);
 }
 /* == FAQ Section == */
@@ -7004,7 +7004,7 @@ margin: 0 !important;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-faq__question span {
+[data-md-color-scheme="slate"] .infra-page .mining-faq__question span {
   color: var(--color-white);
 }
 
@@ -7043,8 +7043,9 @@ margin: 0 !important;
   display: inline-block;
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-faq__answer {
-  background: #171717;
+[data-md-color-scheme="slate"] .infra-page .mining-faq__answer {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
 
 .infra-page .mining-faq__answer p {
@@ -7053,15 +7054,14 @@ margin: 0 !important;
   font-size: 16px;
   line-height: 1.6;
   color: var(--color-black);
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     line-height: 1.4;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .mining-faq__answer p {
+[data-md-color-scheme="slate"] .infra-page .mining-faq__answer p {
   color: var(--color-white);
 }
-
 
 /* == Ownit Hero Section == */
 
@@ -7093,7 +7093,6 @@ margin: 0 !important;
   }
 }
 
-
 /* == Ownit Section — shared styles == */
 
 .infra-page .ownit-section__container {
@@ -7123,7 +7122,6 @@ margin: 0 !important;
   @media (max-width: 992px) {
     font-size: 32px;
   }
-
 }
 
 /* Media column */
@@ -7194,7 +7192,7 @@ margin: 0 !important;
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .ownit-section__text {
+[data-md-color-scheme="slate"] .infra-page .ownit-section__text {
   color: var(--color-white);
 }
 
@@ -7254,10 +7252,7 @@ margin: 0 !important;
   }
 }
 
-
-
 /* == Who Gonka Is Built For Section == */
-
 
 .infra-page .ownit-for__container {
   display: flex;
@@ -7307,12 +7302,12 @@ margin: 0 !important;
   border: 1px solid #000;
 }
 
-[data-md-color-scheme='slate'] .infra-page .ownit-for__card {
-  background: #171717;
-  border-color: transparent;
+[data-md-color-scheme="slate"] .infra-page .ownit-for__card {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
 }
 
-[data-md-color-scheme='slate'] .infra-page .ownit-for__card:hover {
+[data-md-color-scheme="slate"] .infra-page .ownit-for__card:hover {
   background: var(--color-yellow);
   border: 1px solid #000;
 }
@@ -7337,7 +7332,7 @@ margin: 0 !important;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .ownit-for__card-title {
+[data-md-color-scheme="slate"] .infra-page .ownit-for__card-title {
   color: var(--color-white);
 }
 
@@ -7349,11 +7344,9 @@ margin: 0 !important;
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .ownit-for__card-text {
+[data-md-color-scheme="slate"] .infra-page .ownit-for__card-text {
   color: var(--color-white);
 }
-
-
 
 /* == Familiar tools — decentralized compute == */
 .infra-page .integration {
@@ -7364,8 +7357,8 @@ margin: 0 !important;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 1024px){
-      align-items: start; 
+  @media (max-width: 1024px) {
+    align-items: start;
   }
 }
 .infra-page .integration__header {
@@ -7389,7 +7382,7 @@ margin: 0 !important;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .integration__subtitle {
+[data-md-color-scheme="slate"] .infra-page .integration__subtitle {
   color: var(--color-white);
 }
 
@@ -7418,7 +7411,7 @@ margin: 0 !important;
   justify-content: center;
   min-height: 112px;
   background: var(--color-yellow);
-  border: 1px solid var(--color-black); 
+  border: 1px solid var(--color-black);
   box-sizing: border-box;
   text-align: center;
   transition:
@@ -7432,7 +7425,6 @@ margin: 0 !important;
   }
 }
 
-
 .infra-page .integration__step span {
   font-weight: 500;
   font-size: 15px;
@@ -7443,8 +7435,6 @@ margin: 0 !important;
     font-size: 15px;
   }
 }
-
-
 
 /* Arrow */
 .infra-page .integration__arrow {
@@ -7460,19 +7450,18 @@ margin: 0 !important;
   stroke: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .integration__arrow path {
+[data-md-color-scheme="slate"] .infra-page .integration__arrow path {
   stroke: var(--color-white);
 }
 
 /* == Gonka Accepts Payments In GNK Section == */
 .infra-page .useit-payments {
-
 }
 
 .infra-page .useit-payments__container {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-   max-width: 1095px;
+  max-width: 1095px;
   gap: 54px;
   align-items: center;
 
@@ -7488,7 +7477,6 @@ margin: 0 !important;
   flex-direction: column;
   gap: 24px;
 }
-
 
 /* Steps */
 .infra-page .useit-payments__steps {
@@ -7529,7 +7517,7 @@ margin: 0 !important;
   }
 }
 
-[data-md-color-scheme='slate'] .infra-page .useit-payments__step-text {
+[data-md-color-scheme="slate"] .infra-page .useit-payments__step-text {
   color: var(--color-white);
 }
 
@@ -7542,7 +7530,7 @@ margin: 0 !important;
   color: var(--color-black);
 }
 
-[data-md-color-scheme='slate'] .infra-page .useit-payments__note {
+[data-md-color-scheme="slate"] .infra-page .useit-payments__note {
   color: var(--color-white);
 }
 
@@ -7559,4 +7547,48 @@ margin: 0 !important;
   height: auto;
   display: block;
   margin: 0 auto;
+}
+
+.gonka-fixed-disclaimer {
+  padding: 24px 30px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 930px;
+  background: var(--color-yellow);
+  color: #000;
+  z-index: 99999;
+  font-size: 14px!important;
+  line-height: 1.4;
+  font-weight: 500!important;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+.gonka-disclaimer-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--color-black);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .gonka-fixed-disclaimer {
+    bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 16px 30px 16px 16px;
+    font-size: 12px!important;
+  }
+
+  .gonka-disclaimer-close {
+    top: 8px;
+    right: 10px;
+  }
 }
