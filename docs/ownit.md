@@ -2,8 +2,7 @@
   
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
-    <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-    <a href=https://discord.com/invite/RADwCT2U6R" target="_blank" class="banner-learn-more">learn more</a>
+    <p class="yellow-banner-text">COMING SOON: Kimi K 2.5 and MiniMax</p>
     <button class="banner-close">
       <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
@@ -222,7 +221,7 @@
       </h1>
 
       <p class="infra-header__subtitle">
-        Here, the GNK coin is not just a token. It is your share in the<br />
+        Here, the GNK coin is not just a speculative asset. It is your share in the<br />
         future of artificial intelligence.
       </p>
     </div>
@@ -266,13 +265,13 @@
 
       <div class="ownit-for__card">
         <h3 class="ownit-for__card-title">
-          Token <br />
+          Coin <br />
           Holders
         </h3>
         <p class="ownit-for__card-text">
-          Token holders seeking exposure to AI growth. GNK reflects the total
+          Coin holders seeking exposure to AI growth. GNK reflects the total
           computational capacity of the network. As new nodes join and demand
-          increases, your tokens retain utility by granting access to compute at
+          increases, your coins retain utility by granting access to compute at
           any time.
         </p>
       </div>
@@ -341,7 +340,7 @@
     <div class="ownit-section__content">
       <h2 class="ownit-section__title title title--sm">What It Means <br/> To Own GNK</h2>
       <div class="ownit-section__texts">
-        <p class="ownit-section__text">GONKA coins are more than just a token. They represent a share of the network's real computing power—today and in the future.</p>
+        <p class="ownit-section__text">GONKA coins are more than just a speculative asset. They represent a share of the network's real computing power—today and in the future.</p>
         <p class="ownit-section__text">As the network grows, so does the amount of computing power it produces.</p>
         <p class="ownit-section__text">Each coin is a key to accessing an ever-increasing amount of computation.</p>
       </div>
@@ -400,11 +399,9 @@
         <h3 class="infra-steps__card-title">Hold GNK</h3>
         <div class="infra-steps__card-content">
           <p class="infra-steps__card-text">
-            Hold GNK, and your share of the network will grow along with it.
+           Compute is currency of the future that you can use or sell any time you need.
           </p>
-          <p class="infra-steps__card-text">
-            Sell when the time is right. Or just know you always have instant access to AI computing anywhere in the world at any time.
-          </p>
+          
         </div>
       </div>
 
