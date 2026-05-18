@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="nav-item-dropdown">
+        <!-- <div class="nav-item-dropdown">
           <a href="#" class="nav-item" data-dropdown="tokenomics">
             <span class="nav-text">tokenomics</span>
             <span class="nav-icon">+</span>
@@ -56,7 +56,7 @@
           <div class="dropdown-menu" id="tokenomics">
             <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
           </div>
-        </div>
+        </div> -->
 
         <a href="/introduction" class="nav-item nav-item-link">
           <span class="nav-text">documentations</span>
@@ -159,7 +159,7 @@
           </div>
         </div>
         
-        <div class="mobile-nav-item-dropdown">
+        <!-- <div class="mobile-nav-item-dropdown">
           <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
             <span class="mobile-nav-text">tokenomics</span>
             <span class="mobile-nav-icon">+</span>
@@ -167,7 +167,7 @@
           <div class="mobile-dropdown-menu" id="mobile-tokenomics">
             <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
           </div>
-        </div>
+        </div> -->
         
         <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
           <span class="mobile-nav-text">documentations</span>
@@ -429,10 +429,6 @@
       </a>
 
 
-      <div class="social-card-empty">
-      </div>
-
-
       <a href="https://x.com/gonka_ai" target="_blank" class="social-card x">
         <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_392_3204)">
@@ -447,11 +443,6 @@
         </svg>
 
       </a>
-
-
-      <div class="social-card-empty">
-      </div>
-
 
 
       <a href="mailto:hello@productscience.ai" target="_blank" class="social-card twitter">

@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <div class="nav-item-dropdown">
+        <!-- <div class="nav-item-dropdown">
           <a href="#" class="nav-item" data-dropdown="tokenomics">
             <span class="nav-text">tokenomics</span>
             <span class="nav-icon">+</span>
@@ -56,7 +56,7 @@
           <div class="dropdown-menu" id="tokenomics">
             <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
           </div>
-        </div>
+        </div> -->
 
         <a href="/introduction" class="nav-item nav-item-link">
           <span class="nav-text">documentations</span>
@@ -147,7 +147,7 @@
           </div>
         </div>
         
-        <div class="mobile-nav-item-dropdown">
+        <!-- <div class="mobile-nav-item-dropdown">
           <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
             <span class="mobile-nav-text">tokenomics</span>
             <span class="mobile-nav-icon">+</span>
@@ -155,7 +155,7 @@
           <div class="mobile-dropdown-menu" id="mobile-tokenomics">
             <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
           </div>
-        </div>
+        </div> -->
         
         <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
           <span class="mobile-nav-text">documentations</span>
