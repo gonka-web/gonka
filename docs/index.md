@@ -234,7 +234,10 @@
       <!-- Docs Demo (Left) -->
       <div class="docs-demo-section">
         <div class="docs-demo-card">
-          <img src="images/docs.png" srcset="images/docs.png 1x, images/docs@2x.png 2x" alt="Gonka documentation terminal walkthrough" class="docs-demo-image" />
+          <picture>
+            <source srcset="images/docs.webp 1x, images/docs@2x.webp 2x" type="image/webp" />
+            <img src="images/docs.png" srcset="images/docs.png 1x, images/docs@2x.png 2x" alt="Gonka documentation terminal walkthrough" class="docs-demo-image" />
+          </picture>
             
           <a href="/developer/quickstart" class="docs-demo-link" aria-label="Open documentation">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
