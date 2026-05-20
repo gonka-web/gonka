@@ -231,55 +231,19 @@
   <section class="hero-wrapper">
     <div class="hero-container">
       
-      <!-- Chat Demo (Left) -->
-      <div class="chat-demo-section">
-        <div class="chat-demo-header">
-          <h3>Chat with AI</h3>
-          <span class="chat-close">
-<svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 1H9.10159M9.10159 1L9.1016 10.1458M9.10159 1L0.869023 9.23055" stroke-width="2.01752" stroke-linejoin="bevel"/>
-</svg>
-
-          </span>
+      <!-- Docs Demo (Left) -->
+      <div class="docs-demo-section">
+        <div class="docs-demo-card">
+          <img src="images/docs.png" alt="Gonka documentation terminal walkthrough" class="docs-demo-image" />
+          <a href="/developer/quickstart" class="docs-demo-link" aria-label="Open documentation">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6.25 2.75H3.25V5.75" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"/>
+              <path d="M11.75 2.75H14.75V5.75" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"/>
+              <path d="M14.75 12.25V15.25H11.75" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"/>
+              <path d="M3.25 12.25V15.25H6.25" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"/>
+            </svg>
+          </a>
         </div>
-
-        <div class="chat-demo-window">
-          <div class="chat-demo-top">
-            <button class="chat-back"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-
-<path d="M6.38004 3.95334L2.33337 8.00001L6.38004 12.0467" stroke="#292D32" style="stroke:#292D32;stroke:color(display-p3 0.1608 0.1765 0.1961);stroke-opacity:1;" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M13.6667 8H2.44666" stroke="#292D32" style="stroke:#292D32;stroke:color(display-p3 0.1608 0.1765 0.1961);stroke-opacity:1;" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</button>
-            <div class="chat-info">
-              <span class="chat-title">AI Chat</span>
-              <span class="chat-status">Online</span>
-            </div>
-          </div>
-          
-          <div class="chat-messages">
-            <div class="message ai-message">
-              <span class="message-icon"><img src="images/icons/robot.svg" alt="ai robot" width="18" height="18"/></span>
-              <div class="message-bubble">How can I help you?</div>
-            </div>
-            <div class="message user-message">
-              <div class="message-bubble">Where can I buy GNK coins?</div>
-            </div>
-            <div class="message ai-message">
-                            <span class="message-icon"><img src="images/icons/robot.svg" alt="ai robot" width="18" height="18"/></span>
-              <div class="message-bubble">Gonka doesn't officially sell tokens anywhere right now. However, users can buy them directly from miners in different community channels.<br><br>Please be careful and avoid scammers.</div>
-            </div>
-          </div>
-          
-          <div class="chat-input-area">
-            <input type="text" placeholder="Write your message" />
-            <button class="chat-send">
-              <img src="images/icons/send.svg" alt="send" width="24" height="24" />
-            </button>
-          </div>
-        </div>
-        
-        <p class="chat-disclaimer">This project is free to use, built with the Gonka API, and powered by miners from the Gonka network</p>
       </div>
 
       <!-- Hero Content (Right) -->
