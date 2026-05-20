@@ -3000,9 +3000,16 @@ body:has(.gonka-landing-2025) .md-header {
     width: 100%;
   }
 
+  .docs-demo-section {
+    width: min(420px, 100%);
+    max-width: 420px !important;
+    order: 2;
+  }
+
   .hero-content {
     padding-top: 0 !important;
     text-align: center;
+    order: 1;
   }
 
   .hero-actions {
@@ -3028,6 +3035,59 @@ body:has(.gonka-landing-2025) .md-header {
     gap: 40px;
     gap: 40px !important;
   }
+}
+
+/* Docs Demo (Left Side) */
+.docs-demo-section {
+  width: min(420px, 100%);
+  max-width: 420px;
+}
+
+.docs-demo-card {
+  position: relative;
+  width: 100%;
+}
+
+.docs-demo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+ 
+}
+
+.docs-demo-link {
+  position: absolute;
+  top: 3.31%;
+  right: 1.91%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.24%;
+  aspect-ratio: 1;
+  background: #f7f7f7;
+  color: #6a696a;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.docs-demo-link svg path {
+  stroke: #242424;
+  
+}
+
+.docs-demo-link:hover,
+.docs-demo-link:focus-visible {
+  background: var(--color-yellow);
+  box-shadow: 0 0 0 1px rgba(36, 36, 36, 0.1);
+  outline: none;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+[data-md-color-scheme="slate"] .docs-demo-link {
+  color: #6a696a;
 }
 
 /* Chat Demo (Left Side) */
