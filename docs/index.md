@@ -334,7 +334,7 @@
       <a href="/host/quickstart/" class="card card-miners">
         <h3>Miners</h3>
         <div class="card-content">
-        <p>Connect GPUs to Gonka — start earning coins right away. Your mining node works 24/7 solving AI jobs ordered by developers. Become part of golabal AI infrastructure.</p>
+        <p>Connect GPUs to Gonka — start earning coins right away. Your mining node works 24/7 solving AI jobs ordered by developers. Become part of global AI infrastructure.</p>
         <div class="card-btn primary">read more</div>
         </div>
       </a>
