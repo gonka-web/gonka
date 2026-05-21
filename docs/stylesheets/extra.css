@@ -1681,7 +1681,7 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .banner-learn-more {
-  background: white;
+  background-color: white;
   border: none;
   padding: 0 12px;
   min-height: 24px;
@@ -3351,13 +3351,10 @@ body:has(.gonka-landing-2025) .md-header {
   background: white;
   color: #242424 !important;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
-
-  -moz-transition: all 0.2s;
-
-  -o-transition: all 0.2s;
-
-  transition: all 0.2s;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
   text-decoration: none;
   display: inline-flex;
   -webkit-align-items: center;
@@ -3380,20 +3377,37 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 .hero-btn:hover {
-  background: #dff200;
+  background-color: #dff200;
   border-color: #000;
   color: #242424 !important;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.hero-btn:focus-visible {
+  background-color: #dff200;
+  border-color: #000;
+  color: #242424 !important;
+  outline: none;
 }
 
 /* Dark theme - keep hero buttons with black text */
 [data-md-color-scheme="slate"] .hero-btn {
-  background: white;
+  background-color: white;
   color: #242424 !important;
   border-color: #000;
 }
 
 [data-md-color-scheme="slate"] .hero-btn:hover {
-  background: #dff200;
+  background-color: #dff200;
+  color: #242424 !important;
+  border-color: #000;
+}
+
+[data-md-color-scheme="slate"] .hero-btn:focus-visible {
+  background-color: #dff200;
   color: #242424 !important;
   border-color: #000;
 }
@@ -5338,7 +5352,7 @@ body:has(.infra-page) {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #f2f2f3;
+  background-color: #fff;
 }
 
 .md-content__inner.md-typeset .infra-page {
@@ -7625,18 +7639,105 @@ body:has(.infra-page) {
   font-weight: 500!important;
   text-transform: uppercase;
   font-family: var(--font-mono);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s ease;
+}
+
+html.gonka-disclaimer-collapsed .gonka-fixed-disclaimer {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(12px);
+  visibility: hidden;
 }
 
 .gonka-disclaimer-close {
   position: absolute;
   top: 10px;
   right: 10px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background: none;
-  font-size: 12px;
   cursor: pointer;
   color: var(--color-black);
-  font-weight: 700;
+  padding: 0;
+  border-radius: 50%;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.gonka-disclaimer-close:hover,
+.gonka-disclaimer-close:focus-visible {
+  background: rgba(0, 0, 0, 0.08);
+  color: #000;
+  transform: scale(1.08);
+}
+
+.gonka-disclaimer-close:focus-visible {
+  outline: 2px solid rgba(0, 0, 0, 0.25);
+  outline-offset: 2px;
+}
+
+.gonka-disclaimer-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.gonka-disclaimer-close .gonka-disclaimer-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  stroke: none;
+}
+
+.gonka-disclaimer-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-yellow);
+  color: var(--color-black);
+  cursor: pointer;
+  padding: 0;
+  z-index: 99999;
+  transition: background-color 0.18s ease;
+  box-shadow: 0 0px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gonka-disclaimer-toggle-text {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 30px;
+  line-height: 1;
+  color: var(--color-black);
+}
+
+.gonka-disclaimer-toggle:hover,
+.gonka-disclaimer-toggle:focus-visible {
+  background: #e0ea00;
+}
+
+html.gonka-disclaimer-collapsed .gonka-disclaimer-toggle {
+  display: inline-flex;
 }
 
 @media (max-width: 768px) {
@@ -7650,5 +7751,16 @@ body:has(.infra-page) {
   .gonka-disclaimer-close {
     top: 8px;
     right: 10px;
+  }
+
+  .gonka-disclaimer-toggle {
+    right: 10px;
+    bottom: 10px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .gonka-disclaimer-toggle-text {
+    font-size: 28px;
   }
 }
