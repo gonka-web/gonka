@@ -34,7 +34,16 @@
       function closeMobileMenu() {
         mobileMenuToggle.classList.remove('active');
         mobileMenu.classList.remove('active');
+        closeMobileBuyGnk();
         restoreBodyScroll();
+      }
+
+      function closeMobileBuyGnk() {
+        mobileMenu.querySelectorAll('.mobile-buy-gnk-wrapper.active').forEach(wrapper => {
+          wrapper.classList.remove('active');
+          const button = wrapper.querySelector('.mobile-buy-gnk-btn');
+          if (button) button.setAttribute('aria-expanded', 'false');
+        });
       }
 
       // Check if we're on a documentation page
@@ -194,6 +203,10 @@
       }
 
       // Event Listeners
+      mobileMenu.querySelectorAll('.mobile-buy-gnk-btn').forEach(button => {
+        button.setAttribute('aria-expanded', 'false');
+      });
+
       mobileMenuToggle.addEventListener('click', function (e) {
         e.preventDefault();
         if (mobileMenu.classList.contains('active')) {
@@ -214,6 +227,25 @@
 
       // Handle all clicks inside menu
       mobileMenu.addEventListener('click', function (e) {
+        const buyGnkButton = e.target.closest('.mobile-buy-gnk-btn');
+        if (buyGnkButton) {
+          e.preventDefault();
+          const wrapper = buyGnkButton.closest('.mobile-buy-gnk-wrapper');
+          const isActive = wrapper.classList.toggle('active');
+          buyGnkButton.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+          return;
+        }
+
+        const buyGnkDropdown = e.target.closest('.mobile-gnk-exchanges-dropdown');
+        if (buyGnkDropdown) {
+          if (e.target.closest('a')) {
+            closeMobileMenu();
+          }
+          return;
+        }
+
+        closeMobileBuyGnk();
+
         // Dropdowns
         const trigger = e.target.closest('.mobile-nav-item[data-mobile-dropdown]');
         if (trigger) {
@@ -290,6 +322,12 @@
             // Regular links
             closeMobileMenu();
           }
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          closeMobileBuyGnk();
         }
       });
     }, 100);
