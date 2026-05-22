@@ -92,13 +92,7 @@
             </svg>
           </button>
 
-          <div class="wallet-tooltip">
-            <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
-            <div class="wallet-text">
-              <span>Wallet will be</span>
-              <span>available soon</span>
-            </div>
-          </div>
+          --8<-- "overrides/partials/buy-gnk-dropdown.html"
         </div>
         <a href="https://x.com/gonka_ai" target="_blank" class="join-btn">join today</a>
       </div>
@@ -186,13 +180,7 @@
               </svg>
             </button>
             
-            <div class="mobile-wallet-tooltip">
-              <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
-              <div class="mobile-wallet-text">
-                <span>Wallet will be</span>
-                <span>available soon</span>
-              </div>
-            </div>
+            --8<-- "overrides/partials/buy-gnk-dropdown.html"
           </div>
           
         <a href="https://x.com/gonka_ai" target="_blank" class="mobile-join-btn">join today</a>

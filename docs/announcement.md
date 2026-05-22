@@ -6,8 +6,7 @@ template: announcement.html
   
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
-    <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-    <a href="/announcement/" class="banner-learn-more">learn more</a>
+    <p class="yellow-banner-text">COMING SOON: Kimi K 2.5 and MiniMax</p>
     <button class="banner-close">
       <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
@@ -109,13 +108,7 @@ template: announcement.html
             </svg>
           </button>
 
-          <div class="wallet-tooltip">
-            <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
-            <div class="wallet-text">
-              <span>Wallet will be</span>
-              <span>available soon</span>
-            </div>
-          </div>
+          --8<-- "overrides/partials/buy-gnk-dropdown.html"
         </div>
         <a href="https://discord.com/invite/RADwCT2U6R" target="_blank" class="join-btn">join today</a>
       </div>
@@ -217,13 +210,7 @@ template: announcement.html
               </svg>
             </button>
             
-            <div class="mobile-wallet-tooltip">
-              <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
-              <div class="mobile-wallet-text">
-                <span>Wallet will be</span>
-                <span>available soon</span>
-              </div>
-            </div>
+            --8<-- "overrides/partials/buy-gnk-dropdown.html"
           </div>
           
         <a href="https://discord.com/invite/RADwCT2U6R" target="_blank" class="mobile-join-btn">join today</a>

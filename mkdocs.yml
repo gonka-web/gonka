@@ -89,6 +89,10 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.keys
   - pymdownx.emoji
+  - pymdownx.snippets:
+      base_path:
+        - .
+        - docs
   - pymdownx.tabbed:
       alternate_style: true
 
