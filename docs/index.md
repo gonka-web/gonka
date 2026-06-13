@@ -219,22 +219,35 @@
   <section class="hero-wrapper">
     <div class="hero-container">
       
-      <!-- Docs Demo (Left) -->
+      <!-- Broker Commands (Left) -->
       <div class="docs-demo-section">
-        <div class="docs-demo-card">
-          <picture>
-            <source srcset="images/docs.webp 1x, images/docs@2x.webp 2x" type="image/webp" />
-            <img src="images/docs.png" srcset="images/docs.png 1x, images/docs@2x.png 2x" alt="Gonka documentation terminal walkthrough" class="docs-demo-image" />
-          </picture>
-            
-          <a href="/developer/quickstart" class="docs-demo-link" aria-label="Open documentation">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M6.25 2.75H3.25V5.75" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"/>
-              <path d="M11.75 2.75H14.75V5.75" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"/>
-              <path d="M14.75 12.25V15.25H11.75" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"/>
-              <path d="M3.25 12.25V15.25H6.25" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter"/>
-            </svg>
-          </a>
+        <div class="broker-commands-card">
+          <h2 class="broker-commands-title">Broker Commands</h2>
+
+          <div class="broker-command-block broker-command-block--env highlight">
+            <span class="broker-command-lang">bash</span>
+            <pre><code><span class="broker-command-keyword">export</span> GONKA_BROKER_URL=&lt;broker-base-url&gt;
+<span class="broker-command-keyword">export</span> GONKA_BROKER_API_KEY=&lt;your-api-key&gt;
+<span class="broker-command-keyword">export</span> GONKA_MODEL=Qwen/Qwen3-235B-A22B-Instruct-2507-I</code></pre>
+          </div>
+
+          <div class="broker-command-block broker-command-block--single highlight">
+            <span class="broker-command-lang">bash</span>
+            <pre><code>pip install openai</code></pre>
+          </div>
+
+          <div class="broker-command-block broker-command-block--single highlight">
+            <span class="broker-command-lang">bash</span>
+            <pre><code>python example.py</code></pre>
+          </div>
+
+          <h3 class="broker-commands-subtitle">For Node.js:</h3>
+
+          <div class="broker-command-block broker-command-block--node highlight">
+            <span class="broker-command-lang">bash</span>
+            <pre><code>npm install openai
+node example.mjs</code></pre>
+          </div>
         </div>
       </div>
 
