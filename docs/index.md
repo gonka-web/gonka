@@ -249,6 +249,12 @@
 node example.mjs</code></pre>
           </div>
         </div>
+        <a href="https://gonka.ai/docs/developer/quickstart/" class="broker-commands-guide">
+          <span class="broker-commands-guide__text">Full Setup Guide</span>
+          <svg class="broker-commands-guide__arrow" aria-hidden="true" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+          </svg>
+        </a>
       </div>
 
       <!-- Hero Content (Right) -->

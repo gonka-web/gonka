@@ -3121,6 +3121,47 @@ body:has(.gonka-landing-2025) .md-header {
  
 }
 
+.broker-commands-guide {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-black) !important;
+  text-decoration: none;
+}
+
+.broker-commands-guide__text {
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.broker-commands-guide:hover .broker-commands-guide__text,
+.broker-commands-guide:focus-visible .broker-commands-guide__text {
+  text-decoration: underline;
+}
+
+.broker-commands-guide:focus-visible {
+  outline: none;
+}
+
+.broker-commands-guide__arrow {
+  flex: 0 0 auto;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.broker-commands-guide__arrow path {
+  stroke: currentColor;
+}
+
 .broker-commands-title {
   margin: 0 0 15px!important;
   font-family: "Geist", sans-serif;
@@ -7941,5 +7982,9 @@ html.gonka-disclaimer-collapsed .gonka-disclaimer-toggle {
 [data-md-color-scheme="slate"] .broker-commands-title,
 [data-md-color-scheme="slate"] .broker-commands-subtitle {
   color: var(--color-white);
+}
+
+[data-md-color-scheme="slate"] .broker-commands-guide {
+  color: var(--color-white) !important;
 }
 
