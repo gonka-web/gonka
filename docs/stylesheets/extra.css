@@ -3206,8 +3206,8 @@ body:has(.gonka-landing-2025) .md-header {
 .broker-command-block pre {
   margin: 0;
   padding: 0;
-  overflow-x: auto;
-  white-space: pre;
+  overflow-x: hidden;
+  white-space: pre-wrap;
   background: transparent !important;
   box-shadow: none !important;
   border: 0 !important;
@@ -3215,7 +3215,7 @@ body:has(.gonka-landing-2025) .md-header {
 
 .broker-command-block code {
   display: block;
-  min-width: max-content;
+  min-width: 0;
   padding: 0!important;
   background: transparent !important;
   box-shadow: none !important;
@@ -3223,6 +3223,9 @@ body:has(.gonka-landing-2025) .md-header {
   font-family: "IBM Plex Mono", monospace;
   font-size: 14px;
   font-weight: 500;
+  white-space: inherit;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   line-height: 1.4;
   color: var(--color-black);
 }
