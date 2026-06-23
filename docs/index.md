@@ -224,11 +224,11 @@
         <div class="broker-commands-card">
           <h2 class="broker-commands-title">Broker Commands</h2>
 
-          <div class="broker-command-block broker-command-block--env highlight">
+<div class="broker-command-block broker-command-block--env highlight">
             <span class="broker-command-lang">bash</span>
             <pre><code><span class="broker-command-keyword">export</span> GONKA_BROKER_URL=&lt;broker-base-url&gt;
 <span class="broker-command-keyword">export</span> GONKA_BROKER_API_KEY=&lt;your-api-key&gt;
-<span class="broker-command-keyword">export</span> GONKA_MODEL=Qwen/Qwen3-235B-A22B-Instruct-2507-I</code></pre>
+<span class="broker-command-keyword">export</span> GONKA_MODEL=MiniMaxAI/MiniMax-M2.7 (Or choose any other)</code></pre>
           </div>
 
           <div class="broker-command-block broker-command-block--single highlight">
