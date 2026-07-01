@@ -2,7 +2,7 @@
   
   <!-- Yellow Top Banner -->
   <div class="yellow-banner">
-    <p class="yellow-banner-text">COMING SOON: Kimi K 2.5 and MiniMax</p>
+    <p class="yellow-banner-text">Kimi K and MiniMax models are now available</p>
     <button class="banner-close">
       <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
     </button>
