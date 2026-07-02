@@ -268,7 +268,6 @@ node example.mjs</code></pre>
           <a href="/ownit" class="hero-btn">own it</a>
           <a href="/useit" class="hero-btn">use it</a>
         </div>
-        <h3 class="hero-subtitle">Choose your path in the Gonka network.</h3>
         <div class="gonka-uniswap-row">
           <span class="gonka-uniswap-text">Buy or Sell GNK on</span>
           <a
