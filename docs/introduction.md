@@ -6,7 +6,7 @@ We introduce an innovative consensus mechanism that ensures nearly **100%** of c
 
 The system features key roles: 
 
-- **Developers** build and deploy AI applications using the network's distributed power. Getting started, visit the [Developer Quickstart Guide](/developer/quickstart/).
-- **Hosts (hardware providers or nodes)** contribute computational resources to the network and are rewarded based on the amount and quality of resources they provide. To begin contributing, visit the [Host Quickstart Guide](/host/quickstart/).
+- **Developers** build and deploy AI applications using the network's distributed power. Getting started, visit the [Developer Quickstart Guide](https://gonka.ai/developer/quickstart/).
+- **Hosts (hardware providers or nodes)** contribute computational resources to the network and are rewarded based on the amount and quality of resources they provide. To begin contributing, visit the [Host Quickstart Guide](https://gonka.ai/docs/host/quickstart/).
 
 This collaboration allows the platform to offer AI services at significantly lower prices, making advanced AI technology more accessible to a broader audience.
