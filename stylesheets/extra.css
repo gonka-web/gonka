@@ -2716,6 +2716,11 @@ body:has(.gonka-landing-2025) .md-header {
 }
 
 /* Language Selector */
+html.multilingual-disabled .language-selector,
+html.multilingual-disabled .mobile-language-selector {
+  display: none !important;
+}
+
 .language-selector {
   position: relative;
   display: flex;

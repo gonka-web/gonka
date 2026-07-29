@@ -171,6 +171,19 @@
   }
 </style>
 
+<script>
+  (function () {
+    document.documentElement.classList.add("multilingual-disabled");
+  })();
+</script>
+<style>
+  html.multilingual-disabled .language-selector,
+  html.multilingual-disabled .mobile-language-selector {
+    display: none !important;
+  }
+</style>
+
+
   </head>
   
   
@@ -1798,8 +1811,6 @@ INFO:     127.0.0.1:37542 - "GET /v1/models HTTP/1.1" 200 OK
         <script src="../../../javascripts/announcement.js"></script>
       
         <script src="../../../javascripts/code-copy.js"></script>
-      
-        <script src="../../../javascripts/language-selector.js"></script>
       
         <script src="../../../javascripts/header-links.js"></script>
       
