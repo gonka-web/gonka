@@ -45,3 +45,15 @@ py -m mkdocs build - сборка сайта
 py -m pip install <package>
 
 py -m mkdocs build --clean
+Documentation is automatically deployed to GitHub Pages via GitHub Actions when you push to `main`, `master`, or `dev` branches.
+
+The deployment workflow:
+- Builds the MkDocs site
+- Deploys to the `gh-pages` branch
+- Configures the custom domain (gonka.me) via CNAME
+
+You can also manually trigger the deployment from the Actions tab in GitHub.
+
+**Note:** Make sure GitHub Pages is enabled in your repository settings:
+1. Go to Settings → Pages
+2. Source should be set to "GitHub Actions" (or "Deploy from a branch" using `gh-pages` branch)

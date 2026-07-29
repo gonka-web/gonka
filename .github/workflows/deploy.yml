@@ -1,17 +1,41 @@
-name: Build-and-deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["___main"]
+    branches:
+      - main
+      - master
+      - dev
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Sync project
-        env:
-          RSYNC_PASSWORD: BlAm-uD0uebL
-        run: rsync -rult --delete --exclude .env --exclude robots.txt ./ rsync_gonka@89.23.101.102::gonka_web
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r buildtools/requirements.txt
+
+      - name: Build documentation
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.ref == 'refs/heads/dev'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
+          cname: gonka.me
+          keep_files: false
