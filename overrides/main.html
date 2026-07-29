@@ -1,66 +1,226 @@
-{#-
-    This file was automatically generated - do not edit
-  -#}
-  {% extends "base.html" %}
+{#- This file was automatically generated - do not edit -#} {% extends
+"base.html" %} {% block extrahead %} {% set title = config.site_name %} {% if
+page and page.title and not page.is_homepage %} {% set title = config.site_name
+~ " - " ~ page.title | striptags %} {% endif %}
+<!-- Google Fonts Preconnect for faster loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter+Display:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{ title }}" />
+<meta property="og:description" content="{{ config.site_description }}" />
+<meta property="og:url" content="{{ page.canonical_url }}" />
+<meta property="og:image" content="{{ image }}" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="568" />
+<!-- Prevent theme flash: apply theme immediately before render -->
+<script>
+  (function () {
+    try {
+      var savedScheme = localStorage.getItem("data-md-color-scheme");
+      if (savedScheme) {
+        // Apply to both html and body immediately
+        document.documentElement.setAttribute(
+          "data-md-color-scheme",
+          savedScheme,
+        );
+        if (document.body) {
+          document.body.setAttribute("data-md-color-scheme", savedScheme);
+        } else {
+          // If body doesn't exist yet, wait for it
+          document.addEventListener("DOMContentLoaded", function () {
+            document.body.setAttribute("data-md-color-scheme", savedScheme);
+            // Trigger Material theme update if function exists
+            if (typeof __md_set !== "undefined") {
+              __md_set("__palette", { color: { scheme: savedScheme } });
+            }
+          });
+        }
+        // Try to trigger Material theme update immediately
+        if (typeof __md_set !== "undefined") {
+          __md_set("__palette", { color: { scheme: savedScheme } });
+        }
+      } else {
+        // Default to light theme
+        var defaultScheme = "default";
+        document.documentElement.setAttribute(
+          "data-md-color-scheme",
+          defaultScheme,
+        );
+        if (document.body) {
+          document.body.setAttribute("data-md-color-scheme", defaultScheme);
+        }
+      }
+      if (sessionStorage.getItem("gonkaDisclaimerCollapsed") === "true") {
+        document.documentElement.classList.add("gonka-disclaimer-collapsed");
+      }
+    } catch (e) {}
+  })();
+</script>
+<style>
+  /* Prevent white flash on page load - apply immediately */
+  html:not([data-md-color-scheme]) {
+    background-color: #fff;
+  }
 
-  {% block extrahead %}
-    {% set title = config.site_name %}
-    {% if page and page.title and not page.is_homepage %}
-      {% set title = config.site_name ~ " - " ~ page.title | striptags %}
-    {% endif %}
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ title }}">
-    <meta property="og:description" content="{{ config.site_description }}">
-    <meta property="og:url" content="{{ page.canonical_url }}">
-    <meta property="og:image" content="{{ image }}">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1080">
-    <meta property="og:image:height" content="568">
-  {% endblock %}
+  html[data-md-color-scheme="slate"] {
+    background-color: #1a1a1a;
+  }
 
-{% block header %}
-{% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
-{% elif page and page.file and page.file.src_path == "announcement.md" %}
-{% elif page %}
-  <style>
-    .header-wrap {
-      padding: 20px 40px
+  html[data-md-color-scheme="slate"] body {
+    background-color: #1a1a1a;
+  }
+
+  /* Force theme colors to apply immediately */
+  html[data-md-color-scheme="slate"] {
+    color-scheme: dark;
+  }
+
+  html[data-md-color-scheme="default"] {
+    color-scheme: light;
+  }
+</style>
+{% endblock %} {% block header %} {% if page and page.file and
+(page.file.src_path == "index.md" or page.file.src_path == "zh/index.md" or
+page.file.src_path == "mineit.md" or page.file.src_path == "ownit.md" or
+page.file.src_path == "useit.md") %} {# Homepage and mineit page have header in
+content #} {% elif page and page.file and page.file.src_path ==
+"announcement.md" %} {# Announcement page has header in content via
+announcement.html template #} {% elif page %} {# All other pages use custom
+header #}
+<style>
+  /* Ensure header and footer are full width and override MkDocs styles */
+  .landing-header,
+  .landing-footer {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    z-index: 100 !important;
+  }
+
+  /* Override MkDocs container constraints but keep sidebar layout */
+  .md-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .md-main {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-main__inner {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  @media (max-width: 768px) {
+    .md-main__inner {
+      flex-direction: column !important;
+      row-gap: 20px !important;
     }
-    .yellow-banner {
-      padding: 8px 40px
+  }
+
+  .md-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide only MkDocs default header, keep sidebars */
+  .md-header {
+    display: none !important;
+  }
+
+  /* Ensure content has proper spacing with sidebars */
+  .md-content__inner {
+    padding: 20px !important;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .md-content__inner {
+      padding: 20px 0 !important;
     }
-  </style>
-  {% include "partials/custom-header.html" %}
-{% endif %}
-{% endblock %}
+  }
+</style>
+{% include "partials/custom-header.html" %} {% endif %} {% endblock %} {% block
+tabs %}{% endblock %} {# --- Custom footer for all pages except homepage and
+announcement ----------------------- #} {% block footer %} {% if page and
+page.file and (page.file.src_path == "index.md" or page.file.src_path ==
+"zh/index.md" or page.file.src_path == "mineit.md" or page.file.src_path ==
+"ownit.md" or page.file.src_path == "useit.md") %} {# Homepage and mineit page
+have footer in content #} {% elif page and page.file and page.file.src_path ==
+"announcement.md" %} {# Announcement page has footer in content via
+announcement.html template #} {% elif page %} {# All other pages use custom
+footer #} {% include "partials/custom-footer.html" %} {% endif %} {% if page and
+page.file and ( page.file.src_path == "index.md" or page.file.src_path ==
+"mineit.md" or page.file.src_path == "ownit.md" or page.file.src_path ==
+"useit.md" ) %}
 
-{% block tabs %}{% endblock %}
+<div class="gonka-fixed-disclaimer" id="gonkaDisclaimer">
+  <button
+    class="gonka-disclaimer-close"
+    id="gonkaDisclaimerClose"
+    type="button"
+    aria-label="Collapse disclaimer"
+    aria-controls="gonkaDisclaimer"
+  >
+    <svg
+      class="gonka-disclaimer-icon"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M3.64671 3.64666C3.74047 3.55303 3.86755 3.50044 4.00005 3.50044C4.13255 3.50044 4.25963 3.55303 4.35338 3.64666L8.00005 7.29333L11.6467 3.64666C11.6925 3.59754 11.7477 3.55814 11.809 3.53081C11.8704 3.50348 11.9366 3.48879 12.0037 3.4876C12.0708 3.48642 12.1375 3.49877 12.1998 3.52392C12.262 3.54906 12.3186 3.58649 12.3661 3.63397C12.4136 3.68145 12.451 3.73801 12.4761 3.80027C12.5013 3.86252 12.5136 3.92921 12.5124 3.99635C12.5113 4.06348 12.4966 4.12969 12.4692 4.19102C12.4419 4.25236 12.4025 4.30756 12.3534 4.35333L8.70672 8L12.3534 11.6467C12.4025 11.6924 12.4419 11.7476 12.4692 11.809C12.4966 11.8703 12.5113 11.9365 12.5124 12.0036C12.5136 12.0708 12.5013 12.1375 12.4761 12.1997C12.451 12.262 12.4136 12.3185 12.3661 12.366C12.3186 12.4135 12.262 12.4509 12.1998 12.4761C12.1375 12.5012 12.0708 12.5136 12.0037 12.5124C11.9366 12.5112 11.8704 12.4965 11.809 12.4692C11.7477 12.4419 11.6925 12.4025 11.6467 12.3533L8.00005 8.70666L4.35338 12.3533C4.2586 12.4417 4.13323 12.4897 4.0037 12.4874C3.87417 12.4852 3.75058 12.4327 3.65897 12.3411C3.56736 12.2495 3.51488 12.1259 3.5126 11.9963C3.51031 11.8668 3.55839 11.7414 3.64671 11.6467L7.29338 8L3.64671 4.35333C3.55308 4.25958 3.50049 4.1325 3.50049 4C3.50049 3.8675 3.55308 3.74041 3.64671 3.64666Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
 
-{% block site_nav %}
-  {% if nav %}
-    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner">
-          {% include "partials/nav.html" %}
-        </div>
-      </div>
-    </div>
-  {% endif %}
-  {% if page.toc %}
-    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner">
-          {% include "partials/toc.html" %}
-        </div>
-      </div>
-    </div>
-  {% endif %}
-{% endblock %}
+  <div class="gonka-disclaimer-text">
+    <strong>DISCLAIMER: </strong>THE INFORMATION PROVIDED HERE IS FOR GENERAL
+    INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY AND SHOULD NOT BE CONSIDERED
+    FINANCIAL, INVESTMENT, OR TRADING ADVICE. CRYPTOCURRENCY MARKETS ARE HIGHLY
+    VOLATILE AND SPECULATIVE. ALWAYS DO YOUR OWN RESEARCH (DYOR) AND CONSULT
+    WITH A QUALIFIED FINANCIAL ADVISOR BEFORE MAKING ANY INVESTMENT DECISIONS.
+    THE AUTHOR AND PUBLISHER ARE NOT RESPONSIBLE FOR ANY LOSSES OR DAMAGES
+    RESULTING FROM RELIANCE ON THIS INFORMATION.
+  </div>
+</div>
 
-{% block footer %}
-{% if page and page.file and (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md") %}
-{% elif page and page.file and page.file.src_path == "announcement.md" %}
-{% elif page %}
-  {% include "partials/custom-footer.html" %}
-{% endif %}
-{% endblock %}
+<button
+  class="gonka-disclaimer-toggle"
+  id="gonkaDisclaimerToggle"
+  type="button"
+  aria-label="Show disclaimer"
+  aria-controls="gonkaDisclaimer"
+  aria-expanded="false"
+>
+  <span class="gonka-disclaimer-toggle-text" aria-hidden="true">?</span>
+</button>
+
+
+
+{% endif %} {% endblock %}

@@ -87,6 +87,7 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer – 4 plain columns ---------------------------------------->
@@ -168,7 +169,7 @@
         <h4>法律</h4>
         <ul>
           <li><a href="/protocol-license.pdf">Gonka 协议许可证</a></li>
-          <li><a href="#">专利</a></li>
+          <!-- <li><a href="#">专利</a></li> -->
         </ul>
       </div>
     </div>

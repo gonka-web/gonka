@@ -1,7 +1,62 @@
 {#-
-  Gonka Announcement Page
+Gonka Announcement Page
 -#}
 {% extends "base.html" %}
+
+{% block extrahead %}
+<!-- Prevent theme flash: apply theme immediately before render -->
+<script>
+  (function () {
+    try {
+      var savedScheme = localStorage.getItem('data-md-color-scheme');
+      if (savedScheme) {
+        document.documentElement.setAttribute('data-md-color-scheme', savedScheme);
+        if (document.body) {
+          document.body.setAttribute('data-md-color-scheme', savedScheme);
+        } else {
+          document.addEventListener('DOMContentLoaded', function () {
+            document.body.setAttribute('data-md-color-scheme', savedScheme);
+            if (typeof __md_set !== 'undefined') {
+              __md_set('__palette', { color: { scheme: savedScheme } });
+            }
+          });
+        }
+        if (typeof __md_set !== 'undefined') {
+          __md_set('__palette', { color: { scheme: savedScheme } });
+        }
+      } else {
+        var defaultScheme = 'default';
+        document.documentElement.setAttribute('data-md-color-scheme', defaultScheme);
+        if (document.body) {
+          document.body.setAttribute('data-md-color-scheme', defaultScheme);
+        }
+      }
+    } catch (e) { }
+  })();
+</script>
+<style>
+  /* Prevent white flash on page load - apply immediately */
+  html:not([data-md-color-scheme]) {
+    background-color: #fff;
+  }
+
+  html[data-md-color-scheme="slate"] {
+    background-color: #1A1A1A;
+  }
+
+  html[data-md-color-scheme="slate"] body {
+    background-color: #1A1A1A;
+  }
+
+  html[data-md-color-scheme="slate"] {
+    color-scheme: dark;
+  }
+
+  html[data-md-color-scheme="default"] {
+    color-scheme: light;
+  }
+</style>
+{% endblock %}
 
 {# Hide header and navigation completely #}
 {% block header %}{% endblock %}
@@ -9,56 +64,72 @@
 
 {# Main content - full width #}
 {% block content %}
-  <style>
-    /* Force full width and remove all MkDocs constraints */
-    .md-container {
-      max-width: 100% !important;
-      padding: 0 !important;
-    }
-    .md-main {
-      margin: 0 !important;
-      max-width: 100% !important;
-    }
-    .md-main__inner {
-      margin: 0 !important;
-      max-width: 100% !important;
-    }
-    .md-content {
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    .md-content__inner {
-      margin: 0 !important;
-      padding: 0 !important;
-    }
-    /* Hide sidebars completely */
-    .md-sidebar {
-      display: none !important;
-    }
-    .md-sidebar--primary {
-      display: none !important;
-    }
-    .md-sidebar--secondary {
-      display: none !important;
-    }
-    /* Hide header */
-    .md-header {
-      display: none !important;
-    }
-    /* Remove default background */
-    body {
-      background: transparent !important;
-    }
-    [data-md-color-scheme="slate"] body {
-      background: transparent !important;
-    }
-  </style>
+<style>
+  /* Force full width and remove all MkDocs constraints */
+  .md-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
 
-  <!-- Render the content from announcement.md -->
-  {{ page.content }}
+  .md-main {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-main__inner {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  @media (max-width: 768px) {
+    .md-main__inner {
+      flex-direction: column !important;
+      row-gap: 20px !important;
+    }
+  }
+
+  .md-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .md-content__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide sidebars completely */
+  .md-sidebar {
+    display: none !important;
+  }
+
+  .md-sidebar--primary {
+    display: none !important;
+  }
+
+  .md-sidebar--secondary {
+    display: none !important;
+  }
+
+  /* Hide header */
+  .md-header {
+    display: none !important;
+  }
+
+  /* Remove default background */
+  body {
+    background: transparent !important;
+  }
+
+  [data-md-color-scheme="slate"] body {
+    background: transparent !important;
+  }
+</style>
+
+<!-- Render the content from announcement.md -->
+{{ page.content }}
 {% endblock %}
 
 {# Hide footer #}
 {% block footer %}{% endblock %}
-

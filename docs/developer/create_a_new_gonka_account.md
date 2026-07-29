@@ -332,6 +332,6 @@ There are several ways to do this:
     export GONKA_PRIVATE_KEY=<your-private-key>
     ```
 
-Once your account is ready, you can [start using the network](https://gonka.ai/developer/quickstart/).
+Once your account is ready, you can [start using the network](/developer/quickstart/).
 
 **Need help?** Join our [Discord server](https://discord.gg/fvhNxdFMvB) for assistance with general inquiries, technical issues, or security concerns.  
