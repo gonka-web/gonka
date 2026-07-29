@@ -97,6 +97,7 @@ page and page.title and not page.is_homepage %} {% set title = config.site_name
     color-scheme: light;
   }
 </style>
+{% include "partials/multilingual-config.html" %}
 {% endblock %} {% block header %} {% if page and page.file and
 (page.file.src_path == "index.md" or page.file.src_path == "zh/index.md" or
 page.file.src_path == "mineit.md" or page.file.src_path == "ownit.md" or

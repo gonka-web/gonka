@@ -109,7 +109,6 @@ extra_javascript:
   - javascripts/mobile-menu.js
   - javascripts/announcement.js
   - javascripts/code-copy.js
-  - javascripts/language-selector.js
   - javascripts/header-links.js
   - javascripts/faq.js
   - javascripts/ios-long-press-fix.js
@@ -181,3 +180,4 @@ extra:
   analytics:
     provider: google
     property: G-JWVG5X6CY5
+  multilingual_enabled: false  # true — вернуть переключатель языка
