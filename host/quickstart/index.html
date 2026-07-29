@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../../images/01-favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -35,7 +35,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -74,20 +74,103 @@
   
 
     
-    
-    
-    
-      
-    
-    <meta property="og:type" content="website">
-    <meta property="og:title" content=" - Quickstart">
-    <meta property="og:description" content="Learn to configure and use Gonka network">
-    <meta property="og:url" content="https://gonka.me/host/quickstart/">
-    <meta property="og:image" content="">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1080">
-    <meta property="og:image:height" content="568">
-  
+        
+<!-- Google Fonts Preconnect for faster loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter+Display:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+<meta property="og:type" content="website" />
+<meta property="og:title" content=" - Quickstart" />
+<meta property="og:description" content="Learn to configure and use Gonka network" />
+<meta property="og:url" content="https://gonka.me/host/quickstart/" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="568" />
+<!-- Prevent theme flash: apply theme immediately before render -->
+<script>
+  (function () {
+    try {
+      var savedScheme = localStorage.getItem("data-md-color-scheme");
+      if (savedScheme) {
+        // Apply to both html and body immediately
+        document.documentElement.setAttribute(
+          "data-md-color-scheme",
+          savedScheme,
+        );
+        if (document.body) {
+          document.body.setAttribute("data-md-color-scheme", savedScheme);
+        } else {
+          // If body doesn't exist yet, wait for it
+          document.addEventListener("DOMContentLoaded", function () {
+            document.body.setAttribute("data-md-color-scheme", savedScheme);
+            // Trigger Material theme update if function exists
+            if (typeof __md_set !== "undefined") {
+              __md_set("__palette", { color: { scheme: savedScheme } });
+            }
+          });
+        }
+        // Try to trigger Material theme update immediately
+        if (typeof __md_set !== "undefined") {
+          __md_set("__palette", { color: { scheme: savedScheme } });
+        }
+      } else {
+        // Default to light theme
+        var defaultScheme = "default";
+        document.documentElement.setAttribute(
+          "data-md-color-scheme",
+          defaultScheme,
+        );
+        if (document.body) {
+          document.body.setAttribute("data-md-color-scheme", defaultScheme);
+        }
+      }
+      if (sessionStorage.getItem("gonkaDisclaimerCollapsed") === "true") {
+        document.documentElement.classList.add("gonka-disclaimer-collapsed");
+      }
+    } catch (e) {}
+  })();
+</script>
+<style>
+  /* Prevent white flash on page load - apply immediately */
+  html:not([data-md-color-scheme]) {
+    background-color: #fff;
+  }
+
+  html[data-md-color-scheme="slate"] {
+    background-color: #1a1a1a;
+  }
+
+  html[data-md-color-scheme="slate"] body {
+    background-color: #1a1a1a;
+  }
+
+  /* Force theme colors to apply immediately */
+  html[data-md-color-scheme="slate"] {
+    color-scheme: dark;
+  }
+
+  html[data-md-color-scheme="default"] {
+    color-scheme: light;
+  }
+</style>
+
   </head>
   
   
@@ -116,20 +199,70 @@
       
     </div>
     
-    
+      
+<style>
+  /* Ensure header and footer are full width and override MkDocs styles */
+  .landing-header,
+  .landing-footer {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    z-index: 100 !important;
+  }
 
-  <style>
-    .header-wrap {
-      padding: 20px 40px
+  /* Override MkDocs container constraints but keep sidebar layout */
+  .md-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .md-main {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-main__inner {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  @media (max-width: 768px) {
+    .md-main__inner {
+      flex-direction: column !important;
+      row-gap: 20px !important;
     }
-    .yellow-banner {
-      padding: 8px 40px
+  }
+
+  .md-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide only MkDocs default header, keep sidebars */
+  .md-header {
+    display: none !important;
+  }
+
+  /* Ensure content has proper spacing with sidebars */
+  .md-content__inner {
+    padding: 20px !important;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .md-content__inner {
+      padding: 20px 0 !important;
     }
-  </style>
-  <!-- Yellow Top Banner -->
+  }
+</style>
+<!-- Yellow Top Banner -->
 <div class="yellow-banner">
-  <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-  <button class="banner-learn-more">learn more</button>
+
+  <p class="yellow-banner-text">Kimi K and MiniMax models are now available</p>
   <button class="banner-close">
     <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
   </button>
@@ -138,60 +271,103 @@
 <!-- Header -->
 <header class="landing-header">
   <div class="header-wrap">
-  <div class="nav-section">
-    <div class="logo-section">
-      <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
-      <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
-    </div>
-
-    <nav class="main-nav">
-      <div class="nav-item-dropdown">
-        <a href="#" class="nav-item" data-dropdown="developers">
-          <span class="nav-text">Developers</span>
-          <span class="nav-icon">+</span>
-        </a>
-        <div class="dropdown-menu" id="developers">
-          <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
-          <a href="/developer/details" class="dropdown-link">Details</a>
-        </div>
-      </div>
-      
-      <div class="nav-item-dropdown">
-        <a href="#" class="nav-item" data-dropdown="miners">
-          <span class="nav-text">miners</span>
-          <span class="nav-icon">+</span>
-        </a>
-        <div class="dropdown-menu" id="miners">
-          <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
-          <a href="/host/multiple-nodes" class="dropdown-link">Multiple nodes</a>
-          <a href="/host/network-node-api" class="dropdown-link">Network Node API</a>
-          <a href="/host/key-management" class="dropdown-link">Key Management</a>
-          <a href="/host/access-account" class="dropdown-link">Access account</a>
-          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
-          <a href="/host/hardware-specifications" class="dropdown-link">Hardware Specifications</a>
-          <a href="/host/genesis" class="dropdown-link">Genesis</a>
-          <a href="/host/validator_info" class="dropdown-link">How to edit validator public info</a>
-          <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
-        </div>
-      </div>
-      
-      <div class="nav-item-dropdown">
-        <a href="#" class="nav-item" data-dropdown="tokenomics">
-          <span class="nav-text">tokenomics</span>
-          <span class="nav-icon">+</span>
-        </a>
-        <div class="dropdown-menu" id="tokenomics">
-          <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
-        </div>
-      </div>
-      
-      <a href="/introduction" class="nav-item nav-item-link">
-        <span class="nav-text">documentations</span>
-        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
-        </svg>
+    <div class="nav-section">
+      <a href="/" class="logo-section">
+        <img
+          src="/images/logos/gonka.svg"
+          alt="Gonka"
+          width="40"
+          height="40"
+          class="logo-light"
+        />
+        <img
+          src="/images/logos/dark-gonka.svg"
+          alt="Gonka"
+          width="40"
+          height="40"
+          class="logo-dark"
+        />
       </a>
-    </nav>
+
+      <nav class="main-nav">
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="developers">
+            <span class="nav-text">Developers</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="developers">
+            <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
+            <a href="/developer/details" class="dropdown-link">Details</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="miners">
+            <span class="nav-text">miners</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="miners">
+            <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
+            <a href="/host/multiple-nodes" class="dropdown-link"
+              >Multiple nodes</a
+            >
+            <a href="/host/network-node-api" class="dropdown-link"
+              >Network Node API</a
+            >
+            <a href="/host/key-management" class="dropdown-link"
+              >Key Management</a
+            >
+            <a href="/host/access-account" class="dropdown-link"
+              >Access account</a
+            >
+            <a
+              href="/host/benchmark-to-choose-optimal-deployment-config-for-llms"
+              class="dropdown-link"
+              >Benchmark to Choose Optimal Deployment Config for LLMs</a
+            >
+            <a href="/host/hardware-specifications" class="dropdown-link"
+              >Hardware Specifications</a
+            >
+            <a href="/host/genesis" class="dropdown-link">Genesis</a>
+            <a href="/host/validator_info" class="dropdown-link"
+              >How to edit validator public info</a
+            >
+            <a href="/host/optional-ssl-setup" class="dropdown-link"
+              >SSL setup</a
+            >
+          </div>
+        </div>
+
+        <!-- <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="tokenomics">
+            <span class="nav-text">tokenomics</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="tokenomics">
+            <a href="/tokenomics.pdf" class="dropdown-link"
+              >Tokenomics and more</a
+            >
+          </div>
+        </div> -->
+
+        <a href="/introduction" class="nav-item nav-item-link">
+          <span class="nav-text">documentations</span>
+          <svg
+            style="margin-bottom: 12px; margin-left: 4px"
+            width="6"
+            height="6"
+            viewBox="0 0 6 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006"
+              stroke-width="1.3"
+              stroke-linejoin="bevel"
+            />
+          </svg>
+        </a>
+      </nav>
     </div>
 
     <!-- Mobile Menu Toggle -->
@@ -202,46 +378,122 @@
     </button>
 
     <div class="header-actions">
+      <div class="language-selector">
+        <button
+          class="language-btn"
+          id="language-btn"
+          aria-label="Select language"
+        >
+          <span class="language-text" id="language-text">EN</span>
+          <svg
+            width="8"
+            height="6"
+            viewBox="0 0 8 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="language-arrow"
+          >
+            <path
+              d="M1 1L4 4L7 1"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="language-dropdown" id="language-dropdown">
+          <a href="#" class="language-option" data-lang="en" data-url="/"
+            >English</a
+          >
+          <a href="#" class="language-option" data-lang="zh" data-url="/zh/"
+            >中文</a
+          >
+        </div>
+      </div>
       <div class="theme-toggle">
         <button class="theme-btn theme-btn-sun" data-theme="default">
-          <img src="/images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light" />
-          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-dark" />
+          <img
+            src="/images/icons/light-theme.svg"
+            alt="Light theme"
+            width="18"
+            height="18"
+            class="sun-icon-light"
+          />
+          <img
+            src="/images/icons/dark-light-theme.svg"
+            alt="Light theme"
+            width="18"
+            height="18"
+            class="sun-icon-dark"
+          />
         </button>
         <button class="theme-btn theme-btn-moon" data-theme="slate">
-          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="18" height="18" />
+          <img
+            src="/images/icons/dark-theme.svg"
+            alt="Dark theme"
+            width="18"
+            height="18"
+          />
         </button>
       </div>
       <div class="buy-gnk-wrapper">
         <button class="buy-gnk-btn" onclick="return false;">
-          buy gnk 
-          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+          buy gnk
+          <svg
+            width="6"
+            height="6"
+            viewBox="0 0 6 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006"
+              stroke-width="1.3"
+              stroke-linejoin="bevel"
+            />
           </svg>
         </button>
-        
-        <div class="wallet-tooltip">
-          <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
-          <div class="wallet-text">
-            <span>Wallet will be</span>
-            <span>available soon</span>
-          </div>
-        </div>
+
+        <div class="gnk-exchanges-dropdown mobile-gnk-exchanges-dropdown" role="menu">
+  <p class="gnk-exchanges-note mobile-gnk-exchanges-note">At the moment, there are no official GNK buying or selling methods provided by the team. Below are services and solutions created and maintained by community members.</p>
+  <a href="https://hex.exchange/otc/gonka38261660" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">HEX OTC</a>
+  <a href="https://exchange.gonka.markets/app?chart_source=external&chart_tf=1d" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka Markets</a>
+  <a href="https://gonka.vip/?ref=gnk" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka VIP</a>
+  <a href="https://safetrade.com/exchange/GNK-USDT?type=basic" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">SafeTrade</a>
+</div>
       </div>
-      <button class="join-btn">join today</button>
+      <a
+        href="https://discord.com/invite/RADwCT2U6R"
+        target="_blank"
+        class="join-btn"
+        >join today</a
+      >
     </div>
   </div>
-
 </header>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobile-menu">
   <!-- Mobile Menu Close Button -->
   <button class="mobile-menu-close" id="mobile-menu-close">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 6L6 18M6 6L18 18"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
     </svg>
   </button>
-  
+
   <div class="mobile-menu-content">
     <div class="mobile-nav-section">
       <div class="mobile-nav-item-dropdown">
@@ -250,11 +502,13 @@
           <span class="mobile-nav-icon">+</span>
         </a>
         <div class="mobile-dropdown-menu" id="mobile-developers">
-          <a href="/developer/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/developer/quickstart" class="mobile-dropdown-link"
+            >Quickstart</a
+          >
           <a href="/developer/details" class="mobile-dropdown-link">Details</a>
         </div>
       </div>
-      
+
       <div class="mobile-nav-item-dropdown">
         <a href="#" class="mobile-nav-item" data-mobile-dropdown="miners">
           <span class="mobile-nav-text">miners</span>
@@ -262,89 +516,203 @@
         </a>
         <div class="mobile-dropdown-menu" id="mobile-miners">
           <a href="/host/quickstart" class="mobile-dropdown-link">Quickstart</a>
-          <a href="/host/multiple-nodes" class="mobile-dropdown-link">Multiple nodes</a>
-          <a href="/host/network-node-api" class="mobile-dropdown-link">Network Node API</a>
-          <a href="/host/key-management" class="mobile-dropdown-link">Key Management</a>
-          <a href="/host/access-account" class="mobile-dropdown-link">Access account</a>
-          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="mobile-dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
-          <a href="/host/hardware-specifications" class="mobile-dropdown-link">Hardware Specifications</a>
+          <a href="/host/multiple-nodes" class="mobile-dropdown-link"
+            >Multiple nodes</a
+          >
+          <a href="/host/network-node-api" class="mobile-dropdown-link"
+            >Network Node API</a
+          >
+          <a href="/host/key-management" class="mobile-dropdown-link"
+            >Key Management</a
+          >
+          <a href="/host/access-account" class="mobile-dropdown-link"
+            >Access account</a
+          >
+          <a
+            href="/host/benchmark-to-choose-optimal-deployment-config-for-llms"
+            class="mobile-dropdown-link"
+            >Benchmark to Choose Optimal Deployment Config for LLMs</a
+          >
+          <a href="/host/hardware-specifications" class="mobile-dropdown-link"
+            >Hardware Specifications</a
+          >
           <a href="/host/genesis" class="mobile-dropdown-link">Genesis</a>
-          <a href="/host/validator_info" class="mobile-dropdown-link">How to edit validator public info</a>
-          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link">SSL setup</a>
+          <a href="/host/validator_info" class="mobile-dropdown-link"
+            >How to edit validator public info</a
+          >
+          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link"
+            >SSL setup</a
+          >
         </div>
       </div>
-      
+
       <div class="mobile-nav-item-dropdown">
         <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
           <span class="mobile-nav-text">tokenomics</span>
           <span class="mobile-nav-icon">+</span>
         </a>
         <div class="mobile-dropdown-menu" id="mobile-tokenomics">
-          <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
+          <a href="/tokenomics.pdf" class="mobile-dropdown-link"
+            >Tokenomics and more</a
+          >
         </div>
       </div>
-      
+
       <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
         <span class="mobile-nav-text">documentations</span>
-        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        <svg
+          style="margin-bottom: 12px; margin-left: 4px"
+          width="6"
+          height="6"
+          viewBox="0 0 6 6"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006"
+            stroke-width="1.3"
+            stroke-linejoin="bevel"
+          />
         </svg>
       </a>
     </div>
-    
+
     <!-- Mobile Menu Actions -->
     <div class="mobile-menu-actions">
-      <div class="mobile-theme-toggle">
-        <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
-          <img src="/images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
-          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
-        </button>
-        <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
-          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
-        </button>
+      <div class="mobile-menu-actions-top">
+        <div class="mobile-language-selector">
+          <button
+            class="mobile-language-btn"
+            id="mobile-language-btn"
+            aria-label="Select language"
+          >
+            <span class="mobile-language-text" id="mobile-language-text"
+              >EN</span
+            >
+            <svg
+              width="8"
+              height="6"
+              viewBox="0 0 8 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="mobile-language-arrow"
+            >
+              <path
+                d="M1 1L4 4L7 1"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="mobile-language-dropdown" id="mobile-language-dropdown">
+            <a
+              href="#"
+              class="mobile-language-option"
+              data-lang="en"
+              data-url="/"
+              >English</a
+            >
+            <a
+              href="#"
+              class="mobile-language-option"
+              data-lang="zh"
+              data-url="/zh/"
+              >中文</a
+            >
+          </div>
+        </div>
+        <div class="mobile-theme-toggle">
+          <button
+            class="mobile-theme-btn mobile-theme-btn-sun"
+            data-theme="default"
+          >
+            <img
+              src="/images/icons/light-theme.svg"
+              alt="Light theme"
+              width="16"
+              height="16"
+              class="mobile-sun-icon-light"
+            />
+            <img
+              src="/images/icons/dark-light-theme.svg"
+              alt="Light theme"
+              width="16"
+              height="16"
+              class="mobile-sun-icon-dark"
+            />
+          </button>
+          <button
+            class="mobile-theme-btn mobile-theme-btn-moon"
+            data-theme="slate"
+          >
+            <img
+              src="/images/icons/dark-theme.svg"
+              alt="Dark theme"
+              width="16"
+              height="16"
+            />
+          </button>
+        </div>
       </div>
-      
+
       <div class="mobile-buttons-group">
         <div class="mobile-buy-gnk-wrapper">
           <button class="mobile-buy-gnk-btn" onclick="return false;">
-            buy gnk 
-            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+            buy gnk
+            <svg
+              width="6"
+              height="6"
+              viewBox="0 0 6 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006"
+                stroke-width="1.3"
+                stroke-linejoin="bevel"
+              />
             </svg>
           </button>
-          
-          <div class="mobile-wallet-tooltip">
-            <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
-            <div class="mobile-wallet-text">
-              <span>Wallet will be</span>
-              <span>available soon</span>
-            </div>
-          </div>
+
+          <div class="gnk-exchanges-dropdown mobile-gnk-exchanges-dropdown" role="menu">
+  <p class="gnk-exchanges-note mobile-gnk-exchanges-note">At the moment, there are no official GNK buying or selling methods provided by the team. Below are services and solutions created and maintained by community members.</p>
+  <a href="https://hex.exchange/otc/gonka38261660" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">HEX OTC</a>
+  <a href="https://exchange.gonka.markets/app?chart_source=external&chart_tf=1d" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka Markets</a>
+  <a href="https://gonka.vip/?ref=gnk" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka VIP</a>
+  <a href="https://safetrade.com/exchange/GNK-USDT?type=basic" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">SafeTrade</a>
+</div>
         </div>
-        
-        <button class="mobile-join-btn">join today</button>
+
+        <a
+          href="https://discord.com/invite/RADwCT2U6R"
+          target="_blank"
+          class="mobile-join-btn"
+          >join today</a
+        >
       </div>
     </div>
   </div>
-</div>
-
-
+</div>  
     <div class="md-container" data-md-component="container">
       
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner">
-          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
 <!-- Main navigation -->
 <nav class="md-nav md-nav--primary" aria-label="nav.title" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+    <a href="../.." title=""
+      class="md-nav__button md-logo" aria-label="" data-md-component="logo">
       
   <img src="../../images/logos/gonka.svg" alt="logo">
 
@@ -356,35 +724,42 @@
   <ul class="md-nav__list" data-md-scrollfix>
     <!-- DOCS Section -->
     <li class="md-nav__item">
-      <div class="md-nav__title">DOCS</div>
+      <div class="md-nav__title md-nav__title--first-child md-nav__title--primary">DOCS</div>
       <nav class="md-nav" aria-label="DOCS">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
-              <li class="md-nav__item">
-                <a href="../../introduction/" class="md-nav__link">
-                  Introduction
-                </a>
-              </li>
-            
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
+          
+          
+          <li class="md-nav__item">
+            <a href="../../introduction/"
+              class="md-nav__link">
+              Introduction
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
       </nav>
@@ -392,43 +767,52 @@
 
     <!-- DEVELOPER Section -->
     <li class="md-nav__item">
-      <div class="md-nav__title">DEVELOPER</div>
+      <div class="md-nav__title md-nav__title--primary">DEVELOPER
+      </div>
       <nav class="md-nav" aria-label="DEVELOPER">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
           
-            
-              
-                <li class="md-nav__item">
-                  <a href="../../developer/quickstart/" class="md-nav__link">
-                    Quickstart
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../../developer/details/" class="md-nav__link">
-                    Details
-                  </a>
-                </li>
-              
-            
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../../developer/quickstart/"
+              class="md-nav__link">
+              Quickstart
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../../developer/details/"
+              class="md-nav__link">
+              Details
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
       </nav>
@@ -436,91 +820,108 @@
 
     <!-- PARTICIPANT Section -->
     <li class="md-nav__item">
-      <div class="md-nav__title">PARTICIPANT</div>
+      <div class="md-nav__title md-nav__title--primary">PARTICIPANT
+      </div>
       <nav class="md-nav" aria-label="PARTICIPANT">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
           
-            
           
-            
-              
-                <li class="md-nav__item">
-                  <a href="./" class="md-nav__link md-nav__link--active">
-                    Quickstart
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../multiple-nodes/" class="md-nav__link">
-                    Multiple nodes
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../network-node-api/" class="md-nav__link">
-                    Network Node API
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../key-management/" class="md-nav__link">
-                    Key Management
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../access-account/" class="md-nav__link">
-                    Access account
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../benchmark-to-choose-optimal-deployment-config-for-llms/" class="md-nav__link">
-                    Benchmark to Choose Optimal Deployment Config for LLMs
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../hardware-specifications/" class="md-nav__link">
-                    Hardware Specifications
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../genesis/" class="md-nav__link">
-                    Genesis
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../validator_info/" class="md-nav__link">
-                    How to edit validator public info
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../optional-ssl-setup/" class="md-nav__link">
-                    SSL setup
-                  </a>
-                </li>
-              
-            
           
-            
           
-            
           
-            
           
-            
           
-            
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="./"
+              class="md-nav__link md-nav__link--active">
+              Quickstart
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../multiple-nodes/"
+              class="md-nav__link">
+              Multiple nodes
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../network-node-api/"
+              class="md-nav__link">
+              Network Node API
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../key-management/"
+              class="md-nav__link">
+              Key Management
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../access-account/"
+              class="md-nav__link">
+              Access account
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../benchmark-to-choose-optimal-deployment-config-for-llms/"
+              class="md-nav__link">
+              Benchmark to Choose Optimal Deployment Config for LLMs
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../hardware-specifications/"
+              class="md-nav__link">
+              Hardware Specifications
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../genesis/"
+              class="md-nav__link">
+              Genesis
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../validator_info/"
+              class="md-nav__link">
+              How to edit validator public info
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../optional-ssl-setup/"
+              class="md-nav__link">
+              SSL setup
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
       </nav>
@@ -528,49 +929,58 @@
 
     <!-- WALLET Section -->
     <li class="md-nav__item">
-      <div class="md-nav__title">WALLET</div>
+      <div class="md-nav__title md-nav__title--primary">WALLET</div>
       <nav class="md-nav" aria-label="WALLET">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
-              
-                <li class="md-nav__item">
-                  <a href="../../wallet/dashboard/" class="md-nav__link">
-                    Dashboard
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../../wallet/wallet-and-transfer-guide/" class="md-nav__link">
-                    Wallet & Transfer Guide
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../../wallet/pricing/" class="md-nav__link">
-                    Pricing
-                  </a>
-                </li>
-              
-            
           
-            
           
-            
           
-            
           
-            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../../wallet/dashboard/"
+              class="md-nav__link">
+              Dashboard
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../../wallet/wallet-and-transfer-guide/"
+              class="md-nav__link">
+              Wallet & Transfer Guide
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../../wallet/pricing/"
+              class="md-nav__link">
+              Pricing
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
       </nav>
@@ -581,63 +991,75 @@
       <nav class="md-nav" aria-label="Additional">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
-              <li class="md-nav__item">
-                <a href="../../model-licenses/" class="md-nav__link">
-                  Model licenses
-                </a>
-              </li>
-            
           
-            
-              <li class="md-nav__item">
-                <a href="../../transactions-and-governance/" class="md-nav__link">
-                  Transactions & Governance
-                </a>
-              </li>
-            
           
-            
-              <li class="md-nav__item">
-                <a href="../../software-upgrades/" class="md-nav__link">
-                  Software Upgrades
-                </a>
-              </li>
-            
           
-            
-              
-                <li class="md-nav__item">
-                  <a href="../../FAQ/" class="md-nav__link">
-                    FAQ
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../../Errors/" class="md-nav__link">
-                    Errors
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../../help/" class="md-nav__link">
-                    Get help
-                  </a>
-                </li>
-              
-            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../../model-licenses/"
+              class="md-nav__link">
+              Model licenses
+            </a>
+          </li>
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../../transactions-and-governance/"
+              class="md-nav__link">
+              Transactions & Governance
+            </a>
+          </li>
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../../software-upgrades/"
+              class="md-nav__link">
+              Software Upgrades
+            </a>
+          </li>
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../../FAQ/"
+              class="md-nav__link">
+              FAQ
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../../Errors/"
+              class="md-nav__link">
+              Errors
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../../help/"
+              class="md-nav__link">
+              Get help
+            </a>
+          </li>
+          
+          
           
         </ul>
       </nav>
@@ -645,205 +1067,215 @@
   </ul>
 
 </nav>
-        </div>
-      </div>
-    </div>
-  
-  
-    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner">
-          
-  <nav class="md-nav md-nav--secondary" aria-label="toc.title">
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      TABLE OF CONTENTS
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="toc.title">
+  <label class="md-nav__title" for="__toc">
+    <span class="md-nav__icon md-icon"></span>
+    TABLE OF CONTENTS
+  </label>
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+    <li class="md-nav__item">
       
-        <li class="md-nav__item">
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1" checked>
+      <label class="md-nav__link" for="__toc_1">
+        Setting up your chain
+      </label>
+      <nav class="md-nav" aria-label="Setting up your chain">
+        <ul class="md-nav__list">
           
-            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1" checked>
-            <label class="md-nav__link" for="__toc_1">
-              Setting up your chain
+          <li class="md-nav__item">
+            
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1_1"
+              checked>
+            <label class="md-nav__link" for="__toc_1_1">
+              Prerequisites
             </label>
-            <nav class="md-nav" aria-label="Setting up your chain">
+            <nav class="md-nav" aria-label="Prerequisites">
               <ul class="md-nav__list">
                 
-                  <li class="md-nav__item">
-                    
-                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1_1" checked>
-                      <label class="md-nav__link" for="__toc_1_1">
-                        Prerequisites
-                      </label>
-                      <nav class="md-nav" aria-label="Prerequisites">
-                        <ul class="md-nav__list">
-                          
-                            <li class="md-nav__item">
-                              <a href="#supported-model-classes" class="md-nav__link">
-                                Supported Model Classes
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#configuration-for-optimal-rewards" class="md-nav__link">
-                                Configuration for Optimal Rewards
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#proposed-hardware-configuration" class="md-nav__link">
-                                Proposed Hardware Configuration
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#ports-open-for-public-connections" class="md-nav__link">
-                                Ports open for public connections
-                              </a>
-                            </li>
-                          
-                        </ul>
-                      </nav>
-                    
-                  </li>
+                <li class="md-nav__item">
+                  <a href="#supported-model-classes" class="md-nav__link">
+                    Supported Model Classes
+                  </a>
+                </li>
                 
-                  <li class="md-nav__item">
-                    
-                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_2_2" checked>
-                      <label class="md-nav__link" for="__toc_2_2">
-                        Setup Your Nodes
-                      </label>
-                      <nav class="md-nav" aria-label="Setup Your Nodes">
-                        <ul class="md-nav__list">
-                          
-                            <li class="md-nav__item">
-                              <a href="#key-management-overview" class="md-nav__link">
-                                Key Management Overview
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#local-machine-install-the-cli-tool" class="md-nav__link">
-                                [Local machine] Install the CLI Tool
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#local-machine-create-account-key" class="md-nav__link">
-                                [Local machine] Create Account Key
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#server-download-deployment-files" class="md-nav__link">
-                                [Server] Download Deployment Files
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#server-edit-environment-variables" class="md-nav__link">
-                                [Server] Edit Environment Variables
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#server-edit-inference-node-description-for-the-server" class="md-nav__link">
-                                [Server] Edit Inference Node Description for the Server
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#server-pre-download-model-weights-to-hugging-face-cache-hf_home" class="md-nav__link">
-                                [Server] Pre-download Model Weights to Hugging Face Cache (HF_HOME)
-                              </a>
-                            </li>
-                          
-                        </ul>
-                      </nav>
-                    
-                  </li>
+                <li class="md-nav__item">
+                  <a href="#configuration-for-optimal-rewards" class="md-nav__link">
+                    Configuration for Optimal Rewards
+                  </a>
+                </li>
                 
-                  <li class="md-nav__item">
-                    
-                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_3_3" checked>
-                      <label class="md-nav__link" for="__toc_3_3">
-                        Launch Nodes
-                      </label>
-                      <nav class="md-nav" aria-label="Launch Nodes">
-                        <ul class="md-nav__list">
-                          
-                            <li class="md-nav__item">
-                              <a href="#1-server-pull-docker-images-containers" class="md-nav__link">
-                                1. [Server] Pull Docker Images (Containers)
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#2-server-start-initial-services" class="md-nav__link">
-                                2. [Server] Start Initial Services
-                              </a>
-                            </li>
-                          
-                            <li class="md-nav__item">
-                              <a href="#3-complete-key-setup-and-host-registration" class="md-nav__link">
-                                3. Complete Key Setup and Host Registration
-                              </a>
-                            </li>
-                          
-                        </ul>
-                      </nav>
-                    
-                  </li>
+                <li class="md-nav__item">
+                  <a href="#proposed-hardware-configuration" class="md-nav__link">
+                    Proposed Hardware Configuration
+                  </a>
+                </li>
                 
-                  <li class="md-nav__item">
-                    
-                      <a href="#verify-node-status" class="md-nav__link">
-                        Verify Node Status
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_5_5" checked>
-                      <label class="md-nav__link" for="__toc_5_5">
-                        Stopping and Cleaning Up Your Node
-                      </label>
-                      <nav class="md-nav" aria-label="Stopping and Cleaning Up Your Node">
-                        <ul class="md-nav__list">
-                          
-                            <li class="md-nav__item">
-                              <a href="#how-to-stop-mlnode" class="md-nav__link">
-                                How to stop MLNode
-                              </a>
-                            </li>
-                          
-                        </ul>
-                      </nav>
-                    
-                  </li>
+                <li class="md-nav__item">
+                  <a href="#ports-open-for-public-connections" class="md-nav__link">
+                    Ports open for public connections
+                  </a>
+                </li>
                 
               </ul>
             </nav>
+            
+          </li>
           
-        </li>
+          <li class="md-nav__item">
+            
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_2_2"
+              checked>
+            <label class="md-nav__link" for="__toc_2_2">
+              Setup Your Nodes
+            </label>
+            <nav class="md-nav" aria-label="Setup Your Nodes">
+              <ul class="md-nav__list">
+                
+                <li class="md-nav__item">
+                  <a href="#key-management-overview" class="md-nav__link">
+                    Key Management Overview
+                  </a>
+                </li>
+                
+                <li class="md-nav__item">
+                  <a href="#local-machine-install-the-cli-tool" class="md-nav__link">
+                    [Local machine] Install the CLI Tool
+                  </a>
+                </li>
+                
+                <li class="md-nav__item">
+                  <a href="#local-machine-create-account-key" class="md-nav__link">
+                    [Local machine] Create Account Key
+                  </a>
+                </li>
+                
+                <li class="md-nav__item">
+                  <a href="#server-download-deployment-files" class="md-nav__link">
+                    [Server] Download Deployment Files
+                  </a>
+                </li>
+                
+                <li class="md-nav__item">
+                  <a href="#server-edit-environment-variables" class="md-nav__link">
+                    [Server] Edit Environment Variables
+                  </a>
+                </li>
+                
+                <li class="md-nav__item">
+                  <a href="#server-edit-inference-node-description-for-the-server" class="md-nav__link">
+                    [Server] Edit Inference Node Description for the Server
+                  </a>
+                </li>
+                
+                <li class="md-nav__item">
+                  <a href="#server-pre-download-model-weights-to-hugging-face-cache-hf_home" class="md-nav__link">
+                    [Server] Pre-download Model Weights to Hugging Face Cache (HF_HOME)
+                  </a>
+                </li>
+                
+              </ul>
+            </nav>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_3_3"
+              checked>
+            <label class="md-nav__link" for="__toc_3_3">
+              Launch Nodes
+            </label>
+            <nav class="md-nav" aria-label="Launch Nodes">
+              <ul class="md-nav__list">
+                
+                <li class="md-nav__item">
+                  <a href="#1-server-pull-docker-images-containers" class="md-nav__link">
+                    1. [Server] Pull Docker Images (Containers)
+                  </a>
+                </li>
+                
+                <li class="md-nav__item">
+                  <a href="#2-server-start-initial-services" class="md-nav__link">
+                    2. [Server] Start Initial Services
+                  </a>
+                </li>
+                
+                <li class="md-nav__item">
+                  <a href="#3-complete-key-setup-and-host-registration" class="md-nav__link">
+                    3. Complete Key Setup and Host Registration
+                  </a>
+                </li>
+                
+              </ul>
+            </nav>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#verify-node-status" class="md-nav__link">
+              Verify Node Status
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_5_5"
+              checked>
+            <label class="md-nav__link" for="__toc_5_5">
+              Stopping and Cleaning Up Your Node
+            </label>
+            <nav class="md-nav" aria-label="Stopping and Cleaning Up Your Node">
+              <ul class="md-nav__list">
+                
+                <li class="md-nav__item">
+                  <a href="#how-to-stop-mlnode" class="md-nav__link">
+                    How to stop MLNode
+                  </a>
+                </li>
+                
+              </ul>
+            </nav>
+            
+          </li>
+          
+        </ul>
+      </nav>
       
-    </ul>
+    </li>
     
-    <!-- READ NEXT section -->
-    <div class="md-nav__read-next">
-      <div class="md-nav__read-next-title">READ NEXT:</div>
-      <div class="md-nav__read-next-section">RUNNER</div>
-      <a href="#" class="md-nav__read-next-link">Quickstart</a>
-    </div>
-  </nav>
+  </ul>
 
-        </div>
-      </div>
-    </div>
-  
+  <!-- READ NEXT section -->
+  <div class="md-nav__read-next">
+    <a href="/host/quickstart" class="md-nav__read-next-link">
+      <!-- <span class="md-nav__read-next-number">1.</span> -->
+      <span class="md-nav__read-next-text">Connect GPU</span>
+    </a>
+    <a href="/developer/quickstart" class="md-nav__read-next-link">
+      <!-- <span class="md-nav__read-next-number">2.</span> -->
+      <span class="md-nav__read-next-text">Use Gonka API</span>
+    </a>
+  </div>
+</nav>
 
+                  </div>
+                </div>
+              </div>
+            
+          
           
             <div class="md-content" data-md-component="content">
               
@@ -875,7 +1307,7 @@
 <li>The exact deployment parameters for each category are defined in the genesis configuration.</li>
 <li>Models may be classified into a category if approved by governance.</li>
 <li>Decisions about adding or changing supported models are made by governance.</li>
-<li>For details on governance procedures and how to propose new models, see the <a href="https://gonka.ai/transactions-and-governance/">Transactions and Governance Guide</a>.</li>
+<li>For details on governance procedures and how to propose new models, see the <a href="/transactions-and-governance/">Transactions and Governance Guide</a>.</li>
 </ul>
 </div>
 <h3 id="configuration-for-optimal-rewards">Configuration for Optimal Rewards</h3>
@@ -915,7 +1347,7 @@
 </tbody>
 </table>
 <p>This is a reference architecture. You may adjust node count or hardware allocation, but we recommend following the core principle: each node should support multiple MLNodes across all three model tiers.</p>
-<p>More details about optimal deploy configuration can be found <a href="https://gonka.ai/host/benchmark-to-choose-optimal-deployment-config-for-llms/">here</a>.</p>
+<p>More details about optimal deploy configuration can be found <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms/">here</a>.</p>
 <p>The server hosting the Network Node should have:</p>
 <ul>
 <li>16-core CPU (amd64)</li>
@@ -940,7 +1372,7 @@
 <p>The quickstart instruction is designed to run both the Network Node and the inference node on a single machine (one server setup). </p>
 <details class="note">
 <summary>Multiple nodes deployment</summary>
-<p>If you are deploying multiple GPU nodes, please refer to the detailed <a href="https://gonka.ai/host/multiple-nodes/">Multiple nodes deployment guide</a> for proper setup and configuration. Whether you deploy inference nodes on a single machine or across multiple servers (including across geographical regions), all inference nodes must be connected to the same Network Node.</p>
+<p>If you are deploying multiple GPU nodes, please refer to the detailed <a href="/host/multiple-nodes/">Multiple nodes deployment guide</a> for proper setup and configuration. Whether you deploy inference nodes on a single machine or across multiple servers (including across geographical regions), all inference nodes must be connected to the same Network Node.</p>
 </details>
 <h3 id="key-management-overview">Key Management Overview</h3>
 <p>Before configuring your Network Node, you need to set up cryptographic keys for secure operations.<br>
@@ -1097,7 +1529,7 @@ export KEYRING_BACKEND=file                                 # Keep as is
 <h3 id="server-edit-inference-node-description-for-the-server">[Server] Edit Inference Node Description for the Server</h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The network currently supports the following models: <code>Qwen/Qwen3-235B-A22B-Instruct-2507-FP8</code> and <code>Qwen/Qwen3-32B-FP8</code>. The governance makes decisions regarding the addition or modification of supported models. For details on how model governance works and how to propose new models, see the <a href="https://gonka.ai/transactions-and-governance/">Transactions and Governance Guide</a>.</p>
+<p>The network currently supports the following models: <code>Qwen/Qwen3-235B-A22B-Instruct-2507-FP8</code> and <code>Qwen/Qwen3-32B-FP8</code>. The governance makes decisions regarding the addition or modification of supported models. For details on how model governance works and how to propose new models, see the <a href="/transactions-and-governance/">Transactions and Governance Guide</a>.</p>
 </div>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">8xH200 or 8xH100</label><label for="__tabbed_1_2">1xH100</label><label for="__tabbed_1_3">8x4090</label></div>
 <div class="tabbed-content">
@@ -1167,7 +1599,7 @@ export KEYRING_BACKEND=file                                 # Keep as is
 </div>
 </div>
 </div>
-<p>For more details on the optimal deployment configuration, please refer to <a href="https://gonka.ai/host/benchmark-to-choose-optimal-deployment-config-for-llms/">this link</a>.</p>
+<p>For more details on the optimal deployment configuration, please refer to <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms/">this link</a>.</p>
 <h3 id="server-pre-download-model-weights-to-hugging-face-cache-hf_home">[Server] Pre-download Model Weights to Hugging Face Cache (HF_HOME)</h3>
 <p>Inference nodes download model weights from Hugging Face.
 To make sure the model weights are ready for inference, you should download them before deployment.</p>
@@ -1287,7 +1719,7 @@ docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> 
 </p><div class="highlight"><pre><span></span><code>http://node2.gonka.ai:8000/v1/epochs/current/participants
 </code></pre></div>
 <p>You may turn off your server before this stage and start it again right before the next Proof of Compute.
-To track when the next Proof of Compute session will begin, check <a href="https://gonka.ai/wallet/dashboard/">the dashboard</a> here:
+To track when the next Proof of Compute session will begin, check <a href="/wallet/dashboard/">the dashboard</a> here:
 </p><div class="highlight"><pre><span></span><code>http://node2.gonka.ai:8000/dashboard/gonka/validator
 </code></pre></div>
 <p>Once your node is running, check your node status using Tendermint RPC endpoint of your node (26657 of <code>node</code> container).
@@ -1299,7 +1731,7 @@ On the server, you can use private ones.
 Using the public IP of the genesis node.
 <div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://node2.gonka.ai:26657/status
 </code></pre></div>
-<p>Once your node is visible in the Dashboard, you may also want to update your public profile (host name, website, avatar). This helps other participants identify your node in the network. You can find <a href="https://gonka.ai/host/validator_info/">the instructions here</a>.</p>
+<p>Once your node is visible in the Dashboard, you may also want to update your public profile (host name, website, avatar). This helps other participants identify your node in the network. You can find <a href="/host/validator_info/">the instructions here</a>.</p>
 <h2 id="stopping-and-cleaning-up-your-node">Stopping and Cleaning Up Your Node</h2>
 <h3 id="how-to-stop-mlnode">How to stop MLNode</h3>
 <ol>
@@ -1368,52 +1800,54 @@ This stops and removes all services defined in the <code>docker-compose.yml</cod
 </button>
         
       </main>
-      
-
-  <!-- Footer -->
+         <!-- Footer -->
 <footer class="landing-footer">
   <div class="footer-wrap">
     <div class="footer-brand">
-      <span class="footer-logo">Gonka</span>
+      <a href="/" class="footer-logo">
+        <img src="/images/icons/gonka-logo.svg" alt="Gonka" width="99" height="23" />
+      </a>
+      <a href="https://what-is-gonka.hashnode.dev/" target="_blank" class="footer-link-blog">Blog</a>
     </div>
     <div class="footer-links">
       <div class="footer-col">
         <h4>Protocol</h4>
-        <a href="#">Whitepaper</a>
-        <a href="#">Transformer-Based-Proof-of-Work</a>
+        <a href="/whitepaper.pdf" target="_blank">Whitepaper</a>
+        <a href="/pow-security-analysis.pdf" target="_blank">Transformer-Based-Proof-of-Work</a>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
-        <a href="#">Gonka Protocol License</a>
-        <a href="#">Patents</a>
+        <a href="/protocol-license.pdf" target="_blank">Gonka Protocol License</a>
+        <!-- <a href="/patents.pdf" target="_blank">Patents</a> -->
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-socials">
-      <a href="#" class="footer-social" aria-label="Github">
+      <a href="https://github.com/gonka-ai/gonka/" class="footer-social" target="_blank" aria-label="Github">
         <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
       </a>
-      <a href="#" class="footer-social" aria-label="Discord">
+      <a href="https://discord.com/invite/RADwCT2U6R" class="footer-social" target="_blank" aria-label="Discord">
         <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
       </a>
-      <a href="#" class="footer-social" aria-label="Mail">
+      <a href="mailto:hello@productscience.ai" class="footer-social" target="_blank" aria-label="Mail">
         <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
       </a>
-      <a href="#" class="footer-social" aria-label="X">
+      <a href="https://x.com/gonka_ai" class="footer-social" target="_blank" aria-label="X">
         <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
       </a>
+      <!-- <a href="https://t.me/Gonka_AI" class="footer-social" target="_blank" aria-label="Telegram">
+        <img src="/images/icons/telegram.svg" alt="Telegram" width="25" height="25" />
+      </a> -->
     </div>
 
     <div class="footer-bottom-links">
-      <a href="#" class="footer-link">Help</a>
-      <a href="#" class="footer-link">Transactions & Governance</a>
-      <a href="#" class="footer-link">Terms & Policies</a>
+      <a href="/help" class="footer-link">Help</a>
+      <a href="/transactions-and-governance" class="footer-link">Transactions & Governance</a>
+      <!-- <a href="#" class="footer-link">Terms & Policies</a> -->
     </div>
   </div>
-</footer>
-
-
+</footer>   
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -1423,10 +1857,10 @@ This stops and removes all services defined in the <code>docker-compose.yml</cod
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/links.js"></script>
       
@@ -1443,6 +1877,18 @@ This stops and removes all services defined in the <code>docker-compose.yml</cod
         <script src="../../javascripts/mobile-menu.js"></script>
       
         <script src="../../javascripts/announcement.js"></script>
+      
+        <script src="../../javascripts/code-copy.js"></script>
+      
+        <script src="../../javascripts/language-selector.js"></script>
+      
+        <script src="../../javascripts/header-links.js"></script>
+      
+        <script src="../../javascripts/faq.js"></script>
+      
+        <script src="../../javascripts/ios-long-press-fix.js"></script>
+      
+        <script src="../../javascripts/disclaimer.js"></script>
       
     
   </body>

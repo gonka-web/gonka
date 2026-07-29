@@ -27,7 +27,7 @@
       
       
       <link rel="icon" href="../images/01-favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -35,7 +35,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -74,20 +74,103 @@
   
 
     
-    
-    
-    
-      
-    
-    <meta property="og:type" content="website">
-    <meta property="og:title" content=" - FAQ">
-    <meta property="og:description" content="Learn to configure and use Gonka network">
-    <meta property="og:url" content="https://gonka.me/FAQ/">
-    <meta property="og:image" content="">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1080">
-    <meta property="og:image:height" content="568">
-  
+        
+<!-- Google Fonts Preconnect for faster loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter+Display:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+<meta property="og:type" content="website" />
+<meta property="og:title" content=" - FAQ" />
+<meta property="og:description" content="Learn to configure and use Gonka network" />
+<meta property="og:url" content="https://gonka.me/FAQ/" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="568" />
+<!-- Prevent theme flash: apply theme immediately before render -->
+<script>
+  (function () {
+    try {
+      var savedScheme = localStorage.getItem("data-md-color-scheme");
+      if (savedScheme) {
+        // Apply to both html and body immediately
+        document.documentElement.setAttribute(
+          "data-md-color-scheme",
+          savedScheme,
+        );
+        if (document.body) {
+          document.body.setAttribute("data-md-color-scheme", savedScheme);
+        } else {
+          // If body doesn't exist yet, wait for it
+          document.addEventListener("DOMContentLoaded", function () {
+            document.body.setAttribute("data-md-color-scheme", savedScheme);
+            // Trigger Material theme update if function exists
+            if (typeof __md_set !== "undefined") {
+              __md_set("__palette", { color: { scheme: savedScheme } });
+            }
+          });
+        }
+        // Try to trigger Material theme update immediately
+        if (typeof __md_set !== "undefined") {
+          __md_set("__palette", { color: { scheme: savedScheme } });
+        }
+      } else {
+        // Default to light theme
+        var defaultScheme = "default";
+        document.documentElement.setAttribute(
+          "data-md-color-scheme",
+          defaultScheme,
+        );
+        if (document.body) {
+          document.body.setAttribute("data-md-color-scheme", defaultScheme);
+        }
+      }
+      if (sessionStorage.getItem("gonkaDisclaimerCollapsed") === "true") {
+        document.documentElement.classList.add("gonka-disclaimer-collapsed");
+      }
+    } catch (e) {}
+  })();
+</script>
+<style>
+  /* Prevent white flash on page load - apply immediately */
+  html:not([data-md-color-scheme]) {
+    background-color: #fff;
+  }
+
+  html[data-md-color-scheme="slate"] {
+    background-color: #1a1a1a;
+  }
+
+  html[data-md-color-scheme="slate"] body {
+    background-color: #1a1a1a;
+  }
+
+  /* Force theme colors to apply immediately */
+  html[data-md-color-scheme="slate"] {
+    color-scheme: dark;
+  }
+
+  html[data-md-color-scheme="default"] {
+    color-scheme: light;
+  }
+</style>
+
   </head>
   
   
@@ -116,20 +199,70 @@
       
     </div>
     
-    
+      
+<style>
+  /* Ensure header and footer are full width and override MkDocs styles */
+  .landing-header,
+  .landing-footer {
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    z-index: 100 !important;
+  }
 
-  <style>
-    .header-wrap {
-      padding: 20px 40px
+  /* Override MkDocs container constraints but keep sidebar layout */
+  .md-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .md-main {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .md-main__inner {
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  @media (max-width: 768px) {
+    .md-main__inner {
+      flex-direction: column !important;
+      row-gap: 20px !important;
     }
-    .yellow-banner {
-      padding: 8px 40px
+  }
+
+  .md-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide only MkDocs default header, keep sidebars */
+  .md-header {
+    display: none !important;
+  }
+
+  /* Ensure content has proper spacing with sidebars */
+  .md-content__inner {
+    padding: 20px !important;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .md-content__inner {
+      padding: 20px 0 !important;
     }
-  </style>
-  <!-- Yellow Top Banner -->
+  }
+</style>
+<!-- Yellow Top Banner -->
 <div class="yellow-banner">
-  <p class="yellow-banner-text">NEW MODELS AVAILABLE: In the recent voting miners decided to add two new models: OpenAI GPT-OSS-120b and Qwen3-235B-A22B-Thinking-2507 are now available via API</p>
-  <button class="banner-learn-more">learn more</button>
+
+  <p class="yellow-banner-text">Kimi K and MiniMax models are now available</p>
   <button class="banner-close">
     <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16" />
   </button>
@@ -138,60 +271,103 @@
 <!-- Header -->
 <header class="landing-header">
   <div class="header-wrap">
-  <div class="nav-section">
-    <div class="logo-section">
-      <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light" />
-      <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark" />
-    </div>
-
-    <nav class="main-nav">
-      <div class="nav-item-dropdown">
-        <a href="#" class="nav-item" data-dropdown="developers">
-          <span class="nav-text">Developers</span>
-          <span class="nav-icon">+</span>
-        </a>
-        <div class="dropdown-menu" id="developers">
-          <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
-          <a href="/developer/details" class="dropdown-link">Details</a>
-        </div>
-      </div>
-      
-      <div class="nav-item-dropdown">
-        <a href="#" class="nav-item" data-dropdown="miners">
-          <span class="nav-text">miners</span>
-          <span class="nav-icon">+</span>
-        </a>
-        <div class="dropdown-menu" id="miners">
-          <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
-          <a href="/host/multiple-nodes" class="dropdown-link">Multiple nodes</a>
-          <a href="/host/network-node-api" class="dropdown-link">Network Node API</a>
-          <a href="/host/key-management" class="dropdown-link">Key Management</a>
-          <a href="/host/access-account" class="dropdown-link">Access account</a>
-          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
-          <a href="/host/hardware-specifications" class="dropdown-link">Hardware Specifications</a>
-          <a href="/host/genesis" class="dropdown-link">Genesis</a>
-          <a href="/host/validator_info" class="dropdown-link">How to edit validator public info</a>
-          <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
-        </div>
-      </div>
-      
-      <div class="nav-item-dropdown">
-        <a href="#" class="nav-item" data-dropdown="tokenomics">
-          <span class="nav-text">tokenomics</span>
-          <span class="nav-icon">+</span>
-        </a>
-        <div class="dropdown-menu" id="tokenomics">
-          <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
-        </div>
-      </div>
-      
-      <a href="/introduction" class="nav-item nav-item-link">
-        <span class="nav-text">documentations</span>
-        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
-        </svg>
+    <div class="nav-section">
+      <a href="/" class="logo-section">
+        <img
+          src="/images/logos/gonka.svg"
+          alt="Gonka"
+          width="40"
+          height="40"
+          class="logo-light"
+        />
+        <img
+          src="/images/logos/dark-gonka.svg"
+          alt="Gonka"
+          width="40"
+          height="40"
+          class="logo-dark"
+        />
       </a>
-    </nav>
+
+      <nav class="main-nav">
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="developers">
+            <span class="nav-text">Developers</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="developers">
+            <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
+            <a href="/developer/details" class="dropdown-link">Details</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="miners">
+            <span class="nav-text">miners</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="miners">
+            <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
+            <a href="/host/multiple-nodes" class="dropdown-link"
+              >Multiple nodes</a
+            >
+            <a href="/host/network-node-api" class="dropdown-link"
+              >Network Node API</a
+            >
+            <a href="/host/key-management" class="dropdown-link"
+              >Key Management</a
+            >
+            <a href="/host/access-account" class="dropdown-link"
+              >Access account</a
+            >
+            <a
+              href="/host/benchmark-to-choose-optimal-deployment-config-for-llms"
+              class="dropdown-link"
+              >Benchmark to Choose Optimal Deployment Config for LLMs</a
+            >
+            <a href="/host/hardware-specifications" class="dropdown-link"
+              >Hardware Specifications</a
+            >
+            <a href="/host/genesis" class="dropdown-link">Genesis</a>
+            <a href="/host/validator_info" class="dropdown-link"
+              >How to edit validator public info</a
+            >
+            <a href="/host/optional-ssl-setup" class="dropdown-link"
+              >SSL setup</a
+            >
+          </div>
+        </div>
+
+        <!-- <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="tokenomics">
+            <span class="nav-text">tokenomics</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="tokenomics">
+            <a href="/tokenomics.pdf" class="dropdown-link"
+              >Tokenomics and more</a
+            >
+          </div>
+        </div> -->
+
+        <a href="/introduction" class="nav-item nav-item-link">
+          <span class="nav-text">documentations</span>
+          <svg
+            style="margin-bottom: 12px; margin-left: 4px"
+            width="6"
+            height="6"
+            viewBox="0 0 6 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006"
+              stroke-width="1.3"
+              stroke-linejoin="bevel"
+            />
+          </svg>
+        </a>
+      </nav>
     </div>
 
     <!-- Mobile Menu Toggle -->
@@ -202,46 +378,122 @@
     </button>
 
     <div class="header-actions">
+      <div class="language-selector">
+        <button
+          class="language-btn"
+          id="language-btn"
+          aria-label="Select language"
+        >
+          <span class="language-text" id="language-text">EN</span>
+          <svg
+            width="8"
+            height="6"
+            viewBox="0 0 8 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="language-arrow"
+          >
+            <path
+              d="M1 1L4 4L7 1"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <div class="language-dropdown" id="language-dropdown">
+          <a href="#" class="language-option" data-lang="en" data-url="/"
+            >English</a
+          >
+          <a href="#" class="language-option" data-lang="zh" data-url="/zh/"
+            >中文</a
+          >
+        </div>
+      </div>
       <div class="theme-toggle">
         <button class="theme-btn theme-btn-sun" data-theme="default">
-          <img src="/images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light" />
-          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-dark" />
+          <img
+            src="/images/icons/light-theme.svg"
+            alt="Light theme"
+            width="18"
+            height="18"
+            class="sun-icon-light"
+          />
+          <img
+            src="/images/icons/dark-light-theme.svg"
+            alt="Light theme"
+            width="18"
+            height="18"
+            class="sun-icon-dark"
+          />
         </button>
         <button class="theme-btn theme-btn-moon" data-theme="slate">
-          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="18" height="18" />
+          <img
+            src="/images/icons/dark-theme.svg"
+            alt="Dark theme"
+            width="18"
+            height="18"
+          />
         </button>
       </div>
       <div class="buy-gnk-wrapper">
         <button class="buy-gnk-btn" onclick="return false;">
-          buy gnk 
-          <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+          buy gnk
+          <svg
+            width="6"
+            height="6"
+            viewBox="0 0 6 6"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006"
+              stroke-width="1.3"
+              stroke-linejoin="bevel"
+            />
           </svg>
         </button>
-        
-        <div class="wallet-tooltip">
-          <img src="/images/wallet.svg" alt="Wallet" class="wallet-icon" />
-          <div class="wallet-text">
-            <span>Wallet will be</span>
-            <span>available soon</span>
-          </div>
-        </div>
+
+        <div class="gnk-exchanges-dropdown mobile-gnk-exchanges-dropdown" role="menu">
+  <p class="gnk-exchanges-note mobile-gnk-exchanges-note">At the moment, there are no official GNK buying or selling methods provided by the team. Below are services and solutions created and maintained by community members.</p>
+  <a href="https://hex.exchange/otc/gonka38261660" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">HEX OTC</a>
+  <a href="https://exchange.gonka.markets/app?chart_source=external&chart_tf=1d" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka Markets</a>
+  <a href="https://gonka.vip/?ref=gnk" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka VIP</a>
+  <a href="https://safetrade.com/exchange/GNK-USDT?type=basic" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">SafeTrade</a>
+</div>
       </div>
-      <button class="join-btn">join today</button>
+      <a
+        href="https://discord.com/invite/RADwCT2U6R"
+        target="_blank"
+        class="join-btn"
+        >join today</a
+      >
     </div>
   </div>
-
 </header>
 
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobile-menu">
   <!-- Mobile Menu Close Button -->
   <button class="mobile-menu-close" id="mobile-menu-close">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M18 6L6 18M6 6L18 18"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
     </svg>
   </button>
-  
+
   <div class="mobile-menu-content">
     <div class="mobile-nav-section">
       <div class="mobile-nav-item-dropdown">
@@ -250,11 +502,13 @@
           <span class="mobile-nav-icon">+</span>
         </a>
         <div class="mobile-dropdown-menu" id="mobile-developers">
-          <a href="/developer/quickstart" class="mobile-dropdown-link">Quickstart</a>
+          <a href="/developer/quickstart" class="mobile-dropdown-link"
+            >Quickstart</a
+          >
           <a href="/developer/details" class="mobile-dropdown-link">Details</a>
         </div>
       </div>
-      
+
       <div class="mobile-nav-item-dropdown">
         <a href="#" class="mobile-nav-item" data-mobile-dropdown="miners">
           <span class="mobile-nav-text">miners</span>
@@ -262,89 +516,203 @@
         </a>
         <div class="mobile-dropdown-menu" id="mobile-miners">
           <a href="/host/quickstart" class="mobile-dropdown-link">Quickstart</a>
-          <a href="/host/multiple-nodes" class="mobile-dropdown-link">Multiple nodes</a>
-          <a href="/host/network-node-api" class="mobile-dropdown-link">Network Node API</a>
-          <a href="/host/key-management" class="mobile-dropdown-link">Key Management</a>
-          <a href="/host/access-account" class="mobile-dropdown-link">Access account</a>
-          <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="mobile-dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
-          <a href="/host/hardware-specifications" class="mobile-dropdown-link">Hardware Specifications</a>
+          <a href="/host/multiple-nodes" class="mobile-dropdown-link"
+            >Multiple nodes</a
+          >
+          <a href="/host/network-node-api" class="mobile-dropdown-link"
+            >Network Node API</a
+          >
+          <a href="/host/key-management" class="mobile-dropdown-link"
+            >Key Management</a
+          >
+          <a href="/host/access-account" class="mobile-dropdown-link"
+            >Access account</a
+          >
+          <a
+            href="/host/benchmark-to-choose-optimal-deployment-config-for-llms"
+            class="mobile-dropdown-link"
+            >Benchmark to Choose Optimal Deployment Config for LLMs</a
+          >
+          <a href="/host/hardware-specifications" class="mobile-dropdown-link"
+            >Hardware Specifications</a
+          >
           <a href="/host/genesis" class="mobile-dropdown-link">Genesis</a>
-          <a href="/host/validator_info" class="mobile-dropdown-link">How to edit validator public info</a>
-          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link">SSL setup</a>
+          <a href="/host/validator_info" class="mobile-dropdown-link"
+            >How to edit validator public info</a
+          >
+          <a href="/host/optional-ssl-setup" class="mobile-dropdown-link"
+            >SSL setup</a
+          >
         </div>
       </div>
-      
+
       <div class="mobile-nav-item-dropdown">
         <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
           <span class="mobile-nav-text">tokenomics</span>
           <span class="mobile-nav-icon">+</span>
         </a>
         <div class="mobile-dropdown-menu" id="mobile-tokenomics">
-          <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
+          <a href="/tokenomics.pdf" class="mobile-dropdown-link"
+            >Tokenomics and more</a
+          >
         </div>
       </div>
-      
+
       <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
         <span class="mobile-nav-text">documentations</span>
-        <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+        <svg
+          style="margin-bottom: 12px; margin-left: 4px"
+          width="6"
+          height="6"
+          viewBox="0 0 6 6"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006"
+            stroke-width="1.3"
+            stroke-linejoin="bevel"
+          />
         </svg>
       </a>
     </div>
-    
+
     <!-- Mobile Menu Actions -->
     <div class="mobile-menu-actions">
-      <div class="mobile-theme-toggle">
-        <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
-          <img src="/images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light" />
-          <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark" />
-        </button>
-        <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
-          <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16" />
-        </button>
+      <div class="mobile-menu-actions-top">
+        <div class="mobile-language-selector">
+          <button
+            class="mobile-language-btn"
+            id="mobile-language-btn"
+            aria-label="Select language"
+          >
+            <span class="mobile-language-text" id="mobile-language-text"
+              >EN</span
+            >
+            <svg
+              width="8"
+              height="6"
+              viewBox="0 0 8 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="mobile-language-arrow"
+            >
+              <path
+                d="M1 1L4 4L7 1"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="mobile-language-dropdown" id="mobile-language-dropdown">
+            <a
+              href="#"
+              class="mobile-language-option"
+              data-lang="en"
+              data-url="/"
+              >English</a
+            >
+            <a
+              href="#"
+              class="mobile-language-option"
+              data-lang="zh"
+              data-url="/zh/"
+              >中文</a
+            >
+          </div>
+        </div>
+        <div class="mobile-theme-toggle">
+          <button
+            class="mobile-theme-btn mobile-theme-btn-sun"
+            data-theme="default"
+          >
+            <img
+              src="/images/icons/light-theme.svg"
+              alt="Light theme"
+              width="16"
+              height="16"
+              class="mobile-sun-icon-light"
+            />
+            <img
+              src="/images/icons/dark-light-theme.svg"
+              alt="Light theme"
+              width="16"
+              height="16"
+              class="mobile-sun-icon-dark"
+            />
+          </button>
+          <button
+            class="mobile-theme-btn mobile-theme-btn-moon"
+            data-theme="slate"
+          >
+            <img
+              src="/images/icons/dark-theme.svg"
+              alt="Dark theme"
+              width="16"
+              height="16"
+            />
+          </button>
+        </div>
       </div>
-      
+
       <div class="mobile-buttons-group">
         <div class="mobile-buy-gnk-wrapper">
           <button class="mobile-buy-gnk-btn" onclick="return false;">
-            buy gnk 
-            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"/>
+            buy gnk
+            <svg
+              width="6"
+              height="6"
+              viewBox="0 0 6 6"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006"
+                stroke-width="1.3"
+                stroke-linejoin="bevel"
+              />
             </svg>
           </button>
-          
-          <div class="mobile-wallet-tooltip">
-            <img src="/images/wallet.svg" alt="Wallet" class="mobile-wallet-icon" />
-            <div class="mobile-wallet-text">
-              <span>Wallet will be</span>
-              <span>available soon</span>
-            </div>
-          </div>
+
+          <div class="gnk-exchanges-dropdown mobile-gnk-exchanges-dropdown" role="menu">
+  <p class="gnk-exchanges-note mobile-gnk-exchanges-note">At the moment, there are no official GNK buying or selling methods provided by the team. Below are services and solutions created and maintained by community members.</p>
+  <a href="https://hex.exchange/otc/gonka38261660" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">HEX OTC</a>
+  <a href="https://exchange.gonka.markets/app?chart_source=external&chart_tf=1d" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka Markets</a>
+  <a href="https://gonka.vip/?ref=gnk" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka VIP</a>
+  <a href="https://safetrade.com/exchange/GNK-USDT?type=basic" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">SafeTrade</a>
+</div>
         </div>
-        
-        <button class="mobile-join-btn">join today</button>
+
+        <a
+          href="https://discord.com/invite/RADwCT2U6R"
+          target="_blank"
+          class="mobile-join-btn"
+          >join today</a
+        >
       </div>
     </div>
   </div>
-</div>
-
-
+</div>  
     <div class="md-container" data-md-component="container">
       
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
-  
-    <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner">
-          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
 <!-- Main navigation -->
 <nav class="md-nav md-nav--primary" aria-label="nav.title" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="" class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+    <a href=".." title=""
+      class="md-nav__button md-logo" aria-label="" data-md-component="logo">
       
   <img src="../images/logos/gonka.svg" alt="logo">
 
@@ -356,35 +724,42 @@
   <ul class="md-nav__list" data-md-scrollfix>
     <!-- DOCS Section -->
     <li class="md-nav__item">
-      <div class="md-nav__title">DOCS</div>
+      <div class="md-nav__title md-nav__title--first-child md-nav__title--primary">DOCS</div>
       <nav class="md-nav" aria-label="DOCS">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
-              <li class="md-nav__item">
-                <a href="../introduction/" class="md-nav__link">
-                  Introduction
-                </a>
-              </li>
-            
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
+          
+          
+          <li class="md-nav__item">
+            <a href="../introduction/"
+              class="md-nav__link">
+              Introduction
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
       </nav>
@@ -392,43 +767,52 @@
 
     <!-- DEVELOPER Section -->
     <li class="md-nav__item">
-      <div class="md-nav__title">DEVELOPER</div>
+      <div class="md-nav__title md-nav__title--primary">DEVELOPER
+      </div>
       <nav class="md-nav" aria-label="DEVELOPER">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
           
-            
-              
-                <li class="md-nav__item">
-                  <a href="../developer/quickstart/" class="md-nav__link">
-                    Quickstart
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../developer/details/" class="md-nav__link">
-                    Details
-                  </a>
-                </li>
-              
-            
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../developer/quickstart/"
+              class="md-nav__link">
+              Quickstart
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../developer/details/"
+              class="md-nav__link">
+              Details
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
       </nav>
@@ -436,91 +820,108 @@
 
     <!-- PARTICIPANT Section -->
     <li class="md-nav__item">
-      <div class="md-nav__title">PARTICIPANT</div>
+      <div class="md-nav__title md-nav__title--primary">PARTICIPANT
+      </div>
       <nav class="md-nav" aria-label="PARTICIPANT">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
           
-            
           
-            
-              
-                <li class="md-nav__item">
-                  <a href="../host/quickstart/" class="md-nav__link">
-                    Quickstart
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/multiple-nodes/" class="md-nav__link">
-                    Multiple nodes
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/network-node-api/" class="md-nav__link">
-                    Network Node API
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/key-management/" class="md-nav__link">
-                    Key Management
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/access-account/" class="md-nav__link">
-                    Access account
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/benchmark-to-choose-optimal-deployment-config-for-llms/" class="md-nav__link">
-                    Benchmark to Choose Optimal Deployment Config for LLMs
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/hardware-specifications/" class="md-nav__link">
-                    Hardware Specifications
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/genesis/" class="md-nav__link">
-                    Genesis
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/validator_info/" class="md-nav__link">
-                    How to edit validator public info
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../host/optional-ssl-setup/" class="md-nav__link">
-                    SSL setup
-                  </a>
-                </li>
-              
-            
           
-            
           
-            
           
-            
           
-            
           
-            
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../host/quickstart/"
+              class="md-nav__link">
+              Quickstart
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/multiple-nodes/"
+              class="md-nav__link">
+              Multiple nodes
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/network-node-api/"
+              class="md-nav__link">
+              Network Node API
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/key-management/"
+              class="md-nav__link">
+              Key Management
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/access-account/"
+              class="md-nav__link">
+              Access account
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/benchmark-to-choose-optimal-deployment-config-for-llms/"
+              class="md-nav__link">
+              Benchmark to Choose Optimal Deployment Config for LLMs
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/hardware-specifications/"
+              class="md-nav__link">
+              Hardware Specifications
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/genesis/"
+              class="md-nav__link">
+              Genesis
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/validator_info/"
+              class="md-nav__link">
+              How to edit validator public info
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/optional-ssl-setup/"
+              class="md-nav__link">
+              SSL setup
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
       </nav>
@@ -528,49 +929,58 @@
 
     <!-- WALLET Section -->
     <li class="md-nav__item">
-      <div class="md-nav__title">WALLET</div>
+      <div class="md-nav__title md-nav__title--primary">WALLET</div>
       <nav class="md-nav" aria-label="WALLET">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
-              
-                <li class="md-nav__item">
-                  <a href="../wallet/dashboard/" class="md-nav__link">
-                    Dashboard
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../wallet/wallet-and-transfer-guide/" class="md-nav__link">
-                    Wallet & Transfer Guide
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../wallet/pricing/" class="md-nav__link">
-                    Pricing
-                  </a>
-                </li>
-              
-            
           
-            
           
-            
           
-            
           
-            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../wallet/dashboard/"
+              class="md-nav__link">
+              Dashboard
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../wallet/wallet-and-transfer-guide/"
+              class="md-nav__link">
+              Wallet & Transfer Guide
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../wallet/pricing/"
+              class="md-nav__link">
+              Pricing
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
         </ul>
       </nav>
@@ -581,63 +991,75 @@
       <nav class="md-nav" aria-label="Additional">
         <ul class="md-nav__list">
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
           
-            
-              <li class="md-nav__item">
-                <a href="../model-licenses/" class="md-nav__link">
-                  Model licenses
-                </a>
-              </li>
-            
           
-            
-              <li class="md-nav__item">
-                <a href="../transactions-and-governance/" class="md-nav__link">
-                  Transactions & Governance
-                </a>
-              </li>
-            
           
-            
-              <li class="md-nav__item">
-                <a href="../software-upgrades/" class="md-nav__link">
-                  Software Upgrades
-                </a>
-              </li>
-            
           
-            
-              
-                <li class="md-nav__item">
-                  <a href="./" class="md-nav__link md-nav__link--active">
-                    FAQ
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../Errors/" class="md-nav__link">
-                    Errors
-                  </a>
-                </li>
-              
-                <li class="md-nav__item">
-                  <a href="../help/" class="md-nav__link">
-                    Get help
-                  </a>
-                </li>
-              
-            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../model-licenses/"
+              class="md-nav__link">
+              Model licenses
+            </a>
+          </li>
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../transactions-and-governance/"
+              class="md-nav__link">
+              Transactions & Governance
+            </a>
+          </li>
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../software-upgrades/"
+              class="md-nav__link">
+              Software Upgrades
+            </a>
+          </li>
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="./"
+              class="md-nav__link md-nav__link--active">
+              FAQ
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../Errors/"
+              class="md-nav__link">
+              Errors
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../help/"
+              class="md-nav__link">
+              Get help
+            </a>
+          </li>
+          
+          
           
         </ul>
       </nav>
@@ -645,219 +1067,225 @@
   </ul>
 
 </nav>
-        </div>
-      </div>
-    </div>
-  
-  
-    <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-      <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner">
-          
-  <nav class="md-nav md-nav--secondary" aria-label="toc.title">
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      TABLE OF CONTENTS
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-          
-            <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1" checked>
-            <label class="md-nav__link" for="__toc_1">
-              FAQ
-            </label>
-            <nav class="md-nav" aria-label="FAQ">
-              <ul class="md-nav__list">
-                
-                  <li class="md-nav__item">
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
                     
-                      <a href="#what-is-gonka" class="md-nav__link">
-                        What is Gonka?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#what-is-the-gnk-coin" class="md-nav__link">
-                        What is the GNK coin?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#what-makes-the-protocol-efficient" class="md-nav__link">
-                        What makes the protocol efficient?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#how-does-the-network-operate" class="md-nav__link">
-                        How does the network operate?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#where-can-i-find-information-on-key-management" class="md-nav__link">
-                        Where can I find information on key management?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#what-is-the-incentive-for-contributing-computational-resources" class="md-nav__link">
-                        What is the incentive for contributing computational resources?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#what-are-the-hardware-requirements" class="md-nav__link">
-                        What are the hardware requirements?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#what-if-i-want-to-stop-mining-but-still-use-my-account-when-i-come-back" class="md-nav__link">
-                        What if I want to stop mining but still use my account when I come back?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#what-types-of-changes-require-a-governance-proposal" class="md-nav__link">
-                        What types of changes require a Governance Proposal?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#who-can-create-a-governance-proposal" class="md-nav__link">
-                        Who can create a Governance Proposal?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#whats-the-difference-between-governance-proposals-and-improvement-proposals" class="md-nav__link">
-                        What’s the difference between Governance Proposals and Improvement Proposals?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#how-are-improvement-proposals-reviewed-and-approved" class="md-nav__link">
-                        How are Improvement Proposals reviewed and approved?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#can-an-improvement-proposal-lead-to-a-governance-proposal" class="md-nav__link">
-                        Can an Improvement Proposal lead to a Governance Proposal?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#how-does-the-voting-process-work" class="md-nav__link">
-                        How does the voting process work?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#how-can-i-track-the-status-of-a-governance-proposal" class="md-nav__link">
-                        How can I track the status of a Governance Proposal?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#what-happens-if-a-proposal-fails" class="md-nav__link">
-                        What happens if a proposal fails?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#how-is-governance-power-calculated-in-gonka" class="md-nav__link">
-                        How is governance power calculated in Gonka?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#why-does-gonka-require-locking-gnk-coins-for-governance-power" class="md-nav__link">
-                        Why does Gonka require locking GNK coins for governance power?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#can-governance-parameters-themselves-be-changed" class="md-nav__link">
-                        Can governance parameters themselves be changed?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#my-node-was-jailed-what-does-it-mean" class="md-nav__link">
-                        My node was jailed. What does it mean?
-                      </a>
-                    
-                  </li>
-                
-                  <li class="md-nav__item">
-                    
-                      <a href="#how-to-simulate-proof-of-compute-poc" class="md-nav__link">
-                        How to simulate Proof-of-Compute (PoC)?
-                      </a>
-                    
-                  </li>
-                
-              </ul>
-            </nav>
-          
-        </li>
-      
-    </ul>
+<nav class="md-nav md-nav--secondary" aria-label="toc.title">
+  <label class="md-nav__title" for="__toc">
+    <span class="md-nav__icon md-icon"></span>
+    TABLE OF CONTENTS
+  </label>
+  <ul class="md-nav__list" data-md-scrollfix>
     
-    <!-- READ NEXT section -->
-    <div class="md-nav__read-next">
-      <div class="md-nav__read-next-title">READ NEXT:</div>
-      <div class="md-nav__read-next-section">RUNNER</div>
-      <a href="#" class="md-nav__read-next-link">Quickstart</a>
-    </div>
-  </nav>
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc_1" checked>
+      <label class="md-nav__link" for="__toc_1">
+        FAQ
+      </label>
+      <nav class="md-nav" aria-label="FAQ">
+        <ul class="md-nav__list">
+          
+          <li class="md-nav__item">
+            
+            <a href="#what-is-gonka" class="md-nav__link">
+              What is Gonka?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#what-is-the-gnk-coin" class="md-nav__link">
+              What is the GNK coin?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#what-makes-the-protocol-efficient" class="md-nav__link">
+              What makes the protocol efficient?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#how-does-the-network-operate" class="md-nav__link">
+              How does the network operate?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#where-can-i-find-information-on-key-management" class="md-nav__link">
+              Where can I find information on key management?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#what-is-the-incentive-for-contributing-computational-resources" class="md-nav__link">
+              What is the incentive for contributing computational resources?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#what-are-the-hardware-requirements" class="md-nav__link">
+              What are the hardware requirements?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#what-if-i-want-to-stop-mining-but-still-use-my-account-when-i-come-back" class="md-nav__link">
+              What if I want to stop mining but still use my account when I come back?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#what-types-of-changes-require-a-governance-proposal" class="md-nav__link">
+              What types of changes require a Governance Proposal?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#who-can-create-a-governance-proposal" class="md-nav__link">
+              Who can create a Governance Proposal?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#whats-the-difference-between-governance-proposals-and-improvement-proposals" class="md-nav__link">
+              What’s the difference between Governance Proposals and Improvement Proposals?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#how-are-improvement-proposals-reviewed-and-approved" class="md-nav__link">
+              How are Improvement Proposals reviewed and approved?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#can-an-improvement-proposal-lead-to-a-governance-proposal" class="md-nav__link">
+              Can an Improvement Proposal lead to a Governance Proposal?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#how-does-the-voting-process-work" class="md-nav__link">
+              How does the voting process work?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#how-can-i-track-the-status-of-a-governance-proposal" class="md-nav__link">
+              How can I track the status of a Governance Proposal?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#what-happens-if-a-proposal-fails" class="md-nav__link">
+              What happens if a proposal fails?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#how-is-governance-power-calculated-in-gonka" class="md-nav__link">
+              How is governance power calculated in Gonka?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#why-does-gonka-require-locking-gnk-coins-for-governance-power" class="md-nav__link">
+              Why does Gonka require locking GNK coins for governance power?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#can-governance-parameters-themselves-be-changed" class="md-nav__link">
+              Can governance parameters themselves be changed?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#my-node-was-jailed-what-does-it-mean" class="md-nav__link">
+              My node was jailed. What does it mean?
+            </a>
+            
+          </li>
+          
+          <li class="md-nav__item">
+            
+            <a href="#how-to-simulate-proof-of-compute-poc" class="md-nav__link">
+              How to simulate Proof-of-Compute (PoC)?
+            </a>
+            
+          </li>
+          
+        </ul>
+      </nav>
+      
+    </li>
+    
+  </ul>
 
-        </div>
-      </div>
-    </div>
-  
+  <!-- READ NEXT section -->
+  <div class="md-nav__read-next">
+    <a href="/host/quickstart" class="md-nav__read-next-link">
+      <!-- <span class="md-nav__read-next-number">1.</span> -->
+      <span class="md-nav__read-next-text">Connect GPU</span>
+    </a>
+    <a href="/developer/quickstart" class="md-nav__read-next-link">
+      <!-- <span class="md-nav__read-next-number">2.</span> -->
+      <span class="md-nav__read-next-text">Use Gonka API</span>
+    </a>
+  </div>
+</nav>
 
+                  </div>
+                </div>
+              </div>
+            
+          
           
             <div class="md-content" data-md-component="content">
               
@@ -873,19 +1301,19 @@
 <h2 id="what-is-the-gnk-coin">What is the GNK coin?</h2>
 <p>GNK is the native coin of the Gonka network. It is used to incentivize participants, price resources, and ensure the sustainable growth of the network.</p>
 <h2 id="what-makes-the-protocol-efficient">What makes the protocol efficient?</h2>
-<p>Our difference from the "big players" is the pricing and the fact that, despite the size of the user, the inference is being distributed equally. To learn more, please review the <a href="https://gonka.ai/whitepaper.pdf">Whitepaper</a>.</p>
+<p>Our difference from the "big players" is the pricing and the fact that, despite the size of the user, the inference is being distributed equally. To learn more, please review the <a href="/whitepaper.pdf">Whitepaper</a>.</p>
 <h2 id="how-does-the-network-operate">How does the network operate?</h2>
 <p>The network's operation is collaborative and depends on the role you wish to take:</p>
 <ul>
-<li>As a <a href="https://gonka.ai/developer/quickstart/">Developer</a>: You can use the network's computational resources to build and deploy your AI applications.</li>
-<li>As a <a href="https://gonka.ai/host/quickstart/">Host</a>: You can contribute your computational resources to power the network. The protocol is designed to reward you for your contribution, ensuring the network's continuity and sovereignty.</li>
+<li>As a <a href="/developer/quickstart/">Developer</a>: You can use the network's computational resources to build and deploy your AI applications.</li>
+<li>As a <a href="/host/quickstart/">Host</a>: You can contribute your computational resources to power the network. The protocol is designed to reward you for your contribution, ensuring the network's continuity and sovereignty.</li>
 </ul>
 <h2 id="where-can-i-find-information-on-key-management">Where can I find information on key management?</h2>
-<p>You can find a dedicated section on <a href="https://gonka.ai/host/key-management/">Key Management</a> in the documentation. It outlines the procedures and best practices for securely managing your application's keys on the network.</p>
+<p>You can find a dedicated section on <a href="/host/key-management/">Key Management</a> in the documentation. It outlines the procedures and best practices for securely managing your application's keys on the network.</p>
 <h2 id="what-is-the-incentive-for-contributing-computational-resources">What is the incentive for contributing computational resources?</h2>
-<p>We've created a dedicated document focused on <a href="https://gonka.ai/tokenomics.pdf">Tokenomics</a>, where you can find all the information about how the incentive in being measured.</p>
+<p>We've created a dedicated document focused on <a href="/tokenomics.pdf">Tokenomics</a>, where you can find all the information about how the incentive in being measured.</p>
 <h2 id="what-are-the-hardware-requirements">What are the hardware requirements?</h2>
-<p>You can find the minimum and recommended <a href="https://gonka.ai/host/hardware-specifications/">hardware specifications</a> clearly outlined in the documentation. You should review this section to ensure your hardware meets the requirements for effective contribution.</p>
+<p>You can find the minimum and recommended <a href="/host/hardware-specifications/">hardware specifications</a> clearly outlined in the documentation. You should review this section to ensure your hardware meets the requirements for effective contribution.</p>
 <h2 id="what-if-i-want-to-stop-mining-but-still-use-my-account-when-i-come-back">What if I want to stop mining but still use my account when I come back?</h2>
 <p>To restore a Network Node in the future, it will be sufficient to back up:</p>
 <ul>
@@ -904,7 +1332,7 @@
 <li>Any other actions that must be approved and executed via the governance module</li>
 </ul>
 <h2 id="who-can-create-a-governance-proposal">Who can create a Governance Proposal?</h2>
-<p>Anyone with a valid governance key (cold account) can pay the required fee and create a Governance Proposal. However, each proposal must still be approved by active participants through PoC-weighted voting. Proposers are encouraged to discuss significant changes off-chain first (for example, via <a href="https://github.com/gonka-ai">GitHub</a> or <a href="https://discord.com/invite/kFFVWtNYjs">community forums</a>) to increase the likelihood of approval. See <a href="https://gonka.ai/transactions-and-governance/">the full guide</a>.</p>
+<p>Anyone with a valid governance key (cold account) can pay the required fee and create a Governance Proposal. However, each proposal must still be approved by active participants through PoC-weighted voting. Proposers are encouraged to discuss significant changes off-chain first (for example, via <a href="https://github.com/gonka-ai">GitHub</a> or <a href="https://discord.com/invite/kFFVWtNYjs">community forums</a>) to increase the likelihood of approval. See <a href="/transactions-and-governance/">the full guide</a>.</p>
 <h2 id="whats-the-difference-between-governance-proposals-and-improvement-proposals">What’s the difference between Governance Proposals and Improvement Proposals?</h2>
 <p>Governance Proposals → on-chain proposals. Used for changes that directly affect the network and require on-chain voting. Examples:</p>
 <ul>
@@ -923,12 +1351,8 @@
 <ul>
 <li>Create a Markdown proposal in the <a href="https://github.com/gonka-ai/gonka/tree/main/proposals">/proposals</a> folder.</li>
 <li>Open a Pull Request with your proposal.</li>
-<li>Community review:
-        - Active contributors and maintainers discuss the proposal in the PR thread.
-        - Feedback, suggestions, and refinements are discussed openly.</li>
-<li>Approval and merge:
-        - If the community agrees, the PR is merged.
-        - Approved proposals become part of the official community roadmap.</li>
+<li>Community review: - Active contributors and maintainers discuss the proposal in the PR thread. - Feedback, suggestions, and refinements are discussed openly.</li>
+<li>Approval and merge: - If the community agrees, the PR is merged. - Approved proposals become part of the official community roadmap.</li>
 </ul>
 <h2 id="can-an-improvement-proposal-lead-to-a-governance-proposal">Can an Improvement Proposal lead to a Governance Proposal?</h2>
 <p>Yes. Often, an Improvement Proposal is used to explore ideas and gather consensus before drafting a Governance Proposal. For example:</p>
@@ -955,8 +1379,8 @@
 </li>
 <li>If quorum and thresholds are met, the proposal passes and executes automatically via the governance module</li>
 </ul>
-<p>To vote, you can use the command below. This example votes yes, but you can replace it with your preferred option (<code>yes</code>, <code>no</code>, <code>no_with_veto</code>, <code>abstain</code>):
-</p><div class="highlight"><pre><span></span><code>./inferenced tx gov vote 2 yes \
+<p>To vote, you can use the command below. This example votes yes, but you can replace it with your preferred option (<code>yes</code>, <code>no</code>, <code>no_with_veto</code>, <code>abstain</code>):</p>
+<div class="highlight"><pre><span></span><code>./inferenced tx gov vote 2 yes \
       --from &lt;cold_key_name&gt; \
       --keyring-backend file \
       --unordered \
@@ -966,8 +1390,8 @@
       --yes
 </code></pre></div>
 <h2 id="how-can-i-track-the-status-of-a-governance-proposal">How can I track the status of a Governance Proposal?</h2>
-<p>You can query the proposal status at any time using the CLI:
-</p><div class="highlight"><pre><span></span><code>export NODE_URL=http://47.236.19.22:18000
+<p>You can query the proposal status at any time using the CLI:</p>
+<div class="highlight"><pre><span></span><code>export NODE_URL=http://47.236.19.22:18000
 ./inferenced query gov tally 2 -o json --node $NODE_URL/chain-rpc/
 </code></pre></div>
 <h2 id="what-happens-if-a-proposal-fails">What happens if a proposal fails?</h2>
@@ -981,11 +1405,9 @@
 <p>Gonka uses a PoC-weighted voting model:</p>
 <ul>
 <li>Proof-of-Compute (PoC): Voting power is proportional to your verified compute contribution.</li>
-<li>Collateral commitment:<ul>
+<li>Collateral commitment:</li>
 <li>20% of PoC-derived voting weight is activated automatically.</li>
 <li>To unlock the remaining 80%, you must lock GNK coins as collateral.</li>
-</ul>
-</li>
 <li>This ensures that governance influence reflects real compute work + economic collateral.</li>
 </ul>
 <p>For the first 180 epochs (approximately 6 months), new participants can participate in governance and earn voting weight through PoC alone, without collateral requirements. During this period, the full governance rights are available, while voting weight remains tied to verified compute activity.</p>
@@ -994,8 +1416,8 @@
 <h2 id="can-governance-parameters-themselves-be-changed">Can governance parameters themselves be changed?</h2>
 <p>Yes. All key governance rules — quorum, majority threshold, and veto threshold — are on-chain configurable and can be updated via Governance Proposals. This allows the network to evolve decision-making rules as participation patterns and compute economic changes.</p>
 <h2 id="my-node-was-jailed-what-does-it-mean">My node was jailed. What does it mean?</h2>
-<p>If the validator hasn't participated in signing blocks for 50 blocks in a row, it becomes jailed for a short period of time (about 15 min). It doesn't prevent getting the reward for inference if there were no issues with that detected. So, the reward is not lost. After a short period (15 min currently), nodes can be unjailed. You should use the cold key to set unjail transactions:
-</p><div class="highlight"><pre><span></span><code>export NODE_URL=http://47.236.19.22:18000
+<p>If the validator hasn't participated in signing blocks for 50 blocks in a row, it becomes jailed for a short period of time (about 15 min). It doesn't prevent getting the reward for inference if there were no issues with that detected. So, the reward is not lost. After a short period (15 min currently), nodes can be unjailed. You should use the cold key to set unjail transactions:</p>
+<div class="highlight"><pre><span></span><code>export NODE_URL=http://47.236.19.22:18000
  ./inferenced tx slashing unjail \
     --from &lt;cold_key_name&gt; \
     --keyring-backend file \
@@ -1005,17 +1427,17 @@
     --fees 200000ngonka \
     --node $NODE_URL/chain-rpc/
 </code></pre></div>
-Then, to check if the node was unjailed:
+<p>Then, to check if the node was unjailed:</p>
 <div class="highlight"><pre><span></span><code> ./inferenced query staking delegator-validators \
     &lt;cold_key_addr&gt; \
     --node $NODE_URL/chain-rpc/
 </code></pre></div>
-When a node is jailed, it shows <code>jailed: true</code>.
+<p>When a node is jailed, it shows <code>jailed: true</code>.</p>
 <h2 id="how-to-simulate-proof-of-compute-poc">How to simulate Proof-of-Compute (PoC)?</h2>
 <p>At the start of the PoC phase, <code>ap</code>i container sends POST <code>/v1/pow/init/generate request</code> <a href="https://github.com/gonka-ai/gonka/blob/312044d28c7170d7f08bf88e41427396f3b95817/mlnode/packages/pow/src/pow/service/routes.py#L32">https://github.com/gonka-ai/gonka/blob/312044d28c7170d7f08bf88e41427396f3b95817/mlnode/packages/pow/src/pow/service/routes.py#L32</a></p>
 <p>The next model params are used for PoC: <a href="https://github.com/gonka-ai/gonka/blob/312044d28c7170d7f08bf88e41427396f3b95817/mlnode/packages/pow/src/pow/models/utils.py#L41">https://github.com/gonka-ai/gonka/blob/312044d28c7170d7f08bf88e41427396f3b95817/mlnode/packages/pow/src/pow/models/utils.py#L41</a></p>
-<p>There is a request to start PoC with <code>curl</code>:
-</p><div class="highlight"><pre><span></span><code>curl -X POST "${PORT:-8080}:8080"/api/v1/pow/init/generate" \
+<p>There is a request to start PoC with <code>curl</code>:</p>
+<div class="highlight"><pre><span></span><code>curl -X POST "${PORT:-8080}:8080"/api/v1/pow/init/generate" \
   -H "Content-Type: application/json" \
   -d '{
     "node_id": 0,
@@ -1042,10 +1464,10 @@ When a node is jailed, it shows <code>jailed: true</code>.
     "url": "http://api:9100"
   }'
 </code></pre></div>
-The value of <code>DAPI_API__POC_CALLBACK_URL</code> is used for the field <code>url</code>. Use a real one to test the network setup.
+<p>The value of <code>DAPI_API__POC_CALLBACK_URL</code> is used for the field <code>url</code>. Use a real one to test the network setup.</p>
 <p>Send this request to <code>8080</code> port of MLNode's proxy container or directly to MLNode's <code>8080</code> <a href="https://github.com/gonka-ai/gonka/blob/312044d28c7170d7f08bf88e41427396f3b95817/deploy/join/docker-compose.mlnode.yml#L26">https://github.com/gonka-ai/gonka/blob/312044d28c7170d7f08bf88e41427396f3b95817/deploy/join/docker-compose.mlnode.yml#L26</a></p>
-<p>If the test runs successfully, you will see logs similar to the following:
-</p><div class="highlight"><pre><span></span><code>2025-08-25 20:53:33,568 - pow.compute.controller - INFO - Created 4 GPU groups:
+<p>If the test runs successfully, you will see logs similar to the following:</p>
+<div class="highlight"><pre><span></span><code>2025-08-25 20:53:33,568 - pow.compute.controller - INFO - Created 4 GPU groups:
 2025-08-25 20:53:33,568 - pow.compute.controller - INFO -   Group 0: GpuGroup(devices=[0], primary=0) (VRAM: 79.2GB)
 2025-08-25 20:53:33,568 - pow.compute.controller - INFO -   Group 1: GpuGroup(devices=[1], primary=1) (VRAM: 79.2GB)
 2025-08-25 20:53:33,568 - pow.compute.controller - INFO -   Group 2: GpuGroup(devices=[2], primary=2) (VRAM: 79.2GB)
@@ -1055,17 +1477,25 @@ The value of <code>DAPI_API__POC_CALLBACK_URL</code> is used for the field <code
 2025-08-25 20:53:34,151 - pow.compute.controller - INFO - Using batch size: 247 for GPU group [2]
 2025-08-25 20:53:34,353 - pow.compute.controller - INFO - Using batch size: 247 for GPU group [3]
 </code></pre></div>
-Then the service will start sending generated nonces to <code>DAPI_API__POC_CALLBACK_URL</code>
+<p>Then the service will start sending generated nonces to <code>DAPI_API__POC_CALLBACK_URL</code></p>
 <div class="highlight"><pre><span></span><code>2025-08-25 20:54:58,822 - pow.service.sender - INFO - Sending generated batch to http://api:9100/
 </code></pre></div>
-For this test, the MLNode should <strong>not</strong> be registered as an active participant in the API node. 
+<p>For this test, the MLNode should <strong>not</strong> be registered as an active participant in the API node.</p>
 <p>If your node is not active yet, you can achieve the correct behavior by temporarily pausing the API container before running the test, and unpausing it afterward.</p>
-<p>1) Pause the API container:
-</p><div class="highlight"><pre><span></span><code>docker pause api
+<ol>
+<li>Pause the API container:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker pause api
 </code></pre></div>
-2) Run the test.
-<p>3) Unpause the API container:
-</p><div class="highlight"><pre><span></span><code>docker unpause api
+<ol>
+<li>
+<p>Run the test.</p>
+</li>
+<li>
+<p>Unpause the API container:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker unpause api
 </code></pre></div></div>
 
 
@@ -1096,52 +1526,54 @@ For this test, the MLNode should <strong>not</strong> be registered as an active
 </button>
         
       </main>
-      
-
-  <!-- Footer -->
+         <!-- Footer -->
 <footer class="landing-footer">
   <div class="footer-wrap">
     <div class="footer-brand">
-      <span class="footer-logo">Gonka</span>
+      <a href="/" class="footer-logo">
+        <img src="/images/icons/gonka-logo.svg" alt="Gonka" width="99" height="23" />
+      </a>
+      <a href="https://what-is-gonka.hashnode.dev/" target="_blank" class="footer-link-blog">Blog</a>
     </div>
     <div class="footer-links">
       <div class="footer-col">
         <h4>Protocol</h4>
-        <a href="#">Whitepaper</a>
-        <a href="#">Transformer-Based-Proof-of-Work</a>
+        <a href="/whitepaper.pdf" target="_blank">Whitepaper</a>
+        <a href="/pow-security-analysis.pdf" target="_blank">Transformer-Based-Proof-of-Work</a>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
-        <a href="#">Gonka Protocol License</a>
-        <a href="#">Patents</a>
+        <a href="/protocol-license.pdf" target="_blank">Gonka Protocol License</a>
+        <!-- <a href="/patents.pdf" target="_blank">Patents</a> -->
       </div>
     </div>
   </div>
   <div class="footer-bottom">
     <div class="footer-socials">
-      <a href="#" class="footer-social" aria-label="Github">
+      <a href="https://github.com/gonka-ai/gonka/" class="footer-social" target="_blank" aria-label="Github">
         <img src="/images/icons/github.svg" alt="Github" width="25" height="25" />
       </a>
-      <a href="#" class="footer-social" aria-label="Discord">
+      <a href="https://discord.com/invite/RADwCT2U6R" class="footer-social" target="_blank" aria-label="Discord">
         <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25" />
       </a>
-      <a href="#" class="footer-social" aria-label="Mail">
+      <a href="mailto:hello@productscience.ai" class="footer-social" target="_blank" aria-label="Mail">
         <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25" />
       </a>
-      <a href="#" class="footer-social" aria-label="X">
+      <a href="https://x.com/gonka_ai" class="footer-social" target="_blank" aria-label="X">
         <img src="/images/icons/twitter.svg" alt="X" width="25" height="25" />
       </a>
+      <!-- <a href="https://t.me/Gonka_AI" class="footer-social" target="_blank" aria-label="Telegram">
+        <img src="/images/icons/telegram.svg" alt="Telegram" width="25" height="25" />
+      </a> -->
     </div>
 
     <div class="footer-bottom-links">
-      <a href="#" class="footer-link">Help</a>
-      <a href="#" class="footer-link">Transactions & Governance</a>
-      <a href="#" class="footer-link">Terms & Policies</a>
+      <a href="/help" class="footer-link">Help</a>
+      <a href="/transactions-and-governance" class="footer-link">Transactions & Governance</a>
+      <!-- <a href="#" class="footer-link">Terms & Policies</a> -->
     </div>
   </div>
-</footer>
-
-
+</footer>   
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -1151,10 +1583,10 @@ For this test, the MLNode should <strong>not</strong> be registered as an active
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../js/links.js"></script>
       
@@ -1171,6 +1603,18 @@ For this test, the MLNode should <strong>not</strong> be registered as an active
         <script src="../javascripts/mobile-menu.js"></script>
       
         <script src="../javascripts/announcement.js"></script>
+      
+        <script src="../javascripts/code-copy.js"></script>
+      
+        <script src="../javascripts/language-selector.js"></script>
+      
+        <script src="../javascripts/header-links.js"></script>
+      
+        <script src="../javascripts/faq.js"></script>
+      
+        <script src="../javascripts/ios-long-press-fix.js"></script>
+      
+        <script src="../javascripts/disclaimer.js"></script>
       
     
   </body>

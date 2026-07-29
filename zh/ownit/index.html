@@ -1,0 +1,1276 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn to configure and use Gonka network">
+      
+      
+      
+        <link rel="canonical" href="https://gonka.me/zh/ownit/">
+      
+      
+        <link rel="prev" href="../mineit/">
+      
+      
+        <link rel="next" href="../useit/">
+      
+      
+        
+          <link rel="alternate" href="../../ownit/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../../images/01-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Ownit - </title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manrope:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Manrope";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JWVG5X6CY5"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JWVG5X6CY5",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JWVG5X6CY5",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+        
+<!-- Google Fonts Preconnect for faster loading -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter+Display:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Geist:wght@100;200;300;400;500;600;700;800;900&display=swap"
+  rel="stylesheet"
+/>
+<meta property="og:type" content="website" />
+<meta property="og:title" content=" - Ownit" />
+<meta property="og:description" content="Learn to configure and use Gonka network" />
+<meta property="og:url" content="https://gonka.me/zh/ownit/" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="568" />
+<!-- Prevent theme flash: apply theme immediately before render -->
+<script>
+  (function () {
+    try {
+      var savedScheme = localStorage.getItem("data-md-color-scheme");
+      if (savedScheme) {
+        // Apply to both html and body immediately
+        document.documentElement.setAttribute(
+          "data-md-color-scheme",
+          savedScheme,
+        );
+        if (document.body) {
+          document.body.setAttribute("data-md-color-scheme", savedScheme);
+        } else {
+          // If body doesn't exist yet, wait for it
+          document.addEventListener("DOMContentLoaded", function () {
+            document.body.setAttribute("data-md-color-scheme", savedScheme);
+            // Trigger Material theme update if function exists
+            if (typeof __md_set !== "undefined") {
+              __md_set("__palette", { color: { scheme: savedScheme } });
+            }
+          });
+        }
+        // Try to trigger Material theme update immediately
+        if (typeof __md_set !== "undefined") {
+          __md_set("__palette", { color: { scheme: savedScheme } });
+        }
+      } else {
+        // Default to light theme
+        var defaultScheme = "default";
+        document.documentElement.setAttribute(
+          "data-md-color-scheme",
+          defaultScheme,
+        );
+        if (document.body) {
+          document.body.setAttribute("data-md-color-scheme", defaultScheme);
+        }
+      }
+      if (sessionStorage.getItem("gonkaDisclaimerCollapsed") === "true") {
+        document.documentElement.classList.add("gonka-disclaimer-collapsed");
+      }
+    } catch (e) {}
+  })();
+</script>
+<style>
+  /* Prevent white flash on page load - apply immediately */
+  html:not([data-md-color-scheme]) {
+    background-color: #fff;
+  }
+
+  html[data-md-color-scheme="slate"] {
+    background-color: #1a1a1a;
+  }
+
+  html[data-md-color-scheme="slate"] body {
+    background-color: #1a1a1a;
+  }
+
+  /* Force theme colors to apply immediately */
+  html[data-md-color-scheme="slate"] {
+    color-scheme: dark;
+  }
+
+  html[data-md-color-scheme="default"] {
+    color-scheme: light;
+  }
+</style>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+        
+    <div class="md-container" data-md-component="container">
+      
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<!-- Main navigation -->
+<nav class="md-nav md-nav--primary" aria-label="nav.title" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title=""
+      class="md-nav__button md-logo" aria-label="" data-md-component="logo">
+      
+  <img src="../../images/logos/gonka.svg" alt="logo">
+
+    </a>
+    
+  </label>
+
+  <!-- Custom navigation sections -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    <!-- DOCS Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title md-nav__title--first-child md-nav__title--primary">DOCS</div>
+      <nav class="md-nav" aria-label="DOCS">
+        <ul class="md-nav__list">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../introduction/"
+              class="md-nav__link">
+              介绍
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- DEVELOPER Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title md-nav__title--primary">DEVELOPER
+      </div>
+      <nav class="md-nav" aria-label="DEVELOPER">
+        <ul class="md-nav__list">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../developer/quickstart/"
+              class="md-nav__link">
+              快速上手
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../developer/details/"
+              class="md-nav__link">
+              细节
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- PARTICIPANT Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title md-nav__title--primary">PARTICIPANT
+      </div>
+      <nav class="md-nav" aria-label="PARTICIPANT">
+        <ul class="md-nav__list">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../host/quickstart/"
+              class="md-nav__link">
+              快速上手
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/multiple-nodes/"
+              class="md-nav__link">
+              多节点
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/network-node-api/"
+              class="md-nav__link">
+              网络节点 API
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/key-management/"
+              class="md-nav__link">
+              密钥管理
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/access-account/"
+              class="md-nav__link">
+              访问账户
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/benchmark-to-choose-optimal-deployment-config-for-llms/"
+              class="md-nav__link">
+              LLM 部署配置基准
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/hardware-specifications/"
+              class="md-nav__link">
+              硬件规格
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/genesis/"
+              class="md-nav__link">
+              创世
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/validator_info/"
+              class="md-nav__link">
+              编辑验证者公开信息
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../host/optional-ssl-setup/"
+              class="md-nav__link">
+              SSL 设置
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- WALLET Section -->
+    <li class="md-nav__item">
+      <div class="md-nav__title md-nav__title--primary">WALLET</div>
+      <nav class="md-nav" aria-label="WALLET">
+        <ul class="md-nav__list">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../wallet/dashboard/"
+              class="md-nav__link">
+              仪表盘
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../wallet/wallet-and-transfer-guide/"
+              class="md-nav__link">
+              钱包与转账指南
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../wallet/pricing/"
+              class="md-nav__link">
+              价格
+            </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </ul>
+      </nav>
+    </li>
+
+    <!-- Additional links -->
+    <li class="md-nav__item">
+      <nav class="md-nav" aria-label="Additional">
+        <ul class="md-nav__list">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../model-licenses/"
+              class="md-nav__link">
+              模型许可
+            </a>
+          </li>
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../transactions-and-governance/"
+              class="md-nav__link">
+              交易与治理
+            </a>
+          </li>
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../software-upgrades/"
+              class="md-nav__link">
+              软件升级
+            </a>
+          </li>
+          
+          
+          
+          
+          <li class="md-nav__item">
+            <a href="../FAQ/"
+              class="md-nav__link">
+              常见问题
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../Errors/"
+              class="md-nav__link">
+              错误
+            </a>
+          </li>
+          
+          <li class="md-nav__item">
+            <a href="../help/"
+              class="md-nav__link">
+              获取支持
+            </a>
+          </li>
+          
+          
+          
+        </ul>
+      </nav>
+    </li>
+  </ul>
+
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="infra-page">
+
+  <!-- Yellow Top Banner -->
+  <div class="yellow-banner">
+    <p class="yellow-banner-text">Kimi K and MiniMax models are now available</p>
+    <button class="banner-close">
+      <img src="/images/icons/x-mark.svg" alt="close" width="16" height="16">
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="landing-header">
+    <div class="header-wrap">
+    <div class="nav-section">
+      <a href="/" class="logo-section">
+        <img src="/images/logos/gonka.svg" alt="Gonka" width="40" height="40" class="logo-light">
+        <img src="/images/logos/dark-gonka.svg" alt="Gonka" width="40" height="40" class="logo-dark">
+      </a>
+
+      <nav class="main-nav">
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="developers">
+            <span class="nav-text">Developers</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="developers">
+            <a href="/developer/quickstart" class="dropdown-link">Quickstart</a>
+            <a href="/developer/details" class="dropdown-link">Details</a>
+          </div>
+        </div>
+
+        <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="miners">
+            <span class="nav-text">miners</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="miners">
+            <a href="/host/quickstart" class="dropdown-link">Quickstart</a>
+            <a href="/host/multiple-nodes" class="dropdown-link">Multiple nodes</a>
+            <a href="/host/network-node-api" class="dropdown-link">Network Node API</a>
+            <a href="/host/key-management" class="dropdown-link">Key Management</a>
+            <a href="/host/access-account" class="dropdown-link">Access account</a>
+            <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+            <a href="/host/hardware-specifications" class="dropdown-link">Hardware Specifications</a>
+            <a href="/host/genesis" class="dropdown-link">Genesis</a>
+            <a href="/host/validator_info" class="dropdown-link">How to edit validator public info</a>
+            <a href="/host/optional-ssl-setup" class="dropdown-link">SSL setup</a>
+          </div>
+        </div>
+
+        <!-- <div class="nav-item-dropdown">
+          <a href="#" class="nav-item" data-dropdown="tokenomics">
+            <span class="nav-text">tokenomics</span>
+            <span class="nav-icon">+</span>
+          </a>
+          <div class="dropdown-menu" id="tokenomics">
+            <a href="/tokenomics.pdf" class="dropdown-link">Tokenomics and more</a>
+          </div>
+        </div> -->
+
+        <a href="/introduction" class="nav-item nav-item-link">
+          <span class="nav-text">documentations</span>
+          <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewbox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"></path>
+          </svg>
+        </a>
+      </nav>
+      </div>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+
+      <div class="header-actions">
+        <div class="theme-toggle">
+          <button class="theme-btn theme-btn-sun" data-theme="default">
+            <img src="/images/icons/light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-light">
+            <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="18" height="18" class="sun-icon-dark">
+          </button>
+          <button class="theme-btn theme-btn-moon" data-theme="slate">
+            <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="18" height="18">
+          </button>
+        </div>
+        <div class="buy-gnk-wrapper">
+          <button class="buy-gnk-btn" onclick="return false;">
+            buy gnk
+            <svg width="6" height="6" viewbox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"></path>
+            </svg>
+          </button>
+
+          <div class="gnk-exchanges-dropdown mobile-gnk-exchanges-dropdown" role="menu">
+            <p class="gnk-exchanges-note mobile-gnk-exchanges-note">At the moment, there are no official GNK buying or selling methods provided by the team. Below are services and solutions created and maintained by community members.</p>
+            <a href="https://hex.exchange/otc/gonka38261660" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">HEX OTC</a>
+            <a href="https://exchange.gonka.markets/app?chart_source=external&amp;chart_tf=1d" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka Markets</a>
+            <a href="https://gonka.vip/?ref=gnk" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka VIP</a>
+            <a href="https://safetrade.com/exchange/GNK-USDT?type=basic" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">SafeTrade</a>
+          </div>
+
+        </div>
+        <a href="https://x.com/gonka_ai" target="_blank" class="join-btn">join today</a>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <!-- Mobile Menu Close Button -->
+    <button class="mobile-menu-close" id="mobile-menu-close">
+      <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </button>
+
+    <div class="mobile-menu-content">
+      <div class="mobile-nav-section">
+        <div class="mobile-nav-item-dropdown">
+          <a href="#" class="mobile-nav-item" data-mobile-dropdown="developers">
+            <span class="mobile-nav-text">Developers</span>
+            <span class="mobile-nav-icon">+</span>
+          </a>
+          <div class="mobile-dropdown-menu" id="mobile-developers">
+            <a href="/developer/quickstart" class="mobile-dropdown-link">Quickstart</a>
+            <a href="/developer/details" class="mobile-dropdown-link">Details</a>
+          </div>
+        </div>
+
+        <div class="mobile-nav-item-dropdown">
+          <a href="#" class="mobile-nav-item" data-mobile-dropdown="miners">
+            <span class="mobile-nav-text">miners</span>
+            <span class="mobile-nav-icon">+</span>
+          </a>
+          <div class="mobile-dropdown-menu" id="mobile-miners">
+            <a href="/host/quickstart" class="mobile-dropdown-link">Quickstart</a>
+            <a href="/host/multiple-nodes" class="mobile-dropdown-link">Multiple nodes</a>
+            <a href="/host/network-node-api" class="mobile-dropdown-link">Network Node API</a>
+            <a href="/host/key-management" class="mobile-dropdown-link">Key Management</a>
+            <a href="/host/access-account" class="mobile-dropdown-link">Access account</a>
+            <a href="/host/benchmark-to-choose-optimal-deployment-config-for-llms" class="mobile-dropdown-link">Benchmark to Choose Optimal Deployment Config for LLMs</a>
+            <a href="/host/hardware-specifications" class="mobile-dropdown-link">Hardware Specifications</a>
+            <a href="/host/genesis" class="mobile-dropdown-link">Genesis</a>
+            <a href="/host/validator_info" class="mobile-dropdown-link">How to edit validator public info</a>
+            <a href="/host/optional-ssl-setup" class="mobile-dropdown-link">SSL setup</a>
+          </div>
+        </div>
+
+        <!-- <div class="mobile-nav-item-dropdown">
+          <a href="#" class="mobile-nav-item" data-mobile-dropdown="tokenomics">
+            <span class="mobile-nav-text">tokenomics</span>
+            <span class="mobile-nav-icon">+</span>
+          </a>
+          <div class="mobile-dropdown-menu" id="mobile-tokenomics">
+            <a href="/tokenomics.pdf" class="mobile-dropdown-link">Tokenomics and more</a>
+          </div>
+        </div> -->
+
+        <a href="/introduction" class="mobile-nav-item mobile-nav-item-link">
+          <span class="mobile-nav-text">documentations</span>
+          <svg style="margin-bottom: 12px; margin-left: 4px;" width="6" height="6" viewbox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Actions -->
+      <div class="mobile-menu-actions">
+        <div class="mobile-theme-toggle">
+          <button class="mobile-theme-btn mobile-theme-btn-sun" data-theme="default">
+            <img src="/images/icons/light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-light">
+            <img src="/images/icons/dark-light-theme.svg" alt="Light theme" width="16" height="16" class="mobile-sun-icon-dark">
+          </button>
+          <button class="mobile-theme-btn mobile-theme-btn-moon" data-theme="slate">
+            <img src="/images/icons/dark-theme.svg" alt="Dark theme" width="16" height="16">
+          </button>
+        </div>
+
+        <div class="mobile-buttons-group">
+          <div class="mobile-buy-gnk-wrapper">
+            <button class="mobile-buy-gnk-btn" onclick="return false;">
+              buy gnk 
+              <svg width="6" height="6" viewbox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.0285645 1.00439H5.0006M5.0006 1.00439L5.0006 6.0006M5.0006 1.00439L0.503296 5.5006" stroke-width="1.3" stroke-linejoin="bevel"></path>
+              </svg>
+            </button>
+
+            <div class="gnk-exchanges-dropdown mobile-gnk-exchanges-dropdown" role="menu">
+              <p class="gnk-exchanges-note mobile-gnk-exchanges-note">At the moment, there are no official GNK buying or selling methods provided by the team. Below are services and solutions created and maintained by community members.</p>
+              <a href="https://hex.exchange/otc/gonka38261660" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">HEX OTC</a>
+              <a href="https://exchange.gonka.markets/app?chart_source=external&amp;chart_tf=1d" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka Markets</a>
+              <a href="https://gonka.vip/?ref=gnk" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">Gonka VIP</a>
+              <a href="https://safetrade.com/exchange/GNK-USDT?type=basic" target="_blank" rel="noopener noreferrer" class="gnk-exchange-link mobile-gnk-exchange-link" role="menuitem">SafeTrade</a>
+            </div>
+
+          </div>
+
+        <a href="https://x.com/gonka_ai" target="_blank" class="mobile-join-btn">join today</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="ownit-hero">
+  <div class="ownit-hero__container">
+    <div class="infra-header ownit-hero__header">
+      <div class="infra-badge">
+        <img class="infra-badge__icon" src="/images/icons/glob.svg" alt="Glob">
+        <span class="infra-badge__text">Gonka.ai — a network that belongs to everyone</span>
+      </div>
+
+      <h1 class="main-title">
+        <span>GONKA</span> — YOUR SHARE IN THE<br>
+        FUTURE OF AI
+      </h1>
+
+      <p class="infra-header__subtitle">
+        Here, the GNK coin is not just a speculative asset. It is your share in the<br>
+        future of artificial intelligence.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Who Gonka Is Built For Section -->
+<section class="ownit-for section-offset">
+  <div class="ownit-for__container">
+    <h2 class="ownit-for__title title title--center title--sm">
+      Who Gonka Is Built For
+      <img class="title__icon" src="/images/icons/subtracts.svg" alt="">
+    </h2>
+
+    <div class="ownit-for__cards">
+      <div class="ownit-for__card">
+        <h3 class="ownit-for__card-title">
+          AI Developers <br>
+          and Creators.
+        </h3>
+        <p class="ownit-for__card-text">
+          You need powerful models like Qwen3-235B for inference, but cloud
+          giants overcharge and lock you into their ecosystems. GONKA provides
+          an OpenAI-compatible API through a decentralized GPU network
+          worldwide, connecting you directly with compute providers.
+        </p>
+      </div>
+
+      <div class="ownit-for__card">
+        <h3 class="ownit-for__card-title">
+          GPU <br>
+          Owners
+        </h3>
+        <p class="ownit-for__card-text">
+          GPU owners willing to contribute computing power. Your hardware sits
+          idle between projects. Connect it to GONKA, run real AI tasks from
+          users, and earn GNK for every computation cycle. No useless
+          proof-of-work — only meaningful work that powers the network.
+        </p>
+      </div>
+
+      <div class="ownit-for__card">
+        <h3 class="ownit-for__card-title">
+          Coin <br>
+          Holders
+        </h3>
+        <p class="ownit-for__card-text">
+          Coin holders seeking exposure to AI growth. GNK reflects the total
+          computational capacity of the network. As new nodes join and demand
+          increases, your coins retain utility by granting access to compute at
+          any time.
+        </p>
+      </div>
+    </div>
+
+    <div class="ownit-for__note important-note">
+      <div class="badge">
+        <div class="badge__text">Important</div>
+        <svg class="badge__icon" viewbox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.6" d="M4.99023 0L15.6113 27.4434H10.6211L0 0H4.99023Z"></path>
+          <path opacity="0.4" d="M12.8662 0C13.3812 9.4258e-05 13.8433 0.31664 14.0293 0.796875L23.6846 25.7461C24.0009 26.5635 23.3979 27.4432 22.5215 27.4434H19.3516L8.73047 0H12.8662Z"></path>
+        </svg>
+      </div>
+
+      <div class="important-note__text">
+        <p>Gonka does not guarantee financial returns or token price growth.</p>
+        <p>The coin's value depends on the scale of network adoption.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Our Philosophy — text left, image right -->
+<section class="ownit-section ownit-section--philosophy section-offset">
+  <div class="ownit-section__container">
+
+    <div class="ownit-section__content">
+      <h2 class="ownit-section__title title title--sm">Our Philosophy</h2>
+      <div class="ownit-section__texts">
+        <p class="ownit-section__text">Today, access to powerful AI computing is determined by your bank account.</p>
+        <p class="ownit-section__text">Gonka changes that.</p>
+        <p class="ownit-section__text">GONKA is an infrastructure where computing power is distributed among people, not concentrated in the hands of a few.</p>
+        <p class="ownit-section__text">It's a network that belongs to no one and simultaneously belongs to everyone who participates in it.</p>
+      </div>
+      <div class="ownit-section__quote">
+        <p>AI should belong to everyone. Not corporations. Not governments. Not those with the most money. Everyone.</p>
+      </div>
+    </div>
+
+    <div class="ownit-section__media">
+      <img class="ownit-section__img" src="/images/ai-gnk.png" alt="AI GNK">
+    </div>
+
+  </div>
+</section>
+
+<!-- Section 2: What It Means To Own GNK — image left, text right -->
+<section class="ownit-section ownit-section--own section-offset">
+  <div class="ownit-section__container">
+
+    <div class="ownit-section__media">
+      <img class="ownit-section__img" src="/images/gnk-miner.png" alt="Miner GNK">
+    </div>
+
+    <div class="ownit-section__content">
+      <h2 class="ownit-section__title title title--sm">What It Means <br> To Own GNK</h2>
+      <div class="ownit-section__texts">
+        <p class="ownit-section__text">GONKA coins are more than just a speculative asset. They represent a share of the network's real computing power—today and in the future.</p>
+        <p class="ownit-section__text">As the network grows, so does the amount of computing power it produces.</p>
+        <p class="ownit-section__text">Each coin is a key to accessing an ever-increasing amount of computation.</p>
+      </div>
+      <div class="ownit-section__quote">
+        <p>By owning GNK, you control the AI computing of the future.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Three ways to participate in GONKA -->
+<section class="infra-steps section-offset">
+  <div class="infra-steps__container">
+    <div class="infra-steps__header">
+      <h2 class="title title--center title--sm">Three ways to participate in GONKA</h2>
+
+      <p class="infra-steps__subtitle">
+        Start simple and go deeper. Every step strengthens <br> your connection with the network.
+      </p>
+    </div>
+
+    <div class="infra-steps__cards infra-steps__cards--own">
+      <div class="infra-steps__card">
+        <div class="infra-steps__card-top">
+          <span class="infra-steps__card-num">01</span>
+          <img class="infra-steps__card-img" src="/images/coin-selling.png" alt="">
+        </div>
+        <h3 class="infra-steps__card-title">Use GNK</h3>
+        <div class="infra-steps__card-content">
+          <p class="infra-steps__card-text">
+           Spend GNK on AI inference right now.
+          </p>
+          <p class="infra-steps__card-text">
+           Pay miners for computations and gain access to powerful AI without subscriptions, corporations, or intermediaries.
+          </p>
+          <p class="infra-steps__card-text">
+           For $1 on GONKA, you get what OpenAI charges $100 for. The rest is yours.
+          </p>
+        </div>
+      </div>
+
+      <div class="infra-steps__card">
+        <div class="infra-steps__card-top">
+          <span class="infra-steps__card-num">02</span>
+          <img class="infra-steps__card-img" src="/images/coin-holding.png" alt="">
+        </div>
+        <h3 class="infra-steps__card-title">Hold GNK</h3>
+        <div class="infra-steps__card-content">
+          <p class="infra-steps__card-text">
+           Compute is currency of the future that you can use or sell any time you need.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="infra-steps__card">
+        <div class="infra-steps__card-top">
+          <span class="infra-steps__card-num">03</span>
+          <img class="infra-steps__card-img" src="/images/coin-inference.png" alt="">
+        </div>
+        <h3 class="infra-steps__card-title">Mine GNK</h3>
+        <div class="infra-steps__card-content">
+          <p class="infra-steps__card-text">
+            Connect your hardware to the GONKA network.
+          </p>
+          <p class="infra-steps__card-text">
+            Process other participants' tasks and earn GNK for every completed computing request.
+          </p>
+          <p class="infra-steps__card-text">
+            Your GPU is working. You're earning. The network is growing.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section 3: Why This Changes Everything — image left top-aligned, badge + text right -->
+<section class="ownit-section ownit-section--changes section-offset">
+  <div class="ownit-section__container">
+
+    <div class="ownit-section__media">
+      <img class="ownit-section__img" src="/images/gpu.png" alt="GPU">
+    </div>
+
+    <div class="ownit-section__content">
+      <div class="badge">
+        <div class="badge__text">Reasons</div>
+        <svg class="badge__icon" viewbox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path opacity="0.6" d="M4.99023 0L15.6113 27.4434H10.6211L0 0H4.99023Z"></path>
+          <path opacity="0.4" d="M12.8662 0C13.3812 9.4258e-05 13.8433 0.31664 14.0293 0.796875L23.6846 25.7461C24.0009 26.5635 23.3979 27.4432 22.5215 27.4434H19.3516L8.73047 0H12.8662Z"></path>
+        </svg>
+      </div>
+      <h2 class="ownit-section__title title title--sm">Why This Changes Everything</h2>
+      <div class="ownit-section__texts">
+        <p class="ownit-section__text">Corporations are building AI that belongs to them.</p>
+        <p class="ownit-section__text">They train models on your data, sell you access, and create systems that can replace you.</p>
+        <p class="ownit-section__text">We're building infrastructure that's owned by people—those who believe in it and participate in it.</p>
+        <p class="ownit-section__text">Bitcoin's reputation was once built solely on trust. Today, it's part of the global economy.</p>
+        <p class="ownit-section__text">GONKA is following the same path.</p>
+        <p class="ownit-section__text">Own it.</p>
+      </div>
+      <div class="ownit-section__quote">
+        <p>By owning GONKA, you own the future of artificial intelligence.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="ownit-join section-offset">
+  <div class="ownit-join__container">
+    <div class="infra-header">
+        <h2 class="main-title">
+          <span>Join us</span>
+        </h2>
+      <div class="infra-badge">
+        <span class="infra-badge__text infra-badge__text--md">
+          Own it. By owning GONKA, you secure your share of the future AI compute economy.
+        </span>
+      </div>
+      <p class="infra-header__subtitle">
+        New here? Set up a wallet and acquire GNK via OTC. Ready to <br> contribute? Launch a node or test the API.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Logos Section -->
+  <section class="logos-section">
+    <div class="logos-row">
+      <div class="logos-group">
+        <span class="logos-label">Auditor</span>
+        <div class="logos-items">
+          <img src="/images/partners/certik.svg" alt="Certik" width="110" height="32">
+        </div>
+      </div>
+      <div class="logos-group">
+        <span class="logos-label">Community Partners</span>
+        <div class="logos-items">
+          <img src="/images/partners/web3.svg" alt="Web3.com Ventures" width="98" height="32">
+          <img src="/images/partners/hard-yaka.svg" alt="Hard Yaka" width="114" height="32">
+          <img src="/images/partners/bitfury.svg" alt="Bitfury" width="102" height="32">
+          <img src="/images/partners/qtum.svg" alt="Qtum.AI" width="106" height="32">
+        </div>
+      </div>
+      <div class="logos-group">
+        <span class="logos-label">Select Hosts</span>
+        <div class="logos-items">
+          <img src="/images/partners/gcore.svg" alt="Qtum.AI" width="90" height="32">
+          <img src="/images/partners/huperfusion.svg" alt="Hyperfusion" width="132" height="32">
+          <img src="/images/partners/block.svg" alt="6block" width="90" height="32">
+        </div>
+      </div>
+      <!-- <div class="logos-group">
+        <span class="logos-label">Exchange Partners</span>
+        <div class="logos-items">
+          <img src="/images/partners/uphold.svg" alt="Uphold" width="90" height="32" />
+        </div>
+      </div> -->
+    </div>
+    <div class="logos-row">
+      <div class="logos-group">
+        <span class="logos-label">Protocol Creator</span>
+        <div class="logos-items">
+          <img src="/images/partners/product-science.svg" alt="Product Science" width="158" height="32">
+        </div>
+      </div>
+      <div class="logos-group">
+        <span class="logos-label">Backed by</span>
+        <div class="logos-items">          
+          <img src="/images/partners/coatue.svg" alt="COATUE" width="86" height="32">
+          <img src="/images/partners/slow.svg" alt="Slow" width="49" height="32">
+          <img src="/images/partners/mantis.svg" alt="Mantis" width="100" height="32">
+          <img src="/images/partners/k5.svg" alt="K5" width="31" height="32"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">
+          <img src="/images/icons/gonka-logo.svg" alt="Gonka" width="99" height="23">
+        </a>
+        <a href="https://what-is-gonka.hashnode.dev/" target="_blank" class="footer-link-blog">Blog</a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Protocol</h4>
+            <a href="/whitepaper.pdf" target="_blank">Whitepaper</a>
+            <a href="/pow-security-analysis.pdf" target="_blank">Transformer-Based-Proof-of-Work</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/protocol-license.pdf" target="_blank">Gonka Protocol License</a>
+          <a href="/patents.pdf" target="_blank">Patents</a>
+        </div>
+      </div>
+    </div>
+          <div class="footer-bottom">
+          <div class="footer-socials">
+            <a href="https://github.com/gonka-ai/gonka/" class="footer-social" target="_blank" aria-label="Github">
+              <img src="/images/icons/github.svg" alt="Github" width="25" height="25">
+            </a>
+            <a href="https://discord.com/invite/RADwCT2U6R" class="footer-social" target="_blank" aria-label="Discord">
+              <img src="/images/icons/discord.svg" alt="Discord" width="25" height="25">
+            </a>
+            <a href="mailto:hello@productscience.ai" class="footer-social" target="_blank" aria-label="Mail">
+              <img src="/images/icons/mail.svg" alt="Mail" width="25" height="25">
+            </a>
+            <a href="https://x.com/gonka_ai" class="footer-social" target="_blank" aria-label="X">
+              <img src="/images/icons/twitter.svg" alt="X" width="25" height="25">
+            </a>
+            <!-- <a href="https://t.me/Gonka_AI" class="footer-social" target="_blank" aria-label="Telegram">
+              <img src="/images/icons/telegram.svg" alt="Telegram" width="25" height="25" />
+            </a> -->
+          </div>
+
+        <div class="footer-bottom-links">
+      <a href="/help" class="footer-link">Help</a>
+      <a href="/transactions-and-governance" class="footer-link">Transactions &amp; Governance</a>
+      <!-- <a href="#" class="footer-link">Terms & Policies</a> -->
+          <div>
+        </div>
+
+  
+
+</div></div></footer></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+          
+
+<div class="gonka-fixed-disclaimer" id="gonkaDisclaimer">
+  <button
+    class="gonka-disclaimer-close"
+    id="gonkaDisclaimerClose"
+    type="button"
+    aria-label="Collapse disclaimer"
+    aria-controls="gonkaDisclaimer"
+  >
+    <svg
+      class="gonka-disclaimer-icon"
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M3.64671 3.64666C3.74047 3.55303 3.86755 3.50044 4.00005 3.50044C4.13255 3.50044 4.25963 3.55303 4.35338 3.64666L8.00005 7.29333L11.6467 3.64666C11.6925 3.59754 11.7477 3.55814 11.809 3.53081C11.8704 3.50348 11.9366 3.48879 12.0037 3.4876C12.0708 3.48642 12.1375 3.49877 12.1998 3.52392C12.262 3.54906 12.3186 3.58649 12.3661 3.63397C12.4136 3.68145 12.451 3.73801 12.4761 3.80027C12.5013 3.86252 12.5136 3.92921 12.5124 3.99635C12.5113 4.06348 12.4966 4.12969 12.4692 4.19102C12.4419 4.25236 12.4025 4.30756 12.3534 4.35333L8.70672 8L12.3534 11.6467C12.4025 11.6924 12.4419 11.7476 12.4692 11.809C12.4966 11.8703 12.5113 11.9365 12.5124 12.0036C12.5136 12.0708 12.5013 12.1375 12.4761 12.1997C12.451 12.262 12.4136 12.3185 12.3661 12.366C12.3186 12.4135 12.262 12.4509 12.1998 12.4761C12.1375 12.5012 12.0708 12.5136 12.0037 12.5124C11.9366 12.5112 11.8704 12.4965 11.809 12.4692C11.7477 12.4419 11.6925 12.4025 11.6467 12.3533L8.00005 8.70666L4.35338 12.3533C4.2586 12.4417 4.13323 12.4897 4.0037 12.4874C3.87417 12.4852 3.75058 12.4327 3.65897 12.3411C3.56736 12.2495 3.51488 12.1259 3.5126 11.9963C3.51031 11.8668 3.55839 11.7414 3.64671 11.6467L7.29338 8L3.64671 4.35333C3.55308 4.25958 3.50049 4.1325 3.50049 4C3.50049 3.8675 3.55308 3.74041 3.64671 3.64666Z"
+        fill="currentColor"
+      />
+    </svg>
+  </button>
+
+  <div class="gonka-disclaimer-text">
+    <strong>DISCLAIMER: </strong>THE INFORMATION PROVIDED HERE IS FOR GENERAL
+    INFORMATIONAL AND EDUCATIONAL PURPOSES ONLY AND SHOULD NOT BE CONSIDERED
+    FINANCIAL, INVESTMENT, OR TRADING ADVICE. CRYPTOCURRENCY MARKETS ARE HIGHLY
+    VOLATILE AND SPECULATIVE. ALWAYS DO YOUR OWN RESEARCH (DYOR) AND CONSULT
+    WITH A QUALIFIED FINANCIAL ADVISOR BEFORE MAKING ANY INVESTMENT DECISIONS.
+    THE AUTHOR AND PUBLISHER ARE NOT RESPONSIBLE FOR ANY LOSSES OR DAMAGES
+    RESULTING FROM RELIANCE ON THIS INFORMATION.
+  </div>
+</div>
+
+<button
+  class="gonka-disclaimer-toggle"
+  id="gonkaDisclaimerToggle"
+  type="button"
+  aria-label="Show disclaimer"
+  aria-controls="gonkaDisclaimer"
+  aria-expanded="false"
+>
+  <span class="gonka-disclaimer-toggle-text" aria-hidden="true">?</span>
+</button>
+
+
+
+ 
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "content.code.annotate", "content.code.copy", "navigation.indexes", "navigation.tracking", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../js/links.js"></script>
+      
+        <script src="../../javascripts/theme-toggle.js"></script>
+      
+        <script src="../../javascripts/dropdown.js"></script>
+      
+        <script src="../../javascripts/chat-redirect.js"></script>
+      
+        <script src="../../javascripts/smooth-scroll-to-cards.js"></script>
+      
+        <script src="../../javascripts/banner-close.js"></script>
+      
+        <script src="../../javascripts/mobile-menu.js"></script>
+      
+        <script src="../../javascripts/announcement.js"></script>
+      
+        <script src="../../javascripts/code-copy.js"></script>
+      
+        <script src="../../javascripts/language-selector.js"></script>
+      
+        <script src="../../javascripts/header-links.js"></script>
+      
+        <script src="../../javascripts/faq.js"></script>
+      
+        <script src="../../javascripts/ios-long-press-fix.js"></script>
+      
+        <script src="../../javascripts/disclaimer.js"></script>
+      
+    
+  </body>
+</html>
