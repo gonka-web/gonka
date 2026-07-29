@@ -1,0 +1,15 @@
+{% if config.extra.get('multilingual_enabled', true) %}
+<script src="{{ 'javascripts/language-selector.js' | url }}"></script>
+{% else %}
+<script>
+  (function () {
+    document.documentElement.classList.add("multilingual-disabled");
+  })();
+</script>
+<style>
+  html.multilingual-disabled .language-selector,
+  html.multilingual-disabled .mobile-language-selector {
+    display: none !important;
+  }
+</style>
+{% endif %}
