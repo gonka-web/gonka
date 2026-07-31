@@ -4879,6 +4879,10 @@ html.multilingual-disabled .mobile-language-selector {
 }
 
 /* Dark Theme: Specific Icon Overrides */
+[data-md-color-scheme="slate"] .gonka-landing-2025 .gonka-uniswap-icon path {
+  fill: #ff37c7 !important;
+}
+
 [data-md-color-scheme="slate"] .message-icon img {
   filter: brightness(0) invert(1);
 }
